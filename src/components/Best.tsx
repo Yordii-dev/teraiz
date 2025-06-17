@@ -11,7 +11,7 @@ function Best({ img, title, description }: any) {
         <p className="best__title fw-semibold text-bluedark font-bold mt-4">
           {title}
         </p>
-        <p className="best__des p-4 fw-medium flex-grow-1 text-primary font-regular">
+        <p className="best__des p-4 font-semibold flex-grow-1 text-primary font-regular">
           {description}
         </p>
       </div>
