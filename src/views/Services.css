@@ -1,0 +1,16 @@
+.services{
+   margin-top: 8rem;
+} 
+ .services__title > h1{
+      font-size: 5rem;  
+ }
+ 
+
+.services_list {
+   margin-top: 5rem;
+   width: 110rem;
+   display: grid;
+   justify-items: center;
+   grid-template-columns: repeat(3, 1fr);
+   row-gap: 2.5rem; 
+}

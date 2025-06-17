@@ -1,0 +1,32 @@
+.best {
+  width: 32rem;
+  height: 32rem;
+  position: relative;
+  border-radius: 1rem;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    rgba(0, 220, 167, 0.8) 100%
+  );
+}
+
+.best__img {
+  height: 10rem;
+  width: 10rem;
+  margin-left: -3rem;
+}
+
+.best-content {
+  height: 100%;
+}
+
+.best__title {
+  width: 88%;
+  font-size: 2.5rem;
+  white-space: pre-line;
+}
+
+.best__des {
+  font-size: 1.5rem;
+  white-space: pre-line;
+}

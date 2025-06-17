@@ -1,0 +1,18 @@
+.service {
+  width: 35rem;
+  height: 35rem;
+  border-radius: 1rem;
+}
+
+.service__img {
+  height: 10rem;
+  width: 10rem;
+}
+
+.service__title {
+  font-size: 2.5rem;
+}
+
+.service__des {
+  font-size: 2rem;
+}

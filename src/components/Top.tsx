@@ -11,7 +11,7 @@ function Top() {
     <div className="top-cotainer bg-white fixed-top px-4 d-flex justify-content-between align-items-center">
       <div className="top__sales d-flex align-items-center text-bluedark">
         <FontAwesomeIcon icon={faAt} size="2x" />
-        <p className="fs-5 ms-2 my-0 fw-semibold">sales@techraiz.com</p>
+        <p className="ms-2 my-0 fw-semibold">sales@techraiz.com</p>
       </div>
       <div className="top__logo">
         <img src="/img/logo-light.svg" alt="Techraiz Logo" />
