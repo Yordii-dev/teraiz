@@ -30,7 +30,7 @@ function Hero() {
           <div className="mt-5">
             <Cta />
             <div className="hero-container__socialproof text-white d-flex justify-content-between mt-1">
-              <p className="fw-semibold">{t.hero.socialproofs}</p>
+              <p className="fw-semibold">{t.hero.socialproof}</p>
               <p className="fw-semibold">Planes segun presupuesto</p>
             </div>
           </div>

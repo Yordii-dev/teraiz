@@ -1,8 +1,8 @@
-import { TranslationType } from '../types/Translations';
+import type { TranslationType } from '../types/Translations';
 
 const en: TranslationType = {
   hero: {    
-    socialproof: 'solutions in weeks',
+    socialproof: 'Solutions in weeks',
   }};
 
 export default en;

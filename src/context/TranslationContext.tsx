@@ -2,7 +2,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import en from '../locales/en';
 import es from '../locales/es';
-import { TranslationType } from '../types/Translations';
+import type { TranslationType } from '../types/Translations';
 
 const translations: Record<string, TranslationType> = {
   en,
