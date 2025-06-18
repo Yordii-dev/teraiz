@@ -1,0 +1,107 @@
+/* MODAL MODERNO */
+
+.modal-content.modern-modal {
+  border-radius: 1rem;
+  border: none;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.15);
+}
+
+.modal-header.modern-header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1.6rem 2rem;
+  font-size: 1.8rem;
+  border-bottom: none;
+}
+
+.modal-body.modern-body {
+  background-color: var(--color-gray1);
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+
+.modal-footer.modern-footer {
+  background-color: var(--color-cuaternary);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  border-top: none;
+}
+
+.modern-input {
+  font-size: 1.5rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.modern-input:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 0.2rem rgba(0, 220, 167, 0.2);
+}
+
+label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-blue-dark);
+}
+
+.modal__title {
+  font-size: 2rem;
+}
+
+.modal__field {
+  font-size: 1.8rem;
+}
+
+.modal__close {
+  filter: invert(1);
+  outline: none;
+}
+
+.modal__button {
+  position: relative;
+  overflow: hidden;
+  width: 15rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  background-color: var(--color-secondary);
+  color: white;
+  cursor: pointer;
+}
+
+.modal__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+  pointer-events: none;
+}
+
+.modal__button:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+button:disabled {
+  opacity: 1 !important;
+  cursor: pointer;
+  pointer-events: auto; /* opcional: si quieres permitir hover */
+}

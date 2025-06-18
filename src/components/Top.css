@@ -1,13 +1,18 @@
-.top-cotainer {
-  height: 8rem; /* 80px */
+.top-container {
+  height: 8rem;
+  z-index: 2000;
+  position: sticky;
+  top: 0;
+  background: white;
   z-index: 10000;
+  height: 8rem;
 }
 
 .top__sales {
-  width: 25rem; /* 250px */
+  width: 25rem;
   font-size: 2rem;
 }
 
 .top__end {
-  width: 25rem; /* 250px */
+  width: 25rem;
 }

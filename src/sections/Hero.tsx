@@ -2,10 +2,11 @@ import "./Hero.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import SocialProof from "../components/SocialProof";
+import Cta from "../components/Cta";
 
 function Hero() {
   return (
-    <div className="hero-container vh-100 px-4 bg-primary d-flex flex-column justify-content-between">
+    <div className="hero-container px-4 bg-primary d-flex flex-column justify-content-between">
       <div className="d-flex my-auto align-content-center justify-content-center">
         <div className="me-5">
           <div className="hero-container__title text-white">
@@ -23,16 +24,7 @@ function Hero() {
             <p className="m-0">inmobiliaria.</p>
           </div>
           <div className="mt-5">
-            <div className="hero-container__cta d-flex justify-content-between">
-              <input
-                className="flex-grow-1 me-2 ps-4 text-white"
-                type="text"
-                placeholder="Correo electronico"
-              />
-              <button className="btn bg-secondary text-primary fw-semibold">
-                Cotiza gratis
-              </button>
-            </div>
+            <Cta />
             <div className="hero-container__socialproof text-white d-flex justify-content-between mt-1">
               <p className="fw-semibold">Soluciones en semanas</p>
               <p className="fw-semibold">Planes segun presupuesto</p>

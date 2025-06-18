@@ -1,0 +1,43 @@
+.compaines {
+  margin-top: 8rem;
+  width: 108rem;
+}
+
+.compaines__title {
+  font-size: 4.8rem;
+}
+
+.compaines__des {
+  font-size: 2rem;
+}
+
+.compaines__list {
+  position: relative;
+  border-radius: 1rem;
+  width: 120rem;
+}
+
+.compaines__list__prev {
+  position: absolute;
+  cursor: pointer;
+  left: -15px;
+  top: 80px;
+  opacity: 50%;
+  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  font-size: 4rem;
+}
+.compaines__list__next {
+  position: absolute;
+  cursor: pointer;
+  right: -15px;
+  top: 80px;
+  opacity: 50%;
+  font-size: 4rem;
+  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+.compaines__list__prev:hover,
+.compaines__list__next:hover {
+  opacity: 100%;
+  transform: scale(1.05);
+}
