@@ -3,8 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import SocialProof from "../components/SocialProof";
 import Cta from "../components/Cta";
+import { useTranslation } from '../context/TranslationContext';
 
 function Hero() {
+  const { t } = useTranslation();
+
+
   return (
     <div className="hero-container px-4 bg-primary d-flex flex-column justify-content-between">
       <div className="d-flex my-auto align-content-center justify-content-center">
@@ -26,7 +30,7 @@ function Hero() {
           <div className="mt-5">
             <Cta />
             <div className="hero-container__socialproof text-white d-flex justify-content-between mt-1">
-              <p className="fw-semibold">Soluciones en semanas</p>
+              <p className="fw-semibold">{t.hero.socialproofs}</p>
               <p className="fw-semibold">Planes segun presupuesto</p>
             </div>
           </div>

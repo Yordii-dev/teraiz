@@ -8,19 +8,26 @@ import Companies from "./sections/Companies";
 import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Services from "./sections/Services";
+import './i18n';
+import { TranslationProvider } from './context/TranslationContext';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+
   return (
-    <div className="">
-      <Top></Top>
-      <Hero></Hero>
-      <Services></Services>
-      <Companies></Companies>
-      <Bests></Bests>
-      <Footer></Footer>
-      <MoreInfo />
-      <SuccessModal />
-    </div>
+    <TranslationProvider>
+      <div>
+        <Top></Top>
+        <Hero></Hero>
+        <Services></Services>
+        <Companies></Companies>
+        <Bests></Bests>
+        <Footer></Footer>
+        <MoreInfo />
+        <SuccessModal />
+      </div>
+    </TranslationProvider>
+
   );
 }
 

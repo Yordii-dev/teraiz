@@ -7,15 +7,19 @@ import {
 import { faAt, faCheck, faClone } from "@fortawesome/free-solid-svg-icons";
 import "./Top.css";
 import { useState } from "react";
+import { useTranslation } from '../context/TranslationContext';
+
 function Top() {
   const [copied, setCopied] = useState(false);
-  const [idioma, setIdioma] = useState("EN"); // valor inicial: español
+  const { lang, setLang } = useTranslation();
+  const mailText = "sales@techraiz.com";
+
 
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText("sales@techraiz.com");
+      await navigator.clipboard.writeText(mailText);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // vuelve al ícono original
+      setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       console.error("Error copiando al portapapeles", err);
     }
@@ -68,19 +72,19 @@ function Top() {
       <div className="top__end d-flex justify-content-between align-items-center">
         <div className="w-25 text-bluedark d-flex align-items-center justify-content-between">
           <span
-            className={idioma === "EN" ? "font-black" : ""}
+            className={lang === "es" ? "font-black" : ""}
             role="button"
-            onClick={() => setIdioma("EN")}
+            onClick={() => setLang("es")}
           >
-            EN
+            ES
           </span>
           <span className="mx-2">|</span>
           <span
-            className={idioma === "ES" ? "font-black" : ""}
+            className={lang === "en" ? "font-black" : ""}
             role="button"
-            onClick={() => setIdioma("ES")}
+            onClick={() => setLang("en")}
           >
-            ES
+            EN
           </span>
         </div>
         <div className="w-50 d-flex justify-content-between align-items-center ms-5">

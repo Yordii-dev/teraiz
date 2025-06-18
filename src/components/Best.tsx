@@ -1,4 +1,4 @@
-import "./best.css";
+import "./Best.css";
 
 function Best({ img, title, description }: any) {
   return (
