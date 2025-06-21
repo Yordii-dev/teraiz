@@ -15,6 +15,7 @@ body {
 }
 :root {
   font-family: "Inter", sans-serif;
+
   --color-primary: #031e3d;
   --color-secondary: #00dca7;
   --color-tertiary: #003366;
@@ -22,6 +23,52 @@ body {
   --color-blue-dark: #001932;
   --color-blue-semidark: #03254c;
   --color-gray1: #f5f8fa;
+
+  /*SIZES*/
+  --zise-desktop-big: 48px;
+  --zise-desktop-title: 24px;
+  --zise-desktop-normal: 18px;
+  --zise-desktop-small: 16px;
+
+  --zise-mobil-big: 30px;
+  --zise-mobil-title: 20px;
+  --zise-mobil-normal: 16px;
+  --zise-mobil-short: 14px;
+  --zise-mobil-small: 12px;
+
+  /*SPACING*/
+  --spacing-desktop-big: 64px;
+  --spacing-desktop-normal: 24px;
+  --spacing-desktop-general: 16px;
+  --spacing-desktop-icontext: 12px;
+  --spacing-desktop-beforefooter: 96px;
+
+  --spacing-mobil-big: 16px;
+  --spacing-mobil-normal: 16px;
+  --spacing-mobil-general: 12px;
+  --spacing-mobil-icontext: 8px;
+  --spacing-mobil-beforefooter: 48px;
+
+  /*OPACITY*/
+  --opacity-desktop-0: 100%;
+  --opacity-desktop-1: 90%;
+  --opacity-desktop-2: 65%;
+  --opacity-desktop-3: 60%;
+
+  --opacity-mobil-0: 100%;
+  --opacity-mobil-1: 85%;
+  --opacity-mobil-2: 65%;
+  --opacity-mobil-3: 55%;
+
+  /*WIGHT*/
+  --weight-desktop-bold: bold;
+  --weight-desktop-regular: medium;
+  --weight-desktop-semibold: bold;
+
+  --weight-mobil-bold: bold;
+  --weight-mobil-regular: regular;
+  --weight-mobil-semibold: bold;
+
 }
 
 .bg-primary {
