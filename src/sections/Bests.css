@@ -52,6 +52,7 @@
 }
 
 .bests__promo__ctatext {
+  font-size: 2rem;
   transition: transform 0.3s ease;
   transform-origin: left center;
 }

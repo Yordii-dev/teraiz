@@ -8,12 +8,10 @@ import Companies from "./sections/Companies";
 import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Services from "./sections/Services";
-import './i18n';
-import { TranslationProvider } from './context/TranslationContext';
-import { useTranslation } from 'react-i18next';
+import "./i18n";
+import { TranslationProvider } from "./context/TranslationContext";
 
 function App() {
-
   return (
     <TranslationProvider>
       <div>
@@ -27,7 +25,6 @@ function App() {
         <SuccessModal />
       </div>
     </TranslationProvider>
-
   );
 }
 

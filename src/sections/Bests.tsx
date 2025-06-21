@@ -85,7 +85,7 @@ function Bests() {
               data-bs-toggle="modal"
               data-bs-target="#moreInfoModal"
               role="button"
-              className="bests__promo__ctatext fw-bold text-secondary font-semibold flex-grow-1"
+              className="bests__promo__ctatext mt-4 fw-bold text-secondary font-semibold flex-grow-1"
             >
               {promo.ctaText}
               <FontAwesomeIcon icon={faComments} className="ms-3" />

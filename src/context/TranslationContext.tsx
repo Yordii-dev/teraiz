@@ -1,14 +1,12 @@
-// src/context/TranslationContext.tsx
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import en from '../locales/en';
-import es from '../locales/es';
-import type { TranslationType } from '../types/Translations';
+import React, { createContext, useContext, useState, useEffect } from "react";
+import en from "../locales/en";
+import es from "../locales/es";
+import type { TranslationType } from "../types/Translations";
 
 const translations: Record<string, TranslationType> = {
   en,
   es,
 };
-
 
 type TranslationContextType = {
   lang: string;
@@ -16,15 +14,18 @@ type TranslationContextType = {
   t: TranslationType;
 };
 
-
 export const TranslationContext = createContext<TranslationContextType>({
-  lang: 'es',
+  lang: "es",
   setLang: (lang: string) => {},
   t: es,
 });
 
-export const TranslationProvider = ({ children }: { children: React.ReactNode }) => {
-  const [lang, setLang] = useState<'en' | 'es'>('en');
+export const TranslationProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
+  const [lang, setLang] = useState<string>("es");
   const [t, setT] = useState<TranslationType>(translations[lang]);
 
   useEffect(() => {

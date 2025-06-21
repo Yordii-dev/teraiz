@@ -3,11 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import SocialProof from "../components/SocialProof";
 import Cta from "../components/Cta";
-import { useTranslation } from '../context/TranslationContext';
+import { useTranslation } from "../context/TranslationContext";
 
 function Hero() {
   const { t } = useTranslation();
-
 
   return (
     <div className="hero-container px-4 bg-primary d-flex flex-column justify-content-between">

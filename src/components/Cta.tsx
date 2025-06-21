@@ -9,7 +9,7 @@ function Cta() {
       <input
         className="flex-grow-1 me-2 ps-4 text-white"
         type="email"
-        placeholder="Correo electrónico"
+        placeholder="Tu email de contacto"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
