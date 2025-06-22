@@ -2,8 +2,8 @@ import "./SocialProof.css";
 
 function Top({ text }: any) {
   return (
-    <div className="socialproof bg-bluesemi d-flex flex-direction-column align-items-center justify-content-center">
-      <p className="fw-semibold">{text}</p>
+    <div className="socialproof border-radius bg-bluesemi d-flex justify-content-center align-items-center">
+      <p className="m-0 fw-semibold opacity-1 size-2">{text}</p>
     </div>
   );
 }

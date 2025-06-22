@@ -1,28 +1,28 @@
 .container__cta input {
   border: 1px solid var(--color-cuaternary) !important;
   outline: none;
-  height: 4rem;
   background-color: transparent;
-  border-radius: 1rem;
+  height: var(--height-desktop-cta);
+  padding-left: var(--pl-desktop-ctainput);
 }
 
 .container__cta input::placeholder {
   color: var(--color-cuaternary);
-  opacity: 60%;
+  font-size: var(--zise-desktop-4);
+  opacity: var(--opacity-desktop-3);
 }
 
 .container__cta button {
   position: relative;
-  overflow: hidden;
   width: 12rem;
-  font-size: 1.8rem;
-  border-radius: 1rem;
+  border-radius: var(-border-radius);
   border: none;
   outline: none;
   background-color: var(--color-secondary);
   color: white;
   cursor: pointer;
   z-index: 1;
+  height: var(--height-desktop-cta);
 }
 
 .container__cta button::after {
@@ -48,4 +48,16 @@ button:disabled {
   opacity: 1 !important;
   cursor: pointer;
   pointer-events: auto; /* opcional: si quieres permitir hover */
+}
+
+/* Mobile override */
+@media (max-width: 767px) {
+  .container__cta input {
+    height: var(--height-mobil-cta);
+    padding-left: var(--pl-mobil-ctainput);
+  }
+
+  .container__cta input::placeholder {
+    font-size: var(--zise-mobil-4) !important;
+  }
 }

@@ -1,18 +1,44 @@
 .top-container {
-  height: 8rem;
   z-index: 2000;
   position: sticky;
   top: 0;
   background: white;
   z-index: 10000;
-  height: 8rem;
+  height: var(--height-top);
 }
 
+.top__end,
 .top__sales {
-  width: 25rem;
-  font-size: 2rem;
+  width: 30rem;
 }
 
-.top__end {
-  width: 25rem;
+.top__end__socials {
+  width: var(--width-top-socials);
+  display: block;
+}
+
+.show-desktop {
+  display: block;
+}
+.show-mobile {
+  display: none;
+}
+
+.top__logo img {
+  width: var(--width-wlogo);
+  height: var(--height-hlogo);
+}
+
+@media (max-width: 767px) {
+  .top__end__socials {
+    display: none !important;
+  }
+  .show-desktop {
+    display: none;
+  }
+  .show-mobile,
+  .top__end {
+    display: block;
+    width: 6.5rem;
+  }
 }

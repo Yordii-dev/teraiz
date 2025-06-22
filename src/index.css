@@ -16,6 +16,7 @@ body {
 :root {
   font-family: "Inter", sans-serif;
 
+  /*COLORS*/
   --color-primary: #031e3d;
   --color-secondary: #00dca7;
   --color-tertiary: #003366;
@@ -23,31 +24,52 @@ body {
   --color-blue-dark: #001932;
   --color-blue-semidark: #03254c;
   --color-gray1: #f5f8fa;
+  --width-top-socials: 99px;
+
+  /*LOGO*/
+  --width-wlogo: 87.42px;
+  --height-hlogo: 71.38px;
+
+  /*TOP MENU*/
+  --height-top: 90px;
+
+  /*CTA*/
+  --height-desktop-cta: 55px;
+  --pl-desktop-ctainput: 15px;
+
+  --height-mobil-cta: 44px;
+  --pl-mobil-ctainput: 12px;
+
+  /*RADIUS*/
+  --border-radius: 10px;
 
   /*SIZES*/
-  --zise-desktop-big: 48px;
-  --zise-desktop-title: 24px;
-  --zise-desktop-normal: 18px;
-  --zise-desktop-small: 16px;
+  --zise-desktop-1: 48px;
+  --zise-desktop-2: 24px;
+  --zise-desktop-3: 20px;
+  --zise-desktop-4: 18px;
+  --zise-desktop-5: 16px;
 
-  --zise-mobil-big: 30px;
-  --zise-mobil-title: 20px;
-  --zise-mobil-normal: 16px;
-  --zise-mobil-short: 14px;
-  --zise-mobil-small: 12px;
+  --zise-mobil-1: 30px;
+  --zise-mobil-2: 20px;
+  --zise-mobil-3: 16px;
+  --zise-mobil-4: 14px;
+  --zise-mobil-5: 12px;
 
   /*SPACING*/
-  --spacing-desktop-big: 64px;
-  --spacing-desktop-normal: 24px;
-  --spacing-desktop-general: 16px;
-  --spacing-desktop-icontext: 12px;
-  --spacing-desktop-beforefooter: 96px;
+  --spacing-desktop-1: 96px;
+  --spacing-desktop-2: 64px;
+  --spacing-desktop-3: 24px;
+  --spacing-desktop-4: 16px;
+  --spacing-desktop-5: 12px;
+  --spacing-desktop-6: 6px;
 
-  --spacing-mobil-big: 16px;
-  --spacing-mobil-normal: 16px;
-  --spacing-mobil-general: 12px;
-  --spacing-mobil-icontext: 8px;
-  --spacing-mobil-beforefooter: 48px;
+  --spacing-mobil-1: 48px;
+  --spacing-mobil-2: 32px;
+  --spacing-mobil-3: 16px;
+  --spacing-mobil-4: 12px;
+  --spacing-mobil-5: 8px;
+  --spacing-mobil-6: 4px;
 
   /*OPACITY*/
   --opacity-desktop-0: 100%;
@@ -60,99 +82,150 @@ body {
   --opacity-mobil-2: 65%;
   --opacity-mobil-3: 55%;
 
-  /*WIGHT*/
-  --weight-desktop-bold: bold;
-  --weight-desktop-regular: medium;
-  --weight-desktop-semibold: bold;
+  /*WEIGHT*/
+  --weight-desktop-bold: 700;
+  --weight-desktop-regular: 500; /* Medium */
+  --weight-desktop-semibold: 600;
 
-  --weight-mobil-bold: bold;
-  --weight-mobil-regular: regular;
-  --weight-mobil-semibold: bold;
-
+  --weight-mobil-bold: 700;
+  --weight-mobil-regular: 400;
+  --weight-mobil-semibold: 600;
 }
-
+.border-radius {
+  border-radius: var(--border-radius) !important;
+}
 .bg-primary {
   background-color: var(--color-primary) !important;
+}
+.bg-secondary {
+  background-color: var(--color-secondary) !important;
+}
+.bg-tertiary {
+  background-color: var(--color-tertiary) !important;
+}
+.bg-cuaternary {
+  background-color: var(--color-cuaternary) !important;
+}
+.bg-bluedark {
+  background-color: var(--color-blue-dark) !important;
+}
+.bg-bluesemi {
+  background-color: var(--color-blue-semidark) !important;
+}
+.bg-gray1 {
+  background-color: var(--color-gray1) !important;
 }
 .text-primary {
   color: var(--color-primary) !important;
 }
 
-.bg-secondary {
-  background-color: var(--color-secondary) !important;
-}
 .text-secondary {
   color: var(--color-secondary) !important;
 }
 
-/* Crea los que no existen en Bootstrap */
-.bg-tertiary {
-  background-color: var(--color-tertiary) !important;
-}
 .text-tertiary {
   color: var(--color-tertiary) !important;
 }
 
-.bg-cuaternary {
-  background-color: var(--color-cuaternary) !important;
-}
 .text-cuaternary {
   color: var(--color-cuaternary) !important;
 }
 
-.bg-bluedark {
-  background-color: var(--color-blue-dark) !important;
-}
 .text-bluedark {
   color: var(--color-blue-dark) !important;
 }
 
-.bg-bluesemi {
-  background-color: var(--color-blue-semidark) !important;
-}
 .text-bluesemi {
   color: var(--color-blue-semidark) !important;
 }
 
-.bg-gray1 {
-  background-color: var(--color-gray1) !important;
-}
 .text-gray1 {
   color: var(--color-gray1) !important;
 }
 
-.font-thin {
-  font-weight: 100 !important;
+.size-1 {
+  font-size: var(--zise-desktop-1) !important;
+}
+.size-2 {
+  font-size: var(--zise-desktop-2) !important;
+}
+.size-3 {
+  font-size: var(--zise-desktop-3) !important;
+}
+.size-4 {
+  font-size: var(--zise-desktop-4) !important;
+}
+.size-5 {
+  font-size: var(--zise-desktop-5) !important;
 }
 
-.font-extralight {
-  font-weight: 200 !important;
+.opacity-0 {
+  opacity: var(--opacity-desktop-0) !important;
+}
+.opacity-1 {
+  opacity: var(--opacity-desktop-1) !important;
+}
+.opacity-2 {
+  opacity: var(--opacity-desktop-2) !important;
+}
+.opacity-3 {
+  opacity: var(--opacity-desktop-3) !important;
 }
 
-.font-light {
-  font-weight: 300 !important;
+.weight-bold {
+  font-weight: var(--weight-desktop-bold) !important;
 }
 
-.font-regular {
-  font-weight: 400 !important;
+.weight-regular {
+  font-weight: var(--weight-desktop-regular) !important;
+}
+.weight-semibold {
+  font-weight: var(--weight-desktop-semibold) !important;
 }
 
-.font-medium {
-  font-weight: 500 !important;
-}
+@media (max-width: 767px) {
+  /**/
+  :root {
+    --width-wlogo: 47.16px;
+    --height-hlogo: 38.33px;
+    --height-top: 55px;
+  }
+  .size-1 {
+    font-size: var(--zise-mobil-1) !important;
+  }
+  .size-2 {
+    font-size: var(--zise-mobil-2) !important;
+  }
+  .size-3 {
+    font-size: var(--zise-mobil-3) !important;
+  }
+  .size-4 {
+    font-size: var(--zise-mobil-4) !important;
+  }
+  .size-5 {
+    font-size: var(--zise-mobil-5) !important;
+  }
 
-.font-semibold {
-  font-weight: 600 !important;
-}
+  .opacity-0 {
+    opacity: var(--opacity-mobil-0) !important;
+  }
+  .opacity-1 {
+    opacity: var(--opacity-mobil-1) !important;
+  }
+  .opacity-2 {
+    opacity: var(--opacity-mobil-2) !important;
+  }
+  .opacity-3 {
+    opacity: var(--opacity-mobil-3) !important;
+  }
 
-.font-bold {
-  font-weight: 700 !important;
-}
-
-.font-extrabold {
-  font-weight: 800 !important;
-}
-
-.font-black {
-  font-weight: 900 !important;
+  .weight-bold {
+    font-weight: var(--weight-mobil-bold) !important;
+  }
+  .weight-regular {
+    font-weight: var(--weight-mobil-regular) !important;
+  }
+  .weight-semibold {
+    font-weight: var(--weight-mobil-semibold) !important;
+  }
 }
