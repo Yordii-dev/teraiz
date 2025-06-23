@@ -1,0 +1,12 @@
+.container-app-content{
+      max-width: 1170px;
+
+} 
+
+@media (max-width: 1000px) {
+      .container-app-content{
+            padding-right: var(--spacing-3);
+            padding-left: var(--spacing-3);
+
+      } 
+}

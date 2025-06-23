@@ -17,12 +17,17 @@ function App() {
       <div>
         <Top></Top>
         <Hero></Hero>
-        <Services></Services>
-        <Companies></Companies>
-        <Bests></Bests>
-        <Footer></Footer>
-        <MoreInfo />
-        <SuccessModal />
+        <div className="container-app-content mx-auto">
+          <Services></Services>
+          <Companies></Companies>
+          {/*
+            <Bests></Bests>
+            <MoreInfo />
+            <SuccessModal />
+          */}
+        </div>
+        {/* <Footer></Footer> */}
+        
       </div>
     </TranslationProvider>
   );

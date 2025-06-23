@@ -1,18 +1,32 @@
+.company{
+   padding: var(--spacing-3);
+  gap: var(--spacing-5);
+  height: var(--height-testimony);
+}
+
+.company__content{
+    gap: var(--spacing-4);
+
+}
+ 
 .company__img {
-  min-width: 10rem;
-  height: 10rem;
+  width: var(--wh-testimonyimg);
+  height: var(--wh-testimonyimg);
 }
 
 .company__img img {
+  
   width: 80%;
-
   object-fit: cover;
 }
+ 
 
-.company__title {
-  font-size: 2rem;
-}
+@media (max-width: 767px) {
+  .company__img {
+    display: none !important;
+  }
 
-.company__desc {
-  font-size: 1.8rem;
+  .company__desc {
+    font-size: var(--size-3) !important;
+  }
 }

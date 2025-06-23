@@ -14,7 +14,7 @@ function Top() {
 
   return (
     <div className="top-container size-2 fw-semibold text-bluedark px-4 d-flex justify-content-between align-items-center shadow-lg">
-      <div className="top__start">
+       <div className="top__start">
         <div className="show-desktop">
           <Corporate />
         </div>

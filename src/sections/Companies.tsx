@@ -46,17 +46,18 @@ function Companies() {
   };
 
   return (
-    <div className="compaines d-flex justify-content-between align-items-center mx-auto">
-      <div className="w-25">
-        <h1 className="text-secondary fw-bold compaines__title">2025</h1>
-        <p className="text-primary compaines__des fw-semibold">
-          <span className="font-extrabold text-bluedark d-block">
-            Otros ya escalan
-          </span>
+    <div className="compaines align-items-center justify-content-between">
+ 
+      <div className="compaines__title text-center text-bluesemi h-100">
+        <h1 className="m-0 size-1 weight-semibold">
+          <span className="text-secondary">2025</span>
+          <br />
+          otros ya escalan
+          <br />
           y tu aun lo dudas
-        </p>
+        </h1>
       </div>
-      <div className="compaines__list bg-cuaternary p-4">
+      <div className="compaines__list bg-cuaternary h-100 border-radius">
         <FontAwesomeIcon
           icon={faCircleChevronLeft}
           className="compaines__list__prev"
@@ -67,7 +68,7 @@ function Companies() {
           className="compaines__list__next"
           onClick={goNext}
         />
-        <div className="mx-5">
+        <div className="">
           <Company
             key={currentIndex}
             img={companies[currentIndex].img}

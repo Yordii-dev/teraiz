@@ -5,31 +5,11 @@
 
 .services_list {
   display: grid;
-  height: 622px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-template-rows: repeat(2, 1fr);
   gap: var(--spacing-3);
-  max-width: 1312px;
   margin: 0 auto;
   justify-items: center; /* centra horizontalmente el contenido de cada celda */
   align-items: start; /* alinea verticalmente el contenido al top de cada celda */
-}
-
-/* Para primera fila (1 a 3) */
-.services_list > :nth-child(-n + 3) {
-  align-self: start;
-}
-
-/* Para segunda fila (4 a 6) */
-.services_list > :nth-child(n + 4) {
-  align-self: end;
-}
-
-@media (max-width: 767px) {
-  .services_list {
-    grid-template-columns: 1fr;
-    grid-template-rows: none; /* que se acomoden según el contenido */
-    height: auto; /* para que crezca automáticamente */
-    gap: var(--spacing-2);
-  }
-}
+ }
+  

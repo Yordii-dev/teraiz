@@ -1,5 +1,5 @@
 .hero-container {
-  height: calc(100vh - 8rem);
+  height: calc(100vh - var(--height-top));
 }
 
 .hero-container__hero {
@@ -59,11 +59,7 @@
     margin-right: var(--spacing-3) !important;
     margin-bottom: var(--spacing-3) !important;
   }
-
-  .hero-container__img {
-    display: none !important;
-  }
-
+  
   .socialproofs {
     display: none !important;
   }
@@ -75,4 +71,12 @@
   .hero-container__hero__content__subtitle {
     text-align: center;
   }
+}
+
+
+@media (max-width: 1000px) {
+  .hero-container__img {
+    display: none !important;
+  }
+
 }

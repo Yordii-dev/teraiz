@@ -2,7 +2,7 @@
   width: var(--width-card);
   height: var(--height-card);
   padding: var(--spacing-3);
-}
+ }
 
 .service__img {
   width: var(--width-cardimg);
@@ -21,8 +21,16 @@
   margin-top: var(--spacing-4);
 }
 
+.service__cta{
+   
+}
+
 @media (max-width: 767px) {
   .service__des {
     font-size: var(--size-3) !important;
+  }
+
+  .service{
+    width:100%;
   }
 }

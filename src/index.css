@@ -1,7 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
 html {
   font-size: 62.5%; /* 1rem = 10px */
 }
+
 .modal {
   z-index: 20000 !important;
   position: fixed !important;
@@ -10,9 +24,13 @@ html {
   z-index: 19990 !important;
 }
 
+ 
+
 body {
   font-size: 1.6rem; /* 16px */
+  width:100%;
 }
+
 :root {
   font-family: "Inter", sans-serif;
 
@@ -26,9 +44,13 @@ body {
   --color-gray1: #f5f8fa;
   --width-top-socials: 99px;
 
+  /*TESTIMONY*/
+  --wh-testimonyimg: 90px;
+  --height-testimony: 275px;
+
   /*CARD*/
   --width-card: 350px;
-  --height-card: 280px;
+  --height-card: 340px;
   --width-cardimg: 80px;
   --height-cardimg: 80px;
 

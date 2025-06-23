@@ -1,8 +1,8 @@
 import "./Service.css";
 
-function Service({ img, title, description }: any) {
+function Service({ img, title, description,cta }: any) {
   return (
-    <div className="service bg-grays1 border-radius d-flex flex-column align-items-center justify-content-center">
+    <div className="service bg-gray1 border-radius d-flex flex-column align-items-center">
       <div className="service__img d-flex align-items-center justify-content-center">
         <img src={img} alt={title} />
       </div>
@@ -11,6 +11,8 @@ function Service({ img, title, description }: any) {
       <p className="service__des size-4 text-center weight-regular text-primary">
         {description}
       </p>
+      <p className="service__cta size-3 weight-semibold text-secondary mt-auto">{cta}</p>
+
     </div>
   );
 }

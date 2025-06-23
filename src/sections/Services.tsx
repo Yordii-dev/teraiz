@@ -17,6 +17,7 @@ function Services() {
       description: `Enfoque en bienes raices, 
       dashboards, gestion de propiedades, 
       mapas, cotizadores, etc.`,
+      cta: "Controla tu caos"
     },
     {
       img: PropiedadImg,
@@ -24,28 +25,33 @@ function Services() {
       description: `Creamos sistemas donde puedes 
       mostrar tus propiedades, captar 
       clientes y medir resultados.`,
+      cta: "Controla tu caos"
     },
     {
       img: VentaImg,
       title: "Ventas sin fricción",
       description: `Herramientas para que tus agentes vendan más con menos esfuerzo. Agendamiento de visitas, 
       `,
+      cta: "Controla tu caos"
     },
     {
       img: AlquilerImg,
       title: "Alquileres automatizados",
       description: `Con nuestras apps puedes gestionar 
       alquileres, cobros`,
+      cta: "Controla tu caos"
     },
     {
       img: PreventaImg,
       title: "Preventas online",
       description: `Plataformas para constructoras e inmobiliarias que lanzan proyectos: reservas en línea, pagos  .`,
+      cta: "Controla tu caos"
     },
     {
       img: EquipoImg,
       title: "Equipo tech",
       description: `Nos encargamos de todo el proceso digital: diseño, desarrollo, soporte y mejora continua.`,
+      cta: "Controla tu caos"
     },
   ]);
 
@@ -66,6 +72,7 @@ function Services() {
             img={service.img}
             title={service.title}
             description={service.description}
+            cta={service.cta}
           />
         ))}
       </div>
