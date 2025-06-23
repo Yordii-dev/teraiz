@@ -19,13 +19,13 @@ function Hero() {
           </div>
           <div className="hero-container__hero__content__subtitle">
             <p className="size-2 weight-regular opacity-1">
-              En TechRaiz diseñamos sistemas para que recuperes el control,
-              automatices tareas y hagas crecer tu inmobiliaria.
+              En TechRaiz diseñamos sistemas para que recuperes el control de tu
+              inmobiliaria.
             </p>
           </div>
           <Cta />
 
-          <div className="size-4 weight-regular text-white">
+          <div className="hero-container__hero__content__free size-4 weight-regular text-white">
             <p className="p-0 m-0">
               Mantenimiento al año{" "}
               <span className="weight-semibold text-secondary">gratis</span> en

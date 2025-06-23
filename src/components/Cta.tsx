@@ -24,7 +24,7 @@ function Cta() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <div className="size-4 opacity-3 weight-semibold text-white d-flex justify-content-between">
+      <div className="container__cta__objections size-4 opacity-3 weight-semibold text-white d-flex justify-content-between">
         <p>{t.hero.socialproof}</p>
         <p>Planes segun presupuesto</p>
       </div>

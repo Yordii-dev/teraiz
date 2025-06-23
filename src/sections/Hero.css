@@ -4,6 +4,12 @@
 
 .hero-container__hero {
   height: 58.5rem;
+
+  margin-left: var(--spacing-2);
+  margin-right: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+
+  gap: var(--spacing-2);
 }
 
 .hero-container__hero__content,
@@ -13,8 +19,13 @@
   height: 100%;
 }
 
+.hero-container__hero__content__title {
+  text-align: left;
+}
+
 .hero-container__hero__content__subtitle {
-  margin-top: var(--spacing-desktop-3);
+  text-align: left;
+  margin-top: var(--spacing-3);
 }
 
 .hero-container__hero__content__socialproof {
@@ -27,21 +38,41 @@
 }
 
 .socialproofs {
-  margin-bottom: var(--spacing-desktop-normal);
+  margin-bottom: var(--spacing-3);
   width: max-content;
   display: block;
 }
 
 .socialproofs .list {
-  gap: var(--spacing-desktop-normal);
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-3);
+}
+
+.hero-container__hero__content__free {
+  margin-top: var(--spacing-3);
 }
 
 @media (max-width: 767px) {
+  .hero-container__hero {
+    margin-top: var(--spacing-2) !important;
+    margin-left: var(--spacing-3) !important;
+    margin-right: var(--spacing-3) !important;
+    margin-bottom: var(--spacing-3) !important;
+  }
+
   .hero-container__img {
     display: none !important;
   }
 
   .socialproofs {
     display: none !important;
+  }
+
+  .hero-container__hero__content__title {
+    text-align: center;
+  }
+
+  .hero-container__hero__content__subtitle {
+    text-align: center;
   }
 }

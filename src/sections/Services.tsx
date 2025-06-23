@@ -29,19 +29,18 @@ function Services() {
       img: VentaImg,
       title: "Ventas sin fricción",
       description: `Herramientas para que tus agentes vendan más con menos esfuerzo. Agendamiento de visitas, 
-      seguimiento de leads y alertas inteligentes.`,
+      `,
     },
     {
       img: AlquilerImg,
       title: "Alquileres automatizados",
       description: `Con nuestras apps puedes gestionar 
-      alquileres, cobros, mantenimientos y 
-      reportes desde un solo lugar.`,
+      alquileres, cobros`,
     },
     {
       img: PreventaImg,
       title: "Preventas online",
-      description: `Plataformas para constructoras e inmobiliarias que lanzan proyectos: reservas en línea, pagos iniciales y seguimiento a clientes.`,
+      description: `Plataformas para constructoras e inmobiliarias que lanzan proyectos: reservas en línea, pagos  .`,
     },
     {
       img: EquipoImg,
@@ -53,8 +52,11 @@ function Services() {
   return (
     <div className="services bg-white">
       <div className="services__title text-center text-bluesemi">
-        <h1 className="m-0">No solo pierdes tiempo, </h1>
-        <h1 className="m-0">también dinero</h1>
+        <h1 className="m-0 size-1 weight-semibold">
+          No solo pierdes tiempo,
+          <br />
+          también dinero
+        </h1>
       </div>
 
       <div className="services_list mx-auto">
