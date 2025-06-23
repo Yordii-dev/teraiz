@@ -16,7 +16,8 @@ type TranslationContextType = {
 
 export const TranslationContext = createContext<TranslationContextType>({
   lang: "es",
-  setLang: (lang: string) => {},
+  //setLang: (lang: string) => {},
+  setLang: () => {},
   t: es,
 });
 

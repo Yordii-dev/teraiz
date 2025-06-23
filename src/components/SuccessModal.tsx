@@ -25,7 +25,7 @@ const SuccessModal = () => {
 
           <div className="modal-footer modern-footer justify-content-center">
             <button
-              onClick={(e: any) => {
+              onClick={() => {
                 console.log(document.querySelector(".top-container"));
 
                 document

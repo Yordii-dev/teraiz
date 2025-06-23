@@ -1,4 +1,4 @@
-import { use, useState } from "react";
+import { useState } from "react";
 import Best from "../components/Best";
 
 import "./Bests.css";
@@ -8,7 +8,6 @@ import AlertImg from "../assets/bests/alert.svg";
 import FreeImg from "../assets/bests/free.svg";
 import WspImg from "../assets/bests/sms.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
 

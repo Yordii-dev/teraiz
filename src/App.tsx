@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+//import { useEffect } from "react";
 import "./App.css";
-import MoreInfo from "./components/MoreInfo";
-import SuccessModal from "./components/SuccessModal";
+//import MoreInfo from "./components/MoreInfo";
+//import SuccessModal from "./components/SuccessModal";
 import Top from "./components/Top";
-import Bests from "./sections/Bests";
+//import Bests from "./sections/Bests";
 import Companies from "./sections/Companies";
-import Footer from "./sections/Footer";
+//import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Services from "./sections/Services";
 import "./i18n";

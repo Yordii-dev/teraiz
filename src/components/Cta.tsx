@@ -7,7 +7,7 @@ function Cta() {
 
   const [email, setEmail] = useState("");
 
-  const handleClick = (e: any) => {
+  const handleClick = () => {
     console.log(document.querySelector(".top-container"));
 
     document
