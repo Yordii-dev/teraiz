@@ -12,6 +12,7 @@
   gap: var(--spacing-2);
 }
 
+ 
 .hero-container__hero__content,
 .hero-container__img {
   display: block;
@@ -54,23 +55,22 @@
 
 @media (max-width: 767px) {
   .hero-container__hero {
-    margin-top: var(--spacing-2) !important;
     margin-left: var(--spacing-3) !important;
     margin-right: var(--spacing-3) !important;
     margin-bottom: var(--spacing-3) !important;
   }
+
+
   
   .socialproofs {
     display: none !important;
   }
 
   .hero-container__hero__content__title {
-    text-align: center;
-  }
+   }
 
   .hero-container__hero__content__subtitle {
-    text-align: center;
-  }
+   }
 }
 
 
