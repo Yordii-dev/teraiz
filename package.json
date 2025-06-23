@@ -1,11 +1,14 @@
 {
   "homepage": "https://yordii-dev.github.io/techraiz",
-
   "name": "nombre-del-proyecto",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
@@ -17,6 +20,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "bootstrap": "^5.3.6",
+    "gh-pages": "^6.3.0",
     "i18next": "^25.2.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
