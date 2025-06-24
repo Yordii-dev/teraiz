@@ -8,13 +8,20 @@ import "./Top.css";
 import { useTranslation } from "../context/TranslationContext";
 import Corporate from "./Corporate";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 
 function Top() {
   const { lang, setLang } = useTranslation();
+  const [width, setWidth] = useState(window.innerWidth);
 
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className="top-container size-2 fw-semibold text-bluedark px-4 d-flex justify-content-between align-items-center shadow-lg">
-       <div className="top__start">
+      <div className="top__start">
         <div className="show-desktop">
           <Corporate />
         </div>
@@ -38,7 +45,7 @@ function Top() {
             role="button"
             onClick={() => setLang("es")}
           >
-            ES
+            {width} px
           </span>
           <span className="mx-2">|</span>
           <span

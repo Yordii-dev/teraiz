@@ -10,11 +10,8 @@ function Hero() {
         <div className="hero-container__hero__content text-white d-flex flex-column justify-content-center">
           <div className="hero-container__hero__content__title">
             <h1 className="size-1 weight-bold">
-              Convierte el caos
-              <br />
-              inmobiliario en
-              <br />
-              gestión y flujo
+              Del desorden a las ventas: ordena tu inmobiliaria y acelera el
+              cierre.{" "}
             </h1>
           </div>
           <div className="hero-container__hero__content__subtitle">
@@ -47,8 +44,10 @@ function Hero() {
       </div>
 
       <div className="socialproofs mx-auto text-white text-center">
-        <p className="size-3 opacity-1">Las empresas confian en nosotros</p>
-        <div className="list d-flex justify-content-between">
+        <p className="socialproofs__title size-3 opacity-1">
+          Las empresas confian en nosotros
+        </p>
+        <div className="socialproofs__list d-flex justify-content-between">
           <SocialProof text="+8 años" />
           <SocialProof text="LATAM & Norteamerica" />
           <SocialProof text="Inmobiliarias" />

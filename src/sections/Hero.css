@@ -1,18 +1,13 @@
 .hero-container {
-  height: calc(100vh - var(--height-top));
+  min-height: calc(100vh - var(--height-top));
 }
 
 .hero-container__hero {
-  height: 100%;
-  
+  gap: var(--spacing-2);
   margin-left: var(--spacing-2);
   margin-right: var(--spacing-2);
-  margin-bottom: var(--spacing-2);
-
-  gap: var(--spacing-2);
 }
 
- 
 .hero-container__hero__content,
 .hero-container__img {
   display: block;
@@ -41,10 +36,9 @@
 .socialproofs {
   margin-bottom: var(--spacing-3);
   width: max-content;
-  display: block;
 }
 
-.socialproofs .list {
+.socialproofs__list {
   gap: var(--spacing-3);
   margin-top: var(--spacing-3);
 }
@@ -53,30 +47,96 @@
   margin-top: var(--spacing-3);
 }
 
-@media (max-width: 767px) {
-  .hero-container__hero {
+/* 📱 Móviles pequeños */
+@media (max-width: 480px) {
+  .hero-container {
     margin-left: var(--spacing-3) !important;
     margin-right: var(--spacing-3) !important;
-    margin-bottom: var(--spacing-3) !important;
   }
-
-
-  
+  .hero-container__img {
+    display: none !important;
+  }
+  /* .socialproofs__title {
+    display: none;
+  } */
   .socialproofs {
     display: none !important;
   }
-
-  .hero-container__hero__content__title {
-   }
-
-  .hero-container__hero__content__subtitle {
-   }
 }
 
+/* 📱 Móviles grandes */
+@media (min-width: 481px) and (max-width: 767px) {
+  .hero-container__hero {
+    margin-left: var(--spacing-3) !important;
+    margin-right: var(--spacing-3) !important;
+  }
+  .hero-container__hero {
+    margin-top: var(--spacing-3) !important;
+  }
+  .hero-container__img {
+    display: none !important;
+  }
+  .socialproofs__title {
+    display: none;
+  }
 
-@media (max-width: 1000px) {
+  .socialproofs {
+    width: 100%;
+    margin-bottom: var(--spacing-3);
+  }
+
+  .socialproofs__list {
+    max-width: calc(100% - 2 * var(--spacing-3));
+    margin-left: var(--spacing-3) !important;
+    margin-right: var(--spacing-3) !important;
+    width: 100% !important;
+  }
+
+  /* .hero-container__hero__content__free {
+    display: none !important;
+  } */
+  /* .socialproofs {
+    display: none !important;
+  } */
+}
+
+/* 📱 Tablets y laptops pequeñas */
+@media (min-width: 768px) and (max-width: 1024px) {
   .hero-container__img {
     display: none !important;
   }
 
+  .socialproofs__title {
+    display: none;
+  }
+
+  /* .hero-container__hero__content__free {
+    display: block;
+  } */
+}
+
+/* Laptops medianas */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* .hero-container__hero {
+    padding-top: var(--spacing-2);
+  } */
+
+  /* .socialproofs {
+    margin-top: var(--spacing-2) !important;
+  } */
+  .socialproofs,
+  .hero-container__hero__content__free {
+    display: none !important;
+  }
+  .hero-container__hero {
+    margin-left: var(--spacing-3) !important;
+    margin-right: var(--spacing-3) !important;
+  }
+}
+
+/* 🖥️ Pantallas grandes (Full HD) hasta 1920px */
+@media (min-width: 1441px) and (max-width: 1920px) {
+  /* .hero-container__hero__content__free {
+    display: none !important;
+  } */
 }
