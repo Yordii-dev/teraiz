@@ -49,30 +49,42 @@
 
 /* 📱 Móviles pequeños */
 @media (max-width: 480px) {
-  .hero-container {
+  .hero-container__hero {
     margin-left: var(--spacing-3) !important;
     margin-right: var(--spacing-3) !important;
   }
+  
   .hero-container__img {
     display: none !important;
   }
   /* .socialproofs__title {
     display: none;
   } */
-  .socialproofs {
-    display: none !important;
+  .socialproofs {    
+    width: 100%;
+
+    // display: none !important;
   }
+  
+  .socialproofs__list {
+    max-width: calc(100% - 2 * var(--spacing-3));
+    margin-left: var(--spacing-3) !important;
+    margin-right: var(--spacing-3) !important;
+    width: 100% !important;
+  }
+
 }
 
 /* 📱 Móviles grandes */
 @media (min-width: 481px) and (max-width: 767px) {
-  .hero-container__hero {
-    margin-left: var(--spacing-3) !important;
-    margin-right: var(--spacing-3) !important;
+  .hero-container__hero__content {    
+      width: 100%;
+      margin-left: var(--spacing-3) !important;
+      margin-right: var(--spacing-3) !important;
   }
-  .hero-container__hero {
-    margin-top: var(--spacing-3) !important;
-  }
+  // .hero-container__hero {
+  //   margin-top: var(--spacing-3) !important;
+  // }
   .hero-container__img {
     display: none !important;
   }

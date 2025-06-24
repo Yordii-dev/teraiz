@@ -6,7 +6,7 @@ import Cta from "../components/Cta";
 function Hero() {
   return (
     <div className="hero-container bg-primary d-flex flex-column justify-content-between">
-      <div className="hero-container__hero my-auto d-flex align-items-center justify-content-center">
+      <div className="hero-container__hero mx-auto my-auto d-flex align-items-center justify-content-center">
         <div className="hero-container__hero__content text-white d-flex flex-column justify-content-center">
           <div className="hero-container__hero__content__title">
             <h1 className="size-1 weight-bold">
@@ -37,7 +37,7 @@ function Hero() {
             </p>
             <p className="p-0 m-0 d-none hero-container__hero__content__free__socialproof">
               <span className="weight-semibold text-secondary">+8 años</span>{" "}
-              creando sistemas a medida para inmobiliarias.              
+              creando sistemas a medida para inmobiliarias.
             </p>
           </div>
         </div>
