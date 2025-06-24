@@ -121,6 +121,7 @@
   .socialproofs__title {
     display: none;
   }
+  
 
 }
 
@@ -142,8 +143,6 @@
 
 }
 
-
-
 /*HEIGH RESPONSIVE*/
 
 @media (min-height:600px) and (max-height: 800px) {
@@ -162,9 +161,15 @@
 }
 
 
-@media (min-height:801px) and (max-height: 950px) {
- 
+@media (min-height:801px) and (max-height: 950px) { 
   .socialproofs__title {
     display: none !important;
+  }
+}
+
+@media (min-height:950px){
+ 
+  .socialproofs__title {
+    display: block !important;
   }
 }

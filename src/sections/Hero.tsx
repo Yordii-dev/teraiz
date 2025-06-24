@@ -9,13 +9,13 @@ function Hero() {
       <div className="hero-container__hero mx-auto my-auto d-flex align-items-center justify-content-center">
         <div className="hero-container__hero__content text-white d-flex flex-column justify-content-center">
           <div className="hero-container__hero__content__title">
-            <h1 className="size-1 weight-bold">
+            <h1 className="size-1 weight-bold m-0">
               Del desorden a las ventas: ordena tu inmobiliaria y acelera el
               cierre.{" "}
             </h1>
           </div>
           <div className="hero-container__hero__content__subtitle">
-            <p className="size-2 weight-regular opacity-1">
+            <p className="size-2 weight-regular opacity-1 m-0">
               En TechRaiz diseñamos sistemas para que recuperes el control de tu
               inmobiliaria.
             </p>
@@ -48,7 +48,7 @@ function Hero() {
       </div>
 
       <div className="socialproofs mx-auto text-white text-center">
-        <p className="socialproofs__title size-3 opacity-1">
+        <p className="socialproofs__title size-3 opacity-1 m-0">
           Las empresas confian en nosotros
         </p>
         <div className="socialproofs__list d-flex justify-content-between">
