@@ -58,13 +58,26 @@ button:disabled {
   margin-top: var(--spacing-6);
 }
 
-/* Laptops medianas */
-@media (max-width: 1440px) {
-  .container__cta input,
-  .container__cta__objections {
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .container__cta input {
     display: none !important;
+  }
+
+  .container__cta__objections{
+    order:3;
   }
 }
 
-@media (max-width: 1920px) {
+/*HEIGH RESPONSIVE*/
+
+
+@media (min-height:600px) and (max-height: 800px) {
+  .container__cta input{
+    display: none !important;
+  }
+
+  .container__cta__objections{
+    order:3;
+  }
 }
+

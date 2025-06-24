@@ -1,4 +1,4 @@
-import "./Hero.css";
+import "./Hero.scss";
 
 import SocialProof from "../components/SocialProof";
 import Cta from "../components/Cta";
@@ -23,17 +23,21 @@ function Hero() {
           <Cta />
 
           <div className="hero-container__hero__content__free size-4 weight-regular text-white">
-            <p className="p-0 m-0">
-              Mantenimiento al año{" "}
-              <span className="weight-semibold text-secondary">gratis</span> en
-              tu primer proyecto.
-            </p>
             <p className="p-0 m-0 mt-2">
               ¡Aprovecha ahora un{" "}
               <span className="weight-semibold text-secondary">
                 40% de descuento
               </span>{" "}
               exclusivo!
+            </p>
+            <p className="p-0 m-0 hero-container__hero__content__free__maintenance">
+              Mantenimiento al año{" "}
+              <span className="weight-semibold text-secondary">gratis</span> en
+              tu primer proyecto.
+            </p>
+            <p className="p-0 m-0 d-none hero-container__hero__content__free__socialproof">
+              <span className="weight-semibold text-secondary">+8 años</span>{" "}
+              creando sistemas a medida para inmobiliarias.              
             </p>
           </div>
         </div>

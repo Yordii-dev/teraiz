@@ -140,3 +140,30 @@
     display: none !important;
   } */
 }
+
+
+
+/*HEIGH RESPONSIVE*/
+
+@media (min-height:600px) and (max-height: 800px) {
+  .socialproofs {
+    display: none !important;
+  }
+
+  .hero-container__hero__content__free__maintenance {
+    display: none;
+  }
+
+  
+  .hero-container__hero__content__free__socialproof {
+    display: block !important;
+  }
+}
+
+
+@media (min-height:801px) and (max-height: 950px) {
+ 
+  .socialproofs__title {
+    display: none !important;
+  }
+}

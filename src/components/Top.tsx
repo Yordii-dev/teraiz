@@ -13,12 +13,19 @@ import { useEffect, useState } from "react";
 function Top() {
   const { lang, setLang } = useTranslation();
   const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
 
   useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
+    };
+
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return (
     <div className="top-container size-2 fw-semibold text-bluedark px-4 d-flex justify-content-between align-items-center shadow-lg">
       <div className="top__start">
@@ -35,7 +42,9 @@ function Top() {
       </div>
 
       <div className="top__logo">
-        <img src="/img/logo-light.svg" alt="Techraiz Logo" />
+        {/* <img src="/img/logo-light.svg" alt="Techraiz Logo" /> */}
+        {width}px × {height}px
+
       </div>
 
       <div className="top__end d-flex justify-content-between align-items-center">
