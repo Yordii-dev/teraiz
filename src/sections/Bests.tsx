@@ -66,7 +66,24 @@ function Bests() {
             description={best.description}
           />
         ))}
-        
+        <div className="bests__promo__free d-flex flex-column justify-content-between border-radius">
+          <p className="bests__promo__free__title size-2 weight-bold text-bluesemi">
+            {promo.title}
+          </p>
+          <p className="bests__promo__free__des size-4 weight-regular text-primary">
+            {promo.description}
+          </p>
+
+          <p
+            data-bs-toggle="modal"
+            data-bs-target="#moreInfoModal"
+            role="button"
+            className="bests__promo__ctatext size-3 weight-semibold text-secondary mt-auto"
+          >
+            {promo.ctaText}
+            <FontAwesomeIcon icon={faComments} className="ms-3" />
+          </p>
+        </div>
 
         <div className="bests__promo__wsp border-radius">
           <div className="d-flex justify-content-between align-items-center">
