@@ -33,21 +33,21 @@ function Bests() {
     },
   ]);
 
-  const [promo] = useState({
+  const [extras] = useState([{
     img: FreeImg,
     title: "¡POR TIEMPO LIMITADO, el 40% de tus requerimientos es GRATIS!",
     description:
       "Inicia tu proyecto sin compromisos. Analizamos, diseñamos y desarrollamos parte de tu solución sin costo. Tú solo decides si seguimos.",
     ctaText: "Cuentanos tus ideas y cotizalo gratis",
-  });
-
-  const [wsp] = useState({
+  }, {
     img: WspImg,
-    title: "Atencion por whatsapp",
+    title: "Mantenimiento gratis",
     description:
-      "Escribenos al +51 945 234 917 y cuentanos tu idea.Te ayudaremos al instante.",
+      "Mantenimiento al año gratis en tu primer proyecto.",
     ctaText: "Escribenos ahora",
-  });
+  }]);
+
+  const [wsp] = useState();
 
   return (
     <div className="bests">
@@ -66,46 +66,28 @@ function Bests() {
             description={best.description}
           />
         ))}
-        <div className="bests__promo__free d-flex flex-column justify-content-between border-radius">
-          <p className="bests__promo__free__title size-2 weight-bold text-bluesemi">
-            {promo.title}
-          </p>
-          <p className="bests__promo__free__des size-4 weight-regular text-primary">
-            {promo.description}
-          </p>
 
-          <p
-            data-bs-toggle="modal"
-            data-bs-target="#moreInfoModal"
-            role="button"
-            className="bests__promo__ctatext size-3 weight-semibold text-secondary mt-auto"
-          >
-            {promo.ctaText}
-            <FontAwesomeIcon icon={faComments} className="ms-3" />
-          </p>
-        </div>
-
-        <div className="bests__promo__wsp border-radius">
-          <div className="d-flex justify-content-between align-items-center">
-            <p className="bests__promo__wsp__title size-2 weight-bold text-secondary">
-              {wsp.title}
+        {extras.map((extra,index) =>(
+          <div key={index} className="bests__extra d-flex flex-column justify-content-between border-radius">
+            <p className="size-2 weight-bold text-bluesemi">
+              {extra.title}
             </p>
-            <img src={wsp.img} alt={wsp.title} />
-          </div>
-          <p className="size-4 weight-regular text-primary">
-            {wsp.description} <br />
-          </p>
-          <a
-            className="bests__promo__ctatext size-3 d-block weight-semibold text-bluedark mt-auto"
-            href="https://api.whatsapp.com/send?phone=51945234917&text=Hola,%20me%20gustaria%20saber%20mas%20sobre%20sus%20servicios."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {wsp.ctaText}
+            <p className="size-4 weight-regular text-primary">
+              {extra.description}
+            </p>
 
-            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ms-3" />
-          </a>
-        </div>   
+            <p
+              data-bs-toggle="modal"
+              data-bs-target="#moreInfoModal"
+              role="button"
+              className="bests__extra__ctatext size-3 weight-semibold text-secondary mt-auto"
+            >
+              {extra.ctaText}
+              <FontAwesomeIcon icon={faComments} className="ms-3" />
+            </p>
+          </div>
+
+        ))}         
       </div>
 
     </div>

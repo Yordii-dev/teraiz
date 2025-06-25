@@ -2,7 +2,7 @@ import "./Best.css";
 
 function Best({ img, title, description }: any) {
   return (
-    <div className="best d-flex align-items-center justify-content-between">
+    <div className="best d-flex align-items-center justify-content-between border-radius">
       <div className="best__img d-flex align-items-center justify-content-center">
         <img src={img} alt={title} />
       </div>
