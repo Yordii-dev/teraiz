@@ -24,6 +24,11 @@
   margin-top: var(--spacing-3);
 }
 
+.hero-container__hero__content__free p:last-of-type {  
+  margin-top: var(--spacing-6) !important;
+}
+
+
 .hero-container__hero__content__socialproof {
   width: 100%;
   font-size: 1.4rem;
@@ -76,6 +81,9 @@
     width: 100% !important;
   }
 
+   .hero-container__hero__content__title, .hero-container__hero__content__subtitle{
+    text-align: center;
+  }
 }
 
 /* 📱 Móviles grandes */
@@ -113,6 +121,10 @@
   /* .socialproofs {
     display: none !important;
   } */
+
+   .hero-container__hero__content__title, .hero-container__hero__content__subtitle{
+    text-align: center;
+  }
 }
 
 /* 📱 Tablets y laptops pequeñas */
@@ -125,7 +137,9 @@
     display: none;
   }
   
-
+  .hero-container__hero__content__title, .hero-container__hero__content__subtitle, .hero-container__hero__content__free p{
+    text-align: center;
+  }
 }
 
 /* Laptops medianas */

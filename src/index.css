@@ -69,6 +69,8 @@ body {
   --border-radius: 10px;
 
   /*SIZES*/
+  --size-0: 48px;
+
   --size-1: 48px;
   --size-2: 24px;
   --size-3: 20px;
@@ -145,7 +147,9 @@ body {
 .text-gray1 {
   color: var(--color-gray1) !important;
 }
-
+.size-0 {
+  font-size: var(--size-0) !important;
+}
 .size-1 {
   font-size: var(--size-1) !important;
 }
@@ -200,6 +204,7 @@ body {
     --height-cta: 44px;
     --pl-ctainput: 12px;
 
+    --size-0: 40px;
     --size-1: 30px;
     --size-2: 20px;
     --size-3: 16px;

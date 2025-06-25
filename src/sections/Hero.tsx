@@ -9,7 +9,7 @@ function Hero() {
       <div className="hero-container__hero mx-auto my-auto d-flex align-items-center justify-content-center">
         <div className="hero-container__hero__content text-white d-flex flex-column justify-content-center">
           <div className="hero-container__hero__content__title">
-            <h1 className="size-1 weight-bold m-0">
+            <h1 className="size-0 weight-semibold m-0">
               Del desorden a las ventas: ordena tu inmobiliaria y acelera el
               cierre.{" "}
             </h1>
@@ -23,7 +23,7 @@ function Hero() {
           <Cta />
 
           <div className="hero-container__hero__content__free size-4 weight-regular text-white">
-            <p className="p-0 m-0 mt-2">
+            <p className="p-0 m-0">
               ¡Aprovecha ahora un{" "}
               <span className="weight-semibold text-secondary">
                 40% de descuento

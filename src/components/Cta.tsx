@@ -29,13 +29,13 @@ function Cta() {
         <p>Planes segun presupuesto</p>
       </div>
       <button
-        className="w-100 btn size-3 bg-secondary text-primary weight-semibold border-radius"
+        className="w-100 btn size-3 bg-white text-primary weight-semibold border-radius"
         onClick={handleClick}
         data-bs-toggle="modal"
         data-bs-target="#successModal"
         disabled={!email.trim()}
       >
-        Cotiza gratis
+        Cotiza gratis <span className="btn__txt40dto d-none">con 40% dto</span>
       </button>
     </div>
   );
