@@ -10,6 +10,7 @@ import Hero from "./sections/Hero";
 import Services from "./sections/Services";
 import "./i18n";
 import { TranslationProvider } from "./context/TranslationContext";
+import Bests from "./sections/Bests";
 
 function App() {
   return (
@@ -20,8 +21,8 @@ function App() {
         <div className="container-app-content mx-auto">
           <Services></Services>
           <Companies></Companies>
+          <Bests></Bests>
           {/*
-            <Bests></Bests>
             <MoreInfo />
             <SuccessModal />
           */}

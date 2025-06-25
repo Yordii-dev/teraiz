@@ -56,7 +56,7 @@ function Services() {
   ]);
 
   return (
-    <div className="services bg-white">
+    <div className="services">
       <div className="services__title text-center text-bluesemi">
         <h1 className="m-0 size-1 weight-semibold">
           No solo pierdes tiempo,

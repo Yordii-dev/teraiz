@@ -50,9 +50,11 @@ function Bests() {
   });
 
   return (
-    <div className="bests bg-white">
+    <div className="bests">
       <div className="bests__title text-center text-bluesemi">
-        <h1 className="m-0">Somos tu mejor opcion</h1>
+        <h1 className="m-0 size-1 weight-semibold">
+          Somos tu mejor opcion
+        </h1>
       </div>
 
       <div className="bests__list mx-auto">
@@ -64,46 +66,20 @@ function Bests() {
             description={best.description}
           />
         ))}
-      </div>
+        
 
-      <div className="bests__promo mx-auto d-flex justify-content-between align-items-center">
-        <div className="bests__promo__free d-flex align-items-center justify-content-between">
-          <div className="bests__promo__free__img">
-            <img className="mt-2" src={promo.img} alt={promo.title} />
-          </div>
-
-          <div className="d-flex flex-column h-100 justify-content-between p-5">
-            <p className="bests__promo__free__title text-white fw-semibold font-bold mt-4">
-              {promo.title}
-            </p>
-            <p className="bests__promo__free__des text-white font-semibold flex-grow-1">
-              {promo.description}
-            </p>
-
-            <p
-              data-bs-toggle="modal"
-              data-bs-target="#moreInfoModal"
-              role="button"
-              className="bests__promo__ctatext mt-4 fw-bold text-secondary font-semibold flex-grow-1"
-            >
-              {promo.ctaText}
-              <FontAwesomeIcon icon={faComments} className="ms-3" />
-            </p>
-          </div>
-        </div>
-
-        <div className="bests__promo__wsp p-5">
+        <div className="bests__promo__wsp border-radius">
           <div className="d-flex justify-content-between align-items-center">
-            <p className="bests__promo__wsp__title text-secondary fw-bold">
+            <p className="bests__promo__wsp__title size-2 weight-bold text-secondary">
               {wsp.title}
             </p>
-            <img className="mt-2" src={wsp.img} alt={wsp.title} />
+            <img src={wsp.img} alt={wsp.title} />
           </div>
-          <p className="text-bluesemi fw-semibold mt-3">
+          <p className="size-4 weight-regular text-primary">
             {wsp.description} <br />
           </p>
           <a
-            className="bests__promo__ctatext d-block mt-4 text-primary fw-bold"
+            className="bests__promo__ctatext size-3 d-block weight-semibold text-bluedark mt-auto"
             href="https://api.whatsapp.com/send?phone=51945234917&text=Hola,%20me%20gustaria%20saber%20mas%20sobre%20sus%20servicios."
             target="_blank"
             rel="noopener noreferrer"
@@ -112,8 +88,9 @@ function Bests() {
 
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ms-3" />
           </a>
-        </div>
+        </div>   
       </div>
+
     </div>
   );
 }

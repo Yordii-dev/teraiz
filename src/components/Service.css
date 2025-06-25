@@ -13,17 +13,10 @@
   width: 100%;
   height: 100%;
 }
-.service__title {
+.service__title, .service__des {
   margin-top: var(--spacing-4);
 }
 
-.service__des {
-  margin-top: var(--spacing-4);
-}
-
-.service__cta{
-   
-}
 
 @media (max-width: 767px) {
   .service__des {

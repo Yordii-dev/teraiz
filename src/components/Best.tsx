@@ -4,12 +4,12 @@ function Best({ img, title, description }: any) {
   return (
     <div className="best d-flex align-items-center justify-content-between">
       <div className="best__img d-flex align-items-center justify-content-center">
-        <img className="mt-2" src={img} alt={title} />
+        <img src={img} alt={title} />
       </div>
 
-      <div className="best-content d-flex flex-column align-items-center justify-content-lg-start">
-        <p className="best__title fw-semibold text-bluedark mt-4">{title}</p>
-        <p className="best__des p-4 font-semibold flex-grow-1 text-primary">
+      <div className="best-content d-flex flex-column justify-content-start">
+        <p className="best__title size-2 weight-bold text-bluesemi">{title}</p>
+        <p className="best__des size-4 weight-regular text-primary">
           {description}
         </p>
       </div>
