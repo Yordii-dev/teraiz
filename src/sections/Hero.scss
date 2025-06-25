@@ -54,6 +54,9 @@
     margin-right: var(--spacing-3) !important;
   }
   
+   .hero-container__hero__content__free {
+    display: none !important;
+  } 
   .hero-container__img {
     display: none !important;
   }
@@ -104,9 +107,9 @@
     width: 100% !important;
   }
 
-  /* .hero-container__hero__content__free {
+   .hero-container__hero__content__free {
     display: none !important;
-  } */
+  } 
   /* .socialproofs {
     display: none !important;
   } */
