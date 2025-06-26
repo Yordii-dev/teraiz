@@ -46,18 +46,16 @@ function Companies() {
   };
 
   return (
-    <div className="compaines align-items-center justify-content-between">
- 
-      <div className="compaines__title text-center text-bluesemi h-100">
+    <div className="compaines">
+      <div className="compaines__title text-bluesemi h-100">
         <h1 className="m-0 size-1 weight-semibold">
           <span className="text-secondary">2025</span>
           <br />
-          otros ya escalan
-          <br />
-          y tu aun lo dudas
+          otros escalan
+          <br />y tu aun dudas
         </h1>
       </div>
-      <div className="compaines__list bg-cuaternary h-100 border-radius">
+      <div className="compaines__list h-100 border-radius">
         <FontAwesomeIcon
           icon={faCircleChevronLeft}
           className="compaines__list__prev"

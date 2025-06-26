@@ -1,38 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-
-html {
-  font-size: 62.5%; /* 1rem = 10px */
-}
-
-.modal {
-  z-index: 20000 !important;
-  position: fixed !important;
-}
-.modal-backdrop {
-  z-index: 19990 !important;
-}
-
- 
-
-body {
-  font-size: 1.6rem; /* 16px */
-  width:100%;
-}
-
 :root {
-  font-family: "Inter", sans-serif;
+  --font-heading: "Mona-Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
 
   /*COLORS*/
   --color-primary: #031e3d;
@@ -49,8 +19,8 @@ body {
   --height-testimony: 275px;
 
   /*CARD*/
-  --width-card: 350px;
-  --height-card: 340px;
+  --width-card: 100%;
+  --height-card: 100%;
   --width-cardimg: 80px;
   --height-cardimg: 80px;
 
@@ -96,6 +66,47 @@ body {
   --spacing-5: 12px;
   --spacing-6: 6px;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+.modal {
+  z-index: 20000 !important;
+  position: fixed !important;
+}
+.modal-backdrop {
+  z-index: 19990 !important;
+}
+
+body {
+  font-size: 1.6rem; /* 16px */
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
+body,
+p,
+span {
+  font-family: var(--font-body);
+}
+
 .border-radius {
   border-radius: var(--border-radius) !important;
 }

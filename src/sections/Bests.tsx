@@ -8,7 +8,6 @@ import AlertImg from "../assets/bests/alert.svg";
 import FreeImg from "../assets/bests/free.svg";
 import WspImg from "../assets/bests/sms.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
 
 function Bests() {
@@ -33,28 +32,26 @@ function Bests() {
     },
   ]);
 
-  const [extras] = useState([{
-    img: FreeImg,
-    title: "¡POR TIEMPO LIMITADO, el 40% de tus requerimientos es GRATIS!",
-    description:
-      "Inicia tu proyecto sin compromisos. Analizamos, diseñamos y desarrollamos parte de tu solución sin costo. Tú solo decides si seguimos.",
-    ctaText: "Cuentanos tus ideas y cotizalo gratis",
-  }, {
-    img: WspImg,
-    title: "Mantenimiento gratis",
-    description:
-      "Mantenimiento al año gratis en tu primer proyecto.",
-    ctaText: "Escribenos ahora",
-  }]);
-
-  const [wsp] = useState();
+  const [extras] = useState([
+    {
+      img: WspImg,
+      title: "Mantenimiento gratis",
+      description: "Mantenimiento al año gratis en tu primer proyecto.",
+      ctaText: "Escribenos ahora",
+    },
+    {
+      img: FreeImg,
+      title: "¡POR TIEMPO LIMITADO, el 40% de tus requerimientos es GRATIS!",
+      description:
+        "Inicia tu proyecto sin compromisos. Analizamos, diseñamos y desarrollamos parte de tu solución sin costo. Tú solo decides si seguimos.",
+      ctaText: "Cuentanos tus ideas y cotizalo gratis",
+    },
+  ]);
 
   return (
     <div className="bests">
       <div className="bests__title text-center text-bluesemi">
-        <h1 className="m-0 size-1 weight-semibold">
-          Somos tu mejor opcion
-        </h1>
+        <h1 className="m-0 size-1 weight-semibold">Somos tu mejor opcion</h1>
       </div>
 
       <div className="bests__list mx-auto">
@@ -67,12 +64,13 @@ function Bests() {
           />
         ))}
 
-        {extras.map((extra,index) =>(
-          <div key={index} className="bests__extra d-flex flex-column justify-content-between border-radius">
-            <p className="size-2 weight-bold text-bluesemi">
-              {extra.title}
-            </p>
-            <p className="size-4 weight-regular text-primary">
+        {extras.map((extra, index) => (
+          <div
+            key={index}
+            className="bests__list__extra d-flex flex-column justify-content-between border-radius"
+          >
+            <p className="size-2 weight-bold text-bluesemi">{extra.title}</p>
+            <p className="bests__list__extra__des size-4 weight-regular text-primary">
               {extra.description}
             </p>
 
@@ -80,16 +78,14 @@ function Bests() {
               data-bs-toggle="modal"
               data-bs-target="#moreInfoModal"
               role="button"
-              className="bests__extra__ctatext size-3 weight-semibold text-secondary mt-auto"
+              className="bests__list__extra__ctatext size-3 weight-semibold text-secondary mt-auto"
             >
               {extra.ctaText}
               <FontAwesomeIcon icon={faComments} className="ms-3" />
             </p>
           </div>
-
-        ))}         
+        ))}
       </div>
-
     </div>
   );
 }
