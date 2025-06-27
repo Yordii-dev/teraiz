@@ -11,6 +11,9 @@ import Services from "./sections/Services";
 import "./i18n";
 import { TranslationProvider } from "./context/TranslationContext";
 import Bests from "./sections/Bests";
+import Solutions from "./sections/Solutions";
+import Section from "./components/Section";
+import Authority from "./sections/Authority";
 
 function App() {
   return (
@@ -18,8 +21,16 @@ function App() {
       <div>
         <Top></Top>
         <Hero></Hero>
+        <Section backgroundColor="white">
+          <Solutions />
+        </Section>
+        <Section backgroundColor="#EEEEEE">
+          <Services />
+        </Section>
+        <Section backgroundColor="white">
+          <Authority />
+        </Section>
         <div className="container-app-content mx-auto">
-          <Services></Services>
           <Companies></Companies>
           <Bests></Bests>
           {/*
@@ -28,7 +39,6 @@ function App() {
           */}
         </div>
         {/* <Footer></Footer> */}
-        
       </div>
     </TranslationProvider>
   );

@@ -1,15 +1,10 @@
-.services__title {
-  margin-top: var(--spacing-2);
-  margin-bottom: var(--spacing-2);
-}
-
 .services_list {
+  padding-top: var(--spacing-2);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   gap: var(--spacing-3);
   margin: 0 auto;
   justify-items: center; /* centra horizontalmente el contenido de cada celda */
   align-items: start; /* alinea verticalmente el contenido al top de cada celda */
- }
-  
+}

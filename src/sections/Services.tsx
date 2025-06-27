@@ -5,8 +5,8 @@ import ControlImg from "./../assets/services/control.svg";
 import PropiedadImg from "./../assets/services/propiedad.svg";
 import VentaImg from "./../assets/services/venta.svg";
 import AlquilerImg from "./../assets/services/alquiler.svg";
-import PreventaImg from "./../assets/services/preventa.svg";
-import EquipoImg from "./../assets/services/equipo.svg";
+// import PreventaImg from "./../assets/services/preventa.svg";
+// import EquipoImg from "./../assets/services/equipo.svg";
 import { useState } from "react";
 
 function Services() {
@@ -17,7 +17,7 @@ function Services() {
       description: `Enfoque en bienes raices, 
       dashboards, gestion de propiedades, 
       mapas, cotizadores, etc.`,
-      cta: "Controla tu caos"
+      cta: "Controla tu caos",
     },
     {
       img: PropiedadImg,
@@ -25,43 +25,33 @@ function Services() {
       description: `Creamos sistemas donde puedes 
       mostrar tus propiedades, captar 
       clientes y medir resultados.`,
-      cta: "Controla tu caos"
+      cta: "Controla tu caos",
     },
     {
       img: VentaImg,
       title: "Ventas sin fricción",
       description: `Herramientas para que tus agentes vendan más con menos esfuerzo. Agendamiento de visitas, 
       `,
-      cta: "Controla tu caos"
+      cta: "Controla tu caos",
     },
     {
       img: AlquilerImg,
       title: "Alquileres automatizados",
       description: `Con nuestras apps puedes gestionar 
       alquileres, cobros`,
-      cta: "Controla tu caos"
-    },
-    {
-      img: PreventaImg,
-      title: "Preventas online",
-      description: `Plataformas para constructoras e inmobiliarias que lanzan proyectos: reservas en línea, pagos  .`,
-      cta: "Controla tu caos"
-    },
-    {
-      img: EquipoImg,
-      title: "Equipo tech",
-      description: `Nos encargamos de todo el proceso digital: diseño, desarrollo, soporte y mejora continua.`,
-      cta: "Controla tu caos"
+      cta: "Controla tu caos",
     },
   ]);
 
   return (
-    <div className="services">
-      <div className="services__title text-center text-bluesemi">
-        <h1 className="m-0 size-1 weight-semibold">
-          No solo pierdes tiempo,
-          <br />
-          también dinero
+    <div className="services text-black">
+      <div className="services__title text-center">
+        <h1 className="size-1">
+          ¿Que{" "}
+          <span className="text-secondary">
+            hacemos <br />
+          </span>
+          por ti? <br />
         </h1>
       </div>
 

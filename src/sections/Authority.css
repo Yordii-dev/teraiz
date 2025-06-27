@@ -1,0 +1,26 @@
+.authority {
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+
+.authority__socialproofs__proof:nth-child(2) {
+  margin-top: var(--spacing-2) !important;
+}
+.authority__socialproofs__proof:nth-child(3) {
+  margin-top: var(--spacing-2) !important;
+}
+
+.authority__socialproofs__proof p:nth-child(1) {
+  margin-right: var(--spacing-2);
+  min-width: 15rem !important;
+}
+
+/* @media (max-width: 768px) {
+  .solutions > div:first-child {
+    order: 2;
+  }
+
+  .solutions > div:nth-child(2) {
+    order: 1;
+  }
+} */

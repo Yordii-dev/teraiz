@@ -1,192 +1,188 @@
-.hero-container {
-  min-height: calc(100vh - var(--height-top));
+
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-.hero-container__hero {
-  gap: var(--spacing-2);
-  margin-left: var(--spacing-2);
-  margin-right: var(--spacing-2);
-}
-
-.hero-container__hero__content,
-.hero-container__img {
-  display: block;
-  width: 65.6rem;
+.hero__bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
   height: 100%;
+  background: url('./../assets/fondo.jpg') center/cover no-repeat;
+
+  z-index: 0;
 }
 
-.hero-container__hero__content__title {
-  text-align: left;
-}
-
-.hero-container__hero__content__subtitle {
-  text-align: left;
-  margin-top: var(--spacing-3);
-}
-
-.hero-container__hero__content__free p:last-of-type {  
-  margin-top: var(--spacing-6) !important;
-}
-
-
-.hero-container__hero__content__socialproof {
+.hero__overlay {
+  position: absolute;
+  top: 0; left: 0;
   width: 100%;
-  font-size: 1.4rem;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); // oscurece un 40%
+  z-index: 1;
 }
 
-.hero-container__img img {
-  width: 100%;
+.hero__content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  height: 100vh;
 }
 
-.socialproofs {
-  margin-bottom: var(--spacing-3);
-  width: max-content;
-}
-
-.socialproofs__list {
-  gap: var(--spacing-3);
+.hero__subtitle{
   margin-top: var(--spacing-3);
 }
 
-.hero-container__hero__content__free {
-  margin-top: var(--spacing-3);
-}
-
-/* 📱 Móviles pequeños */
-@media (max-width: 480px) {
-  .hero-container__hero {
-    margin-left: var(--spacing-3) !important;
-    margin-right: var(--spacing-3) !important;
-  }
-  
-   .hero-container__hero__content__free {
-    display: none !important;
-  } 
-  .hero-container__img {
-    display: none !important;
-  }
-  /* .socialproofs__title {
-    display: none;
-  } */
-  .socialproofs {    
-    width: 100%;
-
-    // display: none !important;
-  }
-  
-  .socialproofs__list {
-    max-width: calc(100% - 2 * var(--spacing-3));
-    margin-left: var(--spacing-3) !important;
-    margin-right: var(--spacing-3) !important;
-    width: 100% !important;
-  }
-
-   .hero-container__hero__content__title, .hero-container__hero__content__subtitle{
-    text-align: center;
-  }
-}
-
-/* 📱 Móviles grandes */
-@media (min-width: 481px) and (max-width: 767px) {
-  .hero-container__hero__content {    
-      width: 100%;
-      margin-left: var(--spacing-3) !important;
-      margin-right: var(--spacing-3) !important;
-  }
-  // .hero-container__hero {
-  //   margin-top: var(--spacing-3) !important;
-  // }
-  .hero-container__img {
-    display: none !important;
-  }
-  .socialproofs__title {
+@media (max-width: 768px) {
+  .hero__content__socialproof-lg {
     display: none;
   }
 
-  .socialproofs {
-    width: 100%;
-    margin-bottom: var(--spacing-3);
-  }
-
-  .socialproofs__list {
-    max-width: calc(100% - 2 * var(--spacing-3));
-    margin-left: var(--spacing-3) !important;
-    margin-right: var(--spacing-3) !important;
-    width: 100% !important;
-  }
-
-   .hero-container__hero__content__free {
-    display: none !important;
-  } 
-  /* .socialproofs {
-    display: none !important;
-  } */
-
-   .hero-container__hero__content__title, .hero-container__hero__content__subtitle{
-    text-align: center;
-  }
-}
-
-/* 📱 Tablets y laptops pequeñas */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .hero-container__img {
-    display: none !important;
-  }
-
-  .socialproofs__title {
-    display: none;
-  }
-  
-  .hero-container__hero__content__title, .hero-container__hero__content__subtitle, .hero-container__hero__content__free p{
-    text-align: center;
-  }
-}
-
-/* Laptops medianas */
-@media (min-width: 1025px) and (max-width: 1440px) {
-
-  .socialproofs,
-  .hero-container__hero__content__free {
-    display: none !important;
-  }
-  .hero-container__hero {
-    margin-left: var(--spacing-3) !important;
-    margin-right: var(--spacing-3) !important;
-  }
-}
-
-/* 🖥️ Pantallas grandes (Full HD) hasta 1920px */
-@media (min-width: 1441px) and (max-width: 1920px) {
-
-}
-
-/*HEIGH RESPONSIVE*/
-
-@media (min-height:600px) and (max-height: 800px) {
-  .socialproofs {
-    display: none !important;
-  }
-
-  .hero-container__hero__content__free__maintenance {
-    display: none;
-  }
-
-  
-  .hero-container__hero__content__free__socialproof {
+  .hero__content__socialproof-sm {
     display: block !important;
   }
 }
 
+// /* 📱 Móviles pequeños */
+// @media (max-width: 480px) {
+//   .hero-container__hero {
+//     margin-left: var(--spacing-3) !important;
+//     margin-right: var(--spacing-3) !important;
+//   }
+  
+//    .hero-container__hero__content__free {
+//     display: none !important;
+//   } 
+//   .hero-container__img {
+//     display: none !important;
+//   }
+//   /* .socialproofs__title {
+//     display: none;
+//   } */
+//   .socialproofs {    
+//     width: 100%;
 
-@media (min-height:801px) and (max-height: 950px) { 
-  .socialproofs__title {
-    display: none !important;
-  }
-}
+//     // display: none !important;
+//   }
+  
+//   .socialproofs__list {
+//     max-width: calc(100% - 2 * var(--spacing-3));
+//     margin-left: var(--spacing-3) !important;
+//     margin-right: var(--spacing-3) !important;
+//     width: 100% !important;
+//   }
 
-@media (min-height:950px){
+//    .hero-container__hero__content__title, .hero-container__hero__content__subtitle{
+//     text-align: center;
+//   }
+// }
+
+// /* 📱 Móviles grandes */
+// @media (min-width: 481px) and (max-width: 767px) {
+//   .hero-container__hero__content {    
+//       width: 100%;
+//       margin-left: var(--spacing-3) !important;
+//       margin-right: var(--spacing-3) !important;
+//   }
+//   // .hero-container__hero {
+//   //   margin-top: var(--spacing-3) !important;
+//   // }
+//   .hero-container__img {
+//     display: none !important;
+//   }
+//   .socialproofs__title {
+//     display: none;
+//   }
+
+//   .socialproofs {
+//     width: 100%;
+//     margin-bottom: var(--spacing-3);
+//   }
+
+//   .socialproofs__list {
+//     max-width: calc(100% - 2 * var(--spacing-3));
+//     margin-left: var(--spacing-3) !important;
+//     margin-right: var(--spacing-3) !important;
+//     width: 100% !important;
+//   }
+
+//    .hero-container__hero__content__free {
+//     display: none !important;
+//   } 
+//   /* .socialproofs {
+//     display: none !important;
+//   } */
+
+//    .hero-container__hero__content__title, .hero-container__hero__content__subtitle{
+//     text-align: center;
+//   }
+// }
+
+// /* 📱 Tablets y laptops pequeñas */
+// @media (min-width: 768px) and (max-width: 1024px) {
+//   .hero-container__img {
+//     display: none !important;
+//   }
+
+//   .socialproofs__title {
+//     display: none;
+//   }
+  
+//   .hero-container__hero__content__title, .hero-container__hero__content__subtitle, .hero-container__hero__content__free p{
+//     text-align: center;
+//   }
+// }
+
+// /* Laptops medianas */
+// @media (min-width: 1025px) and (max-width: 1440px) {
+
+//   .socialproofs,
+//   .hero-container__hero__content__free {
+//     display: none !important;
+//   }
+//   .hero-container__hero {
+//     margin-left: var(--spacing-3) !important;
+//     margin-right: var(--spacing-3) !important;
+//   }
+// }
+
+// /* 🖥️ Pantallas grandes (Full HD) hasta 1920px */
+// @media (min-width: 1441px) and (max-width: 1920px) {
+
+// }
+
+// /*HEIGH RESPONSIVE*/
+
+// @media (min-height:600px) and (max-height: 800px) {
+//   .socialproofs {
+//     display: none !important;
+//   }
+
+//   .hero-container__hero__content__free__maintenance {
+//     display: none;
+//   }
+
+  
+//   .hero-container__hero__content__free__socialproof {
+//     display: block !important;
+//   }
+// }
+
+
+// @media (min-height:801px) and (max-height: 950px) { 
+//   .socialproofs__title {
+//     display: none !important;
+//   }
+// }
+
+// @media (min-height:950px){
  
-  .socialproofs__title {
-    display: block !important;
-  }
-}
+//   .socialproofs__title {
+//     display: block !important;
+//   }
+// }

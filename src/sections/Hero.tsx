@@ -1,60 +1,44 @@
 import "./Hero.scss";
-
-import SocialProof from "../components/SocialProof";
 import Cta from "../components/Cta";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShieldAlt } from "@fortawesome/free-solid-svg-icons";
 
 function Hero() {
   return (
-    <div className="hero-container bg-primary d-flex flex-column justify-content-between">
-      <div className="hero-container__hero mx-auto my-auto d-flex align-items-center justify-content-center">
-        <div className="hero-container__hero__content text-white d-flex flex-column justify-content-center">
-          <div className="hero-container__hero__content__title">
-            <h1 className="size-0 weight-semibold m-0">
-              Del desorden a las ventas: ordena tu inmobiliaria y acelera el
-              cierre.{" "}
-            </h1>
-          </div>
-          <div className="hero-container__hero__content__subtitle">
-            <p className="size-2 weight-regular opacity-1 m-0">
-              En TechRaiz diseñamos sistemas para que recuperes el control de tu
-              inmobiliaria.
-            </p>
-          </div>
-          <Cta />
+    <div className="hero">
+      <div className="hero__bg" />
+      <div className="hero__overlay" />
+      <div
+        className="hero__content d-flex 
+        flex-column align-items-center justify-content-center 
+         "
+      >
+        <div className="my-auto">
+          <h1 className="hero__title size-0">
+            Convierte el caos inmobiliario en <br /> gestión y flujo
+          </h1>
+          <p className="hero__subtitle size-2">
+            Expertos en sistemas para que recuperes el control,
+            <br /> automatices tareas y hagas{" "}
+          </p>
 
-          <div className="hero-container__hero__content__free size-4 weight-regular text-white">
-            <p className="p-0 m-0">
-              ¡Aprovecha ahora un{" "}
-              <span className="weight-semibold text-secondary">
-                40% de descuento
-              </span>{" "}
-              exclusivo!
-            </p>
-            <p className="p-0 m-0 hero-container__hero__content__free__maintenance">
-              Mantenimiento al año{" "}
-              <span className="weight-semibold text-secondary">gratis</span> en
-              tu primer proyecto.
-            </p>
-            <p className="p-0 m-0 d-none hero-container__hero__content__free__socialproof">
-              <span className="weight-semibold text-secondary">+8 años</span>{" "}
-              creando sistemas a medida para inmobiliarias.
-            </p>
-          </div>
+          <Cta text="Cotiza gratis con 40% dsct" />
         </div>
+        <div className="mt-auto">
+          <div className="d-flex align-items-center">
+            <FontAwesomeIcon
+              icon={faShieldAlt}
+              style={{ width: "25px", height: "25px" }}
+            />
 
-        <div className="hero-container__img d-flex justify-content-center align-items-center">
-          <img src="img/img-hero.svg" alt="" />
-        </div>
-      </div>
-
-      <div className="socialproofs mx-auto text-white text-center">
-        <p className="socialproofs__title size-3 opacity-1 m-0">
-          Las empresas confian en nosotros
-        </p>
-        <div className="socialproofs__list d-flex justify-content-between">
-          <SocialProof text="+8 años" />
-          <SocialProof text="LATAM & Norteamerica" />
-          <SocialProof text="Inmobiliarias" />
+            <p className="my-0 mleft-5 hero__content__socialproof-lg">
+              Confianza comprobada: +8 años transformando inmobiliarias en LATAM
+              & Norteamérica.
+            </p>
+            <p className="my-0 mleft-5 hero__content__socialproof-sm d-none">
+              +8 años transformando inmobiliarias.
+            </p>
+          </div>
         </div>
       </div>
     </div>

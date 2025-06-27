@@ -1,0 +1,28 @@
+.solutions {
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.solutions__subtitle {
+  margin-top: var(--spacing-3);
+}
+
+.solutions__off {
+  margin-top: var(--spacing-3);
+}
+.solutions__img img {
+  width: 100%;
+  height: 100%;
+}
+.solutions__cta {
+  margin-top: var(--spacing-3) !important;
+}
+
+@media (max-width: 768px) {
+  .solutions > div:first-child {
+    order: 2;
+  }
+
+  .solutions > div:nth-child(2) {
+    order: 1;
+  }
+}

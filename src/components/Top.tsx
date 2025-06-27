@@ -1,17 +1,13 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookSquare,
-  faLinkedin,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
 import "./Top.css";
-import { useTranslation } from "../context/TranslationContext";
-import Corporate from "./Corporate";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+// import { useTranslation } from "../context/TranslationContext";
 import { useEffect, useState } from "react";
+import Logo from "./../assets/logo.svg";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 function Top() {
-  const { lang, setLang } = useTranslation();
+  // const { lang, setLang } = useTranslation();
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
 
@@ -27,80 +23,22 @@ function Top() {
   }, []);
 
   return (
-    <div className="top-container size-2 fw-semibold text-bluedark px-4 d-flex justify-content-between align-items-center shadow-lg">
-      <div className="top__start">
-        <div className="show-desktop">
-          <Corporate />
-        </div>
-
-        <div className="show-mobile">
-          <FontAwesomeIcon
-            icon={faEnvelope}
-            style={{ width: "25px", height: "25px" }}
-          />
-        </div>
+    <div className="top-container size-2 weight-regular d-flex justify-content-between align-items-center shadow-lg">
+      <div className="top-container__logo">
+        <img src={Logo} alt="Techraiz Logo" />
       </div>
 
       <div className="top__logo">
-        {/* <img src="/img/logo-light.svg" alt="Techraiz Logo" /> */}
         {width}px × {height}px
-
       </div>
 
-      <div className="top__end d-flex justify-content-between align-items-center">
-        <div className="d-flex mx-auto align-items-center justify-content-between">
-          <span
-            className={lang === "es" ? "font-black" : ""}
-            role="button"
-            onClick={() => setLang("es")}
-          >
-            {width} px
-          </span>
-          <span className="mx-2">|</span>
-          <span
-            className={lang === "en" ? "font-black" : ""}
-            role="button"
-            onClick={() => setLang("en")}
-          >
-            EN
-          </span>
-        </div>
-        <div className="top__end__socials d-flex justify-content-between align-items-center ms-5">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon
-              icon={faFacebookSquare}
-              className="text-bluedark"
-              style={{ width: "25px", height: "25px" }}
-            />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon
-              icon={faLinkedin}
-              style={{ width: "25px", height: "25px" }}
-              className="text-bluedark"
-            />
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon
-              icon={faTwitter}
-              style={{ width: "25px", height: "25px" }}
-              className="text-bluedark"
-            />
-          </a>
-        </div>
-      </div>
+      <button className="top__cta d-flex align-items-center px-4 btn size-3 text-secondary">
+        <FontAwesomeIcon
+          style={{ width: "25px", height: "25px" }}
+          icon={faWhatsapp}
+        />
+        <span className="mleft-5">Hablemos</span>
+      </button>
     </div>
   );
 }

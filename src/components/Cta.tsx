@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Cta.css";
 import { useTranslation } from "../context/TranslationContext";
 
-function Cta() {
+function Cta({ text }: any) {
   const { t } = useTranslation();
 
   const [email, setEmail] = useState("");
@@ -29,13 +29,13 @@ function Cta() {
         <p>Planes segun presupuesto</p>
       </div>
       <button
-        className="w-100 btn size-3 bg-white text-primary weight-semibold border-radius"
+        className="w-100 btn size-3 bg-white text-black weight-semibold border-radius"
         onClick={handleClick}
         data-bs-toggle="modal"
         data-bs-target="#successModal"
         disabled={!email.trim()}
       >
-        Cotiza gratis <span className="btn__txt40dto d-none">con 40% dto</span>
+        {text}
       </button>
     </div>
   );
