@@ -4,7 +4,7 @@ function Authority() {
   return (
     <div className="authority text-black d-flex align-items-start justify-content-between">
       <div className="authority__title">
-        <h1 className="size-1">
+        <h1 className="size-1 weight-semibold">
           Somos<span className="text-secondary"> expertos </span> en
           <br />
           lo que hacemos

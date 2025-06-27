@@ -46,7 +46,7 @@ function Services() {
   return (
     <div className="services text-black">
       <div className="services__title text-center">
-        <h1 className="size-1">
+        <h1 className="size-1 weight-semibold">
           ¿Que{" "}
           <span className="text-secondary">
             hacemos <br />

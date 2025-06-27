@@ -2,7 +2,6 @@
   margin-top: var(--spacing-2);
 }
 .container__cta input {
-  border: 1px solid var(--color-cuaternary) !important;
   outline: none;
   background-color: transparent;
   height: var(--height-cta);
@@ -16,17 +15,15 @@
 }
 
 .container__cta button {
+  margin-top: var(--spacing-6);
   position: relative;
   width: 12rem;
   border-radius: var(--border-radius);
   border: none;
   outline: none;
-  background-color: var(--color-secondary);
-  color: white;
   cursor: pointer;
   z-index: 1;
   height: var(--height-cta);
-  margin-top: var(--spacing-6);
 }
 
 .container__cta button::after {
@@ -37,15 +34,15 @@
   width: 0;
   height: 0;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
+  /* border-radius: 50%; */
   transform: translate(-50%, -50%);
   transition: width 0.5s ease, height 0.5s ease;
   pointer-events: none;
   z-index: 0;
 }
 .container__cta button:hover::after {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
 }
 
 button:disabled {

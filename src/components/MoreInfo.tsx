@@ -52,7 +52,7 @@ const MoreInfo = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="nombre@ejemplo.com"
-                  className="form-control modern-input"
+                  className="form-control modern-input border-black"
                 />
               </div>
               <div className="form-group">
@@ -63,7 +63,7 @@ const MoreInfo = () => {
                   id="mensaje"
                   rows={4}
                   placeholder="Escríbenos los detalles de tu idea..."
-                  className="form-control modern-input"
+                  className="form-control modern-input border-black"
                 ></textarea>
               </div>
             </form>

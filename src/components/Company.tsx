@@ -10,10 +10,10 @@ function Company({ img, title, author, description }: any) {
         <p className="company__title size-2 weight-semibold text-dark">
           "{title}"
         </p>
-        <p className="company__author size-5 weight-regular text-secondary">
+        <p className="company__author size-4 weight-regular text-secondary">
           {author}
         </p>
-        <p className="company__desc size-4 weight-regular text-dark">
+        <p className="company__desc size-3 weight-regular text-dark">
           "{description}"
         </p>
       </div>

@@ -1,0 +1,11 @@
+.question:not(:first-child) {
+  margin-top: var(--spacing-3) !important;
+}
+
+.question__answer {
+  margin-top: var(--spacing-3);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

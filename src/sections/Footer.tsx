@@ -5,8 +5,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import "./Footer.css";
+import Logodark from "../assets/LOGO-DARK.svg";
 
-import "./Footer.css"; // Assuming you have a CSS file for styling
 import Cta from "../components/Cta";
 function Footer() {
   const [data, _] = useState({
@@ -47,16 +48,21 @@ function Footer() {
   });
 
   return (
-    <div className="footer bg-bluedark text-white px-4">
-      <div className="d-flex justify-content-between mx-auto">
+    <div className="footer bg-white text-black">
+      <div className="footer__cta d-flex justify-content-between mx-auto">
         <div className="me-5">
-          <div className="">
-            <img src="/img/logo-dark.svg" alt="Techraiz Logo" />
-          </div>
-          <p className="fw-bold mt-5 footer__cta_title">
+          <img src={Logodark} alt="Techraiz Logo" />
+
+          <p className="weight-semibold size-2 footer__cta_title">
             Control para tu inmobiliaria, adaptado a tu presupuesto.
           </p>
-          <Cta />
+          <Cta
+            btnBg="bg-secondary"
+            textColor="text-black"
+            text="Agendar una asesoria"
+            textInputColor="text-black"
+            borderInput="border-black"
+          />
         </div>
 
         <div className="d-flex ms-5 w-75 justify-content-between">

@@ -9,7 +9,7 @@ function Solutions() {
   return (
     <div className="solutions text-black d-flex justify-content-between">
       <div className="d-flex flex-column">
-        <h1 className="size-1">
+        <h1 className="size-1 weight-semibold">
           Tu inmobiliaria necesita <br />
           <span className="text-secondary">de nosotros</span>
         </h1>
@@ -21,19 +21,19 @@ function Solutions() {
         <div className="solutions__off">
           <div className="d-flex">
             <FontAwesomeIcon
-              className="text-secondary"
+              className="text-secondary size-icon"
               icon={faCircleDollarToSlot}
-              style={{ width: "25px", height: "25px" }}
             />
-            <p className="size-4 mleft-5">1 año de mantenimiento sin costo</p>
+            <p className="size-3 mleft-5 my-0">
+              1 año de mantenimiento sin costo
+            </p>
           </div>
           <div className="d-flex">
             <FontAwesomeIcon
-              className="text-secondary"
+              className="text-secondary size-icon"
               icon={faScrewdriverWrench}
-              style={{ width: "25px", height: "25px" }}
             />
-            <p className="size-4 mleft-5">40% de descuento exclusivo </p>
+            <p className="size-3 mleft-5 my-0">40% de descuento exclusivo </p>
           </div>
         </div>
         <div className="solutions__cta mt-auto">

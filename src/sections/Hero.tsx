@@ -1,7 +1,7 @@
 import "./Hero.scss";
 import Cta from "../components/Cta";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShieldAlt } from "@fortawesome/free-solid-svg-icons";
+import { faShield } from "@fortawesome/free-solid-svg-icons";
 
 function Hero() {
   return (
@@ -14,7 +14,7 @@ function Hero() {
          "
       >
         <div className="my-auto">
-          <h1 className="hero__title size-0">
+          <h1 className="hero__title size-0 weight-semibold">
             Convierte el caos inmobiliario en <br /> gestión y flujo
           </h1>
           <p className="hero__subtitle size-2">
@@ -22,14 +22,17 @@ function Hero() {
             <br /> automatices tareas y hagas{" "}
           </p>
 
-          <Cta text="Cotiza gratis con 40% dsct" />
+          <Cta
+            text="Cotiza gratis con 40% dsct"
+            btnBg="bg-secondary"
+            textColor="text-black"
+            textInputColor="text-white"
+            borderInput="border-cuaternary"
+          />
         </div>
         <div className="mt-auto">
           <div className="d-flex align-items-center">
-            <FontAwesomeIcon
-              icon={faShieldAlt}
-              style={{ width: "25px", height: "25px" }}
-            />
+            <FontAwesomeIcon className="size-icon" icon={faShield} />
 
             <p className="my-0 mleft-5 hero__content__socialproof-lg">
               Confianza comprobada: +8 años transformando inmobiliarias en LATAM

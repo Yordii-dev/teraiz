@@ -1,6 +1,5 @@
 .btn__cta {
   position: relative;
-  border: 1px solid var(--color-black);
   /* width: 12rem; */
   border-radius: var(--border-radius);
   outline: none;

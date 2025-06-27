@@ -12,7 +12,6 @@
 }
 
 .top__cta {
-  border: 1px solid var(--color-secondary);
   height: var(--height-cta) - 10px;
   border-radius: 2.5rem;
 }

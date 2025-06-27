@@ -5,10 +5,7 @@
 .authority__socialproofs__proof {
   flex-wrap: wrap;
 }
-.authority__socialproofs__proof:nth-child(2) {
-  margin-top: var(--spacing-2) !important;
-}
-.authority__socialproofs__proof:nth-child(3) {
+.authority__socialproofs__proof:not(:first-child) {
   margin-top: var(--spacing-2) !important;
 }
 

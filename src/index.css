@@ -13,7 +13,10 @@
   --color-blue-semidark: #03254c;
   --color-gray1: #f5f8fa;
   --color-black: #1a1a1a;
+
   --width-top-socials: 99px;
+  /*ICON*/
+  --wh-icon: 25px;
 
   /*TESTIMONY*/
   --wh-testimonyimg: 90px;
@@ -21,7 +24,7 @@
 
   /*CARD*/
   --width-card: 100%;
-  --height-card: 100%;
+  --height-card: 550px;
   --width-cardimg: 80px;
   --height-cardimg: 80px;
 
@@ -100,14 +103,52 @@ h1,
 h2,
 h3 {
   font-family: var(--font-heading);
+  margin-bottom: 0px;
 }
 
 body,
 p,
 span {
+  margin-bottom: 0px;
+
   font-family: var(--font-body);
 }
+.border-primary {
+  border: 1px solid var(--color-primary) !important;
+}
 
+.border-secondary {
+  border: 1px solid var(--color-secondary) !important;
+}
+
+.border-tertiary {
+  border: 1px solid var(--color-tertiary) !important;
+}
+
+.border-cuaternary {
+  border: 1px solid var(--color-cuaternary) !important;
+}
+
+.border-bluedark {
+  border: 1px solid var(--color-blue-dark) !important;
+}
+
+.border-bluesemi {
+  border: 1px solid var(--color-blue-semidark) !important;
+}
+
+.border-gray1 {
+  border: 1px solid var(--color-gray1) !important;
+}
+
+.border-black {
+  border: 1px solid var(--color-black) !important;
+}
+
+.size-icon {
+  width: var(--wh-icon);
+  height: var(--wh-icon);
+}
 .border-radius {
   border-radius: var(--border-radius) !important;
 }
@@ -210,19 +251,19 @@ span {
   margin-left: var(--spacing-5);
 }
 
-
 @media (max-width: 767px) {
   /**/
   :root {
     --width-card: 288px;
-    --height-card: 250px;
+    --wh-icon: 20px;
+    --height-card: 350px;
     --width-cardimg: 55px;
     --height-cardimg: 55px;
 
     --width-logo: 47.16px;
     --height-logo: 38.33px;
     --height-top: 55px;
-    /*--height-cta: 44px;*/
+    /* --height-cta: 44px; */
     --pl-ctainput: 12px;
 
     --size-0: 40px;

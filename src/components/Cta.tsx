@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Cta.css";
 import { useTranslation } from "../context/TranslationContext";
 
-function Cta({ text }: any) {
+function Cta({ text, btnBg, textColor, textInputColor, borderInput }: any) {
   const { t } = useTranslation();
 
   const [email, setEmail] = useState("");
@@ -18,18 +18,18 @@ function Cta({ text }: any) {
   return (
     <div className="container__cta d-flex flex-column">
       <input
-        className="text-white size-3 flex-grow-1 border-radius"
+        className={`${textInputColor} ${borderInput} size-3 flex-grow-1 border-radius`}
         type="email"
         placeholder="Tu email de contacto"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <div className="container__cta__objections size-4 opacity-3 weight-semibold text-white d-flex justify-content-between">
+      <div className="container__cta__objections size-4 opacity-3 weight-regular text-white d-flex justify-content-between">
         <p>{t.hero.socialproof}</p>
         <p>Planes segun presupuesto</p>
       </div>
       <button
-        className="w-100 btn size-3 bg-white text-black weight-semibold border-radius"
+        className={`w-100 btn ${textColor} size-3 ${btnBg} weight-semibold border-radius`}
         onClick={handleClick}
         data-bs-toggle="modal"
         data-bs-target="#successModal"

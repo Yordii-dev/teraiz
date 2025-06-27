@@ -1,7 +1,10 @@
 .footer {
-  margin-top: 10rem;
+  padding-left: var(--spacing-3);
+  padding-right: var(--spacing-3);
 }
-
+.footer__cta_title {
+  margin-top: var(--spacing-3);
+}
 .footer > div {
   max-width: 200rem;
   padding-top: 4rem;

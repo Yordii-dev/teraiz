@@ -4,10 +4,6 @@
   height: var(--height-testimony);
 }
 
-.company__content {
-  gap: var(--spacing-4);
-}
-
 .company__img {
   width: var(--wh-testimonyimg);
   height: var(--wh-testimonyimg);

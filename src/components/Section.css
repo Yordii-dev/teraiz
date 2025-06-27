@@ -1,5 +1,6 @@
 .section {
-  padding: var(--spacing-2);
+  min-height: 80vh;
+  padding: var(--spacing-2) var(--spacing-3);
 }
 
 .section__content {

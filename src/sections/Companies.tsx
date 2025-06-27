@@ -48,7 +48,7 @@ function Companies() {
   return (
     <div className="compaines text-black d-flex align-items-center justify-content-between">
       <div className="compaines__title">
-        <h1 className="size-1">
+        <h1 className="size-1 weight-semibold">
           <span className="text-secondary">2025 </span>
           <br />
           Es el año para
