@@ -48,7 +48,7 @@ function Top() {
 
       <button className="top__cta border-secondary d-flex align-items-center px-4 btn size-3 text-secondary">
         <FontAwesomeIcon className="size-icon" icon={faWhatsapp} />
-        <span className="mleft-5">Hablemos</span>
+        <span className="mleft-5">Cotiza</span>
       </button>
     </div>
   );
