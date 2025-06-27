@@ -14,7 +14,7 @@
   height: 100%;
 }
 .solutions__cta {
-  margin-top: var(--spacing-3) !important;
+  margin-top: var(--spacing-2) !important;
 }
 
 @media (max-width: 768px) {

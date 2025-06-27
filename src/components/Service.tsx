@@ -12,7 +12,7 @@ function Service({ img, title, description, cta }: any) {
       <p className="service__des size-4 text-center weight-regular text-primary">
         {description}
       </p>
-      <div className="solutions__cta mt-auto">
+      <div className="mt-auto">
         <BtnCta text={cta} />
       </div>
       {/* <p className="service__cta size-3 weight-semibold text-secondary mt-auto">

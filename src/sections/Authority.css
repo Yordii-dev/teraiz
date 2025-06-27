@@ -1,8 +1,10 @@
 .authority {
-  flex-wrap: nowrap;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
 }
-
+.authority__socialproofs__proof {
+  flex-wrap: wrap;
+}
 .authority__socialproofs__proof:nth-child(2) {
   margin-top: var(--spacing-2) !important;
 }
@@ -11,8 +13,8 @@
 }
 
 .authority__socialproofs__proof p:nth-child(1) {
-  margin-right: var(--spacing-2);
-  min-width: 15rem !important;
+  margin-right: var(--spacing-3);
+  min-width: 10rem !important;
 }
 
 /* @media (max-width: 768px) {

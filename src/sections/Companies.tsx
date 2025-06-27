@@ -46,13 +46,14 @@ function Companies() {
   };
 
   return (
-    <div className="compaines">
-      <div className="compaines__title text-bluesemi h-100">
-        <h1 className="m-0 size-1 weight-semibold">
-          <span className="text-secondary">2025</span>
+    <div className="compaines text-black d-flex align-items-center justify-content-between">
+      <div className="compaines__title">
+        <h1 className="size-1">
+          <span className="text-secondary">2025 </span>
           <br />
-          otros escalan
-          <br />y tu aun dudas
+          Es el año para
+          <br />
+          escalar
         </h1>
       </div>
       <div className="compaines__list h-100 border-radius">

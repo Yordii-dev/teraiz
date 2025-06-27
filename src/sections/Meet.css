@@ -1,0 +1,17 @@
+.meet {
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+.meet__content__cta {
+  margin-top: var(--spacing-2) !important;
+}
+
+@media (max-width: 768px) {
+  .meet > div:first-child {
+    order: 2;
+  }
+
+  .meet > div:nth-child(2) {
+    order: 1;
+  }
+}

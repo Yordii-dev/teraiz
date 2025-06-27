@@ -10,10 +10,12 @@ import Hero from "./sections/Hero";
 import Services from "./sections/Services";
 import "./i18n";
 import { TranslationProvider } from "./context/TranslationContext";
-import Bests from "./sections/Bests";
+// import Bests from "./sections/Bests";
 import Solutions from "./sections/Solutions";
 import Section from "./components/Section";
 import Authority from "./sections/Authority";
+import Meet from "./sections/Meet";
+import Faq from "./sections/Faq";
 
 function App() {
   return (
@@ -30,14 +32,16 @@ function App() {
         <Section backgroundColor="white">
           <Authority />
         </Section>
-        <div className="container-app-content mx-auto">
+        <Section backgroundColor="#EEEEEE">
+          <Meet />
+        </Section>
+        <Section backgroundColor="white">
           <Companies></Companies>
-          <Bests></Bests>
-          {/*
-            <MoreInfo />
-            <SuccessModal />
-          */}
-        </div>
+        </Section>
+        <Section backgroundColor="#EEEEEE">
+          <Faq></Faq>
+        </Section>
+
         {/* <Footer></Footer> */}
       </div>
     </TranslationProvider>

@@ -7,7 +7,7 @@ function BtnCta({ text }: any) {
       <span>{text}</span>
       <FontAwesomeIcon
         className="mleft-5"
-        style={{ width: "25px", height: "25px" }}
+        style={{ width: "20px", height: "20px" }}
         icon={faArrowRight}
       />
     </button>

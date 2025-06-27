@@ -1,6 +1,6 @@
 .top-container {
-  margin-left: var(--spacing-3);
-  margin-right: var(--spacing-3);
+  padding-left: var(--spacing-3);
+  padding-right: var(--spacing-3);
   position: fixed;
   z-index: 2000;
   top: 0;
