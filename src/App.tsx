@@ -1,7 +1,6 @@
-//import { useEffect } from "react";
 import "./App.css";
-//import MoreInfo from "./components/MoreInfo";
-//import SuccessModal from "./components/SuccessModal";
+import MoreInfo from "./components/MoreInfo";
+import SuccessModal from "./components/SuccessModal";
 import Top from "./components/Top";
 import Companies from "./sections/Companies";
 import Footer from "./sections/Footer";
@@ -9,7 +8,6 @@ import Hero from "./sections/Hero";
 import Services from "./sections/Services";
 import "./i18n";
 import { TranslationProvider } from "./context/TranslationContext";
-// import Bests from "./sections/Bests";
 import Solutions from "./sections/Solutions";
 import Section from "./components/Section";
 import Authority from "./sections/Authority";
@@ -32,16 +30,18 @@ function App() {
           <Authority />
         </Section>
         <Section backgroundColor="#EEEEEE">
-          <Meet />
+          <Companies></Companies>
         </Section>
         <Section backgroundColor="white">
-          <Companies></Companies>
+          <Meet />
         </Section>
         <Section backgroundColor="#EEEEEE">
           <Faq></Faq>
         </Section>
 
         <Footer></Footer>
+        <MoreInfo />
+        <SuccessModal />
       </div>
     </TranslationProvider>
   );

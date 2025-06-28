@@ -90,14 +90,14 @@ body {
 html {
   font-size: 62.5%; /* 1rem = 10px */
 }
-
+/* 
 .modal {
   z-index: 20000 !important;
   position: fixed !important;
 }
 .modal-backdrop {
   z-index: 19990 !important;
-}
+} */
 
 body {
   font-size: 1.6rem; /* 16px */

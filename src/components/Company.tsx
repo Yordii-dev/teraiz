@@ -2,7 +2,7 @@ import "./Company.css";
 
 function Company({ img, title, author, description }: any) {
   return (
-    <div className="company bg-gray1 border-radius d-flex justify-content-between align-items-center mx-auto">
+    <div className="company bg-white border-radius d-flex justify-content-between align-items-center mx-auto">
       <div className="company__img d-flex align-items-center justify-content-center">
         <img src={img} alt={title} />
       </div>

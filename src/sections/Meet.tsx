@@ -31,7 +31,7 @@ function Meet() {
         </div>
       </div>
       <div className={`meet__title ${isWrapped ? "order-1" : "order-2"}`}>
-        <h1 className="size-1 weight-semibold">
+        <h1 className="size-0 weight-semibold">
           Agenda una <span className="text-secondary"> reunion </span>
           <br />
           con nosotros

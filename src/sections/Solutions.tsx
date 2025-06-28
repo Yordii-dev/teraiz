@@ -9,7 +9,7 @@ function Solutions() {
   return (
     <div className="solutions text-black d-flex justify-content-between">
       <div className={`solutions__content d-flex flex-column`}>
-        <h1 className="size-1 weight-semibold">
+        <h1 className="size-0 weight-semibold">
           Haz crecer tu inmobiliaria <br />
           <span className="text-secondary">con tecnología real</span>
         </h1>
@@ -19,30 +19,24 @@ function Solutions() {
           pierdes tiempo, ventas y oportunidades.
           <br />
           <br />
-          Digitaliza tu operación y obtén:
+          Digitaliza tu operación: gestiona propiedades, agentes, cobros y
+          terrenos de forma automática.
         </p>
-
-        <ul className="solutions__benefits-list size-2 mt-3">
-          <li>Clientes directos a tu WhatsApp</li>
-          <li>Gestión de agentes y propiedades</li>
-          <li>Cobros y seguimientos automáticos</li>
-          <li>Control de terrenos y lotizaciones</li>
-        </ul>
 
         <div className="solutions__content__off">
           <div className="d-flex align-items-center">
             <img src={dollarIcon} />
             <p className="size-3 mleft-5 my-0">
-              1 año de mantenimiento sin costo
+              1 año de mantenimiento sin costo.
             </p>
           </div>
           <div className="d-flex align-items-center">
             <img src={maintenanceIcon} />
-            <p className="size-3 mleft-5 my-0">40% de descuento exclusivo </p>
+            <p className="size-3 mleft-5 my-0">40% de descuento exclusivo. </p>
           </div>
         </div>
         <div className="solutions__content__cta mt-auto">
-          <BtnCta text="Cotiza gratis hoy" />
+          <BtnCta text="Contactanos ahora" />
         </div>
       </div>
 

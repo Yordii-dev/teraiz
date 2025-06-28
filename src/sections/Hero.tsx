@@ -20,7 +20,6 @@ function Hero() {
             Menos caos. Más ventas. Todo en un solo sistema.
           </p>
 
-          {/* <div className="w-75 mx-auto"> */}
           <Cta
             text="Cotiza con 40% de descuento"
             btnBg="bg-secondary"
@@ -28,7 +27,6 @@ function Hero() {
             textInputColor="text-white"
             borderInput="border-cuaternary"
           />
-          {/* </div> */}
         </div>
         <div className="mt-auto">
           <div className="d-flex align-items-center">

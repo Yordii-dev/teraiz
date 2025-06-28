@@ -37,8 +37,8 @@ function Top() {
   return (
     <div
       className={`${
-        scrolled ? "bg-white" : ""
-      } top-container size-2 weight-regular d-flex justify-content-between align-items-center shadow-lg`}
+        scrolled ? "bg-white shadow-lg" : ""
+      } top-container size-2 weight-regular d-flex justify-content-between align-items-center`}
     >
       <div className="top-container__logo">
         <img
@@ -54,7 +54,7 @@ function Top() {
 
       <button className="top__cta d-flex align-items-center px-4 btn size-3 text-secondary">
         <FontAwesomeIcon className="size-icon" icon={faWhatsapp} />
-        <span className="mleft-5">Cotiza</span>
+        <span className="mleft-5">Cotiza gratis hoy</span>
       </button>
     </div>
   );

@@ -7,6 +7,7 @@ const SuccessModal = () => {
       id="successModal"
       tabIndex={-1}
       aria-hidden="true"
+      data-bs-backdrop="static"
       aria-labelledby="successModalLabel"
     >
       <div className="modal-dialog modal-dialog-centered">
