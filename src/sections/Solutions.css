@@ -31,20 +31,8 @@
     order: 1;
   }
 
-  .solutions__content{
-    width: 100%;
-    text-align: center;
-  }
-  
+
   .solutions__img{
-    width: 100%;
-  }
-
-  .solutions__content__off > div{
-    justify-content: center;
-  }
-
-  .solutions__content__cta{
-    margin: 0 auto;
+    text-align: center;
   }
 }

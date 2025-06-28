@@ -48,7 +48,7 @@ function Top() {
         />
       </div>
 
-      <div className="top__logo tetx-black d-none"> {width}px × {height}px{" "}</div>
+      <div className="top__logo tetx-black"> {width}px × {height}px{" "}</div>
 
       <button className="top__cta border-secondary d-flex align-items-center px-4 btn size-3 text-secondary">
         <FontAwesomeIcon className="size-icon" icon={faWhatsapp} />

@@ -1,12 +1,16 @@
 import BtnCta from "../components/BtnCta";
+import { useFlexWrap } from "../hooks/useFlexWrap";
 import "./Meet.css";
 
 function Meet() {
+  const { containerRef, isWrapped } = useFlexWrap<HTMLDivElement>();
+
   return (
-    <div className="meet text-black d-flex align-items-start justify-content-between">
+    <div ref={containerRef} className={`meet text-black ${isWrapped ? 'flex-column-reverse': 'flex-row'} d-flex align-items-start justify-content-between`}>
       <div className="meet__content d-flex flex-column">
         <div className="meet__content__desc">
           <p className="size-2">
+            {isWrapped ? 'wrap':'no hizo wrap'}
             Soluciones digitales que transforman tu empresa.
             <br />
             Cotiza gratis tu proyecto y obten:
