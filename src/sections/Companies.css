@@ -33,10 +33,9 @@
   transform: scale(1.05);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   .compaines__title {
     width: 100%;
-
     text-align: center;
   }
 

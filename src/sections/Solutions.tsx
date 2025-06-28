@@ -8,17 +8,17 @@ import BtnCta from "../components/BtnCta";
 function Solutions() {
   return (
     <div className="solutions text-black d-flex justify-content-between">
-      <div className="d-flex flex-column">
+      <div className="solutions__content d-flex flex-column">
         <h1 className="size-1 weight-semibold">
           Tu inmobiliaria necesita <br />
           <span className="text-secondary">de nosotros</span>
         </h1>
-        <p className="solutions__subtitle size-2">
+        <p className="solutions__content__subtitle size-2">
           No solo pierdes tiempo, tambien dinero.
           <br />
           Cotiza gratis tu proyecto y obten:
         </p>
-        <div className="solutions__off">
+        <div className="solutions__content__off">
           <div className="d-flex">
             <FontAwesomeIcon
               className="text-secondary size-icon"
@@ -36,7 +36,7 @@ function Solutions() {
             <p className="size-3 mleft-5 my-0">40% de descuento exclusivo </p>
           </div>
         </div>
-        <div className="solutions__cta mt-auto">
+        <div className="solutions__content__cta mt-auto">
           <BtnCta text="Solicitar esto" />
         </div>
       </div>

@@ -11,8 +11,8 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 function Top() {
   // const { lang, setLang } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
-  // const [width, setWidth] = useState(window.innerWidth);
-  // const [height, setHeight] = useState(window.innerHeight);
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,8 +25,8 @@ function Top() {
 
   useEffect(() => {
     const handleResize = () => {
-      // setWidth(window.innerWidth);
-      // setHeight(window.innerHeight);
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
     };
 
     window.addEventListener("resize", handleResize);
@@ -48,7 +48,7 @@ function Top() {
         />
       </div>
 
-      <div className="top__logo"> {/* {width}px × {height}px{" "} */}</div>
+      <div className="top__logo tetx-black"> {width}px × {height}px{" "}</div>
 
       <button className="top__cta border-secondary d-flex align-items-center px-4 btn size-3 text-secondary">
         <FontAwesomeIcon className="size-icon" icon={faWhatsapp} />

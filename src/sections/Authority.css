@@ -14,12 +14,24 @@
   min-width: 10rem !important;
 }
 
-/* @media (max-width: 768px) {
-  .solutions > div:first-child {
-    order: 2;
+
+@media (max-width: 1300px) {
+
+  .authority > div{
+    width: 100%;
+    text-align: center;
+  }
+  
+  .solutions__img{
+    width: 100%;
   }
 
-  .solutions > div:nth-child(2) {
-    order: 1;
+  .authority__socialproofs__proof{
+    justify-content: center;
   }
-} */
+
+  .solutions__content__cta{
+    margin: 0 auto;
+  }
+}
+
