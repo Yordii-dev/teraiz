@@ -8,7 +8,7 @@ import BtnCta from "../components/BtnCta";
 function Solutions() {
   return (
     <div className="solutions text-black d-flex justify-content-between">
-      <div className="solutions__content d-flex flex-column">
+      <div className={`solutions__content d-flex flex-column `}>
         <h1 className="size-1 weight-semibold">
           Tu inmobiliaria necesita <br />
           <span className="text-secondary">de nosotros</span>
@@ -41,7 +41,7 @@ function Solutions() {
         </div>
       </div>
 
-      <div className="solutions__img">
+      <div className={`solutions__img`}>
         <img src={SolutionImg}></img>
       </div>
     </div>

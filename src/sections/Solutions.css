@@ -21,18 +21,3 @@
 .solutions__content__cta {
   margin-top: var(--spacing-2) !important;
 }
-
-@media (max-width: 1300px) {
-  .solutions > div:first-child {
-    order: 2;
-  }
-
-  .solutions > div:nth-child(2) {
-    order: 1;
-  }
-
-
-  .solutions__img{
-    text-align: center;
-  }
-}

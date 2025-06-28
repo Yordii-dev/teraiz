@@ -10,7 +10,6 @@ import Logodark from "../assets/LOGO-DARK.svg";
 import Cta from "../components/Cta";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
-
 function Footer() {
   const [data, _] = useState({
     servicios: [
@@ -49,7 +48,9 @@ function Footer() {
     procesos: ["Gestion de proyectos agiles", "Testeos"],
   });
 
-  const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
+  const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>(
+    {}
+  );
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -69,14 +70,15 @@ function Footer() {
     }));
   };
 
-  
   const renderSection = (title: string, items: string[], key: string) => (
     <div>
       <div
         className="footer__content__details__title-wrapper d-flex align-items-center cursor-pointer"
         onClick={() => isMobile && toggleSection(key)}
       >
-        <p className="footer__content__details__title size-3 weight-semibold">{title}</p>
+        <p className="footer__content__details__title size-3 weight-semibold">
+          {title}
+        </p>
         {isMobile && (
           <FontAwesomeIcon
             icon={openSections[key] ? faChevronUp : faChevronDown}
@@ -98,7 +100,7 @@ function Footer() {
       </div>
     </div>
   );
-  
+
   return (
     <div className="footer bg-white text-black">
       <div className="footer__content d-flex justify-content-between mx-auto">
@@ -120,15 +122,18 @@ function Footer() {
         <div className="footer__content__details d-flex flex-grow-1 justify-content-between">
           {renderSection("Servicios", data.servicios, "servicios")}
           {renderSection("Tecnología", data.techs, "techs")}
-          {renderSection("Especialidades", data.especialidades, "especialidades")}
+          {renderSection(
+            "Especialidades",
+            data.especialidades,
+            "especialidades"
+          )}
           {renderSection("Procesos", data.procesos, "procesos")}
         </div>
       </div>
 
       <hr />
-      
+
       <div className="footer__socials d-flex size-4 d-flex justify-content-between align-items-center">
-      
         <div className="opacity-2">
           <p>© 2025 TechRaiz. Software para el sector inmobiliario.</p>
         </div>
@@ -146,7 +151,6 @@ function Footer() {
               <FontAwesomeIcon
                 icon={faFacebookSquare}
                 className="size-icon text-black"
-
               />
             </a>
             <a

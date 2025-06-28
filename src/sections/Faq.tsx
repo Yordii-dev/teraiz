@@ -30,7 +30,7 @@ function Faq() {
         <h1 className="size-1 weight-semibold">Preguntas frecuentes</h1>
       </div>
 
-      <div className="faq_list mx-auto">
+      <div className="faq__list mx-auto">
         {questions.map((q, index) => (
           <Question key={index} question={q.question} answer={q.answer} />
         ))}

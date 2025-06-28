@@ -23,7 +23,9 @@ function Question({ question, answer }: any) {
         />
       </div>
 
-      {isOpen && <p className="question__answer size-3">{answer}</p>}
+      <p className={`question__answer size-3 ${isOpen ? "open" : "closed"}`}>
+        {answer}
+      </p>
     </div>
   );
 }
