@@ -1,7 +1,7 @@
 import "./Question.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 function Question({ question, answer }: any) {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ function Question({ question, answer }: any) {
       >
         <p className="size-2 weight-semibold">{question}</p>
         <FontAwesomeIcon
-          icon={isOpen ? faChevronUp : faChevronDown}
+          icon={isOpen ? faMinus : faPlus}
           className="text-secondary size-icon"
         />
       </div>

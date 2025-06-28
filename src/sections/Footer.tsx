@@ -4,11 +4,13 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Footer.css";
 import Logodark from "../assets/LOGO-DARK.svg";
-
 import Cta from "../components/Cta";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+
+
 function Footer() {
   const [data, _] = useState({
     servicios: [
@@ -47,10 +49,60 @@ function Footer() {
     procesos: ["Gestion de proyectos agiles", "Testeos"],
   });
 
+  const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1300);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const toggleSection = (key: string) => {
+    setOpenSections((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  };
+
+  
+  const renderSection = (title: string, items: string[], key: string) => (
+    <div>
+      <div
+        className="footer__content__details__title-wrapper d-flex align-items-center cursor-pointer"
+        onClick={() => isMobile && toggleSection(key)}
+      >
+        <p className="footer__content__details__title size-3 weight-semibold">{title}</p>
+        {isMobile && (
+          <FontAwesomeIcon
+            icon={openSections[key] ? faChevronUp : faChevronDown}
+            className="mleft-5 text-black"
+          />
+        )}
+      </div>
+
+      <div
+        className={`footer__content__details__descs size-4 ${
+          isMobile ? (openSections[key] ? "open" : "closed") : ""
+        }`}
+      >
+        {items.map((item, index) => (
+          <p className="weight-regular size-4 opacity-2" key={index}>
+            {item}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
+  
   return (
     <div className="footer bg-white text-black">
-      <div className="footer__cta d-flex justify-content-between mx-auto">
-        <div className="me-5">
+      <div className="footer__content d-flex justify-content-between mx-auto">
+        <div>
           <img className="width-logo" src={Logodark} alt="Techraiz Logo" />
 
           <p className="weight-semibold size-2 footer__cta_title">
@@ -65,57 +117,23 @@ function Footer() {
           />
         </div>
 
-        <div className="d-flex ms-5 w-75 justify-content-between">
-          <div>
-            <p className="size-3 weight-semibold">Servicios</p>
-            <div className="footer__descs size-4">
-              {data.servicios.map((service, index) => (
-                <p className="weight-regular size-4 opacity-2" key={index}>
-                  {service}
-                </p>
-              ))}
-            </div>
-          </div>
-          <div>
-            <p className="size-3 weight-semibold">Tecnologia</p>
-            <div className="footer__descs size-4">
-              {data.techs.map((tech, index) => (
-                <p className="weight-regular size-4 opacity-2" key={index}>
-                  {tech}
-                </p>
-              ))}
-            </div>
-          </div>
-          <div>
-            <p className="size-3 weight-semibold">Especialidades</p>
-            <div className="footer__descs size-4">
-              {data.especialidades.map((es, index) => (
-                <p className="weight-regular size-4 opacity-2" key={index}>
-                  {es}
-                </p>
-              ))}
-            </div>
-          </div>
-          <div>
-            <p className="size-3 weight-semibold">Procesos</p>
-            <div className="footer__descs size-4">
-              {data.procesos.map((proceso, index) => (
-                <p className="weight-regular size-4 opacity-2" key={index}>
-                  {proceso}
-                </p>
-              ))}
-            </div>
-          </div>
+        <div className="footer__content__details d-flex flex-grow-1 justify-content-between">
+          {renderSection("Servicios", data.servicios, "servicios")}
+          {renderSection("Tecnología", data.techs, "techs")}
+          {renderSection("Especialidades", data.especialidades, "especialidades")}
+          {renderSection("Procesos", data.procesos, "procesos")}
         </div>
       </div>
 
-      <div className="d-flex size-4 footer__socials d-flex justify-content-between align-items-center">
+      <hr />
+      
+      <div className="footer__socials d-flex size-4 d-flex justify-content-between align-items-center">
       
         <div className="opacity-2">
           <p>© 2025 TechRaiz. Software para el sector inmobiliario.</p>
         </div>
         <div className="d-flex justify-content-end align-items-center">
-          <p className="weight-semibold footer__socials__title">
+          <p className="weight-semibold footer__socials__title opacity-1">
             Siguenos en redes
           </p>
           <div className="d-flex footer__socials__list mleft-5 justify-content-between opacity-2 align-items-center">
