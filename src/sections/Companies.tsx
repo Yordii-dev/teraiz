@@ -1,41 +1,37 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./Companies.css";
 
 import img from "../assets/react.svg";
 import Company from "../components/Company";
-import { faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { faCircleChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Companies() {
   const [companies] = useState([
     {
       img,
-      title:
-        "Antes de trabajar con Protech, todo era un caos: Excel, mensajes sueltos, cero control.",
+      title: "TechRaiz ordenó nuestro caos con un sistema hecho a medida.",
       author: "Director Comercial",
       description:
-        "Perdíamos tiempo y clientes cada semana. Ahora todo está automatizado y nuestras ventas crecieron sin aumentar el equipo.",
+        "Usábamos Excel, WhatsApp y documentos por todos lados. La agencia entendió nuestro proceso y lo digitalizó todo. Ahora somos más eficientes y vendemos más sin crecer en personal.",
     },
     {
       img,
       title:
-        "Nuestra operación inmobiliaria se volvió más ágil y profesional desde que usamos TechRaiz.",
+        "Nuestra inmobiliaria creció gracias al sistema que nos desarrolló TechRaiz.",
       author: "CEO",
       description:
-        "Ahora respondemos más rápido a nuestros clientes y tenemos visibilidad total de cada proceso. Ha sido clave para nuestro crecimiento.",
+        "Desde la atención al cliente hasta la gestión interna, todo está más rápido y claro. Trabajar con una agencia que entiende el rubro inmobiliario marcó la diferencia.",
     },
     {
       img,
-      title:
-        "TechRaiz nos ayudó a centralizar todo: propiedades, clientes y asesores en una sola plataforma.",
+      title: "Todo en un solo sistema: propiedades, clientes y agentes.",
       author: "Gerente de Operaciones",
       description:
-        "Antes todo era manual, ahora tenemos reportes en tiempo real y podemos tomar decisiones con datos, no con suposiciones.",
+        "Con TechRaiz pasamos de procesos manuales a reportes automáticos. Tomamos decisiones basadas en datos y tenemos visibilidad completa del negocio.",
     },
   ]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const touchStartX = useRef(0);
 
   const goPrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? companies.length - 1 : prev - 1));
@@ -47,7 +43,7 @@ function Companies() {
 
   return (
     <div className="compaines text-black d-flex align-items-center justify-content-between">
-      <div className="compaines__title">
+      <div className={`compaines__title`}>
         <h1 className="size-1 weight-semibold">
           <span className="text-secondary">2025 </span>
           <br />
@@ -56,17 +52,17 @@ function Companies() {
           escalar
         </h1>
       </div>
-      <div className="compaines__list h-100 border-radius">
-        <FontAwesomeIcon
-          icon={faCircleChevronLeft}
-          className="compaines__list__prev"
-          onClick={goPrev}
-        />
-        <FontAwesomeIcon
-          icon={faCircleChevronRight}
-          className="compaines__list__next"
-          onClick={goNext}
-        />
+
+      <div
+        className={`compaines__list h-100 border-radius swipe-container`}
+        onTouchStart={(e) => (touchStartX.current = e.touches[0].clientX)}
+        onTouchEnd={(e) => {
+          const endX = e.changedTouches[0].clientX;
+          const diff = touchStartX.current - endX;
+          if (diff > 50) goNext();
+          else if (diff < -50) goPrev();
+        }}
+      >
         <div className="">
           <Company
             key={currentIndex}
@@ -75,6 +71,15 @@ function Companies() {
             author={companies[currentIndex].author}
             description={companies[currentIndex].description}
           />
+        </div>
+        <div className="dots">
+          {companies.map((_, index) => (
+            <span
+              key={index}
+              className={`dot ${index === currentIndex ? "active" : ""}`}
+              onClick={() => setCurrentIndex(index)}
+            ></span>
+          ))}
         </div>
       </div>
     </div>

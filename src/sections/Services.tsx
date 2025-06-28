@@ -1,45 +1,40 @@
 import Service from "../components/Service";
 import "./Services.css";
 
-import ControlImg from "./../assets/services/control.svg";
-import PropiedadImg from "./../assets/services/propiedad.svg";
-import VentaImg from "./../assets/services/venta.svg";
-import AlquilerImg from "./../assets/services/alquiler.svg";
-// import PreventaImg from "./../assets/services/preventa.svg";
-// import EquipoImg from "./../assets/services/equipo.svg";
+import {
+  faBullhorn,
+  faLayerGroup,
+  faRobot,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
+
 import { useState } from "react";
 
 function Services() {
   const [services, _] = useState([
     {
-      img: ControlImg,
-      title: "Control digital para caos",
-      description: `Enfoque en bienes raices, 
-      dashboards, gestion de propiedades, 
-      mapas, cotizadores, etc.`,
-      cta: "Controla tu caos",
+      icon: faBullhorn,
+      title: "Captamos clientes por ti",
+      description: `Creamos sitios web inmobiliarios que posicionan en Google, conectan con WhatsApp y generan leads reales cada semana. Ya no dependes solo de portales.`,
+      cta: "Quiero más clientes",
     },
     {
-      img: PropiedadImg,
-      title: "Propiedades se venden",
-      description: `Creamos sistemas donde puedes 
-      mostrar tus propiedades, captar 
-      clientes y medir resultados.`,
-      cta: "Controla tu caos",
+      icon: faLayerGroup,
+      title: "Organiza tu inmobiliaria en minutos",
+      description: `CRM fácil de usar para gestionar propiedades, asesores y clientes. Todo sincronizado. Adiós a los Excel y mensajes perdidos.`,
+      cta: "Quiero control",
     },
     {
-      img: VentaImg,
-      title: "Ventas sin fricción",
-      description: `Herramientas para que tus agentes vendan más con menos esfuerzo. Agendamiento de visitas, 
-      `,
-      cta: "Controla tu caos",
+      icon: faRobot,
+      title: "Automatiza lo que nadie quiere hacer",
+      description: `Recordatorios, pagos, contratos, seguimientos… todo lo que consume tiempo, lo automatizamos. Así tú y tu equipo se enfocan en cerrar ventas.`,
+      cta: "Automatizar",
     },
     {
-      img: AlquilerImg,
-      title: "Alquileres automatizados",
-      description: `Con nuestras apps puedes gestionar 
-      alquileres, cobros`,
-      cta: "Controla tu caos",
+      icon: faStar,
+      title: "Haz que tu marca destaque",
+      description: `Te ayudamos a construir una presencia sólida: diseño profesional, confianza digital y herramientas modernas que te diferencian de la competencia local.`,
+      cta: "Destacar mi marca",
     },
   ]);
 
@@ -59,7 +54,7 @@ function Services() {
         {services.map((service, index) => (
           <Service
             key={index}
-            img={service.img}
+            icon={service.icon}
             title={service.title}
             description={service.description}
             cta={service.cta}

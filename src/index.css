@@ -13,6 +13,7 @@
   --color-blue-semidark: #03254c;
   --color-gray1: #f5f8fa;
   --color-black: #1a1a1a;
+  --color-graylight: #8c8c8c;
 
   --width-top-socials: 99px;
   /*ICON*/
@@ -66,6 +67,7 @@
   --weight-semibold: 600;
 
   /*SPACING*/
+  --spacing-section: 150px;
   --spacing-1: 96px;
   --spacing-2: 64px;
   --spacing-3: 24px;
@@ -151,6 +153,10 @@ span {
 
 .border-black {
   border: 1px solid var(--color-black) !important;
+}
+
+.border-graylight {
+  border: 1px solid var(--color-graylight) !important;
 }
 
 .size-icon {
@@ -290,6 +296,7 @@ span {
     --weight-regular: 400;
     --weight-semibold: 600;
 
+    --spacing-section: 75px;
     --spacing-1: 48px;
     --spacing-2: 32px;
     --spacing-3: 16px;

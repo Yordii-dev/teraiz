@@ -2,7 +2,14 @@ import { useState } from "react";
 import "./Cta.css";
 import { useTranslation } from "../context/TranslationContext";
 
-function Cta({ text, btnBg, textColor, textInputColor, borderInput }: any) {
+function Cta({
+  text,
+  btnBg,
+  textColor,
+  textInputColor,
+  borderInput,
+  hideObjections,
+}: any) {
   const { t } = useTranslation();
 
   const [email, setEmail] = useState("");
@@ -24,10 +31,12 @@ function Cta({ text, btnBg, textColor, textInputColor, borderInput }: any) {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <div className="container__cta__objections size-4 opacity-2 weight-regular text-white d-flex justify-content-between">
-        <p>{t.hero.socialproof}</p>
-        <p>Planes segun presupuesto</p>
-      </div>
+      {!hideObjections && (
+        <div className="container__cta__objections size-4 opacity-2 weight-regular text-white d-flex justify-content-between">
+          <p>{t.hero.socialproof}</p>
+          <p>Planes segun presupuesto</p>
+        </div>
+      )}
       <button
         className={`w-100 btn ${textColor} size-3 ${btnBg} weight-semibold border-radius`}
         onClick={handleClick}

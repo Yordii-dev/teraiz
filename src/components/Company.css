@@ -4,6 +4,11 @@
   height: var(--height-testimony);
 }
 
+.company__author,
+.company__desc {
+  margin-top: var(--spacing-4);
+}
+
 .company__img {
   width: var(--wh-testimonyimg);
   height: var(--wh-testimonyimg);

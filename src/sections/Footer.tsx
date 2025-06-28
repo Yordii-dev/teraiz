@@ -13,39 +13,33 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 function Footer() {
   const [data, _] = useState({
     servicios: [
-      "CRM Inmobiliario",
-      "Portales inmobiliarios",
-      "Sistemas de gestion",
-      "Apps mobiles",
-      "Landing pages",
-      "Sistemas de gestion internos",
-      "Apps para preventas",
-      "Plataformas para franquicias",
-    ],
-    techs: [
-      "Microsoft Azure",
-      "AWS",
-      "Oracle Database",
-      "Microsoft SQL Server",
-      "Power BI",
-      "Google Cloud Platform",
-      "DocuSign",
-      "ASP.NET Core",
-      "Javascript",
-      "Docker",
-      "IIS & Azure DevOps",
+      "CRM para inmobiliarias",
+      "Portales y catálogos de propiedades",
+      "Sistemas de gestión y control",
+      "Apps móviles para agentes y clientes",
+      "Landing pages de captación",
+      "Sistemas internos personalizados",
+      "Apps para preventa y lanzamientos",
+      "Plataformas para franquicias inmobiliarias",
     ],
 
-    especialidades: [
-      "Automatizacion",
-      "Seguridad",
-      "Escalabilidad",
-      "Integracion",
-      "Base de datos",
-      "Experiencia tecnica",
+    tecnologias: [
+      "Azure & AWS",
+      "Oracle / SQL Server",
+      "Power BI & Google Cloud",
+      "Docker & DevOps",
+      "ASP.NET Core / JavaScript",
+      "Integración con DocuSign",
     ],
 
-    procesos: ["Gestion de proyectos agiles", "Testeos"],
+    fortalezas: [
+      "Automatización de procesos",
+      "Seguridad y respaldo",
+      "Escalabilidad a medida",
+      "Integraciones externas",
+      "Expertise técnico profundo",
+      "Gestión ágil de proyectos",
+    ],
   });
 
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>(
@@ -102,7 +96,7 @@ function Footer() {
   );
 
   return (
-    <div className="footer bg-white text-black">
+    <div className="footer bg-white text-black mx-auto">
       <div className="footer__content d-flex justify-content-between mx-auto">
         <div>
           <img className="width-logo" src={Logodark} alt="Techraiz Logo" />
@@ -116,18 +110,14 @@ function Footer() {
             text="Agendar una asesoria"
             textInputColor="text-black"
             borderInput="border-black"
+            hideObjections={true}
           />
         </div>
 
         <div className="footer__content__details d-flex flex-grow-1 justify-content-between">
           {renderSection("Servicios", data.servicios, "servicios")}
-          {renderSection("Tecnología", data.techs, "techs")}
-          {renderSection(
-            "Especialidades",
-            data.especialidades,
-            "especialidades"
-          )}
-          {renderSection("Procesos", data.procesos, "procesos")}
+          {renderSection("Tecnologías", data.tecnologias, "tecnlogias")}
+          {renderSection("Fortalezas", data.fortalezas, "fortalezas")}
         </div>
       </div>
 

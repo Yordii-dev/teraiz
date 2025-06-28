@@ -8,7 +8,7 @@ function Meet() {
   return (
     <div
       ref={containerRef}
-      className={`meet text-black d-flex  align-items-start justify-content-between`}
+      className={`meet text-black d-flex align-items-start justify-content-between`}
     >
       <div
         className={`meet__content d-flex flex-column ${
@@ -17,9 +17,12 @@ function Meet() {
       >
         <div className="meet__content__desc">
           <p className="size-2">
-            Soluciones digitales que transforman tu empresa.
+            ¿Tienes una inmobiliaria o vendes propiedades? <br />
             <br />
-            Cotiza gratis tu proyecto y obten:
+            Podemos ayudarte a organizar tu operación, <br />
+            automatizar procesos y vender más. <br />
+            <br />
+            Cotiza gratis tu sistema y obtén asesoría sin compromiso.
           </p>
         </div>
 
