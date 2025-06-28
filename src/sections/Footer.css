@@ -5,23 +5,21 @@
 .footer__cta_title {
   margin-top: var(--spacing-3);
 }
+
+.footer__descs {
+  margin-top: var(--spacing-3);
+}
+
+.footer__descs > p {
+  margin-top: var(--spacing-6);
+}
+
 .footer > div {
   max-width: 200rem;
   padding-top: 4rem;
   padding-bottom: 2rem;
 }
 
-.footer__field {
-  font-size: 1.7rem;
-}
-
-.footer__cta_title {
-  font-size: 1.7rem;
-}
-.footer__socials__title {
-  font-size: 2rem;
-}
-
-.footer__socials__list {
+/* .footer__socials__list {
   width: 15rem;
-}
+} */

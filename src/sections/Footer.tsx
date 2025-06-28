@@ -51,7 +51,7 @@ function Footer() {
     <div className="footer bg-white text-black">
       <div className="footer__cta d-flex justify-content-between mx-auto">
         <div className="me-5">
-          <img src={Logodark} alt="Techraiz Logo" />
+          <img className="width-logo" src={Logodark} alt="Techraiz Logo" />
 
           <p className="weight-semibold size-2 footer__cta_title">
             Control para tu inmobiliaria, adaptado a tu presupuesto.
@@ -67,40 +67,40 @@ function Footer() {
 
         <div className="d-flex ms-5 w-75 justify-content-between">
           <div>
-            <p className="footer__field fw-bold">SERVICIOS</p>
-            <div className="mt-3">
+            <p className="size-3 weight-semibold">Servicios</p>
+            <div className="footer__descs size-4">
               {data.servicios.map((service, index) => (
-                <p className="font-regular m-0 my-1" key={index}>
+                <p className="weight-regular size-3 opacity-2" key={index}>
                   {service}
                 </p>
               ))}
             </div>
           </div>
           <div>
-            <p className="footer__field fw-bold">TECNOLOGIA</p>
-            <div className="mt-3">
+            <p className="size-3 weight-semibold">Tecnologia</p>
+            <div className="footer__descs size-4">
               {data.techs.map((tech, index) => (
-                <p className="font-regular m-0 my-1" key={index}>
+                <p className="weight-regular size-3 opacity-2" key={index}>
                   {tech}
                 </p>
               ))}
             </div>
           </div>
           <div>
-            <p className="footer__field fw-bold">ESPECIALIDADES</p>
-            <div className="mt-3">
+            <p className="size-3 weight-semibold">Especialidades</p>
+            <div className="footer__descs size-4">
               {data.especialidades.map((es, index) => (
-                <p className="font-regular m-0 my-1" key={index}>
+                <p className="weight-regular size-3 opacity-2" key={index}>
                   {es}
                 </p>
               ))}
             </div>
           </div>
           <div>
-            <p className="footer__field fw-bold">PROCESOS</p>
-            <div className="mt-3">
+            <p className="size-3 weight-semibold">Procesos</p>
+            <div className="footer__descs size-4">
               {data.procesos.map((proceso, index) => (
-                <p className="font-regular m-0 my-1" key={index}>
+                <p className="weight-regular size-3 opacity-2" key={index}>
                   {proceso}
                 </p>
               ))}

@@ -18,6 +18,9 @@
   /*ICON*/
   --wh-icon: 25px;
 
+  /*LOGO*/
+  --width-logo: 100px;
+
   /*TESTIMONY*/
   --wh-testimonyimg: 90px;
   --height-testimony: 275px;
@@ -29,8 +32,8 @@
   --height-cardimg: 80px;
 
   /*LOGO*/
-  --width-logo: 87.42px;
-  --height-logo: 71.38px;
+  /* --width-logo: 87.42px;
+  --height-logo: 71.38px; */
 
   /*TOP MENU*/
   --height-top: 90px;
@@ -113,6 +116,11 @@ span {
 
   font-family: var(--font-body);
 }
+
+.width-logo {
+  width: var(--width-logo);
+}
+
 .border-primary {
   border: 1px solid var(--color-primary) !important;
 }
@@ -260,8 +268,8 @@ span {
     --width-cardimg: 55px;
     --height-cardimg: 55px;
 
-    --width-logo: 47.16px;
-    --height-logo: 38.33px;
+    /* --width-logo: 47.16px;
+    --height-logo: 38.33px; */
     --height-top: 55px;
     /* --height-cta: 44px; */
     --pl-ctainput: 12px;

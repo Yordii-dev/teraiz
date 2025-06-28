@@ -41,7 +41,11 @@ function Top() {
       } top-container size-2 weight-regular d-flex justify-content-between align-items-center shadow-lg`}
     >
       <div className="top-container__logo">
-        <img src={scrolled ? LogoDark : Logolight} alt="Techraiz Logo" />
+        <img
+          className="width-logo"
+          src={scrolled ? LogoDark : Logolight}
+          alt="Techraiz Logo"
+        />
       </div>
 
       <div className="top__logo"> {/* {width}px × {height}px{" "} */}</div>
