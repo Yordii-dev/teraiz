@@ -9,9 +9,15 @@
 }
 .btn__cta:hover {
   border-color: var(--color-secondary) !important;
-  color: var(--color-secondary) !important;
+  color: white !important;
+}
+
+.btn__cta:active {
+  border-color: var(--color-secondary) !important;
+  color: white !important;
+  background-color: var(--color-secondary);
 }
 
 .btn__cta:hover svg {
-  color: var(--color-secondary);
+  color: white !important;
 }

@@ -16,7 +16,9 @@ function Top() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      console.log(window.scrollY);
+
+      setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -52,7 +54,7 @@ function Top() {
         {width}px × {height}px{" "}
       </div>
 
-      <button className="top__cta d-flex align-items-center px-4 btn size-3 text-secondary">
+      <button className="top__cta d-flex align-items-center btn size-3 text-secondary">
         <FontAwesomeIcon className="size-icon" icon={faWhatsapp} />
         <span className="mleft-5">Cotiza gratis hoy</span>
       </button>

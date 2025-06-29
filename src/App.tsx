@@ -13,11 +13,12 @@ import Section from "./components/Section";
 import Authority from "./sections/Authority";
 import Meet from "./sections/Meet";
 import Faq from "./sections/Faq";
+import { ModalProvider } from "./context/ModalContext";
 
 function App() {
   return (
     <TranslationProvider>
-      <div>
+      <ModalProvider>
         <Top></Top>
         <Hero></Hero>
 
@@ -45,9 +46,9 @@ function App() {
         </Section>
 
         <Footer></Footer>
-      </div>
         <MoreInfo />
         <SuccessModal />
+      </ModalProvider>
     </TranslationProvider>
   );
 }

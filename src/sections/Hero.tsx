@@ -26,6 +26,7 @@ function Hero() {
             textColor="text-black"
             textInputColor="text-white"
             borderInput="border-cuaternary"
+            placeholderColor="placeholder-cuaternary"
           />
         </div>
         <div className="mt-auto">

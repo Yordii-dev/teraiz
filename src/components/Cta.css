@@ -8,8 +8,15 @@
   padding-left: var(--pl-ctainput);
 }
 
-.container__cta input::placeholder {
+.placeholder-black::placeholder {
+  color: var(--color-black);
+}
+
+.placeholder-cuaternary::placeholder {
   color: var(--color-cuaternary);
+}
+
+.container__cta input::placeholder {
   font-size: var(--size-4);
   opacity: var(--opacity-3);
 }
@@ -64,4 +71,32 @@ button:disabled {
   .container__cta__objections {
     order: 3;
   }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.input-error {
+  border: 1px solid red !important;
+  animation: shake 0.3s ease-in-out;
+}
+
+.input-error::placeholder {
+  color: red !important;
+  font-weight: var(--weight-bold);
 }

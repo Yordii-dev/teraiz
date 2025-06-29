@@ -2,3 +2,23 @@
   font-size: 1.6rem;
   color: var(--color-blue-dark);
 }
+
+.modal-content {
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.shadow-lg {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  font-size: var(--size-4);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #00c095; /* tono más oscuro del secundario */
+  transform: scale(1.02);
+}

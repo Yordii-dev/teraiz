@@ -111,6 +111,7 @@ function Footer() {
             textInputColor="text-black"
             borderInput="border-black"
             hideObjections={true}
+            placeholderColor="placeholder-black"
           />
         </div>
 

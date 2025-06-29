@@ -81,14 +81,12 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
 html {
   font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-size: 1.6rem; /* 16px */
 }
 
 .modal {
@@ -97,11 +95,6 @@ html {
 }
 .modal-backdrop {
   z-index: 19990 !important;
-}
-
-body {
-  font-size: 1.6rem; /* 16px */
-  width: 100%;
 }
 
 h1,
@@ -114,8 +107,6 @@ h3 {
 body,
 p,
 span {
-  margin-bottom: 0px;
-
   font-family: var(--font-body);
 }
 
@@ -275,6 +266,8 @@ span {
     --width-cardimg: 55px;
     --height-cardimg: 55px;
 
+    /*LOGO*/
+    --width-logo: 80px;
     /* --width-logo: 47.16px;
     --height-logo: 38.33px; */
     --height-top: 55px;
