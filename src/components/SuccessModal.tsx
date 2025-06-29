@@ -7,7 +7,7 @@ const SuccessModal = () => {
       id="successModal"
       tabIndex={-1}
       aria-hidden="true"
-      data-bs-backdrop="static"
+      data-backdrop="static"
       aria-labelledby="successModalLabel"
     >
       <div className="modal-dialog modal-dialog-centered">
@@ -28,10 +28,7 @@ const SuccessModal = () => {
             <button
               onClick={() => {
                 console.log(document.querySelector(".top-container"));
-
-                document
-                  .querySelector(".top-container")
-                  ?.classList.remove("top-container-modal-open");
+ 
               }}
               className="modal__button btn bg-secondary text-primary fw-semibold"
               data-bs-dismiss="modal"

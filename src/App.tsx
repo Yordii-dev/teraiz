@@ -45,9 +45,9 @@ function App() {
         </Section>
 
         <Footer></Footer>
+      </div>
         <MoreInfo />
         <SuccessModal />
-      </div>
     </TranslationProvider>
   );
 }

@@ -14,14 +14,6 @@ function Cta({
 
   const [email, setEmail] = useState("");
 
-  const handleClick = () => {
-    console.log(document.querySelector(".top-container"));
-
-    document
-      .querySelector(".top-container")
-      ?.classList.add("top-container-modal-open");
-  };
-
   return (
     <div className="container__cta d-flex flex-column">
       <input
@@ -39,8 +31,7 @@ function Cta({
       )}
       <button
         className={`w-100 btn ${textColor} size-3 ${btnBg} weight-semibold border-radius`}
-        onClick={handleClick}
-        data-bs-toggle="modal"
+         data-bs-toggle="modal"
         data-bs-target="#successModal"
         disabled={!email.trim()}
       >
