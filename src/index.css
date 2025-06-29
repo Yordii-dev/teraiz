@@ -187,6 +187,7 @@ span {
 .bg-gray1 {
   background-color: var(--color-gray1) !important;
 }
+
 .text-primary {
   color: var(--color-primary) !important;
 }

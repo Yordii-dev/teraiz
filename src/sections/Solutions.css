@@ -1,6 +1,11 @@
 .solutions {
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: var(--spacing-2);
+}
+.solutions__content,
+.solutions__img {
+  flex: 1 1 calc(50% - var(--spacing-2) / 2);
+  min-width: 360px;
 }
 .solutions__content__subtitle {
   margin-top: var(--spacing-3);

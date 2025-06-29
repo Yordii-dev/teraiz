@@ -8,19 +8,18 @@ import BtnCta from "../components/BtnCta";
 function Solutions() {
   return (
     <div className="solutions text-black d-flex justify-content-between">
-      <div className={`solutions__content d-flex flex-column`}>
+      <div className="solutions__content d-flex flex-column">
         <h1 className="size-0 weight-semibold">
           Haz crecer tu inmobiliaria <br />
-          <span className="text-secondary">con tecnología real</span>
+          <span className="text-secondary">con tecnología</span>
         </h1>
-
         <p className="solutions__content__subtitle size-2">
-          Cada día con procesos manuales, <br />
-          pierdes tiempo, ventas y oportunidades.
+          Seguir con procesos manuales te hace perder tiempo, ventas y
+          oportunidades.
           <br />
           <br />
-          Digitaliza tu operación: gestiona propiedades, agentes, cobros y
-          terrenos de forma automática.
+          Nosotros lo solucionamos: digitaliza tu operación y gestiona
+          propiedades, agentes, cobros y terrenos sin complicaciones.
         </p>
 
         <div className="solutions__content__off">

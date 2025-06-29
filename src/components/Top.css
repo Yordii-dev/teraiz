@@ -12,7 +12,19 @@
 }
 
 .top__cta {
-  height: var(--height-cta) - 10px;
+  height: calc(var(--height-cta) - 10px);
   border-radius: 2.5rem;
   border: 2px solid var(--color-secondary);
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.top__cta:hover {
+  background-color: var(--color-secondary);
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+.top__cta:hover svg {
+  color: white;
 }

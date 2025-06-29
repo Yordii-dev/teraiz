@@ -2,9 +2,9 @@
   flex-wrap: wrap;
   gap: var(--spacing-2);
 }
-
 .compaines__list {
-  width: 70%;
+  flex: 1 1 calc(70% - var(--spacing-2) / 2);
+  min-width: calc(70% - var(--spacing-2) / 2);
 }
 
 .dots {
@@ -27,7 +27,10 @@
   background-color: #00dca7; /* tu color secundario */
 }
 
-@media (max-width: 1370px) {
+@media (max-width: 1445px) {
+  .compaines {
+    flex-direction: column-reverse;
+  }
   .compaines__title {
     width: 100%;
     text-align: center;

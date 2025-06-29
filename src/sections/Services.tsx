@@ -16,13 +16,13 @@ function Services() {
       icon: faBullhorn,
       title: "Captamos clientes por ti",
       description: `Creamos sitios web inmobiliarios que posicionan en Google, conectan con WhatsApp y generan leads reales cada semana. Ya no dependes solo de portales.`,
-      cta: "Quiero más clientes",
+      cta: "Obtener clientes",
     },
     {
       icon: faLayerGroup,
       title: "Organiza tu inmobiliaria en minutos",
       description: `CRM fácil de usar para gestionar propiedades, asesores y clientes. Todo sincronizado. Adiós a los Excel y mensajes perdidos.`,
-      cta: "Quiero control",
+      cta: "Controlar procesos",
     },
     {
       icon: faRobot,

@@ -17,10 +17,12 @@ function Meet() {
       >
         <div className="meet__content__desc">
           <p className="size-2">
-            ¿Tienes una inmobiliaria o vendes propiedades? <br />
+            ¿Tienes una inmobiliaria o vendes propiedades?
             <br />
-            Podemos ayudarte a organizar tu operación, <br />
-            automatizar procesos y vender más. <br />
+            <br />
+            Podemos ayudarte a organizar tu operación, automatizar procesos y
+            vender más.
+            <br />
             <br />
             Cotiza gratis tu sistema y obtén asesoría sin compromiso.
           </p>
@@ -32,7 +34,10 @@ function Meet() {
       </div>
       <div className={`meet__title ${isWrapped ? "order-1" : "order-2"}`}>
         <h1 className="size-0 weight-semibold">
-          Agenda una <span className="text-secondary"> reunion </span>
+          Agenda una{" "}
+          <span className="text-secondary">
+            <br /> reunion{" "}
+          </span>
           <br />
           con nosotros
         </h1>

@@ -20,21 +20,26 @@ function App() {
       <div>
         <Top></Top>
         <Hero></Hero>
+
         <Section backgroundColor="white">
           <Solutions />
         </Section>
+
         <Section backgroundColor="#EEEEEE">
           <Services />
         </Section>
         <Section backgroundColor="white">
-          <Authority />
-        </Section>
-        <Section backgroundColor="#EEEEEE">
           <Companies></Companies>
         </Section>
+
+        <Section backgroundColor="#EEEEEE">
+          <Authority />
+        </Section>
+
         <Section backgroundColor="white">
           <Meet />
         </Section>
+
         <Section backgroundColor="#EEEEEE">
           <Faq></Faq>
         </Section>

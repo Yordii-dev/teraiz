@@ -2,11 +2,18 @@
   flex-wrap: wrap;
   gap: var(--spacing-2);
 }
+
+.authority__socialproofs,
+.authority__title {
+  flex: 1 1 calc(50% - var(--spacing-2) / 2);
+  min-width: 360px;
+}
 .authority__socialproofs__proof {
   flex-wrap: wrap;
 }
 .authority__socialproofs__proof:not(:first-child) {
   margin-top: var(--spacing-2) !important;
+  text-align: justify;
 }
 
 .authority__socialproofs__proof p:nth-child(1) {

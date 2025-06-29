@@ -43,16 +43,6 @@ function Companies() {
 
   return (
     <div className="compaines text-black d-flex align-items-center justify-content-between">
-      <div className={`compaines__title`}>
-        <h1 className="size-1 weight-semibold">
-          <span className="text-secondary">2025 </span>
-          <br />
-          Es el año para
-          <br />
-          escalar
-        </h1>
-      </div>
-
       <div
         className={`compaines__list h-100 border-radius swipe-container`}
         onTouchStart={(e) => (touchStartX.current = e.touches[0].clientX)}
@@ -81,6 +71,14 @@ function Companies() {
             ></span>
           ))}
         </div>
+      </div>
+
+      <div className={`compaines__title`}>
+        <h1 className="size-1 weight-semibold">
+          <span className="text-secondary">2025</span> <br />
+          Ellos crecieron. <br />
+          ¿Qué esperas?{" "}
+        </h1>
       </div>
     </div>
   );

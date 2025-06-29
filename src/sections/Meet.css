@@ -2,9 +2,16 @@
   flex-wrap: wrap;
   gap: var(--spacing-2);
 }
+
+.meet__content,
+.meet_title {
+  flex: 1 1 calc(50% - var(--spacing-2) / 2);
+  min-width: 360px;
+}
+
+.meet__content__desc > p {
+  text-align: justify;
+}
 .meet__content__cta {
   margin-top: var(--spacing-2) !important;
 }
-
-
-
