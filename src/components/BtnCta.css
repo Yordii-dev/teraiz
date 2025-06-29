@@ -1,23 +1,21 @@
 .btn__cta {
   position: relative;
-  border-radius: var(--border-radius);
   outline: none;
-  color: white;
   cursor: pointer;
   z-index: 1;
+  background-color: var(--color-secondary);
   height: calc(var(--height-cta) / 1.1);
 }
-.btn__cta:hover {
-  border-color: var(--color-secondary) !important;
-  color: white !important;
-}
 
+.btn__cta:hover {
+  background-color: var(--color-secondary);
+}
+/* 
 .btn__cta:active {
   border-color: var(--color-secondary) !important;
   color: white !important;
-  background-color: var(--color-secondary);
 }
 
 .btn__cta:hover svg {
   color: white !important;
-}
+} */

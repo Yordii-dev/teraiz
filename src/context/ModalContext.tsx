@@ -1,6 +1,6 @@
 import { createContext, useContext, useRef } from "react";
+import type { RefObject, ReactNode } from "react";
 
-// Al inicio del archivo (ModalContext.tsx, por ejemplo)
 declare global {
   interface Window {
     bootstrap: {
@@ -8,17 +8,17 @@ declare global {
     };
   }
 }
-type ModalContextType = {
-  successModalRef: React.RefObject<HTMLDivElement | null>; // ✅ Correcto
 
-  openSuccessModal: () => void;
-  closeSuccessModal: () => void;
+export type ModalKey = "success" | "contact" | "login"; // 🔁 Aquí agregas los modales que uses
+
+type ModalContextType = {
+  modalRefs: Record<ModalKey, RefObject<HTMLDivElement | null>>;
+  openModal: (key: ModalKey) => void;
+  closeModal: (key: ModalKey) => void;
 };
 
-// 🔹 Contexto con tipo opcional
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
-// 🔹 Hook personalizado para consumir el contexto
 export const useModal = (): ModalContextType => {
   const context = useContext(ModalContext);
   if (!context) {
@@ -27,30 +27,31 @@ export const useModal = (): ModalContextType => {
   return context;
 };
 
-// 🔹 Proveedor del contexto
-export const ModalProvider = ({ children }: { children: any }) => {
-  const successModalRef = useRef<HTMLDivElement>(null);
+export const ModalProvider = ({ children }: { children: ReactNode }) => {
+  const modalRefs: Record<ModalKey, RefObject<HTMLDivElement | null>> = {
+    success: useRef<HTMLDivElement>(null),
+    contact: useRef<HTMLDivElement>(null),
+    login: useRef<HTMLDivElement>(null),
+  };
 
-  const openSuccessModal = () => {
-    if (successModalRef.current) {
-      const modal = new window.bootstrap.Modal(successModalRef.current);
+  const openModal = (key: ModalKey) => {
+    const ref = modalRefs[key];
+    if (ref?.current) {
+      const modal = new window.bootstrap.Modal(ref.current);
       modal.show();
     }
   };
 
-  const closeSuccessModal = () => {
-    if (successModalRef.current) {
-      const instance = window.bootstrap.Modal.getInstance(
-        successModalRef.current
-      );
-      instance?.hide();
+  const closeModal = (key: ModalKey) => {
+    const ref = modalRefs[key];
+    if (ref?.current) {
+      const modalInstance = window.bootstrap.Modal.getInstance(ref.current);
+      modalInstance?.hide();
     }
   };
 
   return (
-    <ModalContext.Provider
-      value={{ successModalRef, openSuccessModal, closeSuccessModal }}
-    >
+    <ModalContext.Provider value={{ modalRefs, openModal, closeModal }}>
       {children}
     </ModalContext.Provider>
   );

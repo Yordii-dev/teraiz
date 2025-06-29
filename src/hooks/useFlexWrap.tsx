@@ -14,14 +14,10 @@ export function useFlexWrap<T extends HTMLElement>() {
       for (let i = 1; i < container.children.length; i++) {
         const childTop = container.children[i].getBoundingClientRect().top;
         if (childTop !== firstTop) {
-          console.log("true");
-
           setIsWrapped(true);
           return;
         }
       }
-      console.log("false");
-
       setIsWrapped(false);
     };
 

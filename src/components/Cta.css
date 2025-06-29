@@ -8,16 +8,16 @@
   padding-left: var(--pl-ctainput);
 }
 
+.container__cta input::placeholder {
+  font-size: var(--size-4);
+}
 .placeholder-black::placeholder {
   color: var(--color-black);
+  opacity: var(--opacity-3);
 }
 
 .placeholder-cuaternary::placeholder {
   color: var(--color-cuaternary);
-}
-
-.container__cta input::placeholder {
-  font-size: var(--size-4);
   opacity: var(--opacity-3);
 }
 

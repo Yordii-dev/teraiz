@@ -1,5 +1,5 @@
 import "./App.css";
-import MoreInfo from "./components/MoreInfo";
+import FormModal from "./components/FormModal";
 import SuccessModal from "./components/SuccessModal";
 import Top from "./components/Top";
 import Companies from "./sections/Companies";
@@ -45,8 +45,8 @@ function App() {
           <Faq></Faq>
         </Section>
 
-        <Footer></Footer>
-        <MoreInfo />
+        <Footer />
+        <FormModal />
         <SuccessModal />
       </ModalProvider>
     </TranslationProvider>

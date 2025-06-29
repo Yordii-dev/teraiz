@@ -7,12 +7,12 @@ import LogoDark from "./../assets/LOGO-DARK.svg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { useWindowSize } from "../hooks/useWindowSize";
 
 function Top() {
   // const { lang, setLang } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
+  const { width, height } = useWindowSize();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,17 +23,6 @@ function Top() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-      setHeight(window.innerHeight);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -54,7 +43,7 @@ function Top() {
         {width}px × {height}px{" "}
       </div>
 
-      <button className="top__cta d-flex align-items-center btn size-3 text-secondary">
+      <button className="top__cta d-none d-flex align-items-center btn size-3 text-secondary">
         <FontAwesomeIcon className="size-icon" icon={faWhatsapp} />
         <span className="mleft-5">Cotiza gratis hoy</span>
       </button>
