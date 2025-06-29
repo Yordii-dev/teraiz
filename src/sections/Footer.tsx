@@ -49,7 +49,7 @@ function Footer() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1300);
+      setIsMobile(window.innerWidth <= 768);
     };
 
     handleResize();
@@ -98,11 +98,11 @@ function Footer() {
   return (
     <div className="footer bg-white text-black mx-auto">
       <div className="footer__content d-flex justify-content-between mx-auto">
-        <div>
+        <div className="footer__content__cta">
           <img className="width-logo" src={Logodark} alt="Techraiz Logo" />
 
-          <p className="weight-semibold size-2 footer__cta_title">
-            Control para tu inmobiliaria, adaptado a tu presupuesto.
+          <p className="weight-semibold size-2 footer__content__cta__title">
+            Impulsa tu inmobiliaria con soluciones digitales reales
           </p>
           <Cta
             btnBg="bg-secondary"
@@ -125,7 +125,7 @@ function Footer() {
 
       <div className="footer__socials d-flex size-4 d-flex justify-content-between align-items-center">
         <div className="opacity-2">
-          <p>© 2025 TechRaiz. Software para el sector inmobiliario.</p>
+          <p>© 2025 TechRaiz. Tecnologia para el sector inmobiliario.</p>
         </div>
         <div className="d-flex justify-content-end align-items-center">
           <p className="weight-semibold footer__socials__title opacity-1">
