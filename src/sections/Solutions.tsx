@@ -35,7 +35,11 @@ function Solutions() {
           </div>
         </div>
         <div className="solutions__content__cta mt-auto">
-          <BtnCta text="Contactanos ahora" />
+          <BtnCta
+            text="Contactanos ahora"
+            bgBtn="bg-secondary"
+            textColor="text-black"
+          />
         </div>
       </div>
 

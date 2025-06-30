@@ -16,14 +16,16 @@ function Question({ question, answer }: any) {
         className="d-flex justify-content-between align-items-center cursor-pointer"
         onClick={toggleAnswer}
       >
-        <p className="size-2 weight-semibold">{question}</p>
+        <p className="my-3 size-2 weight-semibold">{question}</p>
         <FontAwesomeIcon
           icon={isOpen ? faMinus : faPlus}
           className="text-secondary size-icon"
         />
       </div>
 
-      <p className={`question__answer size-3 ${isOpen ? "open" : "closed"}`}>
+      <p
+        className={`m-0 question__answer size-3 ${isOpen ? "open" : "closed"}`}
+      >
         {answer}
       </p>
     </div>

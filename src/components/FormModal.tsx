@@ -10,6 +10,7 @@ const FormModal = () => {
     "Hola, me interesa el 40% de descuento en sus soluciones inmobiliarias. ¿Podrían escribirme?.";
   const inputRef = useRef<HTMLInputElement>(null);
   const { openModal, closeModal } = useModal();
+  const textRef = useRef<HTMLTextAreaElement>(null);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -27,10 +28,14 @@ const FormModal = () => {
       setError(false);
       setEmail("");
     }
-
-    //Abrir formModal o successModal
+    resetTextDefault();
     closeModal("contact");
     openModal("success");
+  };
+  const resetTextDefault = () => {
+    if (textRef.current) {
+      textRef.current.value = defaultDescription;
+    }
   };
 
   useEffect(() => {
@@ -42,13 +47,27 @@ const FormModal = () => {
     }
   }, [error]);
 
+  useEffect(() => {
+    const modalEl = modalRefs.contact.current;
+
+    if (modalEl) {
+      const handleClose = () => {
+        resetTextDefault();
+      };
+
+      modalEl.addEventListener("hidden.bs.modal", handleClose);
+
+      return () => {
+        modalEl.removeEventListener("hidden.bs.modal", handleClose);
+      };
+    }
+  }, []);
   return (
     <div
       ref={modalRefs.contact}
       className="modal fade"
       tabIndex={-1}
       aria-hidden="true"
-      data-bs-backdrop="static"
       aria-labelledby="FormModalLabel"
     >
       <div className="modal-dialog modal-dialog-centered">
@@ -77,6 +96,7 @@ const FormModal = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <textarea
+              ref={textRef}
               placeholder="Describenos tus problemas"
               className={`border-black text-black placeholder-black size-3 flex-grow-1 border-radius`}
               defaultValue={defaultDescription}

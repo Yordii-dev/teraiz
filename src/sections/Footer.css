@@ -54,8 +54,7 @@
 }
 
 .footer__socials__list a:hover {
-  background-color: #00b38d;
-  transform: scale(1.05);
+  transform: scale(1.2);
 }
 
 .footer__socials__list .size-icon {

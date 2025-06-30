@@ -29,7 +29,11 @@ function Meet() {
         </div>
 
         <div className="meet__content__cta mt-auto">
-          <BtnCta text="Habla con nuestros expertos" />
+          <BtnCta
+            text="Habla con nuestros expertos"
+            bgBtn="bg-secondary"
+            textColor="text-black"
+          />
         </div>
       </div>
       <div className={`meet__title ${isWrapped ? "order-1" : "order-2"}`}>

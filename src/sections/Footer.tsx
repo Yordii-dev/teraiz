@@ -70,7 +70,7 @@ function Footer() {
         className="footer__content__details__title-wrapper d-flex align-items-center cursor-pointer"
         onClick={() => isMobile && toggleSection(key)}
       >
-        <p className="footer__content__details__title size-3 weight-semibold">
+        <p className="my-0 footer__content__details__title size-3 weight-semibold">
           {title}
         </p>
         {isMobile && (
@@ -129,7 +129,7 @@ function Footer() {
           <p>© 2025 TechRaiz. Tecnologia para el sector inmobiliario.</p>
         </div>
         <div className="d-flex justify-content-end align-items-center">
-          <p className="weight-semibold footer__socials__title opacity-1">
+          <p className="m-0 weight-semibold footer__socials__title opacity-1">
             Siguenos en redes
           </p>
           <div className="d-flex footer__socials__list mleft-5 justify-content-between opacity-2 align-items-center">

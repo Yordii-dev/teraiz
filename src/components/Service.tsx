@@ -14,7 +14,12 @@ function Service({ icon, title, description, cta }: any) {
       </p>
       <p className="service__des size-3 weight-regular">{description}</p>
       <div className="service__cta mt-auto">
-        <BtnCta text={cta} />
+        <BtnCta
+          text={cta}
+          bgBtn="bg-white"
+          textColor="text-black"
+          borderColor="border-black"
+        />
       </div>
     </div>
   );
