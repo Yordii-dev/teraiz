@@ -3,16 +3,26 @@ import { useModal } from "../context/ModalContext";
 import "./FormModal.css";
 import { useGlobal } from "../context/GlobalContext";
 
+const hashModalDescription = {  
+  "target_1" : "Hola, me interesa el 40% de descuento en sus soluciones inmobiliarias. ¿Podrían escribirme?.",
+  "target_2" : "Hola!, deseo recibir informacion sobre sus servicios",
+  "target_3" : "target 3",
+}
+
 const FormModal = () => {
   const { modalRefs } = useModal();
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
-  const {descriptionModalContact} = useGlobal()
  
   const inputRef = useRef<HTMLInputElement>(null);
   const { openModal, closeModal } = useModal();
   const textRef = useRef<HTMLTextAreaElement>(null);
 
+const { targetModalContact } = useGlobal();
+
+  const [description, setDescription] = useState(
+    hashModalDescription[targetModalContact]
+  );
   const handleSubmit = (e: any) => {
     e.preventDefault();
     const inputVisible =
@@ -35,7 +45,7 @@ const FormModal = () => {
   };
   const resetTextDefault = () => {
     if (textRef.current) {
-      textRef.current.value = descriptionModalContact;
+      textRef.current.value = hashModalDescription[targetModalContact];
     }
   };
 
@@ -63,6 +73,12 @@ const FormModal = () => {
       };
     }
   }, []);
+
+  useEffect(() => {
+    setDescription(hashModalDescription[targetModalContact]);
+  }, [targetModalContact]);
+
+
   return (
     <div
       ref={modalRefs.contact}
@@ -100,7 +116,8 @@ const FormModal = () => {
               ref={textRef}
               placeholder="Describenos tus problemas"
               className={`border-black text-black placeholder-black size-3 flex-grow-1 border-radius`}
-              defaultValue={descriptionModalContact}
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}            
             ></textarea>
           </div>
 

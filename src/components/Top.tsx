@@ -32,9 +32,9 @@ function Top() {
 
   const MostrarLang = (lang: langType): JSX.Element => {
     const flags: Record<langType, { src: string; label: string }> = {
-      es: { src: FlagEs, label: '🇪🇸'},
-      en: { src: FlagEn, label: '🇺🇸' },
-      fr: { src: FlagFr, label: '🇫🇷' },
+      es: { src: FlagEs, label: 'ES'},
+      en: { src: FlagEn, label: 'EN' },
+      fr: { src: FlagFr, label: 'FR' },
     };
 
     const { src, label } = flags[lang];
@@ -65,7 +65,7 @@ function Top() {
         {width}px × {height}px{" "}
       </div>
 
-      <div onClick={handleClick} role="button" className={scrolled ? 'text-black' : 'text-white'}>
+      <div onClick={handleClick} role="button" className={`size-4 ${scrolled ? 'text-black' : 'text-white'}`}>
         {MostrarLang(lang)}
       </div>
 

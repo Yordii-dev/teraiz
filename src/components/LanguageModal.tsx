@@ -37,21 +37,21 @@ const LanguageModal = () => {
                 className="d-flex align-items-center gap-2 text-black weight-semibold rounded px-3 py-2 cursor-pointer justify-content-center"
                 onClick={() => handleSelect("es")}
               >
-                <span role="img" aria-label="Español">🇪🇸</span>
+                {/* <span role="img" aria-label="Español">🇪🇸</span> */}
                 Español
               </p>
               <p
                 className="d-flex align-items-center gap-2 text-black weight-semibold rounded px-3 py-2 cursor-pointer justify-content-center"
                 onClick={() => handleSelect("en")}
               >
-                <span role="img" aria-label="Inglés">🇺🇸</span>
+                {/* <span role="img" aria-label="Inglés"></span> */}
                 Inglés
               </p>
               <p
                 className="d-flex align-items-center gap-2 text-black weight-semibold rounded px-3 py-2 cursor-pointer justify-content-center"
                 onClick={() => handleSelect("fr")}
               >
-                <span role="img" aria-label="Francés">🇫🇷</span>
+                {/* <span role="img" aria-label="Francés">🇫🇷</span> */}
                 Francés
               </p>
             </div>

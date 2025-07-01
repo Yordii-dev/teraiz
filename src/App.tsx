@@ -29,14 +29,14 @@ function App() {
             <Solutions />
           </Section>
 
-          <Section backgroundColor="#EEEEEE">
+          <Section backgroundColor="white">
             <Services />
           </Section>
           <Section backgroundColor="white">
             <Companies></Companies>
           </Section>
 
-          <Section backgroundColor="#EEEEEE">
+          <Section backgroundColor="white">
             <Authority />
           </Section>
 
@@ -44,7 +44,7 @@ function App() {
             <Meet />
           </Section>
 
-          <Section backgroundColor="#EEEEEE">
+          <Section backgroundColor="white">
             <Faq></Faq>
           </Section>
 

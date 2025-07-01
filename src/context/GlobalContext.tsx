@@ -1,13 +1,10 @@
-// GlobalContext.tsx
 import { createContext, useContext, useState } from "react";
 import type {ReactNode} from 'react'
-
-const defaultDescriptionModalContact =
-  "Hola, me interesa el 40% de descuento en sus soluciones inmobiliarias. ¿Podrían escribirme?.";
+import type { targetModalType } from "../types/targetModal";
 
 type GlobalContextType = {
-  descriptionModalContact: string;
-  setDescriptionModalContact: (desc: string) => void;
+  targetModalContact: targetModalType
+  setTargetModalContact: (target: targetModalType) => void;
 };
 
 const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
@@ -21,13 +18,11 @@ export const useGlobal = (): GlobalContextType => {
 };
 
 export const GlobalProvider = ({ children }: { children: ReactNode }) => {
-  const [descriptionModalContact, setDescriptionModalContact] = useState<string>(
-    defaultDescriptionModalContact
-  );
+  const [targetModalContact, setTargetModalContact] = useState<targetModalType>("target_1");
 
   return (
     <GlobalContext.Provider
-      value={{ descriptionModalContact, setDescriptionModalContact }}
+      value={{ targetModalContact, setTargetModalContact }}
     >
       {children}
     </GlobalContext.Provider>

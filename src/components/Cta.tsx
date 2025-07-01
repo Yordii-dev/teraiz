@@ -4,6 +4,7 @@ import "./Cta.css";
 import { useTranslation } from "../context/TranslationContext";
 import { useModal, type ModalKey } from "../context/ModalContext";
 import { useWindowSize } from "../hooks/useWindowSize";
+import { useGlobal } from "../context/GlobalContext";
 
 function Cta({
   text,
@@ -22,9 +23,13 @@ function Cta({
 
   const { openModal } = useModal();
   const [modalName, setModalName] = useState<ModalKey>("success");
+  const { setTargetModalContact } = useGlobal();
+
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    setTargetModalContact("target_1")
+    
     const inputVisible =
       inputRef.current &&
       window.getComputedStyle(inputRef.current).display !== "none";

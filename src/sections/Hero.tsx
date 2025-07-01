@@ -2,7 +2,8 @@ import "./Hero.scss";
 import Cta from "../components/Cta";
 import ShieldIcon from "./../assets/shield-icon.svg";
 
-function Hero() {
+function Hero() { 
+
   return (
     <div className="hero">
       <div className="hero__bg" />

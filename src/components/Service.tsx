@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Service({ icon, title, description, cta }: any) {
   return (
-    <div className="service text-black bg-white border-radius d-flex flex-column align-items-center">
+    <div className="service text-black bg-gray1 border-radius d-flex flex-column align-items-center">
       <div className="service__img d-flex align-items-center justify-content-center">
         <FontAwesomeIcon icon={icon} size="3x" className="text-secondary" />
       </div>
