@@ -9,7 +9,7 @@ declare global {
   }
 }
 
-export type ModalKey = "success" | "contact" | "login"; // 🔁 Aquí agregas los modales que uses
+export type ModalKey = "success" | "contact" | "language"; // 🔁 Aquí agregas los modales que uses
 
 type ModalContextType = {
   modalRefs: Record<ModalKey, RefObject<HTMLDivElement | null>>;
@@ -31,7 +31,7 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const modalRefs: Record<ModalKey, RefObject<HTMLDivElement | null>> = {
     success: useRef<HTMLDivElement>(null),
     contact: useRef<HTMLDivElement>(null),
-    login: useRef<HTMLDivElement>(null),
+    language: useRef<HTMLDivElement>(null),
   };
 
   const openModal = (key: ModalKey) => {

@@ -8,11 +8,18 @@ import LogoDark from "./../assets/LOGO-DARK.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { useWindowSize } from "../hooks/useWindowSize";
+import { faLanguage } from "@fortawesome/free-solid-svg-icons";
+import { useModal } from "../context/ModalContext";
 
 function Top() {
   // const { lang, setLang } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const { width, height } = useWindowSize();
+  const { openModal } = useModal();
+
+  const handleClick = () => {
+    openModal("language");
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,10 +50,13 @@ function Top() {
         {width}px × {height}px{" "}
       </div>
 
-      <button className="top__cta d-none d-flex align-items-center btn size-3 text-secondary">
+      <div onClick={handleClick}>
+        <FontAwesomeIcon className="size-icon" icon={faLanguage} />
+      </div>
+      {/* <button className="top__cta d-flex align-items-center btn size-3 text-secondary">
         <FontAwesomeIcon className="size-icon" icon={faWhatsapp} />
         <span className="mleft-5">Cotiza gratis hoy</span>
-      </button>
+      </button> */}
     </div>
   );
 }
