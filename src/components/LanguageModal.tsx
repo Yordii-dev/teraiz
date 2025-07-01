@@ -1,15 +1,16 @@
 import { useModal } from "../context/ModalContext";
-import "./SuccessModal.css";
+import { useTranslation } from "../context/TranslationContext";
+import type { langType } from "../types/languages";
+import "./LanguageModal.css";
+  
 
-const LanguageModal = ({
-  onSelectLanguage,
-}: {
-  onSelectLanguage: (lang: string) => void;
-}) => {
-  const { modalRefs } = useModal();
+const LanguageModal = () => {
+  const { modalRefs, closeModal } = useModal();
+  const {setLang} = useTranslation()
 
-  const handleSelect = (lang: string) => {
-    onSelectLanguage(lang);
+  const handleSelect = (lang: langType) => {
+    setLang(lang);
+    closeModal("language")
   };
 
   return (
@@ -18,7 +19,6 @@ const LanguageModal = ({
       className="modal fade"
       tabIndex={-1}
       aria-hidden="true"
-      data-bs-backdrop="static"
       aria-labelledby="languageModalLabel"
     >
       <div className="modal-dialog modal-dialog-centered">
@@ -31,39 +31,31 @@ const LanguageModal = ({
               Selecciona tu idioma
             </h5>
           </div>
-
           <div className="modal-body text-center">
-            <div className="d-flex flex-column gap-3">
-              <button
-                className="btn bg-secondary text-black weight-semibold border-radius px-4 py-2"
+            <div className="d-flex flex-column gap-2">
+              <p
+                className="d-flex align-items-center gap-2 text-black weight-semibold rounded px-3 py-2 cursor-pointer justify-content-center"
                 onClick={() => handleSelect("es")}
               >
+                <span role="img" aria-label="Español">🇪🇸</span>
                 Español
-              </button>
-              <button
-                className="btn bg-secondary text-black weight-semibold border-radius px-4 py-2"
+              </p>
+              <p
+                className="d-flex align-items-center gap-2 text-black weight-semibold rounded px-3 py-2 cursor-pointer justify-content-center"
                 onClick={() => handleSelect("en")}
               >
-                English
-              </button>
-              <button
-                className="btn bg-secondary text-black weight-semibold border-radius px-4 py-2"
+                <span role="img" aria-label="Inglés">🇺🇸</span>
+                Inglés
+              </p>
+              <p
+                className="d-flex align-items-center gap-2 text-black weight-semibold rounded px-3 py-2 cursor-pointer justify-content-center"
                 onClick={() => handleSelect("fr")}
               >
-                Français
-              </button>
+                <span role="img" aria-label="Francés">🇫🇷</span>
+                Francés
+              </p>
             </div>
-          </div>
-
-          <div className="modal-footer border-0 justify-content-center">
-            <button
-              type="button"
-              className="btn size-3 bg-light text-black weight-semibold border-radius px-4 py-2"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-          </div>
+          </div>        
         </div>
       </div>
     </div>

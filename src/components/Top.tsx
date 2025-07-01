@@ -1,18 +1,18 @@
 import "./Top.css";
-// import { useTranslation } from "../context/TranslationContext";
-import { useEffect, useState } from "react";
-import Logolight from "./../assets/LOGO-LIGHT.svg";
+import { useTranslation } from "../context/TranslationContext";
+import { useEffect, useState, type JSX } from "react";
+import { useWindowSize } from "../hooks/useWindowSize";
+import { useModal } from "../context/ModalContext";
+import type { langType } from "../types/languages";
+import FlagEn from './../assets/icons/flagEn.svg'
+import FlagEs from './../assets/icons/flagEs.svg'
+import FlagFr from './../assets/icons/flagFr.svg'
 
+import Logolight from "./../assets/LOGO-LIGHT.svg";
 import LogoDark from "./../assets/LOGO-DARK.svg";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { useWindowSize } from "../hooks/useWindowSize";
-import { faLanguage } from "@fortawesome/free-solid-svg-icons";
-import { useModal } from "../context/ModalContext";
-
 function Top() {
-  // const { lang, setLang } = useTranslation();
+  const { lang } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const { width, height } = useWindowSize();
   const { openModal } = useModal();
@@ -23,14 +23,29 @@ function Top() {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY);
-
       setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const MostrarLang = (lang: langType): JSX.Element => {
+    const flags: Record<langType, { src: string; label: string }> = {
+      es: { src: FlagEs, label: '🇪🇸'},
+      en: { src: FlagEn, label: '🇺🇸' },
+      fr: { src: FlagFr, label: '🇫🇷' },
+    };
+
+    const { src, label } = flags[lang];
+
+    return (
+      <p className="d-flex align-items-center gap-2 m-0">
+        <img src={src} alt={label} width={20} height={20} />
+        {label}
+      </p>
+    );
+  };
 
   return (
     <div
@@ -50,13 +65,10 @@ function Top() {
         {width}px × {height}px{" "}
       </div>
 
-      <div onClick={handleClick}>
-        <FontAwesomeIcon className="size-icon" icon={faLanguage} />
+      <div onClick={handleClick} role="button" className={scrolled ? 'text-black' : 'text-white'}>
+        {MostrarLang(lang)}
       </div>
-      {/* <button className="top__cta d-flex align-items-center btn size-3 text-secondary">
-        <FontAwesomeIcon className="size-icon" icon={faWhatsapp} />
-        <span className="mleft-5">Cotiza gratis hoy</span>
-      </button> */}
+
     </div>
   );
 }

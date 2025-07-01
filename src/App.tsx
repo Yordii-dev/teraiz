@@ -14,41 +14,46 @@ import Authority from "./sections/Authority";
 import Meet from "./sections/Meet";
 import Faq from "./sections/Faq";
 import { ModalProvider } from "./context/ModalContext";
+import LanguageModal from "./components/LanguageModal";
+import { GlobalProvider } from "./context/GlobalContext";
 
 function App() {
   return (
     <TranslationProvider>
-      <ModalProvider>
-        <Top></Top>
-        <Hero></Hero>
+      <GlobalProvider>
+        <ModalProvider>
+          <Top></Top>
+          <Hero></Hero>
 
-        <Section backgroundColor="white">
-          <Solutions />
-        </Section>
+          <Section backgroundColor="white">
+            <Solutions />
+          </Section>
 
-        <Section backgroundColor="#EEEEEE">
-          <Services />
-        </Section>
-        <Section backgroundColor="white">
-          <Companies></Companies>
-        </Section>
+          <Section backgroundColor="#EEEEEE">
+            <Services />
+          </Section>
+          <Section backgroundColor="white">
+            <Companies></Companies>
+          </Section>
 
-        <Section backgroundColor="#EEEEEE">
-          <Authority />
-        </Section>
+          <Section backgroundColor="#EEEEEE">
+            <Authority />
+          </Section>
 
-        <Section backgroundColor="white">
-          <Meet />
-        </Section>
+          <Section backgroundColor="white">
+            <Meet />
+          </Section>
 
-        <Section backgroundColor="#EEEEEE">
-          <Faq></Faq>
-        </Section>
+          <Section backgroundColor="#EEEEEE">
+            <Faq></Faq>
+          </Section>
 
-        <Footer />
-        <FormModal />
-        <SuccessModal />
-      </ModalProvider>
+          <Footer />
+          <FormModal />
+          <SuccessModal />
+          <LanguageModal />
+        </ModalProvider>
+      </GlobalProvider>
     </TranslationProvider>
   );
 }

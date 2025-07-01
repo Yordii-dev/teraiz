@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { useModal } from "../context/ModalContext";
 import "./FormModal.css";
+import { useGlobal } from "../context/GlobalContext";
 
 const FormModal = () => {
   const { modalRefs } = useModal();
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
-  const defaultDescription =
-    "Hola, me interesa el 40% de descuento en sus soluciones inmobiliarias. ¿Podrían escribirme?.";
+  const {descriptionModalContact} = useGlobal()
+ 
   const inputRef = useRef<HTMLInputElement>(null);
   const { openModal, closeModal } = useModal();
   const textRef = useRef<HTMLTextAreaElement>(null);
@@ -34,7 +35,7 @@ const FormModal = () => {
   };
   const resetTextDefault = () => {
     if (textRef.current) {
-      textRef.current.value = defaultDescription;
+      textRef.current.value = descriptionModalContact;
     }
   };
 
@@ -99,7 +100,7 @@ const FormModal = () => {
               ref={textRef}
               placeholder="Describenos tus problemas"
               className={`border-black text-black placeholder-black size-3 flex-grow-1 border-radius`}
-              defaultValue={defaultDescription}
+              defaultValue={descriptionModalContact}
             ></textarea>
           </div>
 

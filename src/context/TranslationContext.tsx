@@ -1,22 +1,25 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import en from "../locales/en";
 import es from "../locales/es";
+import fr from "../locales/fr";
+
 import type { TranslationType } from "../types/Translations";
+import type { langType } from "../types/languages";
 
 const translations: Record<string, TranslationType> = {
   en,
   es,
+  fr
 };
 
 type TranslationContextType = {
-  lang: string;
-  setLang: (lang: string) => void;
+  lang: langType;
+  setLang: (lang: langType) => void;
   t: TranslationType;
 };
 
 export const TranslationContext = createContext<TranslationContextType>({
   lang: "es",
-  //setLang: (lang: string) => {},
   setLang: () => {},
   t: es,
 });
@@ -26,7 +29,7 @@ export const TranslationProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [lang, setLang] = useState<string>("es");
+  const [lang, setLang] = useState<langType>("es");
   const [t, setT] = useState<TranslationType>(translations[lang]);
 
   useEffect(() => {
