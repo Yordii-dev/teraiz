@@ -2,7 +2,7 @@ import "./Solutions.css";
 import dollarIcon from "./../assets/40-icon.svg";
 import maintenanceIcon from "./../assets/maintenance-icon.svg";
 import { useTranslation } from "../context/TranslationContext";
-import SolutionImg from "../assets/solution.svg";
+// import SolutionImg from "../assets/solution.svg";
 import BtnCta from "../components/BtnCta";
 import { useModal } from "../context/ModalContext";
 import { useGlobal } from "../context/GlobalContext";
@@ -20,9 +20,8 @@ function Solutions() {
     openModal("contact");
   };
   return (
-    <div className="solutions text-black d-flex justify-content-between">
+    <div className="solutions text-black d-flex align-items-start justify-content-between">
       <div className="solutions__content d-flex flex-column">
-        {texts.title}
         <p className="solutions__content__subtitle size-2"></p>
 
         <TextWithBreaks
@@ -50,7 +49,9 @@ function Solutions() {
       </div>
 
       <div className={`solutions__img`}>
-        <img src={SolutionImg}></img>
+        {/* <img src={SolutionImg}></img> */}
+        {texts.title}
+
       </div>
     </div>
   );
