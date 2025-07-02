@@ -4,8 +4,7 @@
   height: var(--height-testimony);
 }
 
-.company__author,
-.company__desc {
+.company__author {
   margin-top: var(--spacing-4);
 }
 
@@ -20,10 +19,6 @@
 }
 
 @media (max-width: 767px) {
-  .company__img {
-    display: none !important;
-  }
-
   .company__desc {
     font-size: var(--size-3) !important;
   }

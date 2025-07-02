@@ -48,7 +48,9 @@ function App() {
             <Faq></Faq>
           </Section>
 
-          <Footer />
+          <div className="bg-gray1">
+            <Footer />
+          </div>
           <FormModal />
           <SuccessModal />
           <LanguageModal />

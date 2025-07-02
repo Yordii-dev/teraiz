@@ -4,9 +4,9 @@ import { useEffect, useState, type JSX } from "react";
 import { useWindowSize } from "../hooks/useWindowSize";
 import { useModal } from "../context/ModalContext";
 import type { langType } from "../types/languages";
-import FlagEn from './../assets/icons/flagEn.svg'
-import FlagEs from './../assets/icons/flagEs.svg'
-import FlagFr from './../assets/icons/flagFr.svg'
+import FlagEn from "./../assets/icons/flagEn.svg";
+import FlagEs from "./../assets/icons/flagEs.svg";
+import FlagFr from "./../assets/icons/flagFr.svg";
 
 import Logolight from "./../assets/LOGO-LIGHT.svg";
 import LogoDark from "./../assets/LOGO-DARK.svg";
@@ -23,7 +23,10 @@ function Top() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      const hasPassed100vh = window.scrollY > window.innerHeight - 100;
+      console.log(window.scrollY);
+
+      setScrolled(hasPassed100vh);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -32,9 +35,9 @@ function Top() {
 
   const MostrarLang = (lang: langType): JSX.Element => {
     const flags: Record<langType, { src: string; label: string }> = {
-      es: { src: FlagEs, label: 'ES'},
-      en: { src: FlagEn, label: 'EN' },
-      fr: { src: FlagFr, label: 'FR' },
+      es: { src: FlagEs, label: "ES" },
+      en: { src: FlagEn, label: "EN" },
+      fr: { src: FlagFr, label: "FR" },
     };
 
     const { src, label } = flags[lang];
@@ -65,10 +68,13 @@ function Top() {
         {width}px × {height}px{" "}
       </div>
 
-      <div onClick={handleClick} role="button" className={`size-4 ${scrolled ? 'text-black' : 'text-white'}`}>
+      <div
+        onClick={handleClick}
+        role="button"
+        className={`size-4 ${scrolled ? "text-black" : "text-white"}`}
+      >
         {MostrarLang(lang)}
       </div>
-
     </div>
   );
 }

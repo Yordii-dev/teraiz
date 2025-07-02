@@ -36,7 +36,7 @@ const es: TranslationType = {
   solutions: {
     title: (
       <h1 className="size-0 weight-semibold">
-        Haz crecer tu inmobiliaria <br />
+        Crece tu inmobiliaria <br />
         <span className="text-secondary">con tecnología</span>
       </h1>
     ),
@@ -97,23 +97,22 @@ const es: TranslationType = {
     ),
     list: [
       {
-        title: "TechRaiz ordenó nuestro caos con un sistema hecho a medida.",
+        title:
+          "TechRaiz transformó nuestra operación: de hojas de Excel a un sistema integral y escalable.",
         author: "Director Comercial",
-        description:
-          "Usábamos Excel, WhatsApp y documentos por todos lados. La agencia entendió nuestro proceso y lo digitalizó todo. Ahora somos más eficientes y vendemos más sin crecer en personal.",
+        description: "Grupo Inmobiliario Horizonte",
       },
       {
         title:
-          "Nuestra inmobiliaria creció gracias al sistema que nos desarrolló TechRaiz.",
+          "Duplicamos ventas en 6 meses con el sistema personalizado que nos desarrolló TechRaiz.",
         author: "CEO",
-        description:
-          "Desde la atención al cliente hasta la gestión interna, todo está más rápido y claro. Trabajar con una agencia que entiende el rubro inmobiliario marcó la diferencia.",
+        description: "Inmobiliaria Altavista",
       },
       {
-        title: "Todo en un solo sistema: propiedades, clientes y agentes.",
+        title:
+          "Por fin tenemos todo en un solo lugar: propiedades, clientes, agentes y seguimiento automático.",
         author: "Gerente de Operaciones",
-        description:
-          "Con TechRaiz pasamos de procesos manuales a reportes automáticos. Tomamos decisiones basadas en datos y tenemos visibilidad completa del negocio.",
+        description: "Red de Bienes Raíces Andes",
       },
     ],
   },

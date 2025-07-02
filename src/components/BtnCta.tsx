@@ -6,7 +6,7 @@ function BtnCta({ text, bgBtn, textColor, borderColor, hideIcon }: any) {
   return (
     <button
       type="submit"
-      className={`btn__cta ${borderColor} ${bgBtn} ${textColor} d-flex align-items-center justify-content-center size-3`}
+      className={`btn__cta size-2 ${borderColor} ${bgBtn} ${textColor} d-flex align-items-center justify-content-center`}
     >
       <span className="weight-semibold">{text}</span>
       {!hideIcon && (

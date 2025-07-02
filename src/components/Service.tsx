@@ -20,7 +20,7 @@ function Service({ icon, title, description, cta }: any) {
         <FontAwesomeIcon icon={icon} size="3x" className="text-secondary" />
       </div>
 
-      <p className="service__title text-center size-2 weight-semibold">
+      <p className="service__title size-2 text-center weight-semibold">
         {title}
       </p>
       <p className="service__des size-3 weight-regular">{description}</p>

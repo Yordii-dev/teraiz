@@ -15,7 +15,7 @@ function Authority() {
             <p className="size-2 my-0 weight-semibold text-start">
               {autho.title}
             </p>
-            <p className="size-2 my-0">{autho.description}</p>
+            <p className="size-3 my-0">{autho.description}</p>
           </div>
         ))}
       </div>

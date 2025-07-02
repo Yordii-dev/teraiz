@@ -35,16 +35,15 @@ function Companies() {
           else if (diff < -50) goPrev();
         }}
       >
-        <div className="">
-          <Company
-            key={currentIndex}
-            //@ts-ignore
-            img={texts.list[currentIndex].img}
-            title={texts.list[currentIndex].title}
-            author={texts.list[currentIndex].author}
-            description={texts.list[currentIndex].description}
-          />
-        </div>
+        <Company
+          key={currentIndex}
+          //@ts-ignore
+          img={texts.list[currentIndex].img}
+          title={texts.list[currentIndex].title}
+          author={texts.list[currentIndex].author}
+          description={texts.list[currentIndex].description}
+        />
+
         <div className="dots">
           {texts.list.map((_, index) => (
             <span

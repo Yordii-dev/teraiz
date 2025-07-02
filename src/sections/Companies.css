@@ -27,7 +27,7 @@
   background-color: #00dca7; /* tu color secundario */
 }
 
-@media (max-width: 1445px) {
+@media (max-width: 1010px) {
   .compaines {
     flex-direction: column-reverse;
   }

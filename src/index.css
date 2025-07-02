@@ -103,13 +103,16 @@ h1 {
 h1,
 h2,
 h3 {
-  font-family: var(--font-heading);
+  /* font-family: var(--font-heading); */
+  font-family: "Mona-Sans", sans-serif;
   margin-bottom: 0px;
 }
 
 body,
 p,
 span {
+  font-family: "Mona-Sans", sans-serif;
+
   font-family: var(--font-body);
 }
 

@@ -22,26 +22,23 @@ const fr: TranslationType = {
 
   cta: {
     inputPlaceholder: "Votre email de contact",
-    objections: [
-      "Des solutions en quelques semaines",
-      "Des plans selon le budget",
-    ],
+    objections: ["Solutions en semaines", "Plans selon budget"],
   },
 
   hero: {
-    title: "Organisez et automatisez votre agence immobilière",
-    subtitle: "Moins de chaos. Plus de ventes. Tout en un seul système.",
-    textCtaBtn: "Obtenez un devis avec 40 % de réduction",
+    title: "Organisez et automatisez votre agence",
+    subtitle: "Moins de chaos. Plus de ventes. Tout dans un seul système.",
+    textCtaBtn: "Demandez un devis -40%",
     socialProof:
-      "Confiance éprouvée : plus de 8 ans à transformer des agences immobilières en Amérique latine et en Amérique du Nord.",
-    socialProofShort: "+8 ans à transformer des agences immobilières.",
+      "Confiance prouvée : 8+ ans à transformer des agences en Amérique latine & du Nord.",
+    socialProofShort: "8+ ans à transformer des agences.",
   },
 
   solutions: {
     title: (
       <h1 className="size-0 weight-semibold">
-        Développez votre agence immobilière <br />
-        <span className="text-secondary">avec la technologie</span>
+        Boostez votre agence <br />
+        <span className="text-secondary">avec la tech</span>
       </h1>
     ),
 
@@ -101,22 +98,21 @@ const fr: TranslationType = {
     list: [
       {
         title:
-          "TechRaiz a mis de l’ordre dans notre chaos avec un système sur mesure.",
+          "TechRaiz a transformé notre gestion : des feuilles Excel à un système complet et évolutif.",
         author: "Directeur Commercial",
-        description:
-          "On utilisait Excel, WhatsApp et des documents éparpillés. L’agence a compris notre fonctionnement et a tout digitalisé. Aujourd’hui, nous sommes plus efficaces et vendons davantage sans embaucher plus de personnel.",
+        description: "Groupe Immobilier Horizonte",
       },
       {
-        title: "Notre agence a grandi grâce au système développé par TechRaiz.",
+        title:
+          "Nous avons doublé nos ventes en 6 mois grâce au système sur mesure développé par TechRaiz.",
         author: "PDG",
-        description:
-          "Du service client à la gestion interne, tout est plus rapide et plus clair. Travailler avec une agence qui comprend le secteur immobilier a fait toute la différence.",
+        description: "Immobilier Altavista",
       },
       {
-        title: "Tout dans un seul système : biens, clients et agents.",
+        title:
+          "Tout est enfin centralisé : biens, clients, agents et suivi automatique.",
         author: "Responsable des Opérations",
-        description:
-          "Avec TechRaiz, nous sommes passés de processus manuels à des rapports automatisés. Nous prenons des décisions basées sur les données et avons une vue complète de l’entreprise.",
+        description: "Réseau Immobilier des Andes",
       },
     ],
   },

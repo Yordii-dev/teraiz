@@ -27,7 +27,7 @@ function Solutions() {
 
         <TextWithBreaks
           text={texts.description}
-          className="solutions__content__subtitle size-2"
+          className="solutions__content__subtitle size-3"
         />
 
         <div className="solutions__content__off">

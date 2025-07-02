@@ -20,22 +20,23 @@ const en: TranslationType = {
 
   cta: {
     inputPlaceholder: "Your contact email",
-    objections: ["Solutions in weeks", "Plans according to budget"],
+    objections: ["Solutions in weeks", "Plans based on budget"],
   },
+
   hero: {
-    title: "Organize and automate your real estate business",
-    subtitle: "Less chaos. More sales. Everything in one system.",
+    title: "Organize and automate your agency",
+    subtitle: "Less chaos. More sales. All in one system.",
     textCtaBtn: "Get a quote with 40% off",
     socialProof:
-      "Proven trust: 8+ years transforming real estate agencies in LATAM & North America.",
-    socialProofShort: "8+ years transforming real estate agencies.",
+      "Proven trust: 8+ years transforming agencies in LATAM & North America.",
+    socialProofShort: "8+ years transforming agencies.",
   },
 
   solutions: {
     title: (
       <h1 className="size-0 weight-semibold">
-        Grow your real estate agency <br />
-        <span className="text-secondary">with technology</span>
+        Grow your agency <br />
+        <span className="text-secondary">with tech</span>
       </h1>
     ),
 
@@ -96,23 +97,21 @@ const en: TranslationType = {
     list: [
       {
         title:
-          "TechRaiz brought order to our chaos with a custom-built system.",
+          "TechRaiz transformed our operation: from Excel sheets to a complete and scalable system.",
         author: "Commercial Director",
-        description:
-          "We were using Excel, WhatsApp, and scattered documents. The agency understood our process and digitized everything. Now we’re more efficient and selling more without increasing staff.",
+        description: "Horizonte Real Estate Group",
       },
       {
         title:
-          "Our agency grew thanks to the system TechRaiz developed for us.",
+          "We doubled our sales in 6 months with the custom system TechRaiz built for us.",
         author: "CEO",
-        description:
-          "From customer service to internal operations, everything is faster and clearer. Working with an agency that understands real estate made all the difference.",
+        description: "Altavista Real Estate",
       },
       {
-        title: "Everything in one system: properties, clients, and agents.",
+        title:
+          "Everything is finally in one place: properties, clients, agents, and automated tracking.",
         author: "Operations Manager",
-        description:
-          "With TechRaiz, we moved from manual processes to automated reports. Now we make data-driven decisions and have full visibility over the business.",
+        description: "Andes Real Estate Network",
       },
     ],
   },
