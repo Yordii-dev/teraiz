@@ -12,6 +12,12 @@ const en: TranslationType = {
       target_3: "",
     },
   },
+  languageModal:{
+    title: "Select your language",
+    es : "Spanish",
+    en: "English",
+    fr: "French"
+  },
   successModal: {
     title: "Thank you for your message!",
     description: "We have received your message and will get in touch soon.",

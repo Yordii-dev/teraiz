@@ -43,6 +43,12 @@ export type TranslationType = {
     };
   };
 
+  languageModal:{
+    title:string;
+    es:string;
+    en:string;
+    fr:string;
+  };
   successModal: {
     title: string;
     description: string;

@@ -5,7 +5,8 @@ import "./LanguageModal.css";
 
 const LanguageModal = () => {
   const { modalRefs, closeModal } = useModal();
-  const { setLang } = useTranslation();
+  const { setLang, t } = useTranslation();
+  const texts = t.languageModal;
 
   const handleSelect = (lang: langType) => {
     setLang(lang);
@@ -27,7 +28,7 @@ const LanguageModal = () => {
               className="modal-title size-2 weight-bold text-black"
               id="languageModalLabel"
             >
-              Selecciona tu idioma
+              {texts.title}
             </h5>
           </div>
           <div className="modal-body text-center">
@@ -37,21 +38,21 @@ const LanguageModal = () => {
                 onClick={() => handleSelect("es")}
               >
                 {/* <span role="img" aria-label="Español">🇪🇸</span> */}
-                Español
+                {texts.es}
               </p>
               <p
                 className="languag__option d-flex align-items-center gap-2 text-black weight-semibold rounded px-3 py-2 cursor-pointer justify-content-center"
                 onClick={() => handleSelect("en")}
               >
                 {/* <span role="img" aria-label="Inglés"></span> */}
-                Inglés
+                {texts.en}
               </p>
               <p
                 className="languag__option d-flex align-items-center gap-2 text-black weight-semibold rounded px-3 py-2 cursor-pointer justify-content-center"
                 onClick={() => handleSelect("fr")}
               >
                 {/* <span role="img" aria-label="Francés">🇫🇷</span> */}
-                Francés
+                {texts.fr}
               </p>
             </div>
           </div>
