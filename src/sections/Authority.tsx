@@ -8,7 +8,6 @@ function Authority() {
   return (
     <div className="authority text-black d-flex align-items-start justify-content-between">
       <div className="authority__title">{texts.title} </div>
-
       <div className="authority__socialproofs d-flex flex-column">
         {texts.list.map((autho, index) => (
           <div key={index} className="authority__socialproofs__proof">
@@ -18,7 +17,7 @@ function Authority() {
             <p className="size-3 my-0">{autho.description}</p>
           </div>
         ))}
-      </div>
+      </div>{" "}
     </div>
   );
 }

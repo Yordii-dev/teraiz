@@ -12,11 +12,11 @@ const en: TranslationType = {
       target_3: "",
     },
   },
-  languageModal:{
+  languageModal: {
     title: "Select your language",
-    es : "Spanish",
+    es: "Spanish",
     en: "English",
-    fr: "French"
+    fr: "French",
   },
   successModal: {
     title: "Thank you for your message!",
@@ -91,7 +91,7 @@ const en: TranslationType = {
 
   testimonies: {
     title: (
-      <h1 className="size-0 weight-semibold">
+      <h1 className="size-1 weight-semibold">
         <span className="text-secondary">2025</span>
         <br />
         They grew.
@@ -124,7 +124,7 @@ const en: TranslationType = {
 
   authority: {
     title: (
-      <h1 className="size-1 weight-semibold">
+      <h1 className="size-0 weight-semibold">
         <span className="text-secondary">Experts in</span>
         <br />
         real estate

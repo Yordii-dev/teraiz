@@ -13,12 +13,13 @@ const fr: TranslationType = {
       target_3: "",
     },
   },
-    languageModal:{
-    title: "Selecciona tu idioma",
-    es : "Español",
-    en: "Ingles",
-    fr: "Frances"
+  languageModal: {
+    title: "Sélectionnez votre langue",
+    es: "Espagnol",
+    en: "Anglais",
+    fr: "Français",
   },
+
   successModal: {
     title: "Merci pour votre message !",
     description:
@@ -92,7 +93,7 @@ const fr: TranslationType = {
   },
   testimonies: {
     title: (
-      <h1 className="size-0 weight-semibold">
+      <h1 className="size-1 weight-semibold">
         <span className="text-secondary">2025</span>
         <br />
         Ils ont grandi
@@ -124,7 +125,7 @@ const fr: TranslationType = {
   },
   authority: {
     title: (
-      <h1 className="size-1 weight-semibold">
+      <h1 className="size-0 weight-semibold">
         <span className="text-secondary">Experts en</span>
         <br />
         technologie

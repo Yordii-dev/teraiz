@@ -55,7 +55,9 @@ function Companies() {
         </div>
       </div>
 
-      <div className="compaines__title">{texts.title} </div>
+      <div className="compaines__title d-flex justify-content-end">
+        {texts.title}{" "}
+      </div>
     </div>
   );
 }

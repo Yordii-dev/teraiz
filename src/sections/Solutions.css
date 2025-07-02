@@ -7,9 +7,6 @@
   flex: 1 1 calc(50% - var(--spacing-2) / 2);
   min-width: 360px;
 }
-.solutions__content__subtitle {
-  /* margin-top: var(--spacing-3); */
-}
 
 .solutions__content__off {
   margin-top: var(--spacing-3);
@@ -26,10 +23,10 @@
 .solutions__content__cta {
   margin-top: var(--spacing-2) !important;
 }
-
+/* 
 @media (max-width: 1010px) {
   .solutions {
     flex-direction: column-reverse;
   }
   
-}
+} */

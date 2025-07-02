@@ -1,18 +1,20 @@
-import { useGlobal } from "../context/GlobalContext";
-import { useModal } from "../context/ModalContext";
-import BtnCta from "./BtnCta";
+// import { useGlobal } from "../context/GlobalContext";
+// import { useModal } from "../context/ModalContext";
+// import BtnCta from "./BtnCta";
 import "./Service.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Service({ icon, title, description, cta }: any) {
-  const { openModal } = useModal();
-  const { setTargetModalContact } = useGlobal();
+  console.log(cta);
 
-  const handleClick = (e: any) => {
-    e.preventDefault();
-    setTargetModalContact("target_2");
-    openModal("contact");
-  };
+  // const { openModal } = useModal();
+  // const { setTargetModalContact } = useGlobal();
+
+  // const handleClick = (e: any) => {
+  //   e.preventDefault();
+  //   setTargetModalContact("target_2");
+  //   openModal("contact");
+  // };
 
   return (
     <div className="service text-black bg-gray1 border-radius d-flex flex-column align-items-center">
@@ -24,14 +26,14 @@ function Service({ icon, title, description, cta }: any) {
         {title}
       </p>
       <p className="service__des size-3 weight-regular">{description}</p>
-      <div className="service__cta mt-auto" onClick={handleClick}>
+      {/* <div className="service__cta mt-auto" onClick={handleClick}>
         <BtnCta
           text={cta}
           bgBtn="bg-white"
           textColor="text-black"
           borderColor="border-black"
         />
-      </div>
+      </div> */}
     </div>
   );
 }

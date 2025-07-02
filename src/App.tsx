@@ -16,6 +16,7 @@ import Faq from "./sections/Faq";
 import { ModalProvider } from "./context/ModalContext";
 import LanguageModal from "./components/LanguageModal";
 import { GlobalProvider } from "./context/GlobalContext";
+import Image from "./sections/Image";
 
 function App() {
   return (
@@ -28,20 +29,29 @@ function App() {
           <Section backgroundColor="white">
             <Solutions />
           </Section>
+          <Section disableTop>
+            <Image></Image>
+          </Section>
 
           <Section backgroundColor="white">
             <Services />
           </Section>
           <Section backgroundColor="white">
+            <Authority />
+          </Section>
+          <Section disableTop>
+            <Image></Image>
+          </Section>
+
+          <Section backgroundColor="white">
             <Companies></Companies>
           </Section>
 
           <Section backgroundColor="white">
-            <Authority />
-          </Section>
-
-          <Section backgroundColor="white">
             <Meet />
+          </Section>
+          <Section disableTop>
+            <Image></Image>
           </Section>
 
           <Section backgroundColor="white">
