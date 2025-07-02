@@ -9,3 +9,8 @@
   justify-items: center; /* centra horizontalmente el contenido de cada celda */
   align-items: start; /* alinea verticalmente el contenido al top de cada celda */
 }
+@media (max-width: 767px) {
+  .services_list {
+    gap: var(--spacing-1);
+  }
+}

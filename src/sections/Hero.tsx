@@ -1,9 +1,11 @@
 import "./Hero.scss";
 import Cta from "../components/Cta";
 import ShieldIcon from "./../assets/shield-icon.svg";
+import { useTranslation } from "../context/TranslationContext";
 
-function Hero() { 
-
+function Hero() {
+  const { t } = useTranslation();
+  const texts = t.hero;
   return (
     <div className="hero">
       <div className="hero__bg" />
@@ -14,15 +16,11 @@ function Hero() {
          "
       >
         <div className="my-auto">
-          <h1 className="hero__title size-0 weight-semibold">
-            Ordena y automatiza tu inmobiliaria
-          </h1>
-          <p className="hero__subtitle size-2">
-            Menos caos. Más ventas. Todo en un solo sistema.
-          </p>
+          <h1 className="hero__title size-0 weight-semibold">{texts.title}</h1>
+          <p className="hero__subtitle size-2">{texts.subtitle}</p>
 
           <Cta
-            text="Cotiza con 40% de descuento"
+            text={texts.textCtaBtn}
             btnBg="bg-secondary"
             textColor="text-black"
             textInputColor="text-white"
@@ -35,11 +33,11 @@ function Hero() {
             <img src={ShieldIcon} />
 
             <p className="my-0 mleft-5 hero__content__socialproof-lg">
-              Confianza comprobada: +8 años transformando inmobiliarias en LATAM
-              & Norteamérica.
+              {texts.socialProof}
             </p>
+
             <p className="my-0 mleft-5 hero__content__socialproof-sm d-none">
-              +8 años transformando inmobiliarias.
+              {texts.socialProofShort}
             </p>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { useTranslation } from "../context/TranslationContext";
 import { useModal, type ModalKey } from "../context/ModalContext";
 import { useWindowSize } from "../hooks/useWindowSize";
 import { useGlobal } from "../context/GlobalContext";
+import BtnCta from "./BtnCta";
 
 function Cta({
   text,
@@ -16,6 +17,7 @@ function Cta({
   placeholderColor,
 }: any) {
   const { t } = useTranslation();
+  const texts = t.cta;
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -25,11 +27,10 @@ function Cta({
   const [modalName, setModalName] = useState<ModalKey>("success");
   const { setTargetModalContact } = useGlobal();
 
-
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    setTargetModalContact("target_1")
-    
+    setTargetModalContact("target_1");
+
     const inputVisible =
       inputRef.current &&
       window.getComputedStyle(inputRef.current).display !== "none";
@@ -74,21 +75,20 @@ function Cta({
           !error ? borderInput : "input-error"
         } ${textInputColor} ${placeholderColor} size-3 flex-grow-1 border-radius`}
         type="email"
-        placeholder="Tu email de contacto"
+        placeholder={texts.inputPlaceholder}
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       {!hideObjections && (
         <div className="container__cta__objections size-4 opacity-2 weight-regular text-white d-flex justify-content-between">
-          <p>{t.hero.socialproof}</p>
-          <p>Planes segun presupuesto</p>
+          {texts.objections.map((ob, i) => (
+            <p key={i} className="mb-0">
+              {ob}
+            </p>
+          ))}
         </div>
       )}
-      <button
-        className={`w-100 btn ${textColor} size-3 ${btnBg} weight-semibold border-radius`}
-      >
-        {text}
-      </button>
+      <BtnCta text={text} bgBtn={btnBg} textColor={textColor} hideIcon={true} />
     </form>
   );
 }

@@ -1,25 +1,17 @@
 import "./BtnCta.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import { useModal } from "../context/ModalContext";
-import { useGlobal } from "../context/GlobalContext";
-function BtnCta({ text, bgBtn, textColor, borderColor }: any) {
-  const { openModal } = useModal();
-  const {setTargetModalContact} = useGlobal()
+import { faMessage } from "@fortawesome/free-solid-svg-icons";
 
-  const handleClick = (e: any) => {
-    e.preventDefault();
-    setTargetModalContact("target_2")
-    openModal("contact");
-  };
-
+function BtnCta({ text, bgBtn, textColor, borderColor, hideIcon }: any) {
   return (
     <button
-      onClick={handleClick}
-      className={`btn__cta ${borderColor} d-flex align-items-center btn size-3 ${bgBtn} ${textColor}`}
+      type="submit"
+      className={`btn__cta ${borderColor} ${bgBtn} ${textColor} d-flex align-items-center justify-content-center size-3`}
     >
       <span className="weight-semibold">{text}</span>
-      <FontAwesomeIcon className="mleft-5 size-icon" icon={faPaperPlane} />
+      {!hideIcon && (
+        <FontAwesomeIcon className="mleft-5 size-icon" icon={faMessage} />
+      )}
     </button>
   );
 }

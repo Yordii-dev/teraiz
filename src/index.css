@@ -97,7 +97,9 @@ body {
 .modal-backdrop {
   z-index: 19990 !important;
 }
-
+h1 {
+  white-space: pre-line !important;
+}
 h1,
 h2,
 h3 {
@@ -179,7 +181,9 @@ span {
 .bg-gray1 {
   background-color: var(--color-gray1) !important;
 }
-
+.text-white-opacity {
+  color: rgba(255, 255, 255, 0.9);
+}
 .text-primary {
   color: var(--color-primary) !important;
 }

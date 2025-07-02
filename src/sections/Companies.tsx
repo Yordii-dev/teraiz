@@ -3,42 +3,24 @@ import "./Companies.css";
 
 import img from "../assets/react.svg";
 import Company from "../components/Company";
+import { useTranslation } from "../context/TranslationContext";
 
 function Companies() {
-  const [companies] = useState([
-    {
-      img,
-      title: "TechRaiz ordenó nuestro caos con un sistema hecho a medida.",
-      author: "Director Comercial",
-      description:
-        "Usábamos Excel, WhatsApp y documentos por todos lados. La agencia entendió nuestro proceso y lo digitalizó todo. Ahora somos más eficientes y vendemos más sin crecer en personal.",
-    },
-    {
-      img,
-      title:
-        "Nuestra inmobiliaria creció gracias al sistema que nos desarrolló TechRaiz.",
-      author: "CEO",
-      description:
-        "Desde la atención al cliente hasta la gestión interna, todo está más rápido y claro. Trabajar con una agencia que entiende el rubro inmobiliario marcó la diferencia.",
-    },
-    {
-      img,
-      title: "Todo en un solo sistema: propiedades, clientes y agentes.",
-      author: "Gerente de Operaciones",
-      description:
-        "Con TechRaiz pasamos de procesos manuales a reportes automáticos. Tomamos decisiones basadas en datos y tenemos visibilidad completa del negocio.",
-    },
-  ]);
+  const { t } = useTranslation();
+  const texts = t.testimonies;
+
+  const icons = [img];
+  texts.list = texts.list.map((s) => ({ img: icons[0], ...s }));
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef(0);
 
   const goPrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? companies.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? texts.list.length - 1 : prev - 1));
   };
 
   const goNext = () => {
-    setCurrentIndex((prev) => (prev === companies.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === texts.list.length - 1 ? 0 : prev + 1));
   };
 
   return (
@@ -56,14 +38,15 @@ function Companies() {
         <div className="">
           <Company
             key={currentIndex}
-            img={companies[currentIndex].img}
-            title={companies[currentIndex].title}
-            author={companies[currentIndex].author}
-            description={companies[currentIndex].description}
+            //@ts-ignore
+            img={texts.list[currentIndex].img}
+            title={texts.list[currentIndex].title}
+            author={texts.list[currentIndex].author}
+            description={texts.list[currentIndex].description}
           />
         </div>
         <div className="dots">
-          {companies.map((_, index) => (
+          {texts.list.map((_, index) => (
             <span
               key={index}
               className={`dot ${index === currentIndex ? "active" : ""}`}
@@ -73,13 +56,7 @@ function Companies() {
         </div>
       </div>
 
-      <div className={`compaines__title`}>
-        <h1 className="size-1 weight-semibold">
-          <span className="text-secondary">2025</span> <br />
-          Ellos crecieron. <br />
-          ¿Qué esperas?{" "}
-        </h1>
-      </div>
+      <div className="compaines__title">{texts.title} </div>
     </div>
   );
 }

@@ -19,7 +19,7 @@ function Question({ question, answer }: any) {
         <p className="my-3 size-2 weight-semibold">{question}</p>
         <FontAwesomeIcon
           icon={isOpen ? faMinus : faPlus}
-          className="text-secondary size-icon"
+          className="text-black size-icon"
         />
       </div>
 

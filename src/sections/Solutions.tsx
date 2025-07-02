@@ -1,42 +1,48 @@
 import "./Solutions.css";
 import dollarIcon from "./../assets/40-icon.svg";
 import maintenanceIcon from "./../assets/maintenance-icon.svg";
-
+import { useTranslation } from "../context/TranslationContext";
 import SolutionImg from "../assets/solution.svg";
 import BtnCta from "../components/BtnCta";
+import { useModal } from "../context/ModalContext";
+import { useGlobal } from "../context/GlobalContext";
+import TextWithBreaks from "../utils/TextWithBreak";
 
 function Solutions() {
+  const { openModal } = useModal();
+  const { setTargetModalContact } = useGlobal();
+  const { t } = useTranslation();
+  const texts = t.solutions;
+
+  const handleClick = (e: any) => {
+    e.preventDefault();
+    setTargetModalContact("target_1");
+    openModal("contact");
+  };
   return (
     <div className="solutions text-black d-flex justify-content-between">
       <div className="solutions__content d-flex flex-column">
-        <h1 className="size-0 weight-semibold">
-          Haz crecer tu inmobiliaria <br />
-          <span className="text-secondary">con tecnología</span>
-        </h1>
-        <p className="solutions__content__subtitle size-2">
-          Seguir con procesos manuales te hace perder tiempo, ventas y
-          oportunidades.
-          <br />
-          <br />
-          Nosotros lo solucionamos: digitaliza tu operación y gestiona
-          propiedades, agentes, cobros y terrenos sin complicaciones.
-        </p>
+        {texts.title}
+        <p className="solutions__content__subtitle size-2"></p>
+
+        <TextWithBreaks
+          text={texts.description}
+          className="solutions__content__subtitle size-2"
+        />
 
         <div className="solutions__content__off">
           <div className="d-flex align-items-center">
             <img src={dollarIcon} />
-            <p className="size-3 mleft-5 my-0">
-              1 año de mantenimiento sin costo.
-            </p>
+            <p className="size-3 mleft-5 my-0">{texts.offers[0]}</p>
           </div>
           <div className="d-flex align-items-center">
             <img src={maintenanceIcon} />
-            <p className="size-3 mleft-5 my-0">40% de descuento exclusivo. </p>
+            <p className="size-3 mleft-5 my-0">{texts.offers[1]}</p>
           </div>
         </div>
-        <div className="solutions__content__cta mt-auto">
+        <div className="solutions__content__cta mt-auto" onClick={handleClick}>
           <BtnCta
-            text="Contactanos ahora"
+            text={texts.textCtaBtn}
             bgBtn="bg-secondary"
             textColor="text-black"
           />

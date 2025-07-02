@@ -1,8 +1,11 @@
 import { useModal } from "../context/ModalContext";
+import { useTranslation } from "../context/TranslationContext";
 import "./SuccessModal.css";
 
 const SuccessModal = () => {
   const { modalRefs } = useModal();
+  const { t } = useTranslation();
+  const texts = t.successModal;
 
   return (
     <div
@@ -10,33 +13,32 @@ const SuccessModal = () => {
       className="modal fade"
       tabIndex={-1}
       aria-hidden="true"
-      data-bs-backdrop="static"
       aria-labelledby="successModalLabel"
     >
       <div className="modal-dialog modal-dialog-centered">
-        <div className="modal-content border-radius bg-gray1 shadow-lg">
+        <div className="modal-content border-radius shadow-lg">
           <div className="modal-header border-0 justify-content-center">
             <h5
               className="modal-title size-2 weight-bold text-black"
               id="successModalLabel"
             >
-              ¡Gracias por tu mensaje!
+              {texts.title}
             </h5>
           </div>
 
           <div className="modal-body text-center">
             <p className="size-3 weight-regular text-black opacity-2">
-              Hemos recibido tu mensaje y nos pondremos en contacto pronto.
+              {texts.description}
             </p>
           </div>
 
           <div className="modal-footer border-0 justify-content-center">
             <button
               type="button"
-              className="btn size-3 bg-secondary text-black weight-semibold border-radius px-4 py-2"
+              className="border-0 size-5 bg-gray1 text-black weight-semibold border-radius px-5 py-3"
               data-bs-dismiss="modal"
             >
-              Cerrar
+              {texts.textCtaBtn}
             </button>
           </div>
         </div>

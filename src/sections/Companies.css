@@ -3,8 +3,8 @@
   gap: var(--spacing-2);
 }
 .compaines__list {
-  flex: 1 1 calc(70% - var(--spacing-2) / 2);
-  min-width: calc(70% - var(--spacing-2) / 2);
+  flex: 1 1 calc(60% - var(--spacing-2) / 2);
+  min-width: calc(60% - var(--spacing-2) / 2);
 }
 
 .dots {

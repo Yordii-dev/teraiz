@@ -2,27 +2,24 @@ import { useEffect, useRef, useState } from "react";
 import { useModal } from "../context/ModalContext";
 import "./FormModal.css";
 import { useGlobal } from "../context/GlobalContext";
-
-const hashModalDescription = {  
-  "target_1" : "Hola, me interesa el 40% de descuento en sus soluciones inmobiliarias. ¿Podrían escribirme?.",
-  "target_2" : "Hola!, deseo recibir informacion sobre sus servicios",
-  "target_3" : "target 3",
-}
+import BtnCta from "./BtnCta";
+import { useTranslation } from "../context/TranslationContext";
 
 const FormModal = () => {
-  const { modalRefs } = useModal();
+  const { t } = useTranslation();
+  const texts = t.formModal;
+  const { targetModalContact } = useGlobal();
+  const { modalRefs, openModal, closeModal } = useModal();
+
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
- 
+  const [description, setDescription] = useState(
+    texts.defaultDescription[targetModalContact]
+  );
+
   const inputRef = useRef<HTMLInputElement>(null);
-  const { openModal, closeModal } = useModal();
   const textRef = useRef<HTMLTextAreaElement>(null);
 
-const { targetModalContact } = useGlobal();
-
-  const [description, setDescription] = useState(
-    hashModalDescription[targetModalContact]
-  );
   const handleSubmit = (e: any) => {
     e.preventDefault();
     const inputVisible =
@@ -39,45 +36,34 @@ const { targetModalContact } = useGlobal();
       setError(false);
       setEmail("");
     }
-    resetTextDefault();
+    setDescription(texts.defaultDescription[targetModalContact]);
+
     closeModal("contact");
     openModal("success");
   };
-  const resetTextDefault = () => {
-    if (textRef.current) {
-      textRef.current.value = hashModalDescription[targetModalContact];
-    }
-  };
+
+  useEffect(() => {
+    const modalEl = modalRefs.contact.current;
+    if (!modalEl) return;
+
+    const handleClose = () => {
+      setDescription(texts.defaultDescription[targetModalContact]);
+    };
+
+    modalEl.addEventListener("hidden.bs.modal", handleClose);
+    return () => modalEl.removeEventListener("hidden.bs.modal", handleClose);
+  }, [texts, targetModalContact]);
 
   useEffect(() => {
     if (error) {
-      const timeout = setTimeout(() => {
-        setError(false);
-      }, 1000);
+      const timeout = setTimeout(() => setError(false), 1000);
       return () => clearTimeout(timeout);
     }
   }, [error]);
 
   useEffect(() => {
-    const modalEl = modalRefs.contact.current;
-
-    if (modalEl) {
-      const handleClose = () => {
-        resetTextDefault();
-      };
-
-      modalEl.addEventListener("hidden.bs.modal", handleClose);
-
-      return () => {
-        modalEl.removeEventListener("hidden.bs.modal", handleClose);
-      };
-    }
-  }, []);
-
-  useEffect(() => {
-    setDescription(hashModalDescription[targetModalContact]);
-  }, [targetModalContact]);
-
+    setDescription(texts.defaultDescription[targetModalContact]);
+  }, [targetModalContact, texts]);
 
   return (
     <div
@@ -97,7 +83,7 @@ const { targetModalContact } = useGlobal();
               className="modal-title size-2 weight-bold text-black"
               id="FormModalLabel"
             >
-              Hablar con un experto
+              {texts.title}
             </h5>
           </div>
 
@@ -108,7 +94,7 @@ const { targetModalContact } = useGlobal();
                 !error ? "border-black" : "input-error"
               } text-black placeholder-black size-3 flex-grow-1 border-radius`}
               type="email"
-              placeholder="Tu email de contacto"
+              placeholder={texts.inputPlaceholder}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -117,17 +103,19 @@ const { targetModalContact } = useGlobal();
               placeholder="Describenos tus problemas"
               className={`border-black text-black placeholder-black size-3 flex-grow-1 border-radius`}
               value={description}
-              onChange={(e) => setDescription(e.target.value)}            
+              onChange={(e) => setDescription(e.target.value)}
             ></textarea>
           </div>
 
           <div className="modal-footer border-0 justify-content-center">
-            <button
-              type="submit"
-              className="btn size-3 bg-secondary text-black weight-semibold border-radius px-4 py-3"
-            >
-              Hablar con un experto
-            </button>
+            <div className="meet__content__cta mt-auto">
+              <BtnCta
+                text={texts.textCtaBtn}
+                bgBtn="bg-secondary"
+                textColor="text-black"
+                hideIcon={true}
+              />
+            </div>
           </div>
         </form>
       </div>
