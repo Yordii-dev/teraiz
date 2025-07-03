@@ -91,7 +91,7 @@ const FormModal = () => {
             <input
               ref={inputRef}
               className={`${
-                !error ? "border-black" : "input-error"
+                !error ? "border-black-opacity" : "input-error"
               } text-black placeholder-black size-3 flex-grow-1 border-radius`}
               type="email"
               placeholder={texts.inputPlaceholder}
@@ -101,7 +101,7 @@ const FormModal = () => {
             <textarea
               ref={textRef}
               placeholder="Describenos tus problemas"
-              className={`border-black text-black placeholder-black size-3 flex-grow-1 border-radius`}
+              className={`border-black-opacity text-black placeholder-black size-3 flex-grow-1 border-radius`}
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             ></textarea>

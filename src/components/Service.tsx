@@ -17,7 +17,7 @@ function Service({ icon, title, description, cta }: any) {
   };
 
   return (
-    <div className="service text-black bg-gray1 border-radius d-flex flex-column align-items-center">
+    <div className="service border-black-opacity text-black border-radius d-flex flex-column align-items-center">
       <div className="service__img d-flex align-items-center justify-content-center">
         <FontAwesomeIcon icon={icon} size="3x" className="text-secondary" />
       </div>
@@ -31,7 +31,7 @@ function Service({ icon, title, description, cta }: any) {
           text={cta}
           bgBtn="bg-white"
           textColor="text-black"
-          borderColor="border-black"
+          borderColor="border-black-opacity"
         />
       </div>
     </div>

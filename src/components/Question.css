@@ -1,5 +1,5 @@
 .question {
-  border-bottom: 1px solid var(--color-graylight);
+  border-bottom: 1px solid var(--color-black-opacity);
   padding: var(--spacing-4) 0;
 }
 

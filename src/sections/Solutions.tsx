@@ -68,9 +68,9 @@ function Solutions() {
             >
               <BtnCta
                 text={texts.textCtaBtn}
-                bgBtn="bg-white"
-                hideIcon={true}
-                textColor="text-black"
+                bgBtn="bg-secondary"
+                // hideIcon={true}
+                textColor="text-white"
               />
             </div>
           </div>

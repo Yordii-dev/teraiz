@@ -80,7 +80,7 @@ function Cta({
         onChange={(e) => setEmail(e.target.value)}
       />
       {!hideObjections && (
-        <div className="container__cta__objections size-4 opacity-2 weight-regular text-white d-flex justify-content-between">
+        <div className="container__cta__objections size-4 opacity-1 weight-regular text-black d-flex justify-content-between">
           {texts.objections.map((ob, i) => (
             <p key={i} className="mb-0">
               {ob}

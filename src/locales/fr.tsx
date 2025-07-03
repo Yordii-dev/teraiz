@@ -52,7 +52,7 @@ const fr: TranslationType = {
     description: `Continuer avec des processus manuels vous fait perdre du temps, des ventes et des opportunités.
     \nNous avons la solution : digitalisez votre activité et gérez biens, agents, paiements et terrains sans complications.`,
     offers: ["1 an de maintenance offert.", "Remise exclusive de 40 %."],
-    textCtaBtn: "Contactez-nous maintenant",
+    textCtaBtn: "Contactez-nous",
   },
 
   services: {

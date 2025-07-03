@@ -14,6 +14,7 @@
   --color-gray1: #ededed;
   --color-black: #1a1a1a;
   --color-graylight: #8c8c8c;
+  --color-black-opacity: rgba(0, 0, 0, 0.2);
 
   --width-top-socials: 99px;
 
@@ -115,8 +116,7 @@ body,
 p,
 span {
   font-family: "Mona-Sans", sans-serif;
-
-  font-family: var(--font-body);
+  /* font-family: var(--font-body); */
 }
 
 .width-logo {
@@ -159,6 +159,10 @@ span {
   border: 1px solid var(--color-graylight) !important;
 }
 
+.border-black-opacity {
+  border: 1px solid var(--color-black-opacity) !important; /* Negro con 20% de opacidad */
+}
+
 .size-icon {
   width: var(--wh-icon);
   height: var(--wh-icon);
@@ -187,9 +191,7 @@ span {
 .bg-gray1 {
   background-color: var(--color-gray1) !important;
 }
-.text-white-opacity {
-  color: rgba(255, 255, 255, 0.9);
-}
+
 .text-primary {
   color: var(--color-primary) !important;
 }

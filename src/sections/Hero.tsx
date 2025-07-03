@@ -23,8 +23,8 @@ function Hero() {
             text={texts.textCtaBtn}
             btnBg="bg-secondary"
             textColor="text-black"
-            textInputColor="text-white"
-            borderInput="border-cuaternary"
+            textInputColor="text-black"
+            borderInput="border-black"
             placeholderColor="placeholder-cuaternary"
           />
         </div>

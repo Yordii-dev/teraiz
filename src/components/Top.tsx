@@ -8,7 +8,7 @@ import FlagEn from "./../assets/icons/flagEn.svg";
 import FlagEs from "./../assets/icons/flagEs.svg";
 import FlagFr from "./../assets/icons/flagFr.svg";
 
-import Logolight from "./../assets/LOGO-LIGHT.svg";
+// import Logolight from "./../assets/LOGO-LIGHT.svg";
 import LogoDark from "./../assets/LOGO-DARK.svg";
 
 function Top() {
@@ -59,7 +59,7 @@ function Top() {
       <div className="top-container__logo">
         <img
           className="width-logo"
-          src={scrolled ? LogoDark : Logolight}
+          src={scrolled ? LogoDark : LogoDark}
           alt="Techraiz Logo"
         />
       </div>
@@ -71,7 +71,7 @@ function Top() {
       <div
         onClick={handleClick}
         role="button"
-        className={`size-4 ${scrolled ? "text-black" : "text-white"}`}
+        className={`size-4 ${scrolled ? "text-black" : "text-black"}`}
       >
         {MostrarLang(lang)}
       </div>
