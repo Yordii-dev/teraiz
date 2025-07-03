@@ -16,9 +16,14 @@ import Faq from "./sections/Faq";
 import { ModalProvider } from "./context/ModalContext";
 import LanguageModal from "./components/LanguageModal";
 import { GlobalProvider } from "./context/GlobalContext";
-import Image from "./sections/Image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   return (
     <TranslationProvider>
       <GlobalProvider>
@@ -27,40 +32,45 @@ function App() {
           <Hero></Hero>
 
           <Section backgroundColor="white">
-            <Solutions />
-          </Section>
-          <Section disableTop>
-            <Image></Image>
-          </Section>
-
-          <Section backgroundColor="white">
-            <Services />
-          </Section>
-          <Section backgroundColor="white">
-            <Authority />
-          </Section>
-          <Section disableTop>
-            <Image></Image>
+            <div data-aos="fade-up">
+              <Solutions />
+            </div>
           </Section>
 
           <Section backgroundColor="white">
-            <Companies></Companies>
+            <div data-aos="fade-up">
+              <Services />
+            </div>
           </Section>
 
           <Section backgroundColor="white">
-            <Meet />
-          </Section>
-          <Section disableTop>
-            <Image></Image>
+            <div data-aos="fade-up">
+              <Authority />
+            </div>
           </Section>
 
           <Section backgroundColor="white">
-            <Faq></Faq>
+            <div data-aos="fade-up">
+              <Companies></Companies>
+            </div>
+          </Section>
+
+          <Section backgroundColor="white">
+            <div data-aos="fade-up">
+              <Meet />
+            </div>
+          </Section>
+
+          <Section backgroundColor="white">
+            <div data-aos="fade-up">
+              <Faq></Faq>
+            </div>
           </Section>
 
           <div className="bg-gray1">
             <Footer />
           </div>
+
           <FormModal />
           <SuccessModal />
           <LanguageModal />

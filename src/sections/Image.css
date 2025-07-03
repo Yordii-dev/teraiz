@@ -1,9 +1,47 @@
 .image {
+  margin-top: var(--spacing-section);
+  position: relative;
   height: 500px;
-  border-radius: 30px;
   background: linear-gradient(
     to bottom,
     rgba(0, 220, 167, 0.2) 0%,
     rgba(0, 220, 167, 0.5) 100%
   );
+  overflow: hidden;
+}
+
+.image__img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image__badge {
+  position: absolute;
+  width: 400px;
+  height: var(--height-curve-img);
+  background-color: var(--color-secondary);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  /* line-height: 1.4; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  padding: var(--spacing-5);
+}
+
+/* Curva inferior izquierda */
+.badge-left {
+  bottom: 0;
+  left: 0;
+  clip-path: ellipse(100% 100% at 0% 100%);
+}
+
+/* Curva inferior derecha */
+.badge-right {
+  bottom: 0;
+  right: 0;
+  clip-path: ellipse(100% 100% at 100% 100%);
 }

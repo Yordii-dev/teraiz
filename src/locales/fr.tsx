@@ -69,25 +69,25 @@ const fr: TranslationType = {
         title: "Nous attirons des clients pour vous",
         description:
           "Nous créons des sites web immobiliers qui se positionnent sur Google, se connectent à WhatsApp et génèrent de vrais leads chaque semaine. Vous ne dépendez plus uniquement des portails.",
-        textCtaBtn: "Obtenir des clients",
+        textCtaBtn: "Obtenir",
       },
       {
         title: "Organisez votre agence en quelques minutes",
         description:
           "CRM simple à utiliser pour gérer biens, conseillers et clients. Tout est synchronisé. Fini Excel et les messages perdus.",
-        textCtaBtn: "Contrôler les processus",
+        textCtaBtn: "Contrôle",
       },
       {
         title: "Automatisez ce que personne ne veut faire",
         description:
           "Rappels, paiements, contrats, suivis… toutes ces tâches chronophages, on les automatise. Vous pouvez vous concentrer sur les ventes.",
-        textCtaBtn: "Automatiser",
+        textCtaBtn: "Automatise",
       },
       {
         title: "Faites briller votre marque",
         description:
           "Nous vous aidons à construire une présence forte : design professionnel, confiance numérique et outils modernes pour vous démarquer de la concurrence locale.",
-        textCtaBtn: "Mettre en valeur ma marque",
+        textCtaBtn: "Mets en avant",
       },
     ],
   },

@@ -8,20 +8,20 @@
   min-width: 360px;
 }
 
-.solutions__content__off {
-  margin-top: var(--spacing-3);
+.solutions__content__off__detail {
+  margin-bottom: var(--spacing-3);
 }
 
-.solutions__content__off > div:not(:first-child) {
-  margin-top: var(--spacing-5) !important;
-}
+/* .solutions__content__off > div:not(:first-child) {
+  margin-top: var(--spacing-2) !important;
+} */
 
 .solutions__img img {
   width: 100%;
   height: 100%;
 }
 .solutions__content__cta {
-  margin-top: var(--spacing-2) !important;
+  margin-top: var(--spacing-3) !important;
 }
 /* 
 @media (max-width: 1010px) {

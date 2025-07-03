@@ -66,13 +66,13 @@ const en: TranslationType = {
         title: "We bring clients to you",
         description:
           "We create real estate websites that rank on Google, connect with WhatsApp, and generate real leads every week. You no longer depend only on listing portals.",
-        textCtaBtn: "Get clients",
+        textCtaBtn: "Get them",
       },
       {
         title: "Organize your agency in minutes",
         description:
           "Easy-to-use CRM to manage properties, agents, and clients. Everything stays in sync. Say goodbye to Excel and lost messages.",
-        textCtaBtn: "Control processes",
+        textCtaBtn: "Control",
       },
       {
         title: "Automate what no one wants to do",
@@ -84,7 +84,7 @@ const en: TranslationType = {
         title: "Make your brand stand out",
         description:
           "We help you build a strong presence: professional design, digital trust, and modern tools that set you apart from the local competition.",
-        textCtaBtn: "Boost my brand",
+        textCtaBtn: "Highlight",
       },
     ],
   },

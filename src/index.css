@@ -11,11 +11,14 @@
   --color-cuaternary: #f0f0f0;
   --color-blue-dark: #001932;
   --color-blue-semidark: #03254c;
-  --color-gray1: #EDEDED;
+  --color-gray1: #ededed;
   --color-black: #1a1a1a;
   --color-graylight: #8c8c8c;
 
   --width-top-socials: 99px;
+
+  /* IMG CURVES */
+  --height-curve-img: 300px;
   /*ICON*/
   --wh-icon: 25px;
 
@@ -274,6 +277,8 @@ span {
     --width-cardimg: 55px;
     --height-cardimg: 55px;
 
+    /*IMG CURVES*/
+    --height-curve-img: 200px;
     /*LOGO*/
     --width-logo: 80px;
     /* --width-logo: 47.16px;

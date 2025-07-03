@@ -49,7 +49,8 @@ const es: TranslationType = {
     description: `Seguir con procesos manuales te hace perder tiempo, ventas y oportunidad.
       \nNosotros lo solucionamos: digitaliza tu operación y gestiona propiedades, agentes, cobros y terrenos sin complicaciones.`,
     offers: [
-      "1 año de mantenimiento sin costo.",
+      `1 año gratis en 
+      mantenimiento.`,
       "40% de descuento exclusivo.",
     ],
     textCtaBtn: "Contactanos ahora",
@@ -68,13 +69,13 @@ const es: TranslationType = {
         title: "Captamos clientes por ti",
         description:
           "Creamos sitios web inmobiliarios que posicionan en Google, conectan con WhatsApp y generan leads reales cada semana. Ya no dependes solo de portales.",
-        textCtaBtn: "Obtener clientes",
+        textCtaBtn: "Obtenerlos",
       },
       {
         title: "Organiza tu inmobiliaria en minutos",
         description:
           "CRM fácil de usar para gestionar propiedades, asesores y clientes. Todo sincronizado. Adiós a los Excel y mensajes perdidos.",
-        textCtaBtn: "Controlar procesos",
+        textCtaBtn: "Controlar",
       },
       {
         title: "Automatiza lo que nadie quiere hacer",
@@ -86,7 +87,7 @@ const es: TranslationType = {
         title: "Haz que tu marca destaque",
         description:
           "Te ayudamos a construir una presencia sólida: diseño profesional, confianza digital y herramientas modernas que te diferencian de la competencia local.",
-        textCtaBtn: "Destacar mi marca",
+        textCtaBtn: "Destacar",
       },
     ],
   },
@@ -166,7 +167,7 @@ const es: TranslationType = {
 
         \nCotiza gratis tu sistema y obtén asesoría sin compromiso.`,
 
-    textCtaBtn: "Habla con nuestros expertos",
+    textCtaBtn: "Habla con un experto",
   },
   faqs: {
     title: "Preguntas frecuentes",
