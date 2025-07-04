@@ -19,6 +19,7 @@ import { GlobalProvider } from "./context/GlobalContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { TitleUpdater } from "./components/TitlteUpdater";
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
   }, []);
   return (
     <TranslationProvider>
+      <TitleUpdater />
       <GlobalProvider>
         <ModalProvider>
           <Top></Top>

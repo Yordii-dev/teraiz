@@ -32,6 +32,9 @@ interface SectionFooter {
 }
 
 export type TranslationType = {
+  page: {
+    title: string;
+  };
   formModal: {
     title: string;
     inputPlaceholder: string;
@@ -43,11 +46,11 @@ export type TranslationType = {
     };
   };
 
-  languageModal:{
-    title:string;
-    es:string;
-    en:string;
-    fr:string;
+  languageModal: {
+    title: string;
+    es: string;
+    en: string;
+    fr: string;
   };
   successModal: {
     title: string;

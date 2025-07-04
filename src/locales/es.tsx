@@ -1,6 +1,9 @@
 import type { TranslationType } from "../types/Translations";
 
 const es: TranslationType = {
+  page: {
+    title: "Teraiz - Tecnologia inmobiliaria",
+  },
   formModal: {
     title: "Hablar con un experto",
     inputPlaceholder: "Tu email de contacto",
@@ -105,13 +108,13 @@ const es: TranslationType = {
     list: [
       {
         title:
-          "TechRaiz transformó nuestra operación: de hojas de Excel a un sistema integral y escalable.",
+          "Teraiz transformó nuestra operación: de hojas de Excel a un sistema integral y escalable.",
         author: "Director Comercial",
         description: "Grupo Inmobiliario Horizonte",
       },
       {
         title:
-          "Duplicamos ventas en 6 meses con el sistema personalizado que nos desarrolló TechRaiz.",
+          "Duplicamos ventas en 6 meses con el sistema personalizado que nos desarrolló Teraiz.",
         author: "CEO",
         description: "Inmobiliaria Altavista",
       },
@@ -240,7 +243,7 @@ const es: TranslationType = {
         ],
       },
     ],
-    copyright: "© 2025 TechRaiz. Tecnologia para el sector inmobiliario.",
+    copyright: "© 2025 Teraiz. Tecnologia para el sector inmobiliario.",
     socials: "Siguenos en redes",
   },
 };

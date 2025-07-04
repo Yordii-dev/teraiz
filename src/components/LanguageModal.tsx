@@ -10,6 +10,8 @@ const LanguageModal = () => {
 
   const handleSelect = (lang: langType) => {
     setLang(lang);
+    // document.title = "Inicio - Mi App";
+
     closeModal("language");
   };
 

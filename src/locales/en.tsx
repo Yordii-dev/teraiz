@@ -1,6 +1,9 @@
 import type { TranslationType } from "../types/Translations";
 
 const en: TranslationType = {
+  page: {
+    title: "Teraiz - Real Estate Technology",
+  },
   formModal: {
     title: "Talk to an expert",
     inputPlaceholder: "Your contact email",
@@ -103,13 +106,13 @@ const en: TranslationType = {
     list: [
       {
         title:
-          "TechRaiz transformed our operation: from Excel sheets to a complete and scalable system.",
+          "Teraiz transformed our operation: from Excel sheets to a complete and scalable system.",
         author: "Commercial Director",
         description: "Horizonte Real Estate Group",
       },
       {
         title:
-          "We doubled our sales in 6 months with the custom system TechRaiz built for us.",
+          "We doubled our sales in 6 months with the custom system Teraiz built for us.",
         author: "CEO",
         description: "Altavista Real Estate",
       },
@@ -238,7 +241,7 @@ const en: TranslationType = {
         ],
       },
     ],
-    copyright: "© 2025 TechRaiz. Technology for the real estate sector.",
+    copyright: "© 2025 Teraiz. Technology for the real estate sector.",
     socials: "Follow us on social media",
   },
 };

@@ -4,6 +4,7 @@ import "./FormModal.css";
 import { useGlobal } from "../context/GlobalContext";
 import BtnCta from "./BtnCta";
 import { useTranslation } from "../context/TranslationContext";
+import { Contact } from "../services/Contact";
 
 const FormModal = () => {
   const { t } = useTranslation();
@@ -20,7 +21,7 @@ const FormModal = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const textRef = useRef<HTMLTextAreaElement>(null);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     const inputVisible =
       inputRef.current &&
@@ -39,6 +40,7 @@ const FormModal = () => {
     setDescription(texts.defaultDescription[targetModalContact]);
 
     closeModal("contact");
+    await Contact();
     openModal("success");
   };
 

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState } from "react";
 import en from "../locales/en";
 import es from "../locales/es";
 import fr from "../locales/fr";
@@ -9,7 +9,7 @@ import type { langType } from "../types/languages";
 const translations: Record<string, TranslationType> = {
   en,
   es,
-  fr
+  fr,
 };
 
 type TranslationContextType = {
@@ -30,11 +30,12 @@ export const TranslationProvider = ({
   children: React.ReactNode;
 }) => {
   const [lang, setLang] = useState<langType>("es");
-  const [t, setT] = useState<TranslationType>(translations[lang]);
+  // const [t, setT] = useState<TranslationType>(translations[lang]);
 
-  useEffect(() => {
-    setT(translations[lang]);
-  }, [lang]);
+  // useEffect(() => {
+  //   setT(translations[lang]);
+  // }, [lang]);
+  const t = translations[lang]; // directo, sin useState
 
   return (
     <TranslationContext.Provider value={{ lang, setLang, t }}>

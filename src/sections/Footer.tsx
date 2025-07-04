@@ -74,7 +74,7 @@ function Footer() {
     <div className="footer text-black mx-auto">
       <div className="footer__content d-flex justify-content-between mx-auto">
         <div className="footer__content__cta">
-          <img className="width-logo" src={Logodark} alt="Techraiz Logo" />
+          <img className="width-logo" src={Logodark} alt="Teraiz Logo" />
 
           <p className="weight-semibold size-2 footer__content__cta__title">
             {texts.title}

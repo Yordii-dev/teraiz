@@ -5,8 +5,6 @@ import "./Service.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Service({ icon, title, description, cta }: any) {
-  console.log(cta);
-
   const { openModal } = useModal();
   const { setTargetModalContact } = useGlobal();
 
