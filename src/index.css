@@ -32,7 +32,7 @@
 
   /*CARD*/
   --width-card: 100%;
-  --height-card: 550px;
+  --height-card: 600px;
   --width-cardimg: 80px;
   --height-cardimg: 80px;
 
@@ -275,7 +275,7 @@ span {
   :root {
     --width-card: 288px;
     --wh-icon: 20px;
-    --height-card: 350px;
+    --height-card: 400px;
     --width-cardimg: 55px;
     --height-cardimg: 55px;
 

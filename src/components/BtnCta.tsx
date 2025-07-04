@@ -1,6 +1,6 @@
 import "./BtnCta.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMessage } from "@fortawesome/free-solid-svg-icons";
+import { faCommentDots } from "@fortawesome/free-regular-svg-icons";
 
 function BtnCta({ text, bgBtn, textColor, borderColor, hideIcon }: any) {
   return (
@@ -10,7 +10,7 @@ function BtnCta({ text, bgBtn, textColor, borderColor, hideIcon }: any) {
     >
       <span className="weight-semibold">{text}</span>
       {!hideIcon && (
-        <FontAwesomeIcon className="mleft-5 size-icon" icon={faMessage} />
+        <FontAwesomeIcon className="mleft-5 size-icon" icon={faCommentDots} />
       )}
     </button>
   );

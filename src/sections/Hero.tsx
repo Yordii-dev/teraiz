@@ -1,7 +1,9 @@
 import "./Hero.scss";
 import Cta from "../components/Cta";
-import ShieldIcon from "./../assets/shield-icon.svg";
+// import ShieldIcon from "./../assets/shield-icon.svg";
 import { useTranslation } from "../context/TranslationContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShieldHalved } from "@fortawesome/free-solid-svg-icons";
 
 function Hero() {
   const { t } = useTranslation();
@@ -28,18 +30,18 @@ function Hero() {
             placeholderColor="placeholder-cuaternary"
           />
         </div>
-        <div className="mt-auto">
-          <div className="d-flex align-items-center">
-            <img src={ShieldIcon} />
 
-            <p className="my-0 mleft-5 hero__content__socialproof-lg">
-              {texts.socialProof}
-            </p>
+        <div className="d-flex align-items-center">
+          {/* <img src={ShieldIcon} /> */}
+          <FontAwesomeIcon icon={faShieldHalved} />
 
-            <p className="my-0 mleft-5 hero__content__socialproof-sm d-none">
-              {texts.socialProofShort}
-            </p>
-          </div>
+          <p className="my-0 mleft-5 hero__content__socialproof-lg">
+            {texts.socialProof}
+          </p>
+
+          <p className="my-0 mleft-5 hero__content__socialproof-sm d-none">
+            {texts.socialProofShort}
+          </p>
         </div>
       </div>
     </div>
