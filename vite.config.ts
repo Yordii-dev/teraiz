@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, new URL('.', import.meta.url).pathname)
 
   return {
-    base: env.VITE_BASE_PATH || '/techraiz/',
+    base: env.VITE_BASE_PATH || '/teraiz/',
     plugins: [react()],
   }
 })

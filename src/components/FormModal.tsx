@@ -40,7 +40,8 @@ const FormModal = () => {
     setDescription(texts.defaultDescription[targetModalContact]);
 
     closeModal("contact");
-    await Contact();
+
+    await Contact({ email, description });
     openModal("success");
   };
 
