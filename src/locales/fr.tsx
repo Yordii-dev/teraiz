@@ -2,249 +2,252 @@ import type { TranslationType } from "../types/Translations";
 
 const fr: TranslationType = {
   page: {
-    title: "Teraiz - Technologie immobilière",
+    title: "Teraiz - Tecnologia inmobiliaria",
   },
   formModal: {
-    title: "Parlez à un expert",
-    inputPlaceholder: "Votre e-mail de contact",
-    textCtaBtn: "Parlez à un expert",
+    title: "Contactanos",
+    inputPlaceholder: "Tu email de contacto",
+    textCtaBtn: "Enviar Mensaje",
     defaultDescription: {
       target_1:
-        "Bonjour, je suis intéressé par les 40 % de réduction sur vos solutions immobilières. Pourriez-vous me contacter ?",
-      target_2:
-        "Bonjour ! Je souhaite recevoir des informations sur vos services.",
+        "Hola, me interesa conocer más sobre sus soluciones de software personalizadas para inmobiliarias. Me gustaría recibir una propuesta detallada para mi empresa.",
+      target_2: "SEGUNDA DESCRIPCION",
       target_3: "",
     },
   },
-  languageModal: {
-    title: "Sélectionnez votre langue",
-    es: "Espagnol",
-    en: "Anglais",
-    fr: "Français",
-  },
-
+  // languageModal: {
+  //   title: "Selecciona tu idioma",
+  //   es: "Español",
+  //   en: "Ingles",
+  //   fr: "Frances",
+  // },
   successModal: {
-    title: "Merci pour votre message !",
-    description:
-      "Nous avons bien reçu votre message et nous vous contacterons bientôt.",
-    textCtaBtn: "Fermer",
+    title: "¡Mensaje enviado!",
+    description: "Nos pondremos en contacto contigo muy pronto.",
+    // textCtaBtn: "Close",
   },
 
-  cta: {
-    inputPlaceholder: "Votre email de contact",
-    objections: ["Solutions en semaines", "Plans selon budget"],
-  },
+  // cta: {
+  //   inputPlaceholder: "Tu email de contacto",
+  //   objections: ["Soluciones en semanas", "Planes segun presupuesto"],
+  // },
 
   hero: {
-    title: "Organisez et automatisez votre agence",
-    subtitle: "Moins de chaos. Plus de ventes. Tout dans un seul système.",
-    textCtaBtn: "Demandez un devis -40%",
+    title: `
+      Transformamos
+      inmobiliarias
+      con tecnología de vanguardia`,
+    subtitle: `Soluciones de software personalizadas que automatizan procesos, aumentan ventas y escalan negocios inmobiliarios. +8 años creando éxito en LATAM y Norteamérica.`,
+    textCtaBtn: "Cotiza con 40% de descuento",
     socialProof:
-      "Confiance prouvée : 8+ ans à transformer des agences en Amérique latine & du Nord.",
-    socialProofShort: "8+ ans à transformer des agences.",
+      "Confianza comprobada: +8 años transformando inmobiliarias en LATAM & Norteamérica.",
+
+    socialProofShort: "+8 años transformando inmobiliarias.",
   },
 
   solutions: {
     title: (
       <h1 className="size-0 weight-semibold">
-        Boostez votre agence <br />
-        <span className="text-secondary">avec la tech</span>
+        Crece tu inmobiliaria <br />
+        <span className="text-secondary">con tecnología</span>
       </h1>
     ),
-
-    description: `Continuer avec des processus manuels vous fait perdre du temps, des ventes et des opportunités.
-    \nNous avons la solution : digitalisez votre activité et gérez biens, agents, paiements et terrains sans complications.`,
-    offers: ["1 an de maintenance offert.", "Remise exclusive de 40 %."],
-    textCtaBtn: "Contactez-nous",
+    description: `Seguir con procesos manuales te hace perder tiempo, ventas y oportunidad.
+      \nNosotros lo solucionamos: digitaliza tu operación y gestiona propiedades, agentes, cobros y terrenos sin complicaciones.`,
+    offers: [
+      `1 año gratis en 
+      mantenimiento.`,
+      "40% de descuento exclusivo.",
+    ],
+    textCtaBtn: "Contactanos ahora",
   },
 
   services: {
     title: (
       <h1 className="size-1 weight-semibold">
-        Que <span className="text-secondary"> faisons-nous </span>
+        ¿Que <span className="text-secondary"> hacemos </span>
         <br />
-        pour vous&nbsp;?
+        por ti?
       </h1>
     ),
-
     list: [
       {
-        title: "Nous attirons des clients pour vous",
+        title: "Captamos clientes por ti",
         description:
-          "Nous créons des sites web immobiliers qui se positionnent sur Google, se connectent à WhatsApp et génèrent de vrais leads chaque semaine. Vous ne dépendez plus uniquement des portails.",
-        textCtaBtn: "Obtenir",
+          "Creamos sitios web inmobiliarios que posicionan en Google, conectan con WhatsApp y generan leads reales cada semana. Ya no dependes solo de portales.",
+        textCtaBtn: "Obtenerlos",
       },
       {
-        title: "Organisez votre agence en quelques minutes",
+        title: "Organiza tu inmobiliaria en minutos",
         description:
-          "CRM simple à utiliser pour gérer biens, conseillers et clients. Tout est synchronisé. Fini Excel et les messages perdus.",
-        textCtaBtn: "Contrôle",
+          "CRM fácil de usar para gestionar propiedades, asesores y clientes. Todo sincronizado. Adiós a los Excel y mensajes perdidos.",
+        textCtaBtn: "Controlar",
       },
       {
-        title: "Automatisez ce que personne ne veut faire",
+        title: "Automatiza lo que nadie quiere hacer",
         description:
-          "Rappels, paiements, contrats, suivis… toutes ces tâches chronophages, on les automatise. Vous pouvez vous concentrer sur les ventes.",
-        textCtaBtn: "Automatise",
+          "Recordatorios, pagos, contratos, seguimientos… todo lo que consume tiempo, lo automatizamos. Así tú y tu equipo se enfocan en cerrar ventas.",
+        textCtaBtn: "Automatizar",
       },
       {
-        title: "Faites briller votre marque",
+        title: "Haz que tu marca destaque",
         description:
-          "Nous vous aidons à construire une présence forte : design professionnel, confiance numérique et outils modernes pour vous démarquer de la concurrence locale.",
-        textCtaBtn: "Mets en avant",
+          "Te ayudamos a construir una presencia sólida: diseño profesional, confianza digital y herramientas modernas que te diferencian de la competencia local.",
+        textCtaBtn: "Destacar",
       },
     ],
   },
+
   testimonies: {
     title: (
       <h1 className="size-1 weight-semibold">
-        <span className="text-secondary">2025</span>
+        <span className="text-secondary"> 2025 </span>
         <br />
-        Ils ont grandi
+        Ellos crecieron
         <br />
-        Qu’attendez-vous&nbsp;?
+        ¿Que esperas?
       </h1>
     ),
-
     list: [
       {
         title:
-          "Teraiz a transformé notre gestion : des feuilles Excel à un système complet et évolutif.",
-        author: "Directeur Commercial",
-        description: "Groupe Immobilier Horizonte",
+          "Teraiz transformó nuestra operación: de hojas de Excel a un sistema integral y escalable.",
+        author: "Director Comercial",
+        description: "Grupo Inmobiliario Horizonte",
       },
       {
         title:
-          "Nous avons doublé nos ventes en 6 mois grâce au système sur mesure développé par Teraiz.",
-        author: "PDG",
-        description: "Immobilier Altavista",
+          "Duplicamos ventas en 6 meses con el sistema personalizado que nos desarrolló Teraiz.",
+        author: "CEO",
+        description: "Inmobiliaria Altavista",
       },
       {
         title:
-          "Tout est enfin centralisé : biens, clients, agents et suivi automatique.",
-        author: "Responsable des Opérations",
-        description: "Réseau Immobilier des Andes",
+          "Por fin tenemos todo en un solo lugar: propiedades, clientes, agentes y seguimiento automático.",
+        author: "Gerente de Operaciones",
+        description: "Red de Bienes Raíces Andes",
       },
     ],
   },
   authority: {
     title: (
       <h1 className="size-0 weight-semibold">
-        <span className="text-secondary">Experts en</span>
+        <span className="text-secondary">Expertos en </span>
         <br />
-        technologie
+        tecnologia
         <br />
-        immobilière
+        inmobiliaria
       </h1>
     ),
-
     list: [
       {
-        title: "+8 ans",
+        title: "+8 años",
         description:
-          "Nous développons des systèmes immobiliers qui organisent, automatisent et font croître votre activité.",
+          "Desarrollando sistemas inmobiliarios que ordenan, automatizan y hacen crecer.",
       },
       {
-        title: "Amérique latine",
+        title: "LATAM",
         description:
-          "Nous avons transformé des agences immobilières au Pérou, en Colombie, au Mexique, au Chili et ailleurs.",
+          "Hemos transformado inmobiliarias en Perú, Colombia, México, Chile y más.",
       },
       {
-        title: "Amérique du Nord",
+        title: "Norte America",
         description:
-          "Nous comprenons les défis du marché américain et adaptons des solutions à son échelle.",
+          "Conocemos los retos del mercado en EE.UU. y adaptamos soluciones a su escala.",
       },
     ],
   },
+
   meet: {
     title: (
       <h1 className="size-0 weight-semibold">
-        Planifiez une <br />
-        <span className="text-secondary">réunion</span>
+        Agenda una <br />
+        <span className="text-secondary">reunion</span>
         <br />
-        avec nous
+        con nosotros
       </h1>
     ),
+    description: `¿Tienes una inmobiliaria o vendes propiedades?
 
-    description: `Vous avez une agence immobilière ou vous vendez des biens ?
+        \n\nPodemos ayudarte a organizar tu operación, automatizar procesos y vender más.
 
-    \n\nNous pouvons vous aider à organiser votre activité, automatiser vos processus et vendre davantage.
+        \nCotiza gratis tu sistema y obtén asesoría sin compromiso.`,
 
-    \nDemandez un devis gratuit et recevez des conseils sans engagement.`,
-    textCtaBtn: "Parlez à nos experts",
+    textCtaBtn: "Habla con un experto",
   },
   faqs: {
-    title: "Questions fréquentes",
+    title: "Preguntas frecuentes",
     list: [
       {
-        question: "Que comprend le devis gratuit ?",
+        question: "¿Qué incluye la cotización gratuita?",
         answer:
-          "Nous analysons vos besoins, proposons une solution personnalisée et estimons le coût du système. Sans engagement.",
+          "Analizamos tus necesidades, te proponemos una solución personalizada y estimamos el costo del sistema. Sin compromiso.",
       },
       {
-        question: "Travaillez-vous uniquement avec des agences immobilières ?",
+        question: "¿Trabajan solo con inmobiliarias?",
         answer:
-          "Nous sommes spécialisés dans les agences immobilières, les lotisseurs et les entreprises qui vendent ou louent des biens. Nous connaissons bien le secteur.",
+          "Nos especializamos en inmobiliarias, lotizadoras y empresas que venden o alquilan propiedades. Conocemos bien el sector.",
       },
       {
-        question: "Puis-je intégrer WhatsApp ou les réseaux sociaux ?",
+        question: "¿Puedo integrar WhatsApp o redes sociales?",
         answer:
-          "Oui. Nous pouvons connecter votre système à WhatsApp, Facebook, Instagram et d'autres canaux pour attirer et servir automatiquement vos clients.",
+          "Sí. Podemos conectar tu sistema con WhatsApp, Facebook, Instagram y más, para captar y atender clientes automáticamente.",
       },
       {
-        question: "Avez-vous de l'expérience au Pérou et dans d'autres pays ?",
+        question: "¿Tienen experiencia en Perú y otros países?",
         answer:
-          "Oui. Nous avons travaillé avec des entreprises au Pérou, au Mexique, en Colombie, au Chili et aux États-Unis. Nous adaptons nos solutions à chaque marché.",
+          "Sí. Hemos trabajado con empresas en Perú, México, Colombia, Chile y EE.UU. Adaptamos las soluciones a cada mercado.",
       },
       {
-        question: "Quel type de systèmes développez-vous ?",
+        question: "¿Qué tipo de sistemas desarrollan?",
         answer:
-          "Nous créons des CRM, des gestionnaires de biens, des systèmes de location, des cartes, des estimateurs, de l'automatisation des paiements, et plus encore.",
+          "Creamos CRMs, gestores de propiedades, sistemas de alquiler, mapas, cotizadores, automatización de cobros y más.",
       },
     ],
   },
+
   footer: {
-    title:
-      "Boostez votre agence immobilière avec de vraies solutions numériques",
-    textCtaBtn: "Planifier une réunion",
+    title: "Impulsa tu inmobiliaria con soluciones digitales reales",
+    textCtaBtn: "Agendar una reunion",
     sections: [
       {
-        title: "Services",
+        title: "Servicios",
         details: [
-          "CRM pour agences immobilières",
-          "Portails et catalogues de biens",
-          "Systèmes de gestion et de contrôle",
-          "Applications mobiles pour agents et clients",
-          "Pages d’atterrissage pour la prospection",
-          "Systèmes internes personnalisés",
-          "Applications pour préventes et lancements",
-          "Plateformes pour franchises immobilières",
+          "CRM para inmobiliarias",
+          "Portales y catálogos de propiedades",
+          "Sistemas de gestión y control",
+          "Apps móviles para agentes y clientes",
+          "Landing pages de captación",
+          "Sistemas internos personalizados",
+          "Apps para preventa y lanzamientos",
+          "Plataformas para franquicias inmobiliarias",
         ],
       },
       {
-        title: "Technologies",
+        title: "Tecnologías",
         details: [
           "Azure & AWS",
           "Oracle / SQL Server",
           "Power BI & Google Cloud",
           "Docker & DevOps",
           "ASP.NET Core / JavaScript",
-          "Intégration avec DocuSign",
+          "Integración con DocuSign",
         ],
       },
       {
-        title: "Points forts",
+        title: "Fortalezas",
         details: [
-          "Automatisation des processus",
-          "Sécurité et sauvegarde",
-          "Scalabilité sur mesure",
-          "Intégrations externes",
-          "Expertise technique approfondie",
-          "Gestion de projets agile",
+          "Automatización de procesos",
+          "Seguridad y respaldo",
+          "Escalabilidad a medida",
+          "Integraciones externas",
+          "Expertise técnico profundo",
+          "Gestión ágil de proyectos",
         ],
       },
     ],
-    copyright: "© 2025 Teraiz. Technologie pour le secteur immobilier.",
-    socials: "Suivez-nous sur les réseaux",
+    copyright: "© 2025 Teraiz. Tecnologia para el sector inmobiliario.",
+    socials: "Siguenos en redes",
   },
 };
 

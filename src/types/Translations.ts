@@ -46,22 +46,22 @@ export type TranslationType = {
     };
   };
 
-  languageModal: {
-    title: string;
-    es: string;
-    en: string;
-    fr: string;
-  };
+  // languageModal: {
+  //   title: string;
+  //   es: string;
+  //   en: string;
+  //   fr: string;
+  // };
   successModal: {
     title: string;
     description: string;
-    textCtaBtn: string;
+    // textCtaBtn: string;
   };
 
-  cta: {
-    inputPlaceholder: string;
-    objections: string[];
-  };
+  // cta: {
+  //   inputPlaceholder: string;
+  //   objections: string[];
+  // };
 
   hero: {
     title: string;

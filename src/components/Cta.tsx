@@ -1,96 +1,88 @@
-import { useEffect, useRef, useState } from "react";
 
-import "./Cta.css";
-import { useTranslation } from "../context/TranslationContext";
-import { useModal, type ModalKey } from "../context/ModalContext";
-import { useWindowSize } from "../hooks/useWindowSize";
-import { useGlobal } from "../context/GlobalContext";
-import BtnCta from "./BtnCta";
+import { Button } from '@/components/ui/button';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import ContactForm from './ContactForm';
 
-function Cta({
-  text,
-  btnBg,
-  textColor,
-  textInputColor,
-  borderInput,
-  hideObjections,
-  placeholderColor,
-}: any) {
-  const { t } = useTranslation();
-  const texts = t.cta;
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const { width } = useWindowSize();
-
-  const { openModal } = useModal();
-  const [modalName, setModalName] = useState<ModalKey>("success");
-  const { setTargetModalContact } = useGlobal();
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    setTargetModalContact("target_1");
-
-    const inputVisible =
-      inputRef.current &&
-      window.getComputedStyle(inputRef.current).display !== "none";
-
-    //Validar que input tenga correo solo si esta visible
-    if (inputVisible) {
-      if (!email.trim()) {
-        setError(true);
-        inputRef.current?.focus();
-        return;
-      }
-      setError(false);
-      setEmail("");
-    }
-
-    //Abrir formModal o successModal
-    openModal(modalName);
-  };
-
-  useEffect(() => {
-    if (error) {
-      const timeout = setTimeout(() => {
-        setError(false);
-      }, 1000);
-      return () => clearTimeout(timeout);
-    }
-    //Mobil
-    if (width <= 767) {
-      setModalName("contact");
-    }
-    //Desktop
-    else {
-      setModalName("success");
-    }
-  }, [error, width]);
+const CTA = () => {
+  const benefits = [
+    "Setup gratuito y migración de datos incluida",
+    "Soporte 24/7 en español durante los primeros 30 días",
+    "Capacitación completa para tu equipo",
+    "Sin compromiso - cancela cuando quieras"
+  ];
 
   return (
-    <form onSubmit={handleSubmit} className="container__cta d-flex flex-column">
-      <input
-        ref={inputRef}
-        className={`${
-          !error ? borderInput : "input-error"
-        } ${textInputColor} ${placeholderColor} size-3 flex-grow-1 border-radius`}
-        type="email"
-        placeholder={texts.inputPlaceholder}
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      {!hideObjections && (
-        <div className="container__cta__objections size-4 opacity-1 weight-regular text-black d-flex justify-content-between">
-          {texts.objections.map((ob, i) => (
-            <p key={i} className="mb-0">
-              {ob}
-            </p>
-          ))}
-        </div>
-      )}
-      <BtnCta text={text} bgBtn={btnBg} textColor={textColor} hideIcon={true} />
-    </form>
-  );
-}
+    <section className="py-20 bg-gradient-to-br from-brand-primary via-brand-primary to-brand-primary/90 text-white relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Main CTA Content */}
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+            Comienza tu transformación
+            <span className="text-brand-secondary block mt-2">digital hoy mismo</span>
+          </h2>
+          
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Únete a las 500+ inmobiliarias que ya están cerrando más deals, 
+            ahorrando tiempo y aumentando su rentabilidad con PropTech.
+          </p>
 
-export default Cta;
+          {/* Benefits List */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 max-w-2xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center text-left">
+                <CheckCircle className="h-5 w-5 text-brand-secondary mr-3 flex-shrink-0" />
+                <span className="text-white/90">{benefit}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
+            <ContactForm 
+              trigger={
+                <Button 
+                  size="lg" 
+                  className="bg-brand-secondary hover:bg-brand-secondary/90 text-brand-primary px-10 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 group"
+                >
+                  Comenzar Demo Gratuita
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              }
+            />
+            
+            <ContactForm 
+              trigger={
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-2 border-white text-white hover:bg-white hover:text-brand-primary px-10 py-4 text-lg font-semibold transition-all duration-300"
+                >
+                  Hablar con un Experto
+                </Button>
+              }
+              defaultMessage="Hola, me gustaría hablar con un experto sobre PropTech para entender cómo puede ayudar específicamente a mi negocio inmobiliario y discutir las opciones disponibles."
+            />
+          </div>
+
+          {/* Urgency/Scarcity */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-md mx-auto">
+            <p className="text-brand-secondary font-semibold mb-2">
+              🚀 Oferta de Lanzamiento
+            </p>
+            <p className="text-white/90 text-sm">
+              Los primeros 50 clientes obtienen 3 meses gratis + setup personalizado sin costo
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-brand-secondary/10"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-white/5"></div>
+      </div>
+    </section>
+  );
+};
+
+export default CTA;

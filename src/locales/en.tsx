@@ -2,92 +2,98 @@ import type { TranslationType } from "../types/Translations";
 
 const en: TranslationType = {
   page: {
-    title: "Teraiz - Real Estate Technology",
+    title: "Teraiz - Tecnologia inmobiliaria",
   },
   formModal: {
-    title: "Talk to an expert",
-    inputPlaceholder: "Your contact email",
-    textCtaBtn: "Talk to an expert",
+    title: "Contactanos",
+    inputPlaceholder: "Tu email de contacto",
+    textCtaBtn: "Enviar Mensaje",
     defaultDescription: {
       target_1:
-        "Hi, I'm interested in the 40% discount on your real estate solutions. Could you contact me?",
-      target_2: "Hi! I'd like to receive information about your services.",
+        "Hola, me interesa conocer más sobre sus soluciones de software personalizadas para inmobiliarias. Me gustaría recibir una propuesta detallada para mi empresa.",
+      target_2: "SEGUNDA DESCRIPCION",
       target_3: "",
     },
   },
-  languageModal: {
-    title: "Select your language",
-    es: "Spanish",
-    en: "English",
-    fr: "French",
-  },
+  // languageModal: {
+  //   title: "Selecciona tu idioma",
+  //   es: "Español",
+  //   en: "Ingles",
+  //   fr: "Frances",
+  // },
   successModal: {
-    title: "Thank you for your message!",
-    description: "We have received your message and will get in touch soon.",
-    textCtaBtn: "Close",
+    title: "¡Mensaje enviado!",
+    description: "Nos pondremos en contacto contigo muy pronto.",
+    // textCtaBtn: "Close",
   },
 
-  cta: {
-    inputPlaceholder: "Your contact email",
-    objections: ["Solutions in weeks", "Plans based on budget"],
-  },
+  // cta: {
+  //   inputPlaceholder: "Tu email de contacto",
+  //   objections: ["Soluciones en semanas", "Planes segun presupuesto"],
+  // },
 
   hero: {
-    title: "Organize and automate your agency",
-    subtitle: "Less chaos. More sales. All in one system.",
-    textCtaBtn: "Get a quote with 40% off",
+    title: `
+      Transformamos
+      inmobiliarias
+      con tecnología de vanguardia`,
+    subtitle: `Soluciones de software personalizadas que automatizan procesos, aumentan ventas y escalan negocios inmobiliarios. +8 años creando éxito en LATAM y Norteamérica.`,
+    textCtaBtn: "Cotiza con 40% de descuento",
     socialProof:
-      "Proven trust: 8+ years transforming agencies in LATAM & North America.",
-    socialProofShort: "8+ years transforming agencies.",
+      "Confianza comprobada: +8 años transformando inmobiliarias en LATAM & Norteamérica.",
+
+    socialProofShort: "+8 años transformando inmobiliarias.",
   },
 
   solutions: {
     title: (
       <h1 className="size-0 weight-semibold">
-        Grow your agency <br />
-        <span className="text-secondary">with tech</span>
+        Crece tu inmobiliaria <br />
+        <span className="text-secondary">con tecnología</span>
       </h1>
     ),
-
-    description: `Sticking to manual processes costs you time, sales, and opportunity.
-    \nWe fix that: digitize your operations and manage properties, agents, payments, and land with ease.`,
-    offers: ["1 year of free maintenance.", "Exclusive 40% discount."],
-    textCtaBtn: "Contact us now",
+    description: `Seguir con procesos manuales te hace perder tiempo, ventas y oportunidad.
+      \nNosotros lo solucionamos: digitaliza tu operación y gestiona propiedades, agentes, cobros y terrenos sin complicaciones.`,
+    offers: [
+      `1 año gratis en 
+      mantenimiento.`,
+      "40% de descuento exclusivo.",
+    ],
+    textCtaBtn: "Contactanos ahora",
   },
 
   services: {
     title: (
       <h1 className="size-1 weight-semibold">
-        What <span className="text-secondary"> do we </span>
+        ¿Que <span className="text-secondary"> hacemos </span>
         <br />
-        do for you?
+        por ti?
       </h1>
     ),
-
     list: [
       {
-        title: "We bring clients to you",
+        title: "Captamos clientes por ti",
         description:
-          "We create real estate websites that rank on Google, connect with WhatsApp, and generate real leads every week. You no longer depend only on listing portals.",
-        textCtaBtn: "Get them",
+          "Creamos sitios web inmobiliarios que posicionan en Google, conectan con WhatsApp y generan leads reales cada semana. Ya no dependes solo de portales.",
+        textCtaBtn: "Obtenerlos",
       },
       {
-        title: "Organize your agency in minutes",
+        title: "Organiza tu inmobiliaria en minutos",
         description:
-          "Easy-to-use CRM to manage properties, agents, and clients. Everything stays in sync. Say goodbye to Excel and lost messages.",
-        textCtaBtn: "Control",
+          "CRM fácil de usar para gestionar propiedades, asesores y clientes. Todo sincronizado. Adiós a los Excel y mensajes perdidos.",
+        textCtaBtn: "Controlar",
       },
       {
-        title: "Automate what no one wants to do",
+        title: "Automatiza lo que nadie quiere hacer",
         description:
-          "Reminders, payments, contracts, follow-ups… all those time-consuming tasks—we automate them. So you and your team can focus on closing deals.",
-        textCtaBtn: "Automate",
+          "Recordatorios, pagos, contratos, seguimientos… todo lo que consume tiempo, lo automatizamos. Así tú y tu equipo se enfocan en cerrar ventas.",
+        textCtaBtn: "Automatizar",
       },
       {
-        title: "Make your brand stand out",
+        title: "Haz que tu marca destaque",
         description:
-          "We help you build a strong presence: professional design, digital trust, and modern tools that set you apart from the local competition.",
-        textCtaBtn: "Highlight",
+          "Te ayudamos a construir una presencia sólida: diseño profesional, confianza digital y herramientas modernas que te diferencian de la competencia local.",
+        textCtaBtn: "Destacar",
       },
     ],
   },
@@ -95,154 +101,153 @@ const en: TranslationType = {
   testimonies: {
     title: (
       <h1 className="size-1 weight-semibold">
-        <span className="text-secondary">2025</span>
+        <span className="text-secondary"> 2025 </span>
         <br />
-        They grew.
+        Ellos crecieron
         <br />
-        Will you?
+        ¿Que esperas?
       </h1>
     ),
-
     list: [
       {
         title:
-          "Teraiz transformed our operation: from Excel sheets to a complete and scalable system.",
-        author: "Commercial Director",
-        description: "Horizonte Real Estate Group",
+          "Teraiz transformó nuestra operación: de hojas de Excel a un sistema integral y escalable.",
+        author: "Director Comercial",
+        description: "Grupo Inmobiliario Horizonte",
       },
       {
         title:
-          "We doubled our sales in 6 months with the custom system Teraiz built for us.",
+          "Duplicamos ventas en 6 meses con el sistema personalizado que nos desarrolló Teraiz.",
         author: "CEO",
-        description: "Altavista Real Estate",
+        description: "Inmobiliaria Altavista",
       },
       {
         title:
-          "Everything is finally in one place: properties, clients, agents, and automated tracking.",
-        author: "Operations Manager",
-        description: "Andes Real Estate Network",
+          "Por fin tenemos todo en un solo lugar: propiedades, clientes, agentes y seguimiento automático.",
+        author: "Gerente de Operaciones",
+        description: "Red de Bienes Raíces Andes",
       },
     ],
   },
-
   authority: {
     title: (
       <h1 className="size-0 weight-semibold">
-        <span className="text-secondary">Experts in</span>
+        <span className="text-secondary">Expertos en </span>
         <br />
-        real estate
+        tecnologia
         <br />
-        technology
+        inmobiliaria
       </h1>
     ),
-
     list: [
       {
-        title: "+8 years",
+        title: "+8 años",
         description:
-          "Developing real estate systems that organize, automate, and help you grow.",
+          "Desarrollando sistemas inmobiliarios que ordenan, automatizan y hacen crecer.",
       },
       {
         title: "LATAM",
         description:
-          "We’ve transformed real estate agencies in Peru, Colombia, Mexico, Chile, and more.",
+          "Hemos transformado inmobiliarias en Perú, Colombia, México, Chile y más.",
       },
       {
-        title: "North America",
+        title: "Norte America",
         description:
-          "We understand the challenges of the U.S. market and adapt solutions to its scale.",
+          "Conocemos los retos del mercado en EE.UU. y adaptamos soluciones a su escala.",
       },
     ],
   },
+
   meet: {
     title: (
       <h1 className="size-0 weight-semibold">
-        Schedule a <br />
-        <span className="text-secondary">meeting</span>
+        Agenda una <br />
+        <span className="text-secondary">reunion</span>
         <br />
-        with us
+        con nosotros
       </h1>
     ),
+    description: `¿Tienes una inmobiliaria o vendes propiedades?
 
-    description: `Do you run a real estate agency or sell properties?
+        \n\nPodemos ayudarte a organizar tu operación, automatizar procesos y vender más.
 
-      \n\nWe can help you organize your operations, automate processes, and increase sales.
+        \nCotiza gratis tu sistema y obtén asesoría sin compromiso.`,
 
-      \nGet a free quote and expert advice with no obligation.`,
-    textCtaBtn: "Talk to our experts",
+    textCtaBtn: "Habla con un experto",
   },
   faqs: {
-    title: "Frequently Asked Questions",
+    title: "Preguntas frecuentes",
     list: [
       {
-        question: "What does the free quote include?",
+        question: "¿Qué incluye la cotización gratuita?",
         answer:
-          "We analyze your needs, propose a personalized solution, and estimate the system cost. No strings attached.",
+          "Analizamos tus necesidades, te proponemos una solución personalizada y estimamos el costo del sistema. Sin compromiso.",
       },
       {
-        question: "Do you work only with real estate agencies?",
+        question: "¿Trabajan solo con inmobiliarias?",
         answer:
-          "We specialize in real estate agencies, land developers, and companies that sell or rent properties. We know the industry well.",
+          "Nos especializamos en inmobiliarias, lotizadoras y empresas que venden o alquilan propiedades. Conocemos bien el sector.",
       },
       {
-        question: "Can I integrate WhatsApp or social media?",
+        question: "¿Puedo integrar WhatsApp o redes sociales?",
         answer:
-          "Yes. We can connect your system with WhatsApp, Facebook, Instagram, and more to automatically attract and serve clients.",
+          "Sí. Podemos conectar tu sistema con WhatsApp, Facebook, Instagram y más, para captar y atender clientes automáticamente.",
       },
       {
-        question: "Do you have experience in Peru and other countries?",
+        question: "¿Tienen experiencia en Perú y otros países?",
         answer:
-          "Yes. We've worked with companies in Peru, Mexico, Colombia, Chile, and the U.S. We adapt solutions to each market.",
+          "Sí. Hemos trabajado con empresas en Perú, México, Colombia, Chile y EE.UU. Adaptamos las soluciones a cada mercado.",
       },
       {
-        question: "What kind of systems do you develop?",
+        question: "¿Qué tipo de sistemas desarrollan?",
         answer:
-          "We build CRMs, property managers, rental systems, maps, quote tools, payment automation, and more.",
+          "Creamos CRMs, gestores de propiedades, sistemas de alquiler, mapas, cotizadores, automatización de cobros y más.",
       },
     ],
   },
+
   footer: {
-    title: "Boost your real estate agency with real digital solutions",
-    textCtaBtn: "Schedule a meeting",
+    title: "Impulsa tu inmobiliaria con soluciones digitales reales",
+    textCtaBtn: "Agendar una reunion",
     sections: [
       {
-        title: "Services",
+        title: "Servicios",
         details: [
-          "CRM for real estate agencies",
-          "Property portals and catalogs",
-          "Management and control systems",
-          "Mobile apps for agents and clients",
-          "Lead generation landing pages",
-          "Custom internal systems",
-          "Apps for presales and launches",
-          "Platforms for real estate franchises",
+          "CRM para inmobiliarias",
+          "Portales y catálogos de propiedades",
+          "Sistemas de gestión y control",
+          "Apps móviles para agentes y clientes",
+          "Landing pages de captación",
+          "Sistemas internos personalizados",
+          "Apps para preventa y lanzamientos",
+          "Plataformas para franquicias inmobiliarias",
         ],
       },
       {
-        title: "Technologies",
+        title: "Tecnologías",
         details: [
           "Azure & AWS",
           "Oracle / SQL Server",
           "Power BI & Google Cloud",
           "Docker & DevOps",
           "ASP.NET Core / JavaScript",
-          "DocuSign integration",
+          "Integración con DocuSign",
         ],
       },
       {
-        title: "Strengths",
+        title: "Fortalezas",
         details: [
-          "Process automation",
-          "Security and backup",
-          "Custom scalability",
-          "External integrations",
-          "Deep technical expertise",
-          "Agile project management",
+          "Automatización de procesos",
+          "Seguridad y respaldo",
+          "Escalabilidad a medida",
+          "Integraciones externas",
+          "Expertise técnico profundo",
+          "Gestión ágil de proyectos",
         ],
       },
     ],
-    copyright: "© 2025 Teraiz. Technology for the real estate sector.",
-    socials: "Follow us on social media",
+    copyright: "© 2025 Teraiz. Tecnologia para el sector inmobiliario.",
+    socials: "Siguenos en redes",
   },
 };
 

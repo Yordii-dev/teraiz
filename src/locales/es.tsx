@@ -5,36 +5,39 @@ const es: TranslationType = {
     title: "Teraiz - Tecnologia inmobiliaria",
   },
   formModal: {
-    title: "Hablar con un experto",
+    title: "Contactanos",
     inputPlaceholder: "Tu email de contacto",
-    textCtaBtn: "Habla con un experto",
+    textCtaBtn: "Enviar Mensaje",
     defaultDescription: {
       target_1:
-        "Hola, me interesa el 40% de descuento en sus soluciones inmobiliarias. ¿Podrían escribirme?.",
-      target_2: "Hola!, deseo recibir informacion sobre sus servicios",
+        "Hola, me interesa conocer más sobre sus soluciones de software personalizadas para inmobiliarias. Me gustaría recibir una propuesta detallada para mi empresa.",
+      target_2: "SEGUNDA DESCRIPCION",
       target_3: "",
     },
   },
-  languageModal: {
-    title: "Selecciona tu idioma",
-    es: "Español",
-    en: "Ingles",
-    fr: "Frances",
-  },
+  // languageModal: {
+  //   title: "Selecciona tu idioma",
+  //   es: "Español",
+  //   en: "Ingles",
+  //   fr: "Frances",
+  // },
   successModal: {
-    title: "Thank you for your message!",
-    description: "We have received your message and will get in touch soon.",
-    textCtaBtn: "Close",
+    title: "¡Mensaje enviado!",
+    description: "Nos pondremos en contacto contigo muy pronto.",
+    // textCtaBtn: "Close",
   },
 
-  cta: {
-    inputPlaceholder: "Tu email de contacto",
-    objections: ["Soluciones en semanas", "Planes segun presupuesto"],
-  },
+  // cta: {
+  //   inputPlaceholder: "Tu email de contacto",
+  //   objections: ["Soluciones en semanas", "Planes segun presupuesto"],
+  // },
 
   hero: {
-    title: "Ordena y automatiza tu inmobiliaria",
-    subtitle: "Menos caos. Más ventas. Todo en un solo sistema.",
+    title: `
+      Transformamos
+      inmobiliarias
+      con tecnología de vanguardia`,
+    subtitle: `Soluciones de software personalizadas que automatizan procesos, aumentan ventas y escalan negocios inmobiliarios. +8 años creando éxito en LATAM y Norteamérica.`,
     textCtaBtn: "Cotiza con 40% de descuento",
     socialProof:
       "Confianza comprobada: +8 años transformando inmobiliarias en LATAM & Norteamérica.",
