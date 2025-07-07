@@ -1,5 +1,5 @@
-
-import { Building2, Mail, Phone, MapPin } from 'lucide-react';
+import { Building2, Mail, Phone, MapPin } from "lucide-react";
+import Logo from "@/assets/logo2.svg";
 
 const Footer = () => {
   return (
@@ -10,14 +10,16 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
-              <Building2 className="h-8 w-8 text-brand-secondary mr-3" />
+              {/* <Building2 className="h-8 w-8 text-brand-secondary mr-3" /> */}
               <h3 className="text-2xl font-bold">
-                PropTech<span className="text-brand-secondary">.</span>
+                {/* PropTech<span className="text-brand-secondary">.</span> */}
+                <img src={Logo}></img>
               </h3>
             </div>
             <p className="text-white/80 mb-6 leading-relaxed">
-              La plataforma de software inmobiliario más avanzada del mercado. 
-              Potenciamos el crecimiento de inmobiliarias con tecnología de punta.
+              La plataforma de software inmobiliario más avanzada del mercado.
+              Potenciamos el crecimiento de inmobiliarias con tecnología de
+              punta.
             </p>
             <div className="flex space-x-4">
               <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-brand-secondary transition-colors cursor-pointer">
@@ -37,27 +39,42 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6">Producto</h4>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="text-white/80 hover:text-brand-secondary transition-colors">
+                <a
+                  href="#"
+                  className="text-white/80 hover:text-brand-secondary transition-colors"
+                >
                   Características
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-brand-secondary transition-colors">
+                <a
+                  href="#"
+                  className="text-white/80 hover:text-brand-secondary transition-colors"
+                >
                   Precios
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-brand-secondary transition-colors">
+                <a
+                  href="#"
+                  className="text-white/80 hover:text-brand-secondary transition-colors"
+                >
                   Integraciones
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-brand-secondary transition-colors">
+                <a
+                  href="#"
+                  className="text-white/80 hover:text-brand-secondary transition-colors"
+                >
                   API
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-brand-secondary transition-colors">
+                <a
+                  href="#"
+                  className="text-white/80 hover:text-brand-secondary transition-colors"
+                >
                   Demo
                 </a>
               </li>
@@ -69,27 +86,42 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6">Soporte</h4>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="text-white/80 hover:text-brand-secondary transition-colors">
+                <a
+                  href="#"
+                  className="text-white/80 hover:text-brand-secondary transition-colors"
+                >
                   Centro de Ayuda
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-brand-secondary transition-colors">
+                <a
+                  href="#"
+                  className="text-white/80 hover:text-brand-secondary transition-colors"
+                >
                   Documentación
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-brand-secondary transition-colors">
+                <a
+                  href="#"
+                  className="text-white/80 hover:text-brand-secondary transition-colors"
+                >
                   Capacitaciones
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-brand-secondary transition-colors">
+                <a
+                  href="#"
+                  className="text-white/80 hover:text-brand-secondary transition-colors"
+                >
                   Estado del Sistema
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-brand-secondary transition-colors">
+                <a
+                  href="#"
+                  className="text-white/80 hover:text-brand-secondary transition-colors"
+                >
                   Contacto
                 </a>
               </li>
@@ -111,7 +143,8 @@ const Footer = () => {
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-brand-secondary mr-3 mt-1" />
                 <span className="text-white/80">
-                  Calle Serrano 123<br />
+                  Calle Serrano 123
+                  <br />
                   28006 Madrid, España
                 </span>
               </div>
@@ -121,8 +154,8 @@ const Footer = () => {
             <div className="mt-8">
               <h5 className="font-semibold mb-3">Newsletter</h5>
               <div className="flex">
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   placeholder="Tu email"
                   className="flex-1 px-4 py-2 rounded-l-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-brand-secondary"
                 />
@@ -141,13 +174,22 @@ const Footer = () => {
               © 2024 PropTech Solutions. Todos los derechos reservados.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-white/60 hover:text-brand-secondary transition-colors">
+              <a
+                href="#"
+                className="text-white/60 hover:text-brand-secondary transition-colors"
+              >
                 Política de Privacidad
               </a>
-              <a href="#" className="text-white/60 hover:text-brand-secondary transition-colors">
+              <a
+                href="#"
+                className="text-white/60 hover:text-brand-secondary transition-colors"
+              >
                 Términos de Servicio
               </a>
-              <a href="#" className="text-white/60 hover:text-brand-secondary transition-colors">
+              <a
+                href="#"
+                className="text-white/60 hover:text-brand-secondary transition-colors"
+              >
                 Cookies
               </a>
             </div>

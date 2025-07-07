@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useTranslation } from "@/contexts/LanguageContext";
 import LanguageSelector from "./LanguageSelector";
 import ContactForm from "./ContactForm";
-
+import Logo from "@/assets/logo.svg";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
@@ -16,7 +16,8 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-2xl font-bold text-brand-primary">
-              RealTech<span className="text-brand-secondary">Pro</span>
+              <img src={Logo}></img>
+              {/* RealTech<span className="text-brand-secondary">Pro</span> */}
             </h1>
           </div>
 
