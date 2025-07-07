@@ -1,23 +1,45 @@
-// export type TranslationType = {
-//   hero: {
-//     socialproof: string;
-//   };
-// };
+import { LucideIcon } from "lucide-react";
 
 interface Service {
+  icon: LucideIcon;
   title: string;
   description: string;
-  textCtaBtn: string;
+  points: string[];
+}
+
+interface Tag {
+  href: string;
+  name: string;
+}
+interface Objection {
+  icon: LucideIcon;
+  objTitle: string;
+  objection: string;
+  resoTitle: string;
+  resolution: string;
+  stats: string;
 }
 
 interface Testimony {
-  title: string;
-  author: string;
-  description: string;
+  name: string;
+  role: string;
+  company: string;
+  image: string;
+  content: string;
+  rating: number;
+  results: string;
+  country: string;
 }
 
 interface Authority {
+  icon?: LucideIcon;
   title: string;
+  description: string;
+}
+
+interface Country {
+  icon: string;
+  country: string;
   description: string;
 }
 
@@ -35,83 +57,96 @@ export type TranslationType = {
   page: {
     title: string;
   };
+
   formModal: {
     title: string;
+    mailInput: string;
+    messageInput: string;
     inputPlaceholder: string;
+    messagePlaceholder: string;
+    defaultDescription: string;
     textCtaBtn: string;
-    defaultDescription: {
-      target_1: string;
-      target_2: string;
-      target_3: string;
-    };
+    textCtaBtnSending: string;
   };
 
-  // languageModal: {
-  //   title: string;
-  //   es: string;
-  //   en: string;
-  //   fr: string;
-  // };
   successModal: {
     title: string;
     description: string;
-    // textCtaBtn: string;
   };
 
-  // cta: {
-  //   inputPlaceholder: string;
-  //   objections: string[];
-  // };
+  header: {
+    tags: Tag[];
+    ctaText: string;
+  };
 
   hero: {
-    title: string;
-    subtitle: string;
-    textCtaBtn: string;
-    socialProof: string;
-    socialProofShort: string;
-  };
-  solutions: {
+    badge: string;
     title: React.ReactNode;
-    description: string;
-    offers: string[];
-    textCtaBtn: string;
+    description: React.ReactNode;
+    checks: string[];
+    ctaText: string;
+    socialsProof: string;
   };
 
   services: {
-    title: React.ReactNode;
-
+    title: string;
+    description: string;
     list: Service[];
+    ctaText: string;
+  };
+
+  objections: {
+    title: string;
+    description: string;
+    list: Objection[];
   };
 
   testimonies: {
     title: React.ReactNode;
+    description: string;
 
     list: Testimony[];
   };
 
   authority: {
-    title: React.ReactNode;
-
+    title: string;
+    description: string;
     list: Authority[];
   };
 
-  meet: {
-    title: React.ReactNode;
-
+  authorityMap: {
+    title: string;
     description: string;
-    textCtaBtn: string;
+    list: Country[];
   };
 
   faqs: {
     title: string;
+    description: string;
     list: Faq[];
   };
 
+  cta: {
+    title: React.ReactNode;
+    description: string;
+    checks: string[];
+    ctaText: string;
+    offer: {
+      title: string;
+      description: string;
+    };
+  };
   footer: {
-    title: string;
-    textCtaBtn: string;
+    description: string;
     sections: SectionFooter[];
+    contact: {
+      title: string;
+    };
     copyright: string;
-    socials: string;
+    // terms: string[];
+  };
+  wsp: {
+    message: string;
+    ariaLabel: string;
   };
 };

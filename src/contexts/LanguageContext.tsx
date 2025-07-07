@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useState } from "react";
-import en from "../locales/en";
-import es from "../locales/es";
-import fr from "../locales/fr";
+import en from "@/locales/en";
+import es from "@/locales/es";
+import fr from "@/locales/fr";
 
-import type { TranslationType } from "../types/Translations";
+import type { TranslationType } from "@/types/Translations";
 import type { langType } from "../types/languages";
 
 const translations: Record<string, TranslationType> = {

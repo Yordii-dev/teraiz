@@ -1,9 +1,8 @@
-
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import {
   Dialog,
   DialogContent,
@@ -11,18 +10,23 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog';
-import { useToast } from '@/hooks/use-toast';
-import { Send } from 'lucide-react';
+} from "@/components/ui/dialog";
+import { useToast } from "@/hooks/use-toast";
+import { Send } from "lucide-react";
+import { useTranslation } from "@/contexts/LanguageContext";
 
 interface ContactFormProps {
   trigger: React.ReactNode;
   defaultMessage?: string;
 }
 
-const ContactForm = ({ trigger, defaultMessage = "Hola, me interesa conocer más sobre PropTech y cómo puede ayudar a transformar mi negocio inmobiliario. Me gustaría agendar una demo gratuita." }: ContactFormProps) => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState(defaultMessage);
+const ContactForm = ({ trigger }: ContactFormProps) => {
+  const { t } = useTranslation();
+  const CONTENT = t.formModal;
+  const CONTENT_SUCCESS = t.successModal;
+
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState(CONTENT.defaultDescription);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const { toast } = useToast();
@@ -34,62 +38,63 @@ const ContactForm = ({ trigger, defaultMessage = "Hola, me interesa conocer más
     // Simulamos el envío del formulario
     setTimeout(() => {
       toast({
-        title: "¡Mensaje enviado!",
-        description: "Nos pondremos en contacto contigo muy pronto.",
+        title: CONTENT_SUCCESS.title,
+        description: CONTENT_SUCCESS.description,
       });
       setIsSubmitting(false);
       setIsOpen(false);
-      setEmail('');
-      setMessage(defaultMessage);
+      setEmail("");
+      setMessage(CONTENT.defaultDescription);
     }, 1000);
   };
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogTrigger asChild>
-        {trigger}
-      </DialogTrigger>
+      <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
-          <DialogTitle className="text-brand-primary">Contactanos</DialogTitle>
-          <DialogDescription>
-            Completa el formulario y nos pondremos en contacto contigo para agendar tu demo gratuita.
-          </DialogDescription>
+          <DialogTitle className="text-brand-primary">
+            {CONTENT.title}
+          </DialogTitle>
+          {/* <DialogDescription>
+            Completa el formulario y nos pondremos en contacto contigo para
+            agendar tu demo gratuita.
+          </DialogDescription> */}
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="email">Correo electrónico</Label>
+            <Label htmlFor="email">{CONTENT.mailInput}</Label>
             <Input
               id="email"
               type="email"
-              placeholder="tu@email.com"
+              placeholder={CONTENT.inputPlaceholder}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="message">Mensaje</Label>
+            <Label htmlFor="message">{CONTENT.messageInput}</Label>
             <Textarea
               id="message"
-              placeholder="Escribe tu mensaje aquí..."
+              placeholder={CONTENT.messagePlaceholder}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
               rows={4}
             />
           </div>
-          <Button 
-            type="submit" 
+          <Button
+            type="submit"
             disabled={isSubmitting}
             className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white"
           >
             {isSubmitting ? (
-              "Enviando..."
+              CONTENT.textCtaBtnSending
             ) : (
               <>
                 <Send className="mr-2 h-4 w-4" />
-                Enviar Mensaje
+                {CONTENT.textCtaBtn}
               </>
             )}
           </Button>

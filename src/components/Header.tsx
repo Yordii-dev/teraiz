@@ -8,6 +8,7 @@ import Logo from "@/assets/logo.svg";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
+  const CONTENT = t.header;
 
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
@@ -24,36 +25,14 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a
-                href="#inicio"
-                className="text-gray-700 hover:text-brand-primary transition-colors duration-200"
-              >
-                Inicio
-              </a>
-              <a
-                href="#servicios"
-                className="text-gray-700 hover:text-brand-primary transition-colors duration-200"
-              >
-                Servicios
-              </a>
-              <a
-                href="#testimonios"
-                className="text-gray-700 hover:text-brand-primary transition-colors duration-200"
-              >
-                Testimonios
-              </a>
-              <a
-                href="#faqs"
-                className="text-gray-700 hover:text-brand-primary transition-colors duration-200"
-              >
-                FAQs
-              </a>
-              <a
-                href="#contacto"
-                className="text-gray-700 hover:text-brand-primary transition-colors duration-200"
-              >
-                Contacto
-              </a>
+              {CONTENT.tags.map((tag) => (
+                <a
+                  href={tag.href}
+                  className="text-gray-700 hover:text-brand-primary transition-colors duration-200"
+                >
+                  {tag.name}
+                </a>
+              ))}
             </div>
           </div>
 
@@ -63,7 +42,7 @@ const Header = () => {
             <ContactForm
               trigger={
                 <Button className="bg-brand-secondary hover:bg-brand-secondary/90 text-brand-primary font-semibold px-6">
-                  Demo Gratuita{" "}
+                  {CONTENT.ctaText}
                 </Button>
               }
             />
@@ -89,41 +68,16 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-100">
-              <a
-                href="#inicio"
-                className="block px-3 py-2 text-gray-700 hover:text-brand-primary transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Inicio{" "}
-              </a>
-              <a
-                href="#servicios"
-                className="block px-3 py-2 text-gray-700 hover:text-brand-primary transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Servicios{" "}
-              </a>
-              <a
-                href="#testimonios"
-                className="block px-3 py-2 text-gray-700 hover:text-brand-primary transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Testimonios{" "}
-              </a>
-              <a
-                href="#faqs"
-                className="block px-3 py-2 text-gray-700 hover:text-brand-primary transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                FAQs{" "}
-              </a>
-              <a
-                href="#contacto"
-                className="block px-3 py-2 text-gray-700 hover:text-brand-primary transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contacto{" "}
-              </a>
+              {CONTENT.tags.map((tag) => (
+                <a
+                  href={tag.href}
+                  className="block px-3 py-2 text-gray-700 hover:text-brand-primary transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {tag.name}
+                </a>
+              ))}
+
               <div className="px-3 py-2">
                 <ContactForm
                   trigger={

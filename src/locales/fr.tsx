@@ -1,253 +1,439 @@
-import type { TranslationType } from "../types/Translations";
+import {
+  Award,
+  BarChart3,
+  Clock,
+  Code,
+  Database,
+  DollarSign,
+  Headphones,
+  Settings,
+  Shield,
+  Smartphone,
+  TrendingUp,
+  Users,
+  Zap,
+} from "lucide-react";
+import type { TranslationType } from "@/types/Translations";
+import { COMPANY_NAME } from "@/constants";
 
 const fr: TranslationType = {
   page: {
-    title: "Teraiz - Tecnologia inmobiliaria",
+    title: "Software Inmobiliario",
   },
   formModal: {
-    title: "Contactanos",
-    inputPlaceholder: "Tu email de contacto",
-    textCtaBtn: "Enviar Mensaje",
-    defaultDescription: {
-      target_1:
-        "Hola, me interesa conocer más sobre sus soluciones de software personalizadas para inmobiliarias. Me gustaría recibir una propuesta detallada para mi empresa.",
-      target_2: "SEGUNDA DESCRIPCION",
-      target_3: "",
-    },
+    title: "Contactez-nous",
+    mailInput: "Votre e-mail de contact",
+    messageInput: "Message",
+    inputPlaceholder: "votre@email.com",
+    messagePlaceholder: "Écrivez votre message ici...",
+    defaultDescription:
+      "Bonjour, je souhaite en savoir plus sur la PropTech et comment elle peut transformer mon entreprise immobilière. Je voudrais planifier une démo gratuite.",
+    textCtaBtn: "Parler à un expert",
+    textCtaBtnSending: "Envoi en cours...",
   },
-  // languageModal: {
-  //   title: "Selecciona tu idioma",
-  //   es: "Español",
-  //   en: "Ingles",
-  //   fr: "Frances",
-  // },
   successModal: {
-    title: "¡Mensaje enviado!",
-    description: "Nos pondremos en contacto contigo muy pronto.",
-    // textCtaBtn: "Close",
+    title: "Message envoyé !",
+    description: "Nous vous contacterons très bientôt.",
   },
-
-  // cta: {
-  //   inputPlaceholder: "Tu email de contacto",
-  //   objections: ["Soluciones en semanas", "Planes segun presupuesto"],
-  // },
-
-  hero: {
-    title: `
-      Transformamos
-      inmobiliarias
-      con tecnología de vanguardia`,
-    subtitle: `Soluciones de software personalizadas que automatizan procesos, aumentan ventas y escalan negocios inmobiliarios. +8 años creando éxito en LATAM y Norteamérica.`,
-    textCtaBtn: "Cotiza con 40% de descuento",
-    socialProof:
-      "Confianza comprobada: +8 años transformando inmobiliarias en LATAM & Norteamérica.",
-
-    socialProofShort: "+8 años transformando inmobiliarias.",
-  },
-
-  solutions: {
-    title: (
-      <h1 className="size-0 weight-semibold">
-        Crece tu inmobiliaria <br />
-        <span className="text-secondary">con tecnología</span>
-      </h1>
-    ),
-    description: `Seguir con procesos manuales te hace perder tiempo, ventas y oportunidad.
-      \nNosotros lo solucionamos: digitaliza tu operación y gestiona propiedades, agentes, cobros y terrenos sin complicaciones.`,
-    offers: [
-      `1 año gratis en 
-      mantenimiento.`,
-      "40% de descuento exclusivo.",
+  header: {
+    tags: [
+      {
+        href: "#inicio",
+        name: "Accueil",
+      },
+      {
+        href: "#servicios",
+        name: "Services",
+      },
+      {
+        href: "#testimonios",
+        name: "Témoignages",
+      },
+      {
+        href: "#faqs",
+        name: "FAQs",
+      },
+      {
+        href: "#contacto",
+        name: "Contact",
+      },
     ],
-    textCtaBtn: "Contactanos ahora",
+    ctaText: "Obtenez un devis gratuit",
   },
-
-  services: {
+  hero: {
+    badge: "Développement de logiciels d’entreprise",
     title: (
-      <h1 className="size-1 weight-semibold">
-        ¿Que <span className="text-secondary"> hacemos </span>
-        <br />
-        por ti?
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8">
+        Nous développons le logiciel qui
+        <span className="text-brand-secondary block mt-2">
+          Transforme votre agence immobilière
+        </span>
       </h1>
     ),
+    description: (
+      <p className="text-xl sm:text-2xl text-white/90 leading-relaxed mb-10">
+        Solutions technologiques sur mesure pour les agences immobilières
+        souhaitant
+        <strong className="text-brand-secondary">
+          {" "}
+          automatiser leurs processus et multiplier leurs résultats
+        </strong>
+      </p>
+    ),
+    checks: [
+      "CRM personnalisé avec automatisation des leads et suivi intelligent",
+      "Intégrations avec des portails immobiliers et outils existants",
+      "Support technique spécialisé et maintenance continue",
+    ],
+    ctaText: "Demander une consultation gratuite",
+    socialsProof:
+      "Analyse gratuite des processus • Proposition technique personnalisée • Sans engagement",
+  },
+  services: {
+    title: "Services Spécialisés",
+    description:
+      "Solutions logicielles complètes pour chaque besoin de votre agence immobilière, avec plus de 8 ans d'expérience dans le secteur.",
     list: [
       {
-        title: "Captamos clientes por ti",
+        icon: Code,
+        title: "Développement Web Sur Mesure",
         description:
-          "Creamos sitios web inmobiliarios que posicionan en Google, conectan con WhatsApp y generan leads reales cada semana. Ya no dependes solo de portales.",
-        textCtaBtn: "Obtenerlos",
+          "Portails immobiliers personnalisés avec toutes les fonctionnalités nécessaires.",
+        points: [
+          "Design responsive",
+          "SEO optimisé",
+          "Intégration MLS",
+          "Panneau d’administration",
+        ],
       },
       {
-        title: "Organiza tu inmobiliaria en minutos",
+        icon: Smartphone,
+        title: "Applications Mobiles",
         description:
-          "CRM fácil de usar para gestionar propiedades, asesores y clientes. Todo sincronizado. Adiós a los Excel y mensajes perdidos.",
-        textCtaBtn: "Controlar",
+          "Applications natives iOS et Android pour améliorer l’expérience client.",
+        points: [
+          "Recherche avancée",
+          "Visites virtuelles",
+          "Chat intégré",
+          "Notifications push",
+        ],
       },
       {
-        title: "Automatiza lo que nadie quiere hacer",
+        icon: Database,
+        title: "CRM Immobilier",
         description:
-          "Recordatorios, pagos, contratos, seguimientos… todo lo que consume tiempo, lo automatizamos. Así tú y tu equipo se enfocan en cerrar ventas.",
-        textCtaBtn: "Automatizar",
+          "Système de gestion de clients conçu spécialement pour les agences immobilières.",
+        points: [
+          "Gestion des leads",
+          "Suivi automatisé",
+          "Rapports avancés",
+          "Intégration email",
+        ],
       },
       {
-        title: "Haz que tu marca destaque",
+        icon: BarChart3,
+        title: "Analytics & BI",
         description:
-          "Te ayudamos a construir una presencia sólida: diseño profesional, confianza digital y herramientas modernas que te diferencian de la competencia local.",
-        textCtaBtn: "Destacar",
+          "Analyse de données et business intelligence pour des décisions éclairées.",
+        points: [
+          "Tableaux de bord interactifs",
+          "Prédiction des prix",
+          "Analyse de marché",
+          "KPIs personnalisés",
+        ],
+      },
+      {
+        icon: Shield,
+        title: "Sécurité & Hébergement",
+        description:
+          "Infrastructure sécurisée et fiable pour vos applications critiques.",
+        points: [
+          "Certificat SSL",
+          "Sauvegardes automatiques",
+          "Surveillance 24/7",
+          "CDN mondial",
+        ],
+      },
+      {
+        icon: Headphones,
+        title: "Support Technique",
+        description:
+          "Assistance continue et support spécialisé après la mise en œuvre.",
+        points: [
+          "Support 24/7",
+          "Formation incluse",
+          "Mises à jour gratuites",
+          "Conseil technique",
+        ],
+      },
+    ],
+    ctaText: "Voir les services",
+  },
+  objections: {
+    title: "Nous Répondons à Vos Inquiétudes",
+    description:
+      "Nous connaissons les préoccupations courantes liées à la technologie. Voici nos réponses, basées sur plus de 8 ans d’expérience.",
+    list: [
+      {
+        icon: DollarSign,
+        objTitle: "Préoccupation :",
+        objection: "Le développement sur mesure est trop coûteux",
+        resoTitle: "Notre Solution :",
+        resolution:
+          "Nos projets s’amortissent en 6 à 12 mois grâce à l’augmentation de l’efficacité et des ventes. Plans de paiement flexibles et ROI garanti.",
+        stats: "ROI moyen : 300 % la première année",
+      },
+      {
+        icon: Clock,
+        objTitle: "Préoccupation :",
+        objection: "La mise en œuvre prend trop de temps",
+        resoTitle: "Notre Solution :",
+        resolution:
+          "Notre méthode agile livre des prototypes fonctionnels en 2–3 semaines. Mise en œuvre complète en 2 à 4 mois, migration des données incluse.",
+        stats: "Durée moyenne : 3 mois",
+      },
+      {
+        icon: Settings,
+        objTitle: "Préoccupation :",
+        objection: "C’est trop compliqué à utiliser pour mon équipe",
+        resoTitle: "Notre Solution :",
+        resolution:
+          "Nous concevons des interfaces intuitives pour les agences immobilières. Formation complète et support continu pour une adoption réussie.",
+        stats: "Taux d’adoption : 95 %",
+      },
+      {
+        icon: Users,
+        objTitle: "Préoccupation :",
+        objection: "Nous n’avons pas d’équipe technique pour le gérer",
+        resoTitle: "Notre Solution :",
+        resolution:
+          "Nous nous occupons de la maintenance, des mises à jour et du support. Votre équipe vend, nous gérons la technologie.",
+        stats: "Support 24/7 inclus",
+      },
+      {
+        icon: Zap,
+        objTitle: "Préoccupation :",
+        objection: "Cela ne s’intègre pas à nos outils actuels",
+        resoTitle: "Notre Solution :",
+        resolution:
+          "Experts en intégrations avec MLS, CRM, systèmes comptables, etc. Nous connectons tout votre écosystème sans interruption.",
+        stats: "+50 intégrations disponibles",
       },
     ],
   },
-
   testimonies: {
     title: (
-      <h1 className="size-1 weight-semibold">
-        <span className="text-secondary"> 2025 </span>
-        <br />
-        Ellos crecieron
-        <br />
-        ¿Que esperas?
-      </h1>
+      <>
+        <h2 className="text-3xl sm:text-4xl font-bold text-brand-primary mb-4">
+          Histoires de Succès
+          <span className="text-brand-secondary"> Prouvées</span>
+        </h2>
+        <p className="text-xl text-gray-600 leading-relaxed">
+          Résultats concrets d’agences immobilières ayant transformé leur
+          activité grâce à nos solutions logicielles sur mesure
+        </p>
+      </>
     ),
+    description:
+      "Résultats concrets d’agences immobilières ayant transformé leur activité grâce à nos solutions logicielles sur mesure",
     list: [
       {
-        title:
-          "Teraiz transformó nuestra operación: de hojas de Excel a un sistema integral y escalable.",
-        author: "Director Comercial",
-        description: "Grupo Inmobiliario Horizonte",
+        name: "María González",
+        role: "Directrice Commerciale",
+        company: "Inmobiliaria Premier México",
+        image:
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+        content:
+          "Depuis que nous avons adopté la plateforme RealTechPro, nos ventes ont augmenté de 45 % en 6 mois. L’automatisation du CRM nous fait gagner 15 heures par semaine et le ROI est exceptionnel.",
+        rating: 5,
+        results: "+45% ventes en 6 mois",
+        country: "🇲🇽",
       },
       {
-        title:
-          "Duplicamos ventas en 6 meses con el sistema personalizado que nos desarrolló Teraiz.",
-        author: "CEO",
-        description: "Inmobiliaria Altavista",
+        name: "James Wilson",
+        role: "PDG",
+        company: "Wilson Real Estate Group",
+        image:
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+        content:
+          "La solution logicielle personnalisée a transformé nos opérations. Nous avons constaté une hausse de 60 % de la productivité et nos agents concluent 30 % de ventes en plus. Un accompagnement remarquable tout au long du projet.",
+        rating: 5,
+        results: "+60% productivité",
+        country: "🇺🇸",
       },
       {
-        title:
-          "Por fin tenemos todo en un solo lugar: propiedades, clientes, agentes y seguimiento automático.",
-        author: "Gerente de Operaciones",
-        description: "Red de Bienes Raíces Andes",
+        name: "Carlos Mendoza",
+        role: "Directeur Général",
+        company: "PropiedadesColombia S.A.S",
+        image:
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+        content:
+          "Le meilleur investissement technologique que nous ayons fait. Le système d’analyse prédictive nous aide à cibler les meilleures opportunités. Nous avons triplé notre volume de ventes.",
+        rating: 5,
+        results: "Volume de ventes x3",
+        country: "🇨🇴",
+      },
+      {
+        name: "Ana Rodríguez",
+        role: "Fondatrice",
+        company: "Urban Properties Argentina",
+        image:
+          "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
+        content:
+          "L’équipe de RealTechPro a parfaitement compris nos besoins. Le site web et l’application mobile ont nettement amélioré l’expérience client. ROI de 300 % la première année.",
+        rating: 5,
+        results: "ROI 300% première année",
+        country: "🇦🇷",
       },
     ],
   },
   authority: {
-    title: (
-      <h1 className="size-0 weight-semibold">
-        <span className="text-secondary">Expertos en </span>
-        <br />
-        tecnologia
-        <br />
-        inmobiliaria
-      </h1>
-    ),
+    title: "Des Résultats Qui Parlent d’Eux-Mêmes",
+    description:
+      "Plus de 8 ans de succès auprès des agences immobilières en Amérique latine et du Nord",
     list: [
+      { icon: Users, title: "150+", description: "Agences à succès" },
       {
-        title: "+8 años",
-        description:
-          "Desarrollando sistemas inmobiliarios que ordenan, automatizan y hacen crecer.",
+        icon: TrendingUp,
+        title: "45%",
+        description: "Croissance moyenne des ventes",
       },
-      {
-        title: "LATAM",
-        description:
-          "Hemos transformado inmobiliarias en Perú, Colombia, México, Chile y más.",
-      },
-      {
-        title: "Norte America",
-        description:
-          "Conocemos los retos del mercado en EE.UU. y adaptamos soluciones a su escala.",
-      },
+      { icon: Award, title: "8+", description: "Années d’expérience" },
     ],
   },
-
-  meet: {
-    title: (
-      <h1 className="size-0 weight-semibold">
-        Agenda una <br />
-        <span className="text-secondary">reunion</span>
-        <br />
-        con nosotros
-      </h1>
-    ),
-    description: `¿Tienes una inmobiliaria o vendes propiedades?
-
-        \n\nPodemos ayudarte a organizar tu operación, automatizar procesos y vender más.
-
-        \nCotiza gratis tu sistema y obtén asesoría sin compromiso.`,
-
-    textCtaBtn: "Habla con un experto",
+  authorityMap: {
+    title: "Présence Internationale",
+    description:
+      "Plus de 8 ans à créer des solutions performantes pour les agences immobilières en Amérique latine et du Nord",
+    list: [
+      {
+        icon: "🇲🇽",
+        country: "Mexique",
+        description: "25+ projets réussis",
+      },
+      {
+        icon: "🇺🇸",
+        country: "États-Unis",
+        description: "40+ projets réussis",
+      },
+      {
+        icon: "🇨🇴",
+        country: "Colombie",
+        description: "30+ projets réussis",
+      },
+      {
+        icon: "🇦🇷",
+        country: "Argentine",
+        description: "20+ projets réussis",
+      },
+    ],
   },
   faqs: {
-    title: "Preguntas frecuentes",
+    title: "Foire aux Questions",
+    description:
+      "Réponses aux questions les plus fréquentes sur nos services de développement logiciel pour l’immobilier.",
     list: [
       {
-        question: "¿Qué incluye la cotización gratuita?",
+        question:
+          "Combien de temps prend le développement d’une solution sur mesure ?",
         answer:
-          "Analizamos tus necesidades, te proponemos una solución personalizada y estimamos el costo del sistema. Sin compromiso.",
+          "Cela dépend de la complexité. En général : sites web basiques (4–6 semaines), CRM sur mesure (8–12 semaines), applis mobiles (10–16 semaines). Nous livrons toujours des prototypes fonctionnels sous 2–3 semaines.",
       },
       {
-        question: "¿Trabajan solo con inmobiliarias?",
+        question: "Quel type de support offrez-vous après le lancement ?",
         answer:
-          "Nos especializamos en inmobiliarias, lotizadoras y empresas que venden o alquilan propiedades. Conocemos bien el sector.",
+          "Nous proposons un support technique 24/7, des mises à jour gratuites la première année, une formation continue pour votre équipe, un gestionnaire dédié, un monitoring proactif et des sauvegardes automatiques.",
       },
       {
-        question: "¿Puedo integrar WhatsApp o redes sociales?",
+        question: "Pouvez-vous intégrer nos systèmes existants ?",
         answer:
-          "Sí. Podemos conectar tu sistema con WhatsApp, Facebook, Instagram y más, para captar y atender clientes automáticamente.",
+          "Oui, nous sommes experts en intégration. Nous connectons avec MLS, CRM (ex. Salesforce), systèmes comptables (ex. QuickBooks), emailing, réseaux sociaux et plus de 50 outils utilisés dans l’immobilier.",
       },
       {
-        question: "¿Tienen experiencia en Perú y otros países?",
+        question: "Comment garantissez-vous la sécurité de nos données ?",
         answer:
-          "Sí. Hemos trabajado con empresas en Perú, México, Colombia, Chile y EE.UU. Adaptamos las soluciones a cada mercado.",
+          "Nous utilisons le chiffrement SSL/TLS, des sauvegardes automatiques quotidiennes, l’authentification à deux facteurs, la conformité RGPD et locale, l’hébergement certifié et des audits de sécurité réguliers.",
       },
       {
-        question: "¿Qué tipo de sistemas desarrollan?",
+        question: "Que se passe-t-il si nous avons besoin de modifications ?",
         answer:
-          "Creamos CRMs, gestores de propiedades, sistemas de alquiler, mapas, cotizadores, automatización de cobros y más.",
+          "Les 3 premiers mois incluent des ajustements mineurs gratuits. Pour les changements importants, nous offrons des plans de maintenance flexibles. Notre méthode agile permet des adaptations rapides.",
+      },
+      {
+        question: "Proposez-vous une formation pour notre équipe ?",
+        answer:
+          "Oui, formation complète incluse : sessions en ligne ou sur place, manuels détaillés, vidéos tutorielles et sessions de révision. Nous accompagnons jusqu’à ce que votre équipe soit à l’aise.",
+      },
+      {
+        question: "Quel est le coût approximatif d’une solution sur mesure ?",
+        answer:
+          "Les prix varient selon les fonctionnalités. Sites web dès 5 000 USD, CRM sur mesure dès 15 000 USD, applis mobiles dès 20 000 USD. Plans de paiement flexibles et financement disponibles.",
+      },
+      {
+        question:
+          "Travaillez-vous avec de petites agences ou seulement les grandes ?",
+        answer:
+          "Nous collaborons avec des agences de toutes tailles. Nos solutions s’adaptent des agents indépendants aux grands groupes. Notre approche s’ajuste au budget et aux besoins spécifiques de chaque client.",
       },
     ],
   },
-
+  cta: {
+    title: (
+      <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+        Commencez votre transformation
+        <span className="text-brand-secondary block mt-2">
+          digitale dès aujourd’hui
+        </span>
+      </h2>
+    ),
+    description:
+      "Rejoignez plus de 500 agences immobilières qui concluent plus de ventes, gagnent du temps et augmentent leur rentabilité grâce à la PropTech.",
+    checks: [
+      "Mise en place gratuite et migration des données incluse",
+      "Support 24/7 en espagnol pendant les 30 premiers jours",
+      "Formation complète pour votre équipe",
+      "Sans engagement – annulez à tout moment",
+    ],
+    ctaText: "Parler à un expert",
+    offer: {
+      title: "Offre de Lancement",
+      description:
+        "Les 50 premiers clients bénéficient de 3 mois gratuits + mise en place personnalisée offerte",
+    },
+  },
   footer: {
-    title: "Impulsa tu inmobiliaria con soluciones digitales reales",
-    textCtaBtn: "Agendar una reunion",
+    description:
+      "La plateforme logicielle immobilière la plus avancée du marché. Nous aidons les agences à croître grâce à une technologie de pointe.",
     sections: [
       {
-        title: "Servicios",
-        details: [
-          "CRM para inmobiliarias",
-          "Portales y catálogos de propiedades",
-          "Sistemas de gestión y control",
-          "Apps móviles para agentes y clientes",
-          "Landing pages de captación",
-          "Sistemas internos personalizados",
-          "Apps para preventa y lanzamientos",
-          "Plataformas para franquicias inmobiliarias",
-        ],
+        title: "Produit",
+        details: ["Fonctionnalités", "Tarifs", "Intégrations", "API", "Démo"],
       },
       {
-        title: "Tecnologías",
+        title: "Assistance",
         details: [
-          "Azure & AWS",
-          "Oracle / SQL Server",
-          "Power BI & Google Cloud",
-          "Docker & DevOps",
-          "ASP.NET Core / JavaScript",
-          "Integración con DocuSign",
-        ],
-      },
-      {
-        title: "Fortalezas",
-        details: [
-          "Automatización de procesos",
-          "Seguridad y respaldo",
-          "Escalabilidad a medida",
-          "Integraciones externas",
-          "Expertise técnico profundo",
-          "Gestión ágil de proyectos",
+          "Centre d’aide",
+          "Documentation",
+          "Formations",
+          "État du système",
+          "Contact",
         ],
       },
     ],
-    copyright: "© 2025 Teraiz. Tecnologia para el sector inmobiliario.",
-    socials: "Siguenos en redes",
+    contact: {
+      title: "Contact",
+    },
+    copyright: `© 2025 ${COMPANY_NAME}. Tous droits réservés.`,
+    // terms: [
+    //   "Politique de confidentialité",
+    //   "Conditions d’utilisation",
+    //   "Cookies",
+    // ],
+  },
+  wsp: {
+    message:
+      "Bonjour, je souhaite en savoir plus sur vos solutions logicielles pour les agences immobilières. Pourriez-vous me donner plus d’informations ?",
+    ariaLabel: "Contacter via WhatsApp",
   },
 };
 

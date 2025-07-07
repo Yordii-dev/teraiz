@@ -7,6 +7,7 @@ import MapSection from "@/components/MapSection";
 import FAQSection from "@/components/FAQSection";
 import CTA from "@/components/Cta";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <FAQSection />
       <CTA />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

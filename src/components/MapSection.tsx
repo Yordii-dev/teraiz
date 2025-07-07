@@ -3,10 +3,12 @@ import { useEffect, useRef } from "react";
 import maplibregl from "maplibre-gl";
 
 import "mapbox-gl/dist/mapbox-gl.css";
-// import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "@/contexts/LanguageContext";
 
 const MapSection = () => {
-  // const { t } = useLanguage();
+  const { t } = useTranslation();
+  const CONTENT = t.authorityMap;
+
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<maplibregl.Map | null>(null);
 
@@ -76,38 +78,26 @@ const MapSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-brand-primary mb-4">
-            Presencia Internacional
+            {CONTENT.title}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Más de 8 años creando soluciones exitosas para inmobiliarias en
-            LATAM y Norteamérica
+            {CONTENT.description}
           </p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
           <div ref={mapContainer} className="h-96 w-full" />
 
-          <div className="p-8">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="text-3xl font-bold text-brand-secondary mb-2">
-                  8+
-                </div>
-                <p className="text-gray-600">Años de experiencia</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            {CONTENT.list.map((country) => (
+              <div className="text-center p-6 bg-white rounded-lg shadow-md">
+                <div className="text-2xl mb-2">{country.icon}</div>
+                <h3 className="text-lg font-semibold text-brand-primary">
+                  {country.country}
+                </h3>
+                <p className="text-gray-600">{country.description}</p>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-brand-secondary mb-2">
-                  12
-                </div>
-                <p className="text-gray-600">Países atendidos</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-brand-secondary mb-2">
-                  150+
-                </div>
-                <p className="text-gray-600">Proyectos exitosos</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

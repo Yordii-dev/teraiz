@@ -1,9 +1,14 @@
 import { Building2, Mail, Phone, MapPin } from "lucide-react";
 import Logo from "@/assets/logo2.svg";
+import { useTranslation } from "@/contexts/LanguageContext";
+import { COMPANY_ADDRESS, COMPANY_MAIL, COMPANY_PHONE } from "@/constants";
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const CONTENT = t.footer;
+
   return (
-    <footer id="contacto" className="bg-brand-primary text-white">
+    <footer className="bg-brand-primary text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -17,9 +22,7 @@ const Footer = () => {
               </h3>
             </div>
             <p className="text-white/80 mb-6 leading-relaxed">
-              La plataforma de software inmobiliario más avanzada del mercado.
-              Potenciamos el crecimiento de inmobiliarias con tecnología de
-              punta.
+              {CONTENT.description}
             </p>
             <div className="flex space-x-4">
               <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-brand-secondary transition-colors cursor-pointer">
@@ -35,123 +38,46 @@ const Footer = () => {
           </div>
 
           {/* Product Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Producto</h4>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  href="#"
-                  className="text-white/80 hover:text-brand-secondary transition-colors"
-                >
-                  Características
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/80 hover:text-brand-secondary transition-colors"
-                >
-                  Precios
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/80 hover:text-brand-secondary transition-colors"
-                >
-                  Integraciones
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/80 hover:text-brand-secondary transition-colors"
-                >
-                  API
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/80 hover:text-brand-secondary transition-colors"
-                >
-                  Demo
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Support Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Soporte</h4>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  href="#"
-                  className="text-white/80 hover:text-brand-secondary transition-colors"
-                >
-                  Centro de Ayuda
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/80 hover:text-brand-secondary transition-colors"
-                >
-                  Documentación
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/80 hover:text-brand-secondary transition-colors"
-                >
-                  Capacitaciones
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/80 hover:text-brand-secondary transition-colors"
-                >
-                  Estado del Sistema
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/80 hover:text-brand-secondary transition-colors"
-                >
-                  Contacto
-                </a>
-              </li>
-            </ul>
-          </div>
+          {CONTENT.sections.map((section, index) => (
+            <div key={index}>
+              <h4 className="text-lg font-semibold mb-6">{section.title}</h4>
+              <ul className="space-y-4">
+                {section.details.map((detail, subIndex) => (
+                  <li key={subIndex}>
+                    <a
+                      href="#"
+                      className="text-white/80 hover:text-brand-secondary transition-colors"
+                    >
+                      {detail}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Contacto</h4>
+            <h4 className="text-lg font-semibold mb-6">
+              {CONTENT.contact.title}
+            </h4>
             <div className="space-y-4">
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-brand-secondary mr-3" />
-                <span className="text-white/80">hola@proptech.com</span>
+                <span className="text-white/80">{COMPANY_MAIL}</span>
               </div>
               <div className="flex items-center">
                 <Phone className="h-5 w-5 text-brand-secondary mr-3" />
-                <span className="text-white/80">+34 900 123 456</span>
+                <span className="text-white/80">{COMPANY_PHONE}</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-brand-secondary mr-3 mt-1" />
-                <span className="text-white/80">
-                  Calle Serrano 123
-                  <br />
-                  28006 Madrid, España
-                </span>
+                <span className="text-white/80">{COMPANY_ADDRESS}</span>
               </div>
             </div>
 
             {/* Newsletter */}
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <h5 className="font-semibold mb-3">Newsletter</h5>
               <div className="flex">
                 <input
@@ -163,7 +89,7 @@ const Footer = () => {
                   Suscribir
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -171,9 +97,9 @@ const Footer = () => {
         <div className="border-t border-white/10 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/60 text-sm mb-4 md:mb-0">
-              © 2024 PropTech Solutions. Todos los derechos reservados.
+              {CONTENT.copyright}
             </p>
-            <div className="flex space-x-6 text-sm">
+            {/* <div className="flex space-x-6 text-sm">
               <a
                 href="#"
                 className="text-white/60 hover:text-brand-secondary transition-colors"
@@ -192,7 +118,7 @@ const Footer = () => {
               >
                 Cookies
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
