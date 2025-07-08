@@ -1,4 +1,4 @@
-import { COMPANY_PHONE } from "@/constants";
+import { COMPANY_PHONES } from "@/constants";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { MessageCircle } from "lucide-react";
 
@@ -8,7 +8,7 @@ const WhatsAppButton = () => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(CONTENT.message);
-    const whatsappUrl = `https://wa.me/${COMPANY_PHONE}?text=${message}`;
+    const whatsappUrl = `https://wa.me/${COMPANY_PHONES[0].phone}?text=${message}`;
     window.open(whatsappUrl, "_blank");
   };
 

@@ -27,7 +27,7 @@ const en: TranslationType = {
     inputPlaceholder: "your@email.com",
     messagePlaceholder: "Write your message here...",
     defaultDescription:
-      "Hi, I'm interested in learning more about PropTech and how it can help transform my real estate business. I’d like to schedule a free demo.",
+      "Hi, I’d like to learn how your company can develop solutions to digitalize my real estate business, optimize processes, and increase my sales.",
     textCtaBtn: "Talk to an expert",
     textCtaBtnSending: "Sending...",
   },
@@ -42,11 +42,11 @@ const en: TranslationType = {
         name: "Home",
       },
       {
-        href: HREF_HEADER["services"],        
+        href: HREF_HEADER["services"],
         name: "Services",
       },
       {
-        href: HREF_HEADER["testimonies"],        
+        href: HREF_HEADER["testimonies"],
         name: "Testimonials",
       },
       {
@@ -98,10 +98,10 @@ const en: TranslationType = {
       satisfaction: "Client Satisfaction",
       partner: {
         title: "Trusted Tech Partner",
-        description: "Experts in real estate using agile methods and cutting-edge tech",
-      }
-    }
-
+        description:
+          "Experts in real estate using agile methods and cutting-edge tech",
+      },
+    },
   },
 
   services: {

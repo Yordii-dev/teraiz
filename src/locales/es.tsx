@@ -26,7 +26,7 @@ const es: TranslationType = {
     inputPlaceholder: "tu@mail.com",
     messagePlaceholder: "Escribe tu mensaje aqui...",
     defaultDescription:
-      "Hola, me interesa conocer más sobre PropTech y cómo puede ayudar a transformar mi negocio inmobiliario. Me gustaría agendar una demo gratuita.",
+      "Hola, quiero conocer cómo su empresa puede desarrollar soluciones para digitalizar mi negocio inmobiliario, optimizar procesos y aumentar mis ventas.",
     textCtaBtn: "Hablar con un experto",
     textCtaBtnSending: "Enviando...",
   },
@@ -89,17 +89,18 @@ const es: TranslationType = {
     ctaText: "Habla con un experto",
     socialsProof:
       "Análisis gratuito de procesos • Propuesta técnica personalizada • Sin compromiso",
-    results:{
-      title:"Nuestros Resultados",
-      years:"Años Desarrollando Software",
-      projects:"Proyectos Entregados",
-      clients:"Países con Clientes",
-      satisfaction:"Satisfacción Cliente",
-      partner:{
-        title:"Partner Tecnológico de Confianza",
-        description:"Especializados en el sector inmobiliario con metodologías ágiles y tecnologías de vanguardia",
-      } 
-    }
+    results: {
+      title: "Nuestros Resultados",
+      years: "Años Desarrollando Software",
+      projects: "Proyectos Entregados",
+      clients: "Países con Clientes",
+      satisfaction: "Satisfacción Cliente",
+      partner: {
+        title: "Partner Tecnológico de Confianza",
+        description:
+          "Especializados en el sector inmobiliario con metodologías ágiles y tecnologías de vanguardia",
+      },
+    },
   },
   services: {
     title: "Servicios Especializados",

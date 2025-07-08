@@ -10,11 +10,10 @@ const ObjectionsSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-brand-primary mb-4">
-            Resolvemos tus Inquietudes
+            {CONTENT.title}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Conocemos las preocupaciones comunes sobre la tecnología. Aquí están
-            nuestras respuestas basadas en 8+ años de experiencia.
+            {CONTENT.description}
           </p>
         </div>
 

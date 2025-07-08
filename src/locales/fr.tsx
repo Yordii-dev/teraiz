@@ -27,7 +27,7 @@ const fr: TranslationType = {
     inputPlaceholder: "votre@email.com",
     messagePlaceholder: "Écrivez votre message ici...",
     defaultDescription:
-      "Bonjour, je souhaite en savoir plus sur la PropTech et comment elle peut transformer mon entreprise immobilière. Je voudrais planifier une démo gratuite.",
+      "Bonjour, je souhaite savoir comment votre entreprise peut développer des solutions pour digitaliser mon activité immobilière, optimiser les processus et augmenter mes ventes.",
     textCtaBtn: "Parler à un expert",
     textCtaBtnSending: "Envoi en cours...",
   },
@@ -38,26 +38,24 @@ const fr: TranslationType = {
   header: {
     tags: [
       {
-        href: HREF_HEADER["home"],        
+        href: HREF_HEADER["home"],
         name: "Accueil",
       },
       {
-        
         href: HREF_HEADER["services"],
         name: "Services",
       },
-      {  
+      {
         href: HREF_HEADER["testimonies"],
         name: "Témoignages",
       },
       {
         href: HREF_HEADER["faqs"],
-        
+
         name: "FAQs",
       },
       {
-        
-      href: HREF_HEADER["contact"],
+        href: HREF_HEADER["contact"],
         name: "Contact",
       },
     ],
@@ -101,10 +99,10 @@ const fr: TranslationType = {
       satisfaction: "Satisfaction client",
       partner: {
         title: "Partenaire technologique de confiance",
-        description: "Experts en immobilier avec des méthodes agiles et technologies avancées",
-      }
-    }
-
+        description:
+          "Experts en immobilier avec des méthodes agiles et technologies avancées",
+      },
+    },
   },
   services: {
     title: "Services Spécialisés",

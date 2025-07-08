@@ -6,7 +6,6 @@ import { Label } from "@/components/ui/label";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -32,7 +31,6 @@ const ContactForm = ({ trigger }: ContactFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const { toast } = useToast();
-  const isMobile = useIsMobile();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,7 +49,6 @@ const ContactForm = ({ trigger }: ContactFormProps) => {
     }, 1000);
 
     await MailSend({ email, description: message });
-
   };
 
   return (

@@ -9,6 +9,8 @@ import CTA from "@/components/Cta";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { TitleUpdater } from "@/components/TitlteUpdater";
+import { Card } from "@/components/ui/card";
+import { Clock, Mail, Phone } from "lucide-react";
 
 const Index = () => {
   return (
@@ -19,6 +21,7 @@ const Index = () => {
       <ServicesSection />
       <ObjectionsSection />
       <Testimonials />
+
       <MapSection />
       <FAQSection />
       <CTA />
