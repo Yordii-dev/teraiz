@@ -15,6 +15,10 @@ import {
 } from "lucide-react";
 import type { TranslationType } from "@/types/Translations";
 import { COMPANY_NAME, HREF_HEADER } from "@/constants";
+import T1 from "@/assets/testimonies/t1.jpg";
+import T2 from "@/assets/testimonies/t2.jpg";
+import T3 from "@/assets/testimonies/t3.jpg";
+import T4 from "@/assets/testimonies/t4.png";
 
 const en: TranslationType = {
   page: {
@@ -253,11 +257,11 @@ const en: TranslationType = {
       "Real results from real estate agencies that have transformed their business with our custom software solutions",
     list: [
       {
-        name: "María González",
+        name: "Alberto Gomez",
         role: "Commercial Director",
         company: "Inmobiliaria Premier México",
-        image:
-          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+        image: T1,
+
         content:
           "Since implementing the RealTechPro platform, our sales have increased by 45% in 6 months. CRM automation saves us 15 hours per week, and the ROI has been outstanding.",
         rating: 5,
@@ -265,11 +269,10 @@ const en: TranslationType = {
         country: "🇲🇽",
       },
       {
-        name: "James Wilson",
+        name: "Jhenifer Vasquez",
         role: "CEO",
         company: "Wilson Real Estate Group",
-        image:
-          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+        image: T2,
         content:
           "The custom software solution transformed our business operations. We've seen a 60% increase in productivity and our agents close 30% more deals. Outstanding support throughout the entire process.",
         rating: 5,
@@ -280,8 +283,7 @@ const en: TranslationType = {
         name: "Carlos Mendoza",
         role: "General Manager",
         company: "PropiedadesColombia S.A.S",
-        image:
-          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+        image: T3,
         content:
           "The best tech investment we’ve made. The predictive analytics system helps us spot top opportunities. We've tripled our sales volume.",
         rating: 5,
@@ -292,8 +294,7 @@ const en: TranslationType = {
         name: "Ana Rodríguez",
         role: "Founder",
         company: "Urban Properties Argentina",
-        image:
-          "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
+        image: T4,
         content:
           "The RealTechPro team truly understood our needs. The website and mobile app have greatly improved our clients’ experience. 300% ROI in the first year.",
         rating: 5,

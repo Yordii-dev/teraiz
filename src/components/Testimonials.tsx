@@ -1,5 +1,5 @@
 import { useTranslation } from "@/contexts/LanguageContext";
-import { Star, Quote, TrendingUp, Users, Award } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 const Testimonials = () => {
   const { t } = useTranslation();
