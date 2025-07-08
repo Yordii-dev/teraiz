@@ -18,7 +18,7 @@ import { COMPANY_NAME } from "@/constants";
 
 const fr: TranslationType = {
   page: {
-    title: "Software Inmobiliario",
+    title: `Logiciel Immobilier - ${COMPANY_NAME}`,
   },
   formModal: {
     title: "Contactez-nous",

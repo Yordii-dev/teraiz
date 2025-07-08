@@ -8,10 +8,12 @@ import FAQSection from "@/components/FAQSection";
 import CTA from "@/components/Cta";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { TitleUpdater } from "@/components/TitlteUpdater";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <TitleUpdater />
       <Header />
       <Hero />
       <ServicesSection />
