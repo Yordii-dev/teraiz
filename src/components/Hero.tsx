@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen lg:h-screen flex items-center lg:justify-center bg-gradient-to-br from-brand-primary via-brand-primary/95 to-brand-primary/90"
+      className="relative z-0 min-h-screen lg:h-screen flex items-center lg:justify-center bg-gradient-to-br from-brand-primary via-brand-primary/95 to-brand-primary/90"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -44,7 +44,7 @@ const Hero = () => {
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   }
-                  defaultMessage="Hola, soy [Nombre] de [Inmobiliaria]. Estamos buscando desarrollar una solución de software personalizada para optimizar nuestros procesos de ventas y gestión de propiedades. Me gustaría agendar una consulta para discutir nuestras necesidades específicas."
+                  // defaultMessage="Hola, soy [Nombre] de [Inmobiliaria]. Estamos buscando desarrollar una solución de software personalizada para optimizar nuestros procesos de ventas y gestión de propiedades. Me gustaría agendar una consulta para discutir nuestras necesidades específicas."
                 />
 
                 <p className="text-sm text-white/70 max-w-md mx-auto lg:mx-0">
@@ -142,7 +142,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute inset-0 overflow-hidden">
+  <div className="absolute inset-0 overflow-hidden pointer-events-none z-[-1]">
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-brand-secondary/10"></div>
         <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-white/5"></div>
       </div>
