@@ -50,7 +50,7 @@ const ContactForm = ({ trigger }: ContactFormProps) => {
       setMessage(CONTENT.defaultDescription);
     }, 1000);
 
-    await MailSend({ email, message });
+    await MailSend({ email, description: message });
 
   };
 
