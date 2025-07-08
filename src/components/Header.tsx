@@ -25,8 +25,9 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {CONTENT.tags.map((tag) => (
+              {CONTENT.tags.map((tag, i) => (
                 <a
+                  key={i}
                   href={tag.href}
                   className="text-gray-700 hover:text-brand-primary transition-colors duration-200"
                 >
@@ -68,8 +69,9 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-100">
-              {CONTENT.tags.map((tag) => (
+              {CONTENT.tags.map((tag, i) => (
                 <a
+                  key={i}
                   href={tag.href}
                   className="block px-3 py-2 text-gray-700 hover:text-brand-primary transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}

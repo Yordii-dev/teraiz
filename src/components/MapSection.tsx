@@ -89,8 +89,11 @@ const MapSection = () => {
           <div ref={mapContainer} className="h-96 w-full" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-            {CONTENT.list.map((country) => (
-              <div className="text-center p-6 bg-white rounded-lg shadow-md">
+            {CONTENT.list.map((country, i) => (
+              <div
+                key={i}
+                className="text-center p-6 bg-white rounded-lg shadow-md"
+              >
                 <div className="text-2xl mb-2">{country.icon}</div>
                 <h3 className="text-lg font-semibold text-brand-primary">
                   {country.country}

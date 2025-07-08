@@ -12,10 +12,6 @@ const Testimonials = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           {CONTENT.title}
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Resultados reales de inmobiliarias que han transformado su negocio
-            con nuestras soluciones de software personalizado
-          </p>
         </div>
 
         {/* Testimonials Grid */}

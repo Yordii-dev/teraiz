@@ -41,8 +41,11 @@ const Hero = () => {
 
               {/* Key Value Props */}
               <div className="space-y-4 mb-10">
-                {CONTENT.checks.map((check) => (
-                  <div className="flex items-start justify-center lg:justify-start text-white/90">
+                {CONTENT.checks.map((check, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start justify-center lg:justify-start text-white/90"
+                  >
                     <CheckCircle className="w-5 h-5 text-brand-secondary mr-3 flex-shrink-0 mt-0.5" />
                     <span className="text-left">{check}</span>
                   </div>
