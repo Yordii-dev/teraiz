@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -13,7 +13,6 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { Send } from "lucide-react";
 import { useTranslation } from "@/contexts/LanguageContext";
-import { useIsMobile } from "@/hooks/use-mobile";
 import { MailSend } from "./services/MailZoho";
 
 interface ContactFormProps {
@@ -50,6 +49,10 @@ const ContactForm = ({ trigger }: ContactFormProps) => {
 
     await MailSend({ email, description: message });
   };
+
+  useEffect(() => {
+    setMessage(CONTENT.defaultDescription);
+  }, [CONTENT]);
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
