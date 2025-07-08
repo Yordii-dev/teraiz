@@ -86,6 +86,17 @@ export type TranslationType = {
     checks: string[];
     ctaText: string;
     socialsProof: string;
+    results:{
+      title:string;
+      years:string;
+      projects:string;
+      clients:string;
+      satisfaction:string;
+      partner:{
+        title:string;
+        description:string;
+      } 
+    }
   };
 
   services: {

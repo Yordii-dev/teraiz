@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { useTranslation } from "@/contexts/LanguageContext";
 import ContactForm from "./ContactForm";
+import { RESULTS_HERO } from "@/constants";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -24,7 +25,8 @@ const Hero = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center lg:h-screen">
+          {/* <div className="grid lg:grid-cols-2 gap-16 items-center lg:h-screen"> */}
+          <div className="grid lg:grid-cols-2 gap-0 lg:gap-16 items-center lg:h-screen">
             {/* <div className="grid lg:grid-cols-2 gap-16 items-start"> */}
             <div className="flex flex-col justify-center text-center lg:text-left text-white min-h-screen lg:min-h-0">
               {CONTENT.title}
@@ -52,48 +54,52 @@ const Hero = () => {
             </div>
 
             {/* Trust & Results Column */}
-            <div className="space-y-8 mt-10 lg:mt-0">
+            <div className="space-y-8 mt-0 lg:mt-10">
               {/* Results Stats */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <h3 className="text-white text-xl font-semibold mb-6 text-center">
-                  Nuestros Resultados
+                  {CONTENT.results.title}
                 </h3>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
                     <div className="text-4xl font-bold text-brand-secondary mb-2">
-                      8+
+                      {RESULTS_HERO.years}
                     </div>
                     <p className="text-sm text-white/80">
-                      Años Desarrollando Software
+                      {CONTENT.results.years}
                     </p>
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-bold text-brand-secondary mb-2">
-                      50+
+                      {RESULTS_HERO.projects}
+                      
                     </div>
                     <p className="text-sm text-white/80">
-                      Proyectos Entregados
+                      {CONTENT.results.projects}
                     </p>
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-bold text-brand-secondary mb-2">
-                      15+
+                      {RESULTS_HERO.clients}
+                      
                     </div>
-                    <p className="text-sm text-white/80">Países con Clientes</p>
+                    <p className="text-sm text-white/80">{CONTENT.results.clients}</p>
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-bold text-brand-secondary mb-2">
-                      95%
+                      {RESULTS_HERO.satisfaction}
+                      
                     </div>
                     <p className="text-sm text-white/80">
-                      Satisfacción Cliente
+                      {CONTENT.results.satisfaction}
+
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Services Icons */}
-              <div className="grid grid-cols-3 gap-4">
+              {/* <div className="grid grid-cols-3 gap-4">
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
                   <Building2 className="h-10 w-10 text-brand-secondary mx-auto mb-3" />
                   <p className="text-white/90 text-sm font-medium">
@@ -118,16 +124,16 @@ const Hero = () => {
                     Garantizada
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               {/* Trust Indicator */}
               <div className="bg-gradient-to-r from-brand-secondary/10 to-brand-secondary/5 backdrop-blur-sm rounded-xl p-6 border border-brand-secondary/20 text-center">
                 <p className="text-brand-secondary font-bold text-lg mb-2">
-                  🏆 Partner Tecnológico de Confianza
+                  🏆{CONTENT.results.partner.title}
+
                 </p>
                 <p className="text-white/90 text-sm leading-relaxed">
-                  Especializados en el sector inmobiliario con metodologías
-                  ágiles y tecnologías de vanguardia
+                  {CONTENT.results.partner.description}
                 </p>
               </div>
               <br />

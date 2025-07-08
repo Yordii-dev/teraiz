@@ -14,7 +14,7 @@ import {
   Zap,
 } from "lucide-react";
 import type { TranslationType } from "@/types/Translations";
-import { COMPANY_NAME } from "@/constants";
+import { COMPANY_NAME, HREF_HEADER } from "@/constants";
 
 const en: TranslationType = {
   page: {
@@ -38,23 +38,23 @@ const en: TranslationType = {
   header: {
     tags: [
       {
-        href: "#inicio",
+        href: HREF_HEADER["home"],
         name: "Home",
       },
       {
-        href: "#servicios",
+        href: HREF_HEADER["services"],        
         name: "Services",
       },
       {
-        href: "#testimonios",
+        href: HREF_HEADER["testimonies"],        
         name: "Testimonials",
       },
       {
-        href: "#faqs",
+        href: HREF_HEADER["faqs"],
         name: "FAQs",
       },
       {
-        href: "#contacto",
+        href: HREF_HEADER["contact"],
         name: "Contact",
       },
     ],
@@ -87,9 +87,21 @@ const en: TranslationType = {
       "Integrations with real estate portals and existing tools",
       "Expert technical support and ongoing maintenance",
     ],
-    ctaText: "Request Free Consultation",
+    ctaText: "Talk to an expert",
     socialsProof:
       "Free process analysis • Personalized technical proposal • No obligation",
+    results: {
+      title: "Our Results",
+      years: "Years Building Software",
+      projects: "Delivered Projects",
+      clients: "Client Countries",
+      satisfaction: "Client Satisfaction",
+      partner: {
+        title: "Trusted Tech Partner",
+        description: "Experts in real estate using agile methods and cutting-edge tech",
+      }
+    }
+
   },
 
   services: {
@@ -170,7 +182,7 @@ const en: TranslationType = {
         ],
       },
     ],
-    ctaText: "Explore Services",
+    ctaText: "Start growing today",
   },
   objections: {
     title: "We Address Your Concerns",
@@ -391,7 +403,7 @@ const en: TranslationType = {
       "Full training for your team",
       "No commitment – cancel anytime",
     ],
-    ctaText: "Talk to an Expert",
+    ctaText: "Get Free Consultation",
     offer: {
       title: "Launch Offer",
       description:

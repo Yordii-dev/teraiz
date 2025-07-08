@@ -84,7 +84,8 @@ const Header = () => {
                 <ContactForm
                   trigger={
                     <Button className="w-full bg-brand-secondary hover:bg-brand-secondary/90 text-brand-primary font-semibold">
-                      Demo Gratuita{" "}
+                      {CONTENT.ctaText}
+
                     </Button>
                   }
                 />

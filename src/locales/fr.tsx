@@ -14,7 +14,7 @@ import {
   Zap,
 } from "lucide-react";
 import type { TranslationType } from "@/types/Translations";
-import { COMPANY_NAME } from "@/constants";
+import { COMPANY_NAME, HREF_HEADER } from "@/constants";
 
 const fr: TranslationType = {
   page: {
@@ -38,23 +38,26 @@ const fr: TranslationType = {
   header: {
     tags: [
       {
-        href: "#inicio",
+        href: HREF_HEADER["home"],        
         name: "Accueil",
       },
       {
-        href: "#servicios",
+        
+        href: HREF_HEADER["services"],
         name: "Services",
       },
-      {
-        href: "#testimonios",
+      {  
+        href: HREF_HEADER["testimonies"],
         name: "Témoignages",
       },
       {
-        href: "#faqs",
+        href: HREF_HEADER["faqs"],
+        
         name: "FAQs",
       },
       {
-        href: "#contacto",
+        
+      href: HREF_HEADER["contact"],
         name: "Contact",
       },
     ],
@@ -86,9 +89,22 @@ const fr: TranslationType = {
       "Intégrations avec des portails immobiliers et outils existants",
       "Support technique spécialisé et maintenance continue",
     ],
-    ctaText: "Consultation gratuite",
+    ctaText: "Parlez à un expert",
     socialsProof:
       "Analyse gratuite des processus • Proposition technique personnalisée • Sans engagement",
+
+    results: {
+      title: "Nos Résultats",
+      years: "Années à créer des logiciels",
+      projects: "Projets livrés",
+      clients: "Pays clients",
+      satisfaction: "Satisfaction client",
+      partner: {
+        title: "Partenaire technologique de confiance",
+        description: "Experts en immobilier avec des méthodes agiles et technologies avancées",
+      }
+    }
+
   },
   services: {
     title: "Services Spécialisés",
@@ -168,7 +184,7 @@ const fr: TranslationType = {
         ],
       },
     ],
-    ctaText: "Voir les services",
+    ctaText: "Commencez à croître dès aujourd’hui",
   },
   objections: {
     title: "Nous Répondons à Vos Inquiétudes",
@@ -395,7 +411,7 @@ const fr: TranslationType = {
       "Formation complète pour votre équipe",
       "Sans engagement – annulez à tout moment",
     ],
-    ctaText: "Parler à un expert",
+    ctaText: "Consultation gratuite",
     offer: {
       title: "Offre de Lancement",
       description:

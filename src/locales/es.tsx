@@ -14,7 +14,7 @@ import {
   Zap,
 } from "lucide-react";
 import type { TranslationType } from "@/types/Translations";
-import { COMPANY_NAME } from "@/constants";
+import { COMPANY_NAME, HREF_HEADER } from "@/constants";
 const es: TranslationType = {
   page: {
     title: `${COMPANY_NAME} - Software Inmobiliario`,
@@ -38,23 +38,23 @@ const es: TranslationType = {
   header: {
     tags: [
       {
-        href: "#inicio",
+        href: HREF_HEADER["home"],
         name: "Inicio",
       },
       {
-        href: "#servicios",
+        href: HREF_HEADER["services"],
         name: "Servicios",
       },
       {
-        href: "#testimonios",
+        href: HREF_HEADER["testimonies"],
         name: "Testimonios",
       },
       {
-        href: "#faqs",
+        href: HREF_HEADER["faqs"],
         name: "Dudas",
       },
       {
-        href: "#contacto",
+        href: HREF_HEADER["contact"],
         name: "Contacto",
       },
     ],
@@ -86,9 +86,20 @@ const es: TranslationType = {
       "Integraciones con portales inmobiliarios y herramientas existentes",
       "Soporte técnico especializado y mantenimiento continuo",
     ],
-    ctaText: "Solicitar Consulta Gratuita",
+    ctaText: "Habla con un experto",
     socialsProof:
       "Análisis gratuito de procesos • Propuesta técnica personalizada • Sin compromiso",
+    results:{
+      title:"Nuestros Resultados",
+      years:"Años Desarrollando Software",
+      projects:"Proyectos Entregados",
+      clients:"Países con Clientes",
+      satisfaction:"Satisfacción Cliente",
+      partner:{
+        title:"Partner Tecnológico de Confianza",
+        description:"Especializados en el sector inmobiliario con metodologías ágiles y tecnologías de vanguardia",
+      } 
+    }
   },
   services: {
     title: "Servicios Especializados",
@@ -168,7 +179,7 @@ const es: TranslationType = {
         ],
       },
     ],
-    ctaText: "Consultar Servicios",
+    ctaText: "Empieza a crecer hoy",
   },
   objections: {
     title: "Resolvemos tus Inquietudes",
@@ -397,7 +408,7 @@ const es: TranslationType = {
       "Capacitación completa para tu equipo",
       "Sin compromiso - cancela cuando quieras",
     ],
-    ctaText: "Hablar con un Experto",
+    ctaText: "Solicita tu asesoria sin costo",
     offer: {
       title: "Oferta de Lanzamiento",
       description:
