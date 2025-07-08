@@ -418,7 +418,7 @@ const fr: TranslationType = {
   },
   footer: {
     description:
-      "La plateforme logicielle immobilière la plus avancée du marché. Nous aidons les agences à croître grâce à une technologie de pointe.",
+      "L'éditeur de logiciels immobiliers le plus avancé du marché. Nous aidons les agences à croître grâce à une technologie de pointe.",
     sections: [
       {
         title: "Produit",

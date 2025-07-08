@@ -412,7 +412,7 @@ const en: TranslationType = {
   },
   footer: {
     description:
-      "The most advanced real estate software platform on the market. We empower real estate agencies with cutting-edge technology.",
+      "The most advanced real estate software company on the market. We empower real estate agencies with cutting-edge technology.",
     sections: [
       {
         title: "Product",

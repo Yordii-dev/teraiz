@@ -418,7 +418,7 @@ const es: TranslationType = {
   },
   footer: {
     description:
-      "La plataforma de software inmobiliario más avanzada del mercado. Potenciamos el crecimiento de inmobiliarias con tecnología de punta.",
+      "La empresa de software inmobiliario más avanzada del mercado. Potenciamos el crecimiento de inmobiliarias con tecnología de punta.",
     sections: [
       {
         title: "Producto",
