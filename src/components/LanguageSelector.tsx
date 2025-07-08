@@ -1,8 +1,11 @@
+import { useState, useRef, useEffect } from "react";
 import { Globe } from "lucide-react";
 import { useTranslation } from "@/contexts/LanguageContext";
 
 const LanguageSelector = () => {
   const { lang, setLang } = useTranslation();
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const languages = [
     { code: "es", name: "ES", flag: "🇪🇸" },
@@ -10,31 +13,50 @@ const LanguageSelector = () => {
     { code: "fr", name: "FR", flag: "🇫🇷" },
   ];
 
+  // Cierra si haces clic fuera del menú
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <div className="relative group">
-      <button className="flex items-center space-x-2 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+    <div className="relative" ref={menuRef}>
+      <button
+        onClick={() => setOpen((prev) => !prev)}
+        className="flex items-center space-x-2 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors"
+      >
         <Globe className="h-4 w-4" />
         <span className="text-sm font-medium">{lang.toUpperCase()}</span>
       </button>
 
-      <div className="absolute right-0 top-full mt-1 bg-white rounded-md shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-        <div className="py-1">
-          {languages.map((langP) => (
-            <button
-              key={langP.code}
-              onClick={() => setLang(langP.code as "es" | "en" | "fr")}
-              className={`w-full flex items-center space-x-3 px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
-                lang === langP.code
-                  ? "bg-brand-secondary/10 text-brand-primary"
-                  : "text-gray-700"
-              }`}
-            >
-              <span>{langP.flag}</span>
-              <span>{langP.name}</span>
-            </button>
-          ))}
+      {open && (
+        <div className="absolute right-0 top-full mt-1 bg-white rounded-md shadow-lg border border-gray-200 z-50">
+          <div className="py-1">
+            {languages.map((langP) => (
+              <button
+                key={langP.code}
+                onClick={() => {
+                  setLang(langP.code as "es" | "en" | "fr");
+                  setOpen(false); // 🔴 Cierra el menú al hacer clic
+                }}
+                className={`w-full flex items-center space-x-3 px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
+                  lang === langP.code
+                    ? "bg-brand-secondary/10 text-brand-primary"
+                    : "text-gray-700"
+                }`}
+              >
+                <span>{langP.flag}</span>
+                <span>{langP.name}</span>
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
