@@ -15,6 +15,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Send } from "lucide-react";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { MailSend } from "./services/MailZoho";
 
 interface ContactFormProps {
   trigger: React.ReactNode;
@@ -48,6 +49,9 @@ const ContactForm = ({ trigger }: ContactFormProps) => {
       setEmail("");
       setMessage(CONTENT.defaultDescription);
     }, 1000);
+
+    await MailSend({ email, message });
+
   };
 
   return (
