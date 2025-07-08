@@ -64,28 +64,29 @@ const fr: TranslationType = {
     badge: "Développement de logiciels d’entreprise",
     title: (
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8">
-        Nous développons le logiciel qui
+        Logiciel pour
         <span className="text-brand-secondary block mt-2">
-          Transforme votre agence immobilière
+          Agences Immobilières à Succès
         </span>
       </h1>
     ),
+
     description: (
       <p className="text-xl sm:text-2xl text-white/90 leading-relaxed mb-10">
-        Solutions technologiques sur mesure pour les agences immobilières
-        souhaitant
+        Logiciel immobilier pour
         <strong className="text-brand-secondary">
           {" "}
-          automatiser leurs processus et multiplier leurs résultats
+          développer et automatiser votre agence.
         </strong>
       </p>
     ),
+
     checks: [
       "CRM personnalisé avec automatisation des leads et suivi intelligent",
       "Intégrations avec des portails immobiliers et outils existants",
       "Support technique spécialisé et maintenance continue",
     ],
-    ctaText: "Demander une consultation gratuite",
+    ctaText: "Consultation gratuite",
     socialsProof:
       "Analyse gratuite des processus • Proposition technique personnalisée • Sans engagement",
   },

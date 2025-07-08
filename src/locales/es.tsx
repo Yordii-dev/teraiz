@@ -65,19 +65,19 @@ const es: TranslationType = {
     badge: "Desarrollo de Software Empresarial",
     title: (
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8">
-        Desarrollamos el Software que
+        Software para
         <span className="text-brand-secondary block mt-2">
-          Transforma tu Inmobiliaria
+          Inmobiliarias Exitosas
         </span>
       </h1>
     ),
+
     description: (
       <p className="text-xl sm:text-2xl text-white/90 leading-relaxed mb-10">
-        Soluciones tecnológicas personalizadas para empresas inmobiliarias que
-        buscan
+        Software inmobiliario para
         <strong className="text-brand-secondary">
           {" "}
-          automatizar procesos y multiplicar resultados
+          crecer y automatizar tu negocio.
         </strong>
       </p>
     ),

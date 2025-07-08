@@ -65,21 +65,23 @@ const en: TranslationType = {
     badge: "Enterprise Software Development",
     title: (
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8">
-        We build the software that
+        Software for
         <span className="text-brand-secondary block mt-2">
-          Transforms your Real Estate Business
+          Successful Real Estate Agencies
         </span>
       </h1>
     ),
+
     description: (
       <p className="text-xl sm:text-2xl text-white/90 leading-relaxed mb-10">
-        Custom tech solutions for real estate companies looking to
+        Real estate software to
         <strong className="text-brand-secondary">
           {" "}
-          automate processes and multiply results
+          grow and automate your business.
         </strong>
       </p>
     ),
+
     checks: [
       "Custom CRM with lead automation and smart follow-up",
       "Integrations with real estate portals and existing tools",

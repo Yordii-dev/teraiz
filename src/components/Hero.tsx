@@ -20,38 +20,15 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-28 overflow-hidden bg-gradient-to-br from-brand-primary via-brand-primary/95 to-brand-primary/90"
+      className="relative min-h-screen lg:h-screen flex items-center lg:justify-center bg-gradient-to-br from-brand-primary via-brand-primary/95 to-brand-primary/90"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Content Column */}
-            <div className="text-center lg:text-left text-white">
-              {/* Trust Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-brand-secondary/15 border border-brand-secondary/30 text-brand-secondary text-sm font-medium mb-8">
-                <Shield className="w-4 h-4 mr-2" />
-                {CONTENT.badge}
-              </div>
-
-              {/* Main Headline */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center lg:h-screen">
+            {/* <div className="grid lg:grid-cols-2 gap-16 items-start"> */}
+            <div className="flex flex-col justify-center text-center lg:text-left text-white min-h-screen lg:min-h-0">
               {CONTENT.title}
-
-              {/* Subheadline */}
               {CONTENT.description}
-
-              {/* Key Value Props */}
-              <div className="space-y-4 mb-10">
-                {CONTENT.checks.map((check, i) => (
-                  <div
-                    key={i}
-                    className="flex items-start justify-center lg:justify-start text-white/90"
-                  >
-                    <CheckCircle className="w-5 h-5 text-brand-secondary mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-left">{check}</span>
-                  </div>
-                ))}
-              </div>
-
               {/* CTA */}
               <div className="space-y-6">
                 <ContactForm
@@ -75,7 +52,7 @@ const Hero = () => {
             </div>
 
             {/* Trust & Results Column */}
-            <div className="space-y-8">
+            <div className="space-y-8 mt-10 lg:mt-0">
               {/* Results Stats */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <h3 className="text-white text-xl font-semibold mb-6 text-center">
@@ -153,15 +130,15 @@ const Hero = () => {
                   ágiles y tecnologías de vanguardia
                 </p>
               </div>
+              <br />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Subtle Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 right-0 w-72 h-72 rounded-full bg-brand-secondary/3 blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-0 w-72 h-72 rounded-full bg-white/3 blur-3xl"></div>
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-brand-secondary/10"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-white/5"></div>
       </div>
     </section>
   );
