@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { TranslationProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -18,6 +18,8 @@ const App = () => (
         <Sonner />
         <BrowserRouter basename="/">
           <Routes>
+            <Route path="/" element={<Navigate to="/es" replace />} />
+
             <Route path="/es/*" element={<LangWrapper lang="es" />} />
             <Route path="/en/*" element={<LangWrapper lang="en" />} />
             <Route path="/fr/*" element={<LangWrapper lang="fr" />} />
