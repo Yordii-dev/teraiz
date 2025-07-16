@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { TranslationProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import LangWrapper from "./components/LangWrapper";
 
 const queryClient = new QueryClient();
 
@@ -15,10 +16,16 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename="/">
           <Routes>
-            <Route path="/" element={<Index />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/es/*" element={<LangWrapper lang="es" />} />
+            <Route path="/en/*" element={<LangWrapper lang="en" />} />
+            <Route path="/fr/*" element={<LangWrapper lang="fr" />} />
+            {/* 
+            <Route path="/es" element={<Index />} />
+            <Route path="/en" element={<Index />} />
+            <Route path="/fr" element={<Index />} /> */}
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

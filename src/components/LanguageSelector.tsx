@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Globe } from "lucide-react";
 import { useTranslation } from "@/contexts/LanguageContext";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const LanguageSelector = () => {
   const { lang, setLang } = useTranslation();
@@ -12,7 +13,8 @@ const LanguageSelector = () => {
     { code: "en", name: "EN", flag: "🇺🇸" },
     { code: "fr", name: "FR", flag: "🇫🇷" },
   ];
-
+  const navigate = useNavigate();
+  const location = useLocation();
   // Cierra si haces clic fuera del menú
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -41,8 +43,14 @@ const LanguageSelector = () => {
               <button
                 key={langP.code}
                 onClick={() => {
+                  const path = location.pathname;
+                  const parts = path.split("/");
+                  parts[1] = langP.code;
+                  const newPath = parts.join("/") || "/";
+
+                  navigate(newPath);
                   setLang(langP.code as "es" | "en" | "fr");
-                  setOpen(false); // 🔴 Cierra el menú al hacer clic
+                  setOpen(false);
                 }}
                 className={`w-full flex items-center space-x-3 px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
                   lang === langP.code
