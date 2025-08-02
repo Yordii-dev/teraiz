@@ -15,23 +15,27 @@ import {
 } from "lucide-react";
 import type { TranslationType } from "@/types/Translations";
 import { COMPANY_NAME, HREF_HEADER } from "@/constants";
-import T1 from "@/assets/testimonies/t1.jpg";
-import T2 from "@/assets/testimonies/t2.jpg";
-import T3 from "@/assets/testimonies/t3.jpg";
-import T4 from "@/assets/testimonies/t4.png";
+import T1 from "@/assets/testimonies/t1.jpg?url";
+import T2 from "@/assets/testimonies/t2.jpg?url";
+import T3 from "@/assets/testimonies/t3.jpg?url";
+import T4 from "@/assets/testimonies/t4.png?url";
 
 const es: TranslationType = {
   page: {
-    title: `${COMPANY_NAME} - Software Inmobiliario`,
+    title: `Software Inmobiliario - ${COMPANY_NAME}`,
   },
   formModal: {
     title: "Contactanos",
-    mailInput: "Tu correo de contacto",
-    messageInput: "Mensaje",
-    inputPlaceholder: "tu@mail.com",
-    messagePlaceholder: "Escribe tu mensaje aqui...",
-    defaultDescription:
-      "Hola, quiero conocer cómo su empresa puede desarrollar soluciones para digitalizar mi negocio inmobiliario, optimizar procesos y aumentar mis ventas.",
+
+    nameLabel: "Tu nombre",
+    namePlaceholder: "",
+
+    mailLabel: "Tu correo de contacto",
+    mailPlaceholder: "tu@mail.com",
+
+    phoneLabel: "Tu número de teléfono",
+    phonePlaceholder: "",
+
     textCtaBtn: "Hablar con un experto",
     textCtaBtnSending: "Enviando...",
   },
@@ -68,24 +72,15 @@ const es: TranslationType = {
 
   hero: {
     badge: "Desarrollo de Software Empresarial",
-    title: (
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8">
-        Software para
-        <span className="text-brand-secondary block mt-2">
-          Inmobiliarias Exitosas
-        </span>
-      </h1>
-    ),
+    title: {
+      text: "Software para",
+      emphasis: "Inmobiliarias Exitosas",
+    },
 
-    description: (
-      <p className="text-xl sm:text-2xl text-white/90 leading-relaxed mb-10">
-        Software inmobiliario para
-        <strong className="text-brand-secondary">
-          {" "}
-          crecer y automatizar tu negocio.
-        </strong>
-      </p>
-    ),
+    description: {
+      text: "Software inmobiliario para",
+      emphasis: "crecer y automatizar tu negocio.",
+    },
     checks: [
       "CRM personalizado con automatización de leads y seguimiento inteligente",
       "Integraciones con portales inmobiliarios y herramientas existentes",
@@ -243,18 +238,11 @@ const es: TranslationType = {
     ],
   },
   testimonies: {
-    title: (
-      <>
-        <h2 className="text-3xl sm:text-4xl font-bold text-brand-primary mb-4">
-          Casos de Éxito
-          <span className="text-brand-secondary"> Comprobados</span>
-        </h2>
-        <p className="text-xl text-gray-600 leading-relaxed">
-          Resultados reales de inmobiliarias que han transformado su negocio con
-          nuestras soluciones de software personalizado
-        </p>
-      </>
-    ),
+    title: {
+      text: "Casos de Éxito",
+      emphasis: "Comprobados",
+    },
+
     description:
       "Resultados reales de inmobiliarias que han transformado su negocio con nuestras soluciones de software personalizado",
     list: [
@@ -395,14 +383,11 @@ const es: TranslationType = {
     ],
   },
   cta: {
-    title: (
-      <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-        Comienza tu transformación
-        <span className="text-brand-secondary block mt-2">
-          digital hoy mismo
-        </span>
-      </h2>
-    ),
+    title: {
+      text: "Comienza tu transformación",
+      emphasis: "digital hoy mismo",
+    },
+
     description:
       "Únete a las 500+ inmobiliarias que ya están cerrando más deals, ahorrando tiempo y aumentando su rentabilidad con PropTech.",
     checks: [

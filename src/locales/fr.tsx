@@ -15,10 +15,10 @@ import {
 } from "lucide-react";
 import type { TranslationType } from "@/types/Translations";
 import { COMPANY_NAME, HREF_HEADER } from "@/constants";
-import T1 from "@/assets/testimonies/t1.jpg";
-import T2 from "@/assets/testimonies/t2.jpg";
-import T3 from "@/assets/testimonies/t3.jpg";
-import T4 from "@/assets/testimonies/t4.png";
+import T1 from "@/assets/testimonies/t1.jpg?url";
+import T2 from "@/assets/testimonies/t2.jpg?url";
+import T3 from "@/assets/testimonies/t3.jpg?url";
+import T4 from "@/assets/testimonies/t4.png?url";
 
 const fr: TranslationType = {
   page: {
@@ -26,12 +26,15 @@ const fr: TranslationType = {
   },
   formModal: {
     title: "Contactez-nous",
-    mailInput: "Votre e-mail de contact",
-    messageInput: "Message",
-    inputPlaceholder: "votre@email.com",
-    messagePlaceholder: "Écrivez votre message ici...",
-    defaultDescription:
-      "Bonjour, je souhaite savoir comment votre entreprise peut développer des solutions pour digitaliser mon activité immobilière, optimiser les processus et augmenter mes ventes.",
+    nameLabel: "Votre nom",
+    namePlaceholder: "",
+
+    mailLabel: "Votre adresse e-mail",
+    mailPlaceholder: "vous@email.com",
+
+    phoneLabel: "Votre numéro de téléphone",
+    phonePlaceholder: "",
+
     textCtaBtn: "Parler à un expert",
     textCtaBtnSending: "Envoi en cours...",
   },
@@ -67,24 +70,14 @@ const fr: TranslationType = {
   },
   hero: {
     badge: "Développement de logiciels d’entreprise",
-    title: (
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8">
-        Logiciel pour
-        <span className="text-brand-secondary block mt-2">
-          Agences Immobilières à Succès
-        </span>
-      </h1>
-    ),
-
-    description: (
-      <p className="text-xl sm:text-2xl text-white/90 leading-relaxed mb-10">
-        Logiciel immobilier pour
-        <strong className="text-brand-secondary">
-          {" "}
-          développer et automatiser votre agence.
-        </strong>
-      </p>
-    ),
+    title: {
+      text: "Logiciel pour",
+      emphasis: "Agences Immobilières à Succès",
+    },
+    description: {
+      text: "Logiciel immobilier pour",
+      emphasis: "développer et automatiser votre agence.",
+    },
 
     checks: [
       "CRM personnalisé avec automatisation des leads et suivi intelligent",
@@ -241,18 +234,11 @@ const fr: TranslationType = {
     ],
   },
   testimonies: {
-    title: (
-      <>
-        <h2 className="text-3xl sm:text-4xl font-bold text-brand-primary mb-4">
-          Histoires de Succès
-          <span className="text-brand-secondary"> Prouvées</span>
-        </h2>
-        <p className="text-xl text-gray-600 leading-relaxed">
-          Résultats concrets d’agences immobilières ayant transformé leur
-          activité grâce à nos solutions logicielles sur mesure
-        </p>
-      </>
-    ),
+    title: {
+      text: "Histoires de Succès",
+      emphasis: "Prouvées",
+    },
+
     description:
       "Résultats concrets d’agences immobilières ayant transformé leur activité grâce à nos solutions logicielles sur mesure",
     list: [
@@ -393,14 +379,11 @@ const fr: TranslationType = {
     ],
   },
   cta: {
-    title: (
-      <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-        Commencez votre transformation
-        <span className="text-brand-secondary block mt-2">
-          digitale dès aujourd’hui
-        </span>
-      </h2>
-    ),
+    title: {
+      text: "Commencez votre transformation",
+      emphasis: "digitale dès aujourd’hui",
+    },
+
     description:
       "Rejoignez plus de 500 agences immobilières qui concluent plus de ventes, gagnent du temps et augmentent leur rentabilité grâce à la PropTech.",
     checks: [

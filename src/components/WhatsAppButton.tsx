@@ -1,9 +1,12 @@
 import { COMPANY_PHONES } from "@/constants";
 import { useTranslation } from "@/contexts/LanguageContext";
+import type { TranslationType } from "@/types/Translations";
 import { MessageCircle } from "lucide-react";
-
-const WhatsAppButton = () => {
-  const { t } = useTranslation();
+interface WhatsAppButtonProps {
+  content: TranslationType;
+}
+const WhatsAppButton = ({ content }: WhatsAppButtonProps) => {
+  const t = content;
   const CONTENT = t.wsp;
 
   const handleWhatsAppClick = () => {

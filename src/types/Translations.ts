@@ -1,4 +1,4 @@
-import { LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 interface Service {
   icon: LucideIcon;
@@ -60,11 +60,15 @@ export type TranslationType = {
 
   formModal: {
     title: string;
-    mailInput: string;
-    messageInput: string;
-    inputPlaceholder: string;
-    messagePlaceholder: string;
-    defaultDescription: string;
+    nameLabel: string;
+    namePlaceholder: string;
+
+    mailLabel: string;
+    mailPlaceholder: string;
+
+    phoneLabel: string;
+    phonePlaceholder: string;
+
     textCtaBtn: string;
     textCtaBtnSending: string;
   };
@@ -81,22 +85,30 @@ export type TranslationType = {
 
   hero: {
     badge: string;
-    title: React.ReactNode;
-    description: React.ReactNode;
+    title: {
+      text: string;
+      emphasis: string;
+    };
+
+    description: {
+      text: string;
+      emphasis: string;
+    };
+
     checks: string[];
     ctaText: string;
     socialsProof: string;
-    results:{
-      title:string;
-      years:string;
-      projects:string;
-      clients:string;
-      satisfaction:string;
-      partner:{
-        title:string;
-        description:string;
-      } 
-    }
+    results: {
+      title: string;
+      years: string;
+      projects: string;
+      clients: string;
+      satisfaction: string;
+      partner: {
+        title: string;
+        description: string;
+      };
+    };
   };
 
   services: {
@@ -113,7 +125,10 @@ export type TranslationType = {
   };
 
   testimonies: {
-    title: React.ReactNode;
+    title: {
+      text: string;
+      emphasis: string;
+    };
     description: string;
 
     list: Testimony[];
@@ -138,7 +153,10 @@ export type TranslationType = {
   };
 
   cta: {
-    title: React.ReactNode;
+    title: {
+      text: string;
+      emphasis: string;
+    };
     description: string;
     checks: string[];
     ctaText: string;

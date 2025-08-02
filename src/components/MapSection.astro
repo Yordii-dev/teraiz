@@ -1,0 +1,39 @@
+---
+import "mapbox-gl/dist/mapbox-gl.css";
+import { getContent, getLang } from "@/contexts/PageContext";
+import type { langType } from "@/types/languages";
+import Map from "./Map";
+const CONTENT = getContent().authorityMap;
+const LANG = getLang() as langType;
+---
+
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-brand-primary mb-4">
+        {CONTENT.title}
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        {CONTENT.description}
+      </p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <Map client:only="react" />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+        {
+          CONTENT.list.map((country, i) => (
+            <div class="text-center p-6 bg-white rounded-lg shadow-md">
+              <div class="text-2xl mb-2">{country.icon}</div>
+              <h3 class="text-lg font-semibold text-brand-primary">
+                {country.country}
+              </h3>
+              <p class="text-gray-600">{country.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

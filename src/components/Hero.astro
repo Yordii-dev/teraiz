@@ -1,0 +1,155 @@
+---
+import { getContent, getLang } from "@/contexts/PageContext";
+import type { langType } from "@/types/languages";
+import { RESULTS_HERO } from "@/constants";
+import ContactForm from "./ContactForm";
+
+const CONTENT = getContent().hero;
+const LANG = getLang() as langType;
+---
+
+<section
+  id="inicio"
+  class="relative z-0 min-h-screen lg:h-screen flex items-center lg:justify-center bg-gradient-to-br from-brand-primary via-brand-primary/95 to-brand-primary/90"
+>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      {/* <div class="grid lg:grid-cols-2 gap-16 items-center lg:h-screen"> */}
+      <div class="grid lg:grid-cols-2 gap-0 lg:gap-16 items-center lg:h-screen">
+        {/* <div class="grid lg:grid-cols-2 gap-16 items-start"> */}
+        <div
+          class="flex flex-col justify-center text-center lg:text-left text-white min-h-screen lg:min-h-0"
+        >
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8"
+          >
+            {CONTENT.title.text}
+            <span class="text-brand-secondary block mt-2">
+              {CONTENT.title.emphasis}
+            </span>
+          </h1>
+          <p class="text-xl sm:text-2xl text-white/90 leading-relaxed mb-10">
+            {CONTENT.description.text}
+            <strong class="text-brand-secondary">
+              {CONTENT.description.emphasis}
+            </strong>
+          </p>
+          <!-- {CONTENT.description} -->
+          {/* CTA */}
+          <div class="space-y-6">
+            <ContactForm
+              client:load
+              content={getContent()}
+              textBtn={CONTENT.ctaText}
+              sizeBtn="lg"
+              classBtn="bg-brand-secondary hover:bg-brand-secondary/90 text-brand-primary px-12 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 group"
+              visibleIcon={true}
+            />
+
+            <p class="text-sm text-white/70 max-w-md mx-auto lg:mx-0">
+              {CONTENT.socialsProof}
+            </p>
+          </div>
+        </div>
+
+        {/* Trust & Results Column */}
+        <div class="space-y-8 mt-0 lg:mt-10">
+          {/* Results Stats */}
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+          >
+            <h3 class="text-white text-xl font-semibold mb-6 text-center">
+              {CONTENT.results.title}
+            </h3>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="text-center">
+                <div class="text-4xl font-bold text-brand-secondary mb-2">
+                  {RESULTS_HERO.years}
+                </div>
+                <p class="text-sm text-white/80">
+                  {CONTENT.results.years}
+                </p>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl font-bold text-brand-secondary mb-2">
+                  {RESULTS_HERO.projects}
+                </div>
+                <p class="text-sm text-white/80">
+                  {CONTENT.results.projects}
+                </p>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl font-bold text-brand-secondary mb-2">
+                  {RESULTS_HERO.clients}
+                </div>
+                <p class="text-sm text-white/80">
+                  {CONTENT.results.clients}
+                </p>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl font-bold text-brand-secondary mb-2">
+                  {RESULTS_HERO.satisfaction}
+                </div>
+                <p class="text-sm text-white/80">
+                  {CONTENT.results.satisfaction}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Services Icons */}
+          {
+            /* <div class="grid grid-cols-3 gap-4">
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
+                  <Building2 class="h-10 w-10 text-brand-secondary mx-auto mb-3" />
+                  <p class="text-white/90 text-sm font-medium">
+                    Desarrollo
+                    <br />
+                    Personalizado
+                  </p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
+                  <Users class="h-10 w-10 text-brand-secondary mx-auto mb-3" />
+                  <p class="text-white/90 text-sm font-medium">
+                    Soporte
+                    <br />
+                    Especializado
+                  </p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
+                  <Award class="h-10 w-10 text-brand-secondary mx-auto mb-3" />
+                  <p class="text-white/90 text-sm font-medium">
+                    Calidad
+                    <br />
+                    Garantizada
+                  </p>
+                </div>
+              </div> */
+          }
+
+          {/* Trust Indicator */}
+          <div
+            class="bg-gradient-to-r from-brand-secondary/10 to-brand-secondary/5 backdrop-blur-sm rounded-xl p-6 border border-brand-secondary/20 text-center"
+          >
+            <p class="text-brand-secondary font-bold text-lg mb-2">
+              🏆{CONTENT.results.partner.title}
+            </p>
+            <p class="text-white/90 text-sm leading-relaxed">
+              {CONTENT.results.partner.description}
+            </p>
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute inset-0 overflow-hidden pointer-events-none z-[-1]">
+    <div
+      class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-brand-secondary/10"
+    >
+    </div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-white/5">
+    </div>
+  </div>
+</section>

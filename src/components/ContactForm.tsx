@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import {
   Dialog,
@@ -11,22 +10,35 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
-import { Send } from "lucide-react";
+import { ArrowRight, Send } from "lucide-react";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { MailSend } from "./services/MailZoho";
+import type { TranslationType } from "@/types/Translations";
 
 interface ContactFormProps {
-  trigger: React.ReactNode;
-  defaultMessage?: string;
+  classBtn: string;
+  content: TranslationType;
+  textBtn: string;
+  sizeBtn?: "sm" | "icon" | "lg";
+  visibleIcon?: boolean;
 }
 
-const ContactForm = ({ trigger }: ContactFormProps) => {
-  const { t } = useTranslation();
+const ContactForm = ({
+  classBtn,
+  content,
+  textBtn,
+  visibleIcon,
+  sizeBtn,
+}: ContactFormProps) => {
+  const t = content;
+
   const CONTENT = t.formModal;
   const CONTENT_SUCCESS = t.successModal;
 
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState(CONTENT.defaultDescription);
+  const [phone, setPhone] = useState("");
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const { toast } = useToast();
@@ -35,28 +47,34 @@ const ContactForm = ({ trigger }: ContactFormProps) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulamos el envío del formulario
-    setTimeout(() => {
-      toast({
-        title: CONTENT_SUCCESS.title,
-        description: CONTENT_SUCCESS.description,
-      });
-      setIsSubmitting(false);
-      setIsOpen(false);
-      setEmail("");
-      setMessage(CONTENT.defaultDescription);
-    }, 1000);
+    await MailSend({
+      name,
+      email,
+      phone,
+    });
 
-    await MailSend({ email, description: message });
+    toast({
+      title: CONTENT_SUCCESS.title,
+      description: CONTENT_SUCCESS.description,
+    });
+    setIsSubmitting(false);
+    setIsOpen(false);
+
+    setEmail("");
+    setName("");
+    setPhone("");
   };
-
-  useEffect(() => {
-    setMessage(CONTENT.defaultDescription);
-  }, [CONTENT]);
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogTrigger asChild>{trigger}</DialogTrigger>
+      <DialogTrigger asChild>
+        <Button size={sizeBtn} className={classBtn}>
+          {textBtn}
+          {visibleIcon && (
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          )}
+        </Button>
+      </DialogTrigger>
       <DialogContent
         className="sm:max-w-[500px]"
         onOpenAutoFocus={(e) => e.preventDefault()}
@@ -72,27 +90,39 @@ const ContactForm = ({ trigger }: ContactFormProps) => {
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="email">{CONTENT.mailInput}</Label>
+            <Label htmlFor="name">{CONTENT.nameLabel}</Label>
+            <Input
+              id="name"
+              type="text"
+              placeholder={CONTENT.namePlaceholder}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="email">{CONTENT.mailLabel}</Label>
             <Input
               id="email"
               type="email"
-              placeholder={CONTENT.inputPlaceholder}
+              placeholder={CONTENT.mailPlaceholder}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="message">{CONTENT.messageInput}</Label>
-            <Textarea
-              id="message"
-              placeholder={CONTENT.messagePlaceholder}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+            <Label htmlFor="phone">{CONTENT.phoneLabel}</Label>
+            <Input
+              id="phone"
+              type="phone"
+              placeholder={CONTENT.phonePlaceholder}
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
               required
-              rows={4}
             />
           </div>
+
           <Button
             type="submit"
             disabled={isSubmitting}

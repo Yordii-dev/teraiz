@@ -1,1 +1,0 @@
-export type targetModalType = 'target_1' | 'target_2' | 'target_3';

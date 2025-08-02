@@ -1,9 +1,28 @@
-<!DOCTYPE html>
-<html lang="es">
+---
+import "@/index.css";
+import { getContent, getLang } from "@/contexts/PageContext";
+import { Toaster } from "@/components/ui/toaster";
+import Header from "@/components/Header.astro";
+import Hero from "@/components/Hero.astro";
+import Services from "@/components/Services.astro";
+import Testimonials from "@/components/Testimonials.astro";
+import MapSection from "@/components/MapSection.astro";
+import ObjectionsSection from "@/components/ObjectionsSection.astro";
+import FAQSection from "@/components/FAQSection.astro";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import Cta from "@/components/Cta.astro";
+import Footer from "@/components/Footer.astro";
+
+const lang = getLang();
+const content = getContent();
+const { title } = Astro.props;
+---
+
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Teraiz - Software Inmobiliario a Medida</title>
+    <title>{title}</title>
     <meta
       name="description"
       content="Teraiz desarrolla software inmobiliario a medida para empresas. Digitaliza tu inmobiliaria con soluciones personalizadas, CRM, automatización y más."
@@ -14,7 +33,7 @@
     />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#002b56" />
-    <link rel="canonical" href="https://teraiz.com/" />
+    <link rel="canonical" href="https://teraiz.com/es" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -73,7 +92,18 @@
   </head>
 
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="min-h-screen">
+      <Header />
+      <Hero />
+      <Services />
+      <Testimonials />
+      <MapSection />
+      <ObjectionsSection />
+      <FAQSection />
+      <Cta />
+      <Footer />
+      <WhatsAppButton client:load content={content} />
+      <Toaster client:load />
+    </div>
   </body>
 </html>

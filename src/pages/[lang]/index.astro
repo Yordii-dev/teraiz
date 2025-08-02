@@ -1,0 +1,32 @@
+---
+import BasePage from "@/layouts/BasePage.astro";
+import ContentES from "@/locales/es";
+import ContentEN from "@/locales/en";
+import ContentFR from "@/locales/fr";
+import type { TranslationType } from "@/types/Translations";
+import { SUPPORTED_LANGS, type Lang } from "@/types/lang";
+import { setPageContext } from "@/contexts/PageContext";
+
+// ✅ getStaticPaths DEBE estar dentro del bloque `---`
+export const getStaticPaths = () => {
+  return SUPPORTED_LANGS.map((lang) => ({
+    params: { lang },
+  }));
+};
+
+const rawLang = Astro.params.lang ?? "es";
+const lang = SUPPORTED_LANGS.includes(rawLang as Lang)
+  ? (rawLang as Lang)
+  : "es";
+
+const contentByLang: Record<Lang, TranslationType> = {
+  es: ContentES,
+  en: ContentEN,
+  fr: ContentFR,
+};
+
+const content = contentByLang[lang];
+setPageContext(lang, content);
+---
+
+<BasePage title={content.page.title} />

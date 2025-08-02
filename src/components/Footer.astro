@@ -1,0 +1,114 @@
+---
+import { Building2, Mail, Phone, MapPin } from "lucide-react";
+import Logo from "@/assets/logo2.svg?url";
+import { useTranslation } from "@/contexts/LanguageContext";
+import {
+  COMPANY_ADDRESS,
+  COMPANY_MAIL,
+  COMPANY_PHONES,
+  LINK_SOCIALS_MEDIA,
+} from "@/constants";
+import { getContent, getLang } from "@/contexts/PageContext";
+import type { langType } from "@/types/languages";
+const CONTENT = getContent().footer;
+const LANG = getLang() as langType;
+---
+
+<footer class="bg-brand-primary text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="lg:col-span-1">
+        <div class="flex items-center mb-6">
+          <h3 class="text-2xl font-bold">
+            <img src={Logo} alt="Logo" />
+          </h3>
+        </div>
+        <p class="text-white/80 mb-6 leading-relaxed">
+          {CONTENT.description}
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href={LINK_SOCIALS_MEDIA.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-brand-secondary transition-colors"
+          >
+            <span class="text-sm font-bold">Li</span>
+          </a>
+          <a
+            href={LINK_SOCIALS_MEDIA.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-brand-secondary transition-colors"
+          >
+            <span class="text-sm font-bold">Fb</span>
+          </a>
+        </div>
+      </div>
+
+      {
+        CONTENT.sections.map((section, index) => (
+          <div>
+            <h4 class="text-lg font-semibold mb-6">{section.title}</h4>
+            <ul class="space-y-4">
+              {section.details.map((detail, subIndex) => (
+                <li class="text-white/80 transition-colors">
+                  {/* <a
+                  href="#"
+                  class="text-white/80 hover:text-brand-secondary transition-colors"
+                > */}
+                  {detail}
+                  {/* </a> */}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+
+      <div>
+        <h4 class="text-lg font-semibold mb-6">
+          {CONTENT.contact.title}
+        </h4>
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <Mail className="h-5 w-5 text-brand-secondary mr-3" />
+            <a
+              href={`mailto:${COMPANY_MAIL}`}
+              class="text-white/80 hover:text-brand-secondary transition-colors hover:underline"
+            >
+              {COMPANY_MAIL}
+            </a>
+          </div>
+
+          {
+            COMPANY_PHONES.map((item, index) => (
+              <div class="flex items-center mt-2">
+                <Phone className="h-5 w-5 text-brand-secondary mr-3" />
+                <a
+                  href={`tel:${item.phone}`}
+                  class="text-white/80 hover:text-brand-secondary transition-colors hover:underline"
+                >
+                  {item.text}
+                </a>
+              </div>
+            ))
+          }
+
+          <div class="flex items-start">
+            <MapPin className="h-5 w-5 text-brand-secondary mr-3 mt-1" />
+            <span class="text-white/80">{COMPANY_ADDRESS}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 py-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-white/60 text-sm mb-4 md:mb-0">
+          {CONTENT.copyright}
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

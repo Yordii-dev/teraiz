@@ -1,0 +1,76 @@
+---
+import { Button } from "@/components/ui/button";
+import { ArrowRight, CheckCircle } from "lucide-react";
+import ContactForm from "./ContactForm";
+import { useTranslation } from "@/contexts/LanguageContext";
+import { getContent, getLang } from "@/contexts/PageContext";
+import type { langType } from "@/types/languages";
+const CONTENT = getContent().cta;
+const LANG = getLang() as langType;
+---
+
+<section
+  id="cta"
+  class="py-20 bg-gradient-to-br from-brand-primary via-brand-primary to-brand-primary/90 text-white relative overflow-hidden"
+>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      {/* Main CTA Content */}
+      <h2 class="text-4xl sm:text-5xl font-bold mb-6">
+        {CONTENT.title.text}
+        <span class="text-brand-secondary block mt-2">
+          {CONTENT.title.emphasis}
+        </span>
+      </h2>
+      <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+        {CONTENT.description}
+      </p>
+
+      {/* Benefits List */}
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 max-w-2xl mx-auto"
+      >
+        {
+          CONTENT.checks.map((benefit) => (
+            <div class="flex items-center text-left">
+              <CheckCircle className="h-5 w-5 text-brand-secondary mr-3 flex-shrink-0" />
+              <span class="text-white/90">{benefit}</span>
+            </div>
+          ))
+        }
+      </div>
+
+      {/* CTA Buttons */}
+      <div
+        class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8"
+      >
+        <ContactForm
+          client:load
+          content={getContent()}
+          textBtn={CONTENT.ctaText}
+          sizeBtn="lg"
+          classBtn="bg-brand-secondary hover:bg-brand-secondary/90 text-brand-primary px-10 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 group"
+          visibleIcon={true}
+        />
+      </div>
+
+      {/* Urgency/Scarcity */}
+      <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-md mx-auto">
+        <p class="text-brand-secondary font-semibold mb-2">
+          🚀 {CONTENT.offer.title}
+        </p>
+        <p class="text-white/90 text-sm">{CONTENT.offer.description}</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Background Elements */}
+  <div class="absolute inset-0 overflow-hidden">
+    <div
+      class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-brand-secondary/10"
+    >
+    </div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-white/5">
+    </div>
+  </div>
+</section>

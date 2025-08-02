@@ -1,0 +1,62 @@
+---
+import { useTranslation } from "@/contexts/LanguageContext";
+import { CheckCircle } from "lucide-react";
+import { getContent, getLang } from "@/contexts/PageContext";
+import type { langType } from "@/types/languages";
+
+const CONTENT = getContent().objections;
+const LANG = getLang() as langType;
+---
+
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-brand-primary mb-4">
+        {CONTENT.title}
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        {CONTENT.description}
+      </p>
+    </div>
+
+    <div class="space-y-8">
+      {
+        CONTENT.list.map((item) => (
+          <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div class="grid md:grid-cols-3 gap-6 items-center">
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <item.icon className="h-6 w-6 text-red-600" />
+                </div>
+                <div>
+                  <h3 class="font-semibold text-brand-primary mb-2">
+                    "{item.objTitle}"
+                  </h3>
+                  <p class="text-gray-600 text-sm">{item.objection}</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="h-6 w-6 text-green-600" />
+                </div>
+                <div>
+                  <h3 class="font-semibold text-brand-primary mb-2">
+                    {item.resoTitle}
+                  </h3>
+                  <p class="text-gray-600 text-sm">{item.resolution}</p>
+                </div>
+              </div>
+
+              <div class="bg-brand-secondary/10 p-4 rounded-lg text-center">
+                <div class="text-brand-primary font-bold text-lg">
+                  {item.stats}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

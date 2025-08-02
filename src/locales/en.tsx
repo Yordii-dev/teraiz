@@ -15,23 +15,26 @@ import {
 } from "lucide-react";
 import type { TranslationType } from "@/types/Translations";
 import { COMPANY_NAME, HREF_HEADER } from "@/constants";
-import T1 from "@/assets/testimonies/t1.jpg";
-import T2 from "@/assets/testimonies/t2.jpg";
-import T3 from "@/assets/testimonies/t3.jpg";
-import T4 from "@/assets/testimonies/t4.png";
+import T1 from "@/assets/testimonies/t1.jpg?url";
+import T2 from "@/assets/testimonies/t2.jpg?url";
+import T3 from "@/assets/testimonies/t3.jpg?url";
+import T4 from "@/assets/testimonies/t4.png?url";
 
 const en: TranslationType = {
   page: {
-    title: `${COMPANY_NAME} - Real Estate Software`,
+    title: `Real Estate Software - ${COMPANY_NAME}`,
   },
   formModal: {
     title: "Contact Us",
-    mailInput: "Your contact email",
-    messageInput: "Message",
-    inputPlaceholder: "your@email.com",
-    messagePlaceholder: "Write your message here...",
-    defaultDescription:
-      "Hi, I’d like to learn how your company can develop solutions to digitalize my real estate business, optimize processes, and increase my sales.",
+    nameLabel: "Your name",
+    namePlaceholder: "",
+
+    mailLabel: "Your contact email",
+    mailPlaceholder: "you@email.com",
+
+    phoneLabel: "Your phone number",
+    phonePlaceholder: "",
+
     textCtaBtn: "Talk to an expert",
     textCtaBtnSending: "Sending...",
   },
@@ -67,24 +70,15 @@ const en: TranslationType = {
 
   hero: {
     badge: "Enterprise Software Development",
-    title: (
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8">
-        Software for
-        <span className="text-brand-secondary block mt-2">
-          Successful Real Estate Agencies
-        </span>
-      </h1>
-    ),
+    title: {
+      text: "Software for",
+      emphasis: "Successful Real Estate Agencies",
+    },
 
-    description: (
-      <p className="text-xl sm:text-2xl text-white/90 leading-relaxed mb-10">
-        Real estate software to
-        <strong className="text-brand-secondary">
-          {" "}
-          grow and automate your business.
-        </strong>
-      </p>
-    ),
+    description: {
+      text: "Real estate software to",
+      emphasis: "grow and automate your business.",
+    },
 
     checks: [
       "Custom CRM with lead automation and smart follow-up",
@@ -241,18 +235,10 @@ const en: TranslationType = {
     ],
   },
   testimonies: {
-    title: (
-      <>
-        <h2 className="text-3xl sm:text-4xl font-bold text-brand-primary mb-4">
-          Proven
-          <span className="text-brand-secondary"> Success Stories</span>
-        </h2>
-        <p className="text-xl text-gray-600 leading-relaxed">
-          Real results from real estate agencies that have transformed their
-          business with our custom software solutions
-        </p>
-      </>
-    ),
+    title: {
+      text: "Proven",
+      emphasis: "Success Stories",
+    },
     description:
       "Real results from real estate agencies that have transformed their business with our custom software solutions",
     list: [
@@ -388,14 +374,10 @@ const en: TranslationType = {
     ],
   },
   cta: {
-    title: (
-      <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-        Start your transformation
-        <span className="text-brand-secondary block mt-2">
-          today with digital tools
-        </span>
-      </h2>
-    ),
+    title: {
+      text: "Start your transformation",
+      emphasis: "today with digital tools",
+    },
     description:
       "Join 500+ real estate companies already closing more deals, saving time, and boosting profitability with PropTech.",
     checks: [
