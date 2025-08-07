@@ -11,6 +11,8 @@ const LanguageSelector = ({ langProp }: Props) => {
   const { setLang } = useTranslation();
 
   const languages = [
+    { code: "v1", name: "ES", flag: "🇪🇸" },
+
     { code: "es", name: "ES", flag: "🇪🇸" },
     { code: "en", name: "EN", flag: "🇺🇸" },
     { code: "fr", name: "FR", flag: "🇫🇷" },
