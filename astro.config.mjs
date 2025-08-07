@@ -10,7 +10,6 @@ import path from "path";
 export default defineConfig({
   site: "https://www.teraiz.com",
   adapter: vercel(),
-
   integrations: [react(), sitemap()],
   vite: {
     resolve: {
