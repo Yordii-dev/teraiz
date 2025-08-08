@@ -73,7 +73,7 @@ const es: TranslationType = {
   hero: {
     badge: "Desarrollo de Software Empresarial",
     title: {
-      text: "v1 Software para",
+      text: "v2 Software para",
       emphasis: "Inmobiliarias Exitosas",
     },
 
