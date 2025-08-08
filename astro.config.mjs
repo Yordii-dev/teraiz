@@ -9,6 +9,7 @@ import path from "path";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.teraiz.com",
+  output: "server",
   adapter: vercel(),
   integrations: [react(), sitemap()],
   vite: {
