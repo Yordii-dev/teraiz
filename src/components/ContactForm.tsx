@@ -47,7 +47,7 @@ const ContactForm = ({
     e.preventDefault();
     setIsSubmitting(true);
 
-    await MailSend({
+    MailSend({
       name,
       email,
       phone,
@@ -115,7 +115,7 @@ const ContactForm = ({
             <Label htmlFor="phone">{CONTENT.phoneLabel}</Label>
             <Input
               id="phone"
-              type="phone"
+              type="tel"
               placeholder={CONTENT.phonePlaceholder}
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
