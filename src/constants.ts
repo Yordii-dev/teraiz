@@ -1,5 +1,6 @@
 // src/constants.ts
 export const COMPANY_NAME = "Teraiz";
+export const SITE_URL = "https://www.teraiz.com/";
 export const COMPANY_MAIL = "contact@teraiz.com";
 export const COMPANY_PHONES = [
   {

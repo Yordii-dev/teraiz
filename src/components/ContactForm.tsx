@@ -14,6 +14,7 @@ import { ArrowRight, Send } from "lucide-react";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { MailSend } from "./services/MailZoho";
 import type { TranslationType } from "@/types/Translations";
+import { SITE_URL } from "@/constants";
 
 interface ContactFormProps {
   classBtn: string;
@@ -48,6 +49,7 @@ const ContactForm = ({
     setIsSubmitting(true);
 
     MailSend({
+      origin: SITE_URL,
       name,
       email,
       phone,
