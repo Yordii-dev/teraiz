@@ -1,3 +1,2 @@
-// src/utils/lang.ts
-export const SUPPORTED_LANGS = ["es", "en", "fr"] as const;
-export type Lang = (typeof SUPPORTED_LANGS)[number];
+export const SUPPORTED_LANGS_DYNAMICS: string[] = ["en", "fr"];
+export type LangForPathDinamic = (typeof SUPPORTED_LANGS_DYNAMICS)[number];

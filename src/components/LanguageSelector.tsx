@@ -45,18 +45,14 @@ const LanguageSelector = ({ langProp }: Props) => {
                 key={lang.code}
                 onClick={() => {
                   // En un componente React
-                  const path =
-                    typeof window !== "undefined"
-                      ? window.location.pathname
-                      : "";
-                  const parts = path.split("/");
-                  parts[1] = lang.code;
-                  const newPath = parts.join("/") || "/";
+                  if (typeof window === "undefined") return;
 
-                  window.location.href = newPath;
+                  let urlLang = "";
+                  if (lang.code != "es") {
+                    urlLang = lang.code;
+                  }
 
-                  // setLang(langP.code as "es" | "en" | "fr");
-                  // setOpen(false);
+                  window.location.href = `/${urlLang}`;
                 }}
                 className={`w-full flex items-center space-x-3 px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
                   langProp === lang.code
