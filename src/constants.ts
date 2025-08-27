@@ -3,13 +3,17 @@ export const COMPANY_NAME = "Teraiz";
 export const COMPANY_MAIL = "contact@teraiz.com";
 export const COMPANY_PHONES = [
   {
+    text: "+51 945 234 917",
+    phone: "+51945234917",
+  },
+  {
     text: "+51 931 400 740",
     phone: "+51931400740",
   },
-  {
-    text: "+1 (514) 431-9066",
-    phone: "+15144319066",
-  },
+  // {
+  //   text: "+1 (514) 431-9066",
+  //   phone: "+15144319066",
+  // },
 ];
 export const COMPANY_ADDRESS = "Moyobamba, San Martín, Perú";
 export const HREF_HEADER = {
