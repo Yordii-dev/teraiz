@@ -1,5 +1,5 @@
 ---
-import BasePage from "@/layouts/BasePage.astro";
+import BasePageForMultiLang from "@/layouts/BasePageForMultiLang.astro";
 
 import ContentEN from "@/locales/en";
 import ContentFR from "@/locales/fr";
@@ -17,7 +17,7 @@ export const getStaticPaths = () => {
   }));
 };
 
-const rawLang = Astro.params.lang ?? "es";
+const rawLang = Astro.params.lang ?? "en";
 const lang = SUPPORTED_LANGS_DYNAMICS.includes(rawLang as LangForPathDinamic)
   ? (rawLang as LangForPathDinamic)
   : "en";
@@ -31,4 +31,4 @@ const content = contentByLang[lang];
 setPageContext(lang, content);
 ---
 
-<BasePage title={content.page.title} />
+<BasePageForMultiLang title={content.page.title} />

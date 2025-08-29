@@ -1,0 +1,40 @@
+---
+import LayoutForContact from "@/layouts/LayoutForContact.astro";
+
+import ContentES from "@/locales/es";
+import ContentEN from "@/locales/en";
+import ContentFR from "@/locales/fr";
+import type { TranslationType } from "@/types/Translations";
+import {
+  SUPPORTED_LANGS_DYNAMICS_FOR_CONTACT,
+  type LangForPathDinamicForContact,
+} from "@/types/lang";
+import { setPageContext } from "@/contexts/PageContext";
+
+// ✅ getStaticPaths DEBE estar dentro del bloque `---`
+export const getStaticPaths = () => {
+  return SUPPORTED_LANGS_DYNAMICS_FOR_CONTACT.map((lang) => ({
+    params: { lang },
+  }));
+};
+
+const rawLang = Astro.params.lang ?? "es";
+console.log(rawLang);
+
+const lang = SUPPORTED_LANGS_DYNAMICS_FOR_CONTACT.includes(
+  rawLang as LangForPathDinamicForContact
+)
+  ? (rawLang as LangForPathDinamicForContact)
+  : "en";
+
+const contentByLang: Record<LangForPathDinamicForContact, TranslationType> = {
+  es: ContentES,
+  en: ContentEN,
+  fr: ContentFR,
+};
+
+const content = contentByLang[lang];
+setPageContext(lang, content);
+---
+
+<LayoutForContact title={content.page.title} />
