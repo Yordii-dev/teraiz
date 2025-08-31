@@ -22,7 +22,7 @@ export const HREF_HEADER = {
   services: "#servicios",
   testimonies: "#testimonios",
   faqs: "#faqs",
-  contact: "#cta",
+  contact: "/contact",
 };
 
 export const RESULTS_HERO = {

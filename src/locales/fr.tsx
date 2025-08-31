@@ -22,8 +22,45 @@ import T4 from "@/assets/testimonies/t4.png?url";
 
 const fr: TranslationType = {
   page: {
-    title: `Logiciel Immobilier - ${COMPANY_NAME}`,
+    index: {
+      title: `Logiciel Immobilier | ${COMPANY_NAME}`,
+      metas: {       
+        description: `${COMPANY_NAME} développe des logiciels sur mesure pour les agences immobilières. Numérisez votre entreprise avec des solutions PropTech, CRM immobilier, automatisation des processus et plateformes personnalisées.`,
+        keywords: "logiciel immobilier, CRM immobilier, développement de logiciels sur mesure, numérisation des agences immobilières, PropTech, automatisation immobilière, système pour agences immobilières",      
+        
+        toShared: {
+          openGraph: {
+            title: `Logiciel Immobilier sur Mesure | ${COMPANY_NAME}`,
+            description: "Numérisez votre entreprise immobilière avec des solutions logicielles personnalisées, CRM et automatisation."
+          },
+          
+          twitter: {
+            title: `Logiciel Immobilier sur Mesure | ${COMPANY_NAME}`,
+            description: "Numérisez votre entreprise immobilière avec des solutions logicielles personnalisées, CRM et automatisation."
+          }
+        }
+      }
+    },
+
+    contact: {
+      title: `Contactez-nous | ${COMPANY_NAME}`,
+      metas: {
+        description: `Contactez ${COMPANY_NAME} pour des solutions logicielles sur mesure et personnalisées pour les agences immobilières et les entreprises du secteur.`,
+        keywords: "contact, logiciel immobilier sur mesure, CRM immobilier, solutions PropTech, automatisation immobilière, logiciel personnalisé",
+        toShared: {
+          openGraph: {
+            title: `Contactez-nous | ${COMPANY_NAME}`,
+            description: `Contactez ${COMPANY_NAME} pour des solutions logicielles sur mesure et personnalisées pour les agences immobilières et les entreprises du secteur.`
+          },
+          twitter: {
+            title: `Contactez-nous | ${COMPANY_NAME}`,
+            description: `Contactez ${COMPANY_NAME} pour des solutions logicielles sur mesure et personnalisées pour les agences immobilières et les entreprises du secteur.`
+          }
+        }
+      }
+    }
   },
+
   formModal: {
     title: "Contactez-nous",
     nameLabel: "Votre nom",
@@ -45,23 +82,28 @@ const fr: TranslationType = {
   header: {
     tags: [
       {
+        id: 1,
         href: HREF_HEADER["home"],
         name: "Accueil",
       },
       {
+        id: 2,
         href: HREF_HEADER["services"],
         name: "Services",
       },
       {
+        id: 3,
         href: HREF_HEADER["testimonies"],
         name: "Témoignages",
       },
       {
+        id: 4,
         href: HREF_HEADER["faqs"],
 
         name: "FAQs",
       },
       {
+        id: 5,
         href: HREF_HEADER["contact"],
         name: "Contact",
       },

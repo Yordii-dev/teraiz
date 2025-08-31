@@ -5,6 +5,7 @@ import ContactForm from "./ContactForm";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { getContent, getLang } from "@/contexts/PageContext";
 import type { langType } from "@/types/languages";
+import BtnCta from "./BtnCta.astro";
 const CONTENT = getContent().cta;
 const LANG = getLang() as langType;
 ---
@@ -44,9 +45,8 @@ const LANG = getLang() as langType;
       <div
         class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8"
       >
-        <ContactForm
-          client:load
-          content={getContent()}
+        <BtnCta
+          lang={LANG}
           textBtn={CONTENT.ctaText}
           sizeBtn="lg"
           classBtn="bg-brand-secondary hover:bg-brand-secondary/90 text-brand-primary px-10 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 group"

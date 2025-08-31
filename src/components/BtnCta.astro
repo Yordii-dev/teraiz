@@ -1,0 +1,23 @@
+---
+// BtnCta.astro
+interface Props {
+  lang: string;
+  classBtn: string;
+  textBtn: string;
+  sizeBtn?: "sm" | "icon" | "lg";
+  visibleIcon?: boolean;
+}
+
+const { lang, classBtn, textBtn, sizeBtn, visibleIcon } = Astro.props as Props;
+import { ArrowRight } from "lucide-react";
+import { Button } from "./ui/button";
+---
+
+<a href={`/${lang}/contact`} class="inline-block">
+  <Button size={sizeBtn} className={classBtn}>
+    {textBtn}
+    {visibleIcon && (
+      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+    )}
+  </Button>
+</a>

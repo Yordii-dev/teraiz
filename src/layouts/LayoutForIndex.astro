@@ -15,22 +15,21 @@ import Footer from "@/components/Footer.astro";
 
 const lang = getLang();
 const content = getContent();
-const { title } = Astro.props;
 ---
 
 <html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
+    <title>{content.page.index.title}</title>
 
     <meta
       name="description"
-      content="Teraiz desarrolla software a medida para inmobiliarias. Digitaliza tu negocio con soluciones PropTech, CRM inmobiliario, automatización de procesos y plataformas personalizadas."
+      content={content.page.index.metas.description}
     />
     <meta
       name="keywords"
-      content="software inmobiliario, CRM inmobiliario, desarrollo de software a medida, digitalización de inmobiliarias, PropTech, automatización inmobiliaria, sistema para inmobiliarias"
+      content={content.page.index.metas.keywords}
     />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#002b56" />
@@ -56,11 +55,11 @@ const { title } = Astro.props;
     />
     <meta
       property="og:title"
-      content="Teraiz - Software Inmobiliario a Medida"
+      content={content.page.index.metas.toShared.openGraph.title}
     />
     <meta
       property="og:description"
-      content="Digitaliza tu empresa inmobiliaria con soluciones de software personalizadas, CRM y automatización."
+      content={content.page.index.metas.toShared.openGraph.description}
     />
     <meta property="og:image" content="https://teraiz.com/og-image.jpg" />
 
@@ -74,11 +73,11 @@ const { title } = Astro.props;
     />
     <meta
       name="twitter:title"
-      content="Teraiz - Software Inmobiliario a Medida"
+      content={content.page.index.metas.toShared.twitter.title}
     />
     <meta
       name="twitter:description"
-      content="Digitaliza tu empresa inmobiliaria con soluciones de software personalizadas, CRM y automatización."
+      content={content.page.index.metas.toShared.twitter.description}
     />
     <meta name="twitter:image" content="https://teraiz.com/og-image.jpg" />
 
@@ -124,7 +123,6 @@ const { title } = Astro.props;
       <Cta />
       <Footer />
       <WhatsAppButton client:load content={content} />
-      <Toaster client:load />
     </div>
   </body>
 </html>

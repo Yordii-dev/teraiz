@@ -2,7 +2,7 @@
 import { getContent, getLang } from "@/contexts/PageContext";
 import type { langType } from "@/types/languages";
 import { RESULTS_HERO } from "@/constants";
-import BtnCta from "./BtnCta";
+import BtnCta from "./BtnCta.astro";
 
 const CONTENT = getContent().hero;
 const LANG = getLang() as langType;
@@ -36,7 +36,6 @@ const LANG = getLang() as langType;
           {/* CTA */}
           <div class="space-y-6">
             <BtnCta
-              client:load
               lang={LANG}
               textBtn={CONTENT.ctaText}
               sizeBtn="lg"

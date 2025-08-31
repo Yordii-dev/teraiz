@@ -6,7 +6,7 @@ import LanguageSelector from "./LanguageSelector";
 import type { langType } from "@/types/languages";
 import type { TranslationType } from "@/types/Translations";
 import { Button } from "./ui/button";
-import BtnCta from "./BtnCta";
+//import BtnCta from "./BtnCta";
 interface Props {
   content: TranslationType;
   lang: langType;
@@ -21,11 +21,13 @@ export function LanguageAndCta({ content, lang }: Props) {
     <>
       <div className="hidden md:flex items-center space-x-4">
         <LanguageSelector langProp={lang} />
+        {/*
         <BtnCta
           lang={lang}
           textBtn={CONTENT.ctaText}
           classBtn="bg-brand-secondary hover:bg-brand-secondary/90 text-brand-primary font-semibold px-6"
         />
+        */}
       </div>
 
       {/* Mobile Hamburger */}
@@ -69,11 +71,14 @@ export function ContentMenuMobil({ content, lang }: Props) {
             ))}
 
             <div className="px-3 py-2">
+               {/*
               <BtnCta
                 lang={lang}
                 textBtn={CONTENT.ctaText}
                 classBtn="w-full bg-brand-secondary hover:bg-brand-secondary/90 text-brand-primary font-semibold"
               />
+                      */}
+
             </div>
           </div>
         </div>

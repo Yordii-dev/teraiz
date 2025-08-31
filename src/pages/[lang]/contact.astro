@@ -11,7 +11,6 @@ import {
 } from "@/types/lang";
 import { setPageContext } from "@/contexts/PageContext";
 
-// ✅ getStaticPaths DEBE estar dentro del bloque `---`
 export const getStaticPaths = () => {
   return SUPPORTED_LANGS_DYNAMICS_FOR_CONTACT.map((lang) => ({
     params: { lang },
@@ -37,4 +36,4 @@ const content = contentByLang[lang];
 setPageContext(lang, content);
 ---
 
-<LayoutForContact title={content.page.title} />
+<LayoutForContact />

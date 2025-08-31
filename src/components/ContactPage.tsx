@@ -31,6 +31,7 @@ const ContactPage = ({
   visibleIcon,
   sizeBtn,
 }: ContactPageProps) => {
+    
   const t = content;
 
   const CONTENT = t.formModal;
@@ -46,6 +47,7 @@ const ContactPage = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log(isSubmitting)
     setIsSubmitting(true);
 
     MailSend({
@@ -67,6 +69,7 @@ const ContactPage = ({
     setPhone("");
   };
 
+  
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -104,7 +107,7 @@ const ContactPage = ({
               required
             />
           </div>
-
+ 
           <Button
             type="submit"
             disabled={isSubmitting}

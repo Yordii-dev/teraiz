@@ -8,6 +8,7 @@ interface Service {
 }
 
 interface Tag {
+  id:number;
   href: string;
   name: string;
 }
@@ -53,9 +54,32 @@ interface SectionFooter {
   details: string[];
 }
 
+interface Meta{
+  description: string;
+  keywords:string;
+  toShared:{
+    openGraph:{
+      title:string;
+      description:string;
+    },
+    
+    twitter:{
+      title:string;
+      description:string;
+    }
+  }
+}
+
 export type TranslationType = {
   page: {
-    title: string;
+    index:{
+      title: string;
+      metas:Meta;      
+    },
+    contact:{
+      title: string;
+      metas:Meta;
+    }
   };
 
   formModal: {

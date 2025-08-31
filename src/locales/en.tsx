@@ -22,8 +22,45 @@ import T4 from "@/assets/testimonies/t4.png?url";
 
 const en: TranslationType = {
   page: {
-    title: `Real Estate Software - ${COMPANY_NAME}`,
+    index: {
+      title: `Real Estate Software | ${COMPANY_NAME}`,
+      metas: {       
+        description: `${COMPANY_NAME} develops custom software for real estate companies. Digitize your business with PropTech solutions, real estate CRM, process automation, and personalized platforms.`,
+        keywords: "real estate software, real estate CRM, custom software development, digitalization of real estate, PropTech, real estate automation, real estate system",      
+        
+        toShared: {
+          openGraph: {
+            title: `Custom Real Estate Software | ${COMPANY_NAME}`,
+            description: "Digitize your real estate business with personalized software solutions, CRM, and automation."
+          },
+          
+          twitter: {
+            title: `Custom Real Estate Software | ${COMPANY_NAME}`,
+            description: "Digitize your real estate business with personalized software solutions, CRM, and automation."
+          }
+        }
+      }
+    },
+
+    contact: {
+      title: `Contact Us | ${COMPANY_NAME}`,
+      metas: {
+        description: `Get in touch with ${COMPANY_NAME} for custom and personalized software solutions for real estate companies and businesses in the sector.`,
+        keywords: "contact, custom real estate software, real estate CRM, PropTech solutions, real estate automation, personalized software",
+        toShared: {
+          openGraph: {
+            title: `Contact Us | ${COMPANY_NAME}`,
+            description: `Get in touch with ${COMPANY_NAME} for custom and personalized software solutions for real estate companies and businesses in the sector.`
+          },
+          twitter: {
+            title: `Contact Us | ${COMPANY_NAME}`,
+            description: `Get in touch with ${COMPANY_NAME} for custom and personalized software solutions for real estate companies and businesses in the sector.`
+          }
+        }
+      }
+    }
   },
+
   formModal: {
     title: "Contact Us",
     nameLabel: "Your name",
@@ -45,22 +82,27 @@ const en: TranslationType = {
   header: {
     tags: [
       {
+        id: 1,
         href: HREF_HEADER["home"],
         name: "Home",
       },
       {
+      id: 2,
         href: HREF_HEADER["services"],
         name: "Services",
       },
       {
+        id: 3,
         href: HREF_HEADER["testimonies"],
         name: "Testimonials",
       },
       {
+        id: 4,
         href: HREF_HEADER["faqs"],
         name: "FAQs",
       },
       {
+        id: 5,
         href: HREF_HEADER["contact"],
         name: "Contact",
       },

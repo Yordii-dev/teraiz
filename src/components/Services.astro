@@ -4,6 +4,7 @@ import ContactForm from "./ContactForm";
 import { Button } from "./ui/button";
 import { getContent, getLang } from "@/contexts/PageContext";
 import type { langType } from "@/types/languages";
+import BtnCta from "./BtnCta.astro";
 const CONTENT = getContent().services;
 const LANG = getLang() as langType;
 ---
@@ -47,12 +48,12 @@ const LANG = getLang() as langType;
     </div>
 
     <div class="text-center">
-      <ContactForm
-        client:load
-        classBtn="bg-brand-primary hover:bg-brand-primary/90 text-white px-8 py-4"
-        sizeBtn="lg"
+      <BtnCta
+        lang={LANG}
         textBtn={CONTENT.ctaText}
-        content={getContent()}
+        sizeBtn="lg"
+        classBtn="bg-brand-primary hover:bg-brand-primary/90 text-white px-8 py-4"
+        visibleIcon={false}
       />
     </div>
   </div>

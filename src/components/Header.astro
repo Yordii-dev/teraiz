@@ -5,6 +5,13 @@ import { getContent, getLang } from "@/contexts/PageContext";
 import type { langType } from "@/types/languages";
 const CONTENT = getContent().header;
 const LANG = getLang() as langType;
+
+const tags = CONTENT.tags.map(tag => {
+  if (tag.id === 5) {
+    return { ...tag, href: `/${LANG}${tag.href}` };
+  }
+  return tag;
+});
 ---
 
 <header
@@ -23,7 +30,7 @@ const LANG = getLang() as langType;
       <div class="hidden md:block">
         <div class="ml-10 flex items-baseline space-x-8">
           {
-            CONTENT.tags.map((tag) => (
+            tags.map((tag) => (
               <a
                 href={tag.href}
                 class="text-gray-700 hover:text-brand-primary transition-colors duration-200"

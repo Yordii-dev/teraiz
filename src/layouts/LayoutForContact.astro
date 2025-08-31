@@ -2,56 +2,56 @@
 import "@/index.css";
 import { getContent, getLang } from "@/contexts/PageContext";
 import ContactPage from "@/components/ContactPage";
+import { Toaster } from "@/components/ui/toaster";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import Header from "@/components/Header.astro";
 
 const lang = getLang();
 const content = getContent();
 const CONTENT = content.cta;
-const { title } = Astro.props;
 ---
 
 <html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
+    <title>{content.page.contact.title}</title>
 
     <meta
       name="description"
-      content="Teraiz desarrolla software a medida para inmobiliarias. Digitaliza tu negocio con soluciones PropTech, CRM inmobiliario, automatización de procesos y plataformas personalizadas."
+      content={content.page.contact.metas.description}
     />
     <meta
       name="keywords"
-      content="software inmobiliario, CRM inmobiliario, desarrollo de software a medida, digitalización de inmobiliarias, PropTech, automatización inmobiliaria, sistema para inmobiliarias"
+      content={content.page.contact.metas.keywords}
     />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#002b56" />
 
     <link
       rel="canonical"
-      href={lang === "es"
-        ? "https://teraiz.com/"
-        : `https://teraiz.com/${lang}`}
+      href={`https://teraiz.com/${lang}/contact`}
     />
-    <link rel="alternate" hreflang="es" href="https://teraiz.com/" />
-    <link rel="alternate" hreflang="en" href="https://teraiz.com/en/" />
-    <link rel="alternate" hreflang="fr" href="https://teraiz.com/fr/" />
-    <link rel="alternate" hreflang="x-default" href="https://teraiz.com/" />
+
+    <link rel="alternate" hreflang="es" href="https://teraiz.com/es/contact" />
+    <link rel="alternate" hreflang="en" href="https://teraiz.com/en/contact" />
+    <link rel="alternate" hreflang="fr" href="https://teraiz.com/fr/contact" />
+    <link rel="alternate" hreflang="x-default" href="https://teraiz.com/es/contact" />
+
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content={lang === "es"
-        ? "https://teraiz.com/"
-        : `https://teraiz.com/${lang}/`}
+      content={`https://teraiz.com/${lang}/contact`}
     />
     <meta
       property="og:title"
-      content="Teraiz - Software Inmobiliario a Medida"
+      content={content.page.contact.metas.toShared.openGraph.title}
     />
     <meta
       property="og:description"
-      content="Digitaliza tu empresa inmobiliaria con soluciones de software personalizadas, CRM y automatización."
+      content={content.page.contact.metas.toShared.openGraph.description}
     />
     <meta property="og:image" content="https://teraiz.com/og-image.jpg" />
 
@@ -59,17 +59,15 @@ const { title } = Astro.props;
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:url"
-      content={lang === "es"
-        ? "https://teraiz.com/"
-        : `https://teraiz.com/${lang}/`}
+      content={`https://teraiz.com/${lang}/contact`}
     />
     <meta
       name="twitter:title"
-      content="Teraiz - Software Inmobiliario a Medida"
+      content={content.page.contact.metas.toShared.twitter.title}
     />
     <meta
       name="twitter:description"
-      content="Digitaliza tu empresa inmobiliaria con soluciones de software personalizadas, CRM y automatización."
+      content={content.page.contact.metas.toShared.twitter.description}
     />
     <meta name="twitter:image" content="https://teraiz.com/og-image.jpg" />
 
@@ -90,21 +88,27 @@ const { title } = Astro.props;
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Teraiz",
-        "url": "https://teraiz.com",
-        "logo": "https://teraiz.com/favicon-32x32.png",
-        "description": "Software inmobiliario personalizado para empresas del sector. CRM, automatización y más.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "PE"
+        "@type": "ContactPage",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Teraiz",
+          "url": "https://teraiz.com",
+          "logo": "https://teraiz.com/favicon-32x32.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "availableLanguage": ["es","en","fr"],
+          }
         }
       }
+
     </script>
   </head>
 
   <body>
     <div class="min-h-screen">
+      <!-- <Header />-->
+
       <ContactPage
         client:load
         content={getContent()}
@@ -113,6 +117,9 @@ const { title } = Astro.props;
         classBtn="bg-brand-secondary hover:bg-brand-secondary/90 text-brand-primary px-10 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 group"
         visibleIcon={true}
       />
+      <WhatsAppButton client:load content={content} />
+      <Toaster client:load />
+
     </div>
   </body>
 </html>

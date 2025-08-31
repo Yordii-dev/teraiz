@@ -1,5 +1,5 @@
 ---
-import BasePageForMultiLang from "@/layouts/BasePageForMultiLang.astro";
+import LayoutForIndex from "@/layouts/LayoutForIndex.astro";
 
 import ContentEN from "@/locales/en";
 import ContentFR from "@/locales/fr";
@@ -31,4 +31,4 @@ const content = contentByLang[lang];
 setPageContext(lang, content);
 ---
 
-<BasePageForMultiLang title={content.page.title} />
+<LayoutForIndex />

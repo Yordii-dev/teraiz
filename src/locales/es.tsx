@@ -22,7 +22,44 @@ import T4 from "@/assets/testimonies/t4.png?url";
 
 const es: TranslationType = {
   page: {
-    title: `Software Inmobiliario - ${COMPANY_NAME}`,
+    index:{
+      title: `Software Inmobiliario | ${COMPANY_NAME}`,
+      metas:{       
+        description: "${COMPANY_NAME} desarrolla software a medida para inmobiliarias. Digitaliza tu negocio con soluciones PropTech, CRM inmobiliario, automatización de procesos y plataformas personalizadas.",
+        keywords:"software inmobiliario, CRM inmobiliario, desarrollo de software a medida, digitalización de inmobiliarias, PropTech, automatización inmobiliaria, sistema para inmobiliarias",      
+        
+        toShared:{
+          openGraph:{
+            title: "Software Inmobiliario a Medida | ${COMPANY_NAME}",
+            description: "Digitaliza tu empresa inmobiliaria con soluciones de software personalizadas, CRM y automatización."
+          },
+          
+          twitter:{
+            title: "Software Inmobiliario a Medida | ${COMPANY_NAME}",
+            description: "Digitaliza tu empresa inmobiliaria con soluciones de software personalizadas, CRM y automatización."
+          }
+        }
+      },
+    },
+    
+    contact: {
+      title: `Contáctanos | ${COMPANY_NAME}`,
+      metas: {
+        description: "Ponte en contacto con ${COMPANY_NAME} para soluciones de software a medida y personalizadas para inmobiliarias y empresas del sector.",
+        keywords: "contacto, software inmobiliario a medida, CRM inmobiliario, soluciones PropTech, automatización inmobiliaria, software personalizado",
+        toShared: {
+          openGraph: {
+            title: `Contactanos | ${COMPANY_NAME}`,
+            description: "Ponte en contacto con ${COMPANY_NAME} para soluciones de software a medida y personalizadas para inmobiliarias y empresas del sector."
+          },
+          twitter: {
+            title: `Contactanos | ${COMPANY_NAME}`,
+            description: "Ponte en contacto con ${COMPANY_NAME} para soluciones de software a medida y personalizadas para inmobiliarias y empresas del sector."
+          }
+        }
+      }
+    }
+
   },
   formModal: {
     title: "Contactanos",
@@ -47,22 +84,27 @@ const es: TranslationType = {
   header: {
     tags: [
       {
+        id: 1,
         href: HREF_HEADER["home"],
         name: "Inicio",
       },
       {
+        id: 2,
         href: HREF_HEADER["services"],
         name: "Servicios",
       },
       {
+        id: 3,
         href: HREF_HEADER["testimonies"],
         name: "Testimonios",
       },
       {
+        id: 4,
         href: HREF_HEADER["faqs"],
         name: "Dudas",
       },
       {
+        id: 5,
         href: HREF_HEADER["contact"],
         name: "Contacto",
       },
