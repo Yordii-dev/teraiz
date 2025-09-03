@@ -1,0 +1,130 @@
+---
+import "@/index.css";
+import { getContent, getLang } from "@/contexts/PageContext";
+import ContactPage from "@/components/ContactPage";
+import { Toaster } from "@/components/ui/toaster";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import Header from "@/components/Header.astro";
+
+const lang = getLang();
+const content = getContent();
+const CONTENT = content.successModal;
+ 
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{content.page.thankyou.title}</title>
+
+    <meta
+      name="description"
+      content={content.page.thankyou.metas.description}
+    />
+    <meta
+      name="keywords"
+      content={content.page.thankyou.metas.keywords}
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#002b56" />
+
+    <link
+      rel="canonical"
+      href={`https://teraiz.com/${lang}/thankyou`}
+    />
+
+    <link rel="alternate" hreflang="es" href="https://teraiz.com/es/thankyou" />
+    <link rel="alternate" hreflang="en" href="https://teraiz.com/en/thankyou" />
+    <link rel="alternate" hreflang="fr" href="https://teraiz.com/fr/thankyou" />
+    <link rel="alternate" hreflang="x-default" href="https://teraiz.com/es/thankyou" />
+
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content={`https://teraiz.com/${lang}/thankyou`}
+    />
+    <meta
+      property="og:title"
+      content={content.page.thankyou.metas.toShared.openGraph.title}
+    />
+    <meta
+      property="og:description"
+      content={content.page.thankyou.metas.toShared.openGraph.description}
+    />
+    <meta property="og:image" content="https://teraiz.com/og-image.jpg" />
+
+    <!-- Twitter (opcional, solo si quieres compartir en Twitter) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content={`https://teraiz.com/${lang}/thankyou`}
+    />
+    <meta
+      name="twitter:title"
+      content={content.page.thankyou.metas.toShared.twitter.title}
+    />
+    <meta
+      name="twitter:description"
+      content={content.page.thankyou.metas.toShared.twitter.description}
+    />
+    <meta name="twitter:image" content="https://teraiz.com/og-image.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+   <!-- Structured Data para Thank You Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Gracias por contactarnos | Teraiz",
+      "description": "Gracias por contactar a Teraiz. Nuestro equipo se pondrá en contacto contigo pronto.",
+      "url": "https://teraiz.com/es/thankyou",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Teraiz",
+        "url": "https://teraiz.com",
+        "logo": "https://teraiz.com/favicon-32x32.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "availableLanguage": ["es","en","fr"]
+        }
+      }
+    }
+    </script>
+
+   </head>
+
+  <body>
+    <div class="min-h-screen">
+
+      <section class="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-4 text-center">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">{CONTENT.title}</h1>
+        <p class="text-gray-700 mb-8 max-w-lg">{CONTENT.description}</p>
+        <a
+          href={lang == "es" ? "/" : `/${lang}`}
+          class="px-6 py-3 bg-brand-primary text-white rounded-lg hover:bg-brand-primary/90 transition-colors duration-200"
+        >
+          {CONTENT.textBackBtn}
+        </a>
+
+    </div>
+
+    <WhatsAppButton client:load content={content} />
+
+  </body>
+</html>

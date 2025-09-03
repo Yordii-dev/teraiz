@@ -58,11 +58,31 @@ const en: TranslationType = {
           }
         }
       }
+    },
+
+    thankyou: {
+      title: `Thank You | ${COMPANY_NAME}`,
+      metas: {
+        description: `Thank you for contacting ${COMPANY_NAME}. Our team will reach out to you shortly to provide customized software solutions for your real estate business.`,
+        keywords: "thank you, message sent, custom real estate software, real estate CRM, PropTech solutions, real estate automation",
+        toShared: {
+          openGraph: {
+            title: `Thank You | ${COMPANY_NAME}`,
+            description: `Thank you for contacting ${COMPANY_NAME}. Our team will reach out to you shortly to provide customized software solutions for your real estate business.`
+          },
+          twitter: {
+            title: `Thank You | ${COMPANY_NAME}`,
+            description: `Thank you for contacting ${COMPANY_NAME}. Our team will reach out to you shortly to provide customized software solutions for your real estate business.`
+          }
+        }
+      }
     }
+
   },
 
   formModal: {
     title: "Contact Us",
+    description:`Manage your real estate efficiently with ${COMPANY_NAME}. Fill out the form and our team will get in touch.`,
     nameLabel: "Your name",
     namePlaceholder: "",
 
@@ -78,6 +98,8 @@ const en: TranslationType = {
   successModal: {
     title: "Message sent!",
     description: "We’ll get in touch with you very soon.",
+    textBackBtn: "Back to home",
+
   },
   header: {
     tags: [

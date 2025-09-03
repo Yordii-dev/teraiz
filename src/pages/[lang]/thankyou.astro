@@ -1,0 +1,39 @@
+---
+import LayoutForThankyou from "@/layouts/LayoutForThankyou.astro";
+
+import ContentES from "@/locales/es";
+import ContentEN from "@/locales/en";
+import ContentFR from "@/locales/fr";
+import type { TranslationType } from "@/types/Translations";
+import {
+  SUPPORTED_LANGS_DYNAMICS_FOR_TANKYOU,
+  type LangForPathDinamicForTankyou,
+} from "@/types/lang";
+import { setPageContext } from "@/contexts/PageContext";
+
+export const getStaticPaths = () => {
+  return SUPPORTED_LANGS_DYNAMICS_FOR_TANKYOU.map((lang) => ({
+    params: { lang },
+  }));
+};
+
+const rawLang = Astro.params.lang ?? "es";
+console.log(rawLang);
+
+const lang = SUPPORTED_LANGS_DYNAMICS_FOR_TANKYOU.includes(
+  rawLang as LangForPathDinamicForTankyou
+)
+  ? (rawLang as LangForPathDinamicForTankyou)
+  : "en";
+
+const contentByLang: Record<LangForPathDinamicForTankyou, TranslationType> = {
+  es: ContentES,
+  en: ContentEN,
+  fr: ContentFR,
+};
+
+const content = contentByLang[lang];
+setPageContext(lang, content);
+---
+
+<LayoutForThankyou />

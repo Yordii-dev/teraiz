@@ -1,10 +1,11 @@
 ---
 import Logo from "@/assets/logo.svg?url";
-import { LanguageAndCta, ContentMenuMobil } from "@/components/DynamicHeader";
+import { LanguageAndHamburger } from "@/components/DynamicHeader";
 import { getContent, getLang } from "@/contexts/PageContext";
 import type { langType } from "@/types/languages";
 const CONTENT = getContent().header;
 const LANG = getLang() as langType;
+const { hideNav } = Astro.props;
 
 const tags = CONTENT.tags.map(tag => {
   if (tag.id === 5) {
@@ -27,24 +28,24 @@ const tags = CONTENT.tags.map(tag => {
       </div>
 
       <!-- Desktop Navigation -->
-      <div class="hidden md:block">
-        <div class="ml-10 flex items-baseline space-x-8">
-          {
-            tags.map((tag) => (
-              <a
-                href={tag.href}
-                class="text-gray-700 hover:text-brand-primary transition-colors duration-200"
-              >
-                {tag.name}
-              </a>
-            ))
-          }
+      {!hideNav && (
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            {
+              tags.map((tag) => (
+                <a
+                  href={tag.href}
+                  class="text-gray-700 hover:text-brand-primary transition-colors duration-200"
+                >
+                  {tag.name}
+                </a>
+              ))
+            }
+          </div>
         </div>
-      </div>
+      )}
 
-      <LanguageAndCta client:load content={getContent()} lang={LANG} />
+      <LanguageAndHamburger hideNav={hideNav} client:load content={getContent()} lang={LANG} />
     </div>
-
-    <ContentMenuMobil client:load content={getContent()} lang={LANG} />
   </nav>
 </header>

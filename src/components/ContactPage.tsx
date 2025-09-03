@@ -17,6 +17,7 @@ import type { TranslationType } from "@/types/Translations";
 import { SITE_URL } from "@/constants";
 
 interface ContactPageProps {
+  lang: string;
   classBtn: string;
   content: TranslationType;
   textBtn: string;
@@ -25,6 +26,7 @@ interface ContactPageProps {
 }
 
 const ContactPage = ({
+  lang,
   classBtn,
   content,
   textBtn,
@@ -57,23 +59,32 @@ const ContactPage = ({
       phone,
     });
 
-    toast({
-      title: CONTENT_SUCCESS.title,
-      description: CONTENT_SUCCESS.description,
-    });
+    
     setIsSubmitting(false);
     setIsOpen(false);
 
     setEmail("");
     setName("");
     setPhone("");
+
+    const newPath = `/${lang}/thankyou`;
+    window.location.href = newPath;
   };
 
   
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Título y subtítulo */}
+        <div className="mb-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900">
+            {CONTENT.title}
+          </h2>
+          <p className="mt-2 text-gray-600 max-w-xl mx-auto">
+            {CONTENT.description}
+          </p>
+        </div>
+        <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto w-full">
           <div className="space-y-2">
             <Label htmlFor="name">{CONTENT.nameLabel}</Label>
             <Input

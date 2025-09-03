@@ -58,11 +58,31 @@ const es: TranslationType = {
           }
         }
       }
+    },
+
+    thankyou: {
+      title: `Gracias | ${COMPANY_NAME}`,
+      metas: {
+        description: `Gracias por contactar a ${COMPANY_NAME}. Nuestro equipo se pondrá en contacto contigo pronto para ofrecerte soluciones de software personalizadas para tu inmobiliaria.`,
+        keywords: "gracias, mensaje enviado, software inmobiliario personalizado, CRM inmobiliario, soluciones PropTech, automatización inmobiliaria",
+        toShared: {
+          openGraph: {
+            title: `Gracias | ${COMPANY_NAME}`,
+            description: `Gracias por contactar a ${COMPANY_NAME}. Nuestro equipo se pondrá en contacto contigo pronto para ofrecerte soluciones de software personalizadas para tu inmobiliaria.`
+          },
+          twitter: {
+            title: `Gracias | ${COMPANY_NAME}`,
+            description: `Gracias por contactar a ${COMPANY_NAME}. Nuestro equipo se pondrá en contacto contigo pronto para ofrecerte soluciones de software personalizadas para tu inmobiliaria.`
+          }
+        }
+      }
     }
+
 
   },
   formModal: {
     title: "Contactanos",
+    description: `Gestiona tu inmobiliaria de manera eficiente con ${COMPANY_NAME}. Completa el formulario y nuestro equipo te contactará.`,
 
     nameLabel: "Tu nombre",
     namePlaceholder: "",
@@ -79,6 +99,8 @@ const es: TranslationType = {
   successModal: {
     title: "¡Mensaje enviado!",
     description: "Nos pondremos en contacto contigo muy pronto.",
+    textBackBtn: "Volver al inicio",
+
   },
 
   header: {

@@ -44,15 +44,19 @@ const LanguageSelector = ({ langProp }: Props) => {
               <button
                 key={lang.code}
                 onClick={() => {
-                  // En un componente React
-                  if (typeof window === "undefined") return;
+                    if (typeof window === "undefined") return;
 
-                  let urlLang = "";
-                  if (lang.code != "es") {
-                    urlLang = lang.code;
-                  }
+                    const currentPath = window.location.pathname; // ej: /es/contact o /fr/contact
+                    const segments = currentPath.split("/").filter(Boolean); // ["es", "contact"]
 
-                  window.location.href = `/${urlLang}`;
+                    // Reemplazamos el primer segmento con el idioma seleccionado
+                    let newLang = lang.code; // "es", "en" o "fr"
+                    segments[0] = newLang;
+
+                    // Reconstruimos la ruta
+                    const newPath = "/" + segments.join("/");
+
+                    window.location.href = newPath;
                 }}
                 className={`w-full flex items-center space-x-3 px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
                   langProp === lang.code

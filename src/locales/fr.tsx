@@ -58,11 +58,30 @@ const fr: TranslationType = {
           }
         }
       }
+    },
+
+    thankyou: {
+      title: `Merci | ${COMPANY_NAME}`,
+      metas: {
+        description: `Merci d'avoir contacté ${COMPANY_NAME}. Notre équipe se mettra en relation avec vous rapidement pour vous proposer des solutions logicielles personnalisées pour votre agence immobilière.`,
+        keywords: "merci, message envoyé, logiciel immobilier sur mesure, CRM immobilier, solutions PropTech, automatisation immobilière",
+        toShared: {
+          openGraph: {
+            title: `Merci | ${COMPANY_NAME}`,
+            description: `Merci d'avoir contacté ${COMPANY_NAME}. Notre équipe se mettra en relation avec vous rapidement pour vous proposer des solutions logicielles personnalisées pour votre agence immobilière.`
+          },
+          twitter: {
+            title: `Merci | ${COMPANY_NAME}`,
+            description: `Merci d'avoir contacté ${COMPANY_NAME}. Notre équipe se mettra en relation avec vous rapidement pour vous proposer des solutions logicielles personnalisées pour votre agence immobilière.`
+          }
+        }
+      }
     }
   },
 
   formModal: {
     title: "Contactez-nous",
+    description: `Gérez efficacement votre agence immobilière avec ${COMPANY_NAME}. Remplissez le formulaire et notre équipe vous contactera.`,
     nameLabel: "Votre nom",
     namePlaceholder: "",
 
@@ -78,6 +97,8 @@ const fr: TranslationType = {
   successModal: {
     title: "Message envoyé !",
     description: "Nous vous contacterons très bientôt.",
+    textBackBtn: "Retour à l'accueil",
+
   },
   header: {
     tags: [

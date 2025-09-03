@@ -79,12 +79,18 @@ export type TranslationType = {
     contact:{
       title: string;
       metas:Meta;
+    },
+    thankyou:{
+      title: string;
+      metas:Meta;
     }
   };
 
   formModal: {
     title: string;
     nameLabel: string;
+    description: string;
+
     namePlaceholder: string;
 
     mailLabel: string;
@@ -100,6 +106,8 @@ export type TranslationType = {
   successModal: {
     title: string;
     description: string;
+    textBackBtn: string;
+    
   };
 
   header: {
