@@ -7,8 +7,9 @@ const CONTENT = getContent().header;
 const LANG = getLang() as langType;
 const { hideNav } = Astro.props;
 
-const tags = CONTENT.tags.map(tag => {
-  if (tag.id === 5) {
+const CONTACT_ID = 5;
+const tags = CONTENT.tags.map((tag) => {
+  if (tag.id === CONTACT_ID) {
     return { ...tag, href: `/${LANG}${tag.href}` };
   }
   return tag;
@@ -22,30 +23,37 @@ const tags = CONTENT.tags.map(tag => {
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
       <div class="flex-shrink-0">
-        <h1 class="text-2xl font-bold text-brand-primary">
+        <a href="/" aria-label="Ir a la página principal">
           <img src={Logo} alt="Logo Teraiz" />
-        </h1>
+        </a>
       </div>
 
       <!-- Desktop Navigation -->
-      {!hideNav && (
-        <div class="hidden md:block">
-          <div class="ml-10 flex items-baseline space-x-8">
-            {
-              tags.map((tag) => (
-                <a
-                  href={tag.href}
-                  class="text-gray-700 hover:text-brand-primary transition-colors duration-200"
-                >
-                  {tag.name}
-                </a>
-              ))
-            }
+      {
+        !hideNav && (
+          <div class="hidden md:block">
+            <ul class="ml-10 flex items-baseline space-x-8">
+              {tags.map((tag) => (
+                <li>
+                  <a
+                    href={tag.href}
+                    class="text-gray-700 hover:text-brand-primary transition-colors duration-200"
+                  >
+                    {tag.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
-      )}
+        )
+      }
 
-      <LanguageAndHamburger hideNav={hideNav} client:load content={getContent()} lang={LANG} />
+      <LanguageAndHamburger
+        hideNav={hideNav}
+        client:load
+        content={getContent()}
+        lang={LANG}
+      />
     </div>
   </nav>
 </header>

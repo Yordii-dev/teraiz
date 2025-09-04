@@ -33,7 +33,6 @@ const ContactPage = ({
   visibleIcon,
   sizeBtn,
 }: ContactPageProps) => {
-    
   const t = content;
 
   const CONTENT = t.formModal;
@@ -49,7 +48,7 @@ const ContactPage = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(isSubmitting)
+    console.log(isSubmitting);
     setIsSubmitting(true);
 
     MailSend({
@@ -59,7 +58,6 @@ const ContactPage = ({
       phone,
     });
 
-    
     setIsSubmitting(false);
     setIsOpen(false);
 
@@ -71,20 +69,20 @@ const ContactPage = ({
     window.location.href = newPath;
   };
 
-  
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título y subtítulo */}
         <div className="mb-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900">
-            {CONTENT.title}
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-900">{CONTENT.title}</h2>
           <p className="mt-2 text-gray-600 max-w-xl mx-auto">
             {CONTENT.description}
           </p>
         </div>
-        <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto w-full">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-4 max-w-md mx-auto w-full"
+        >
           <div className="space-y-2">
             <Label htmlFor="name">{CONTENT.nameLabel}</Label>
             <Input
@@ -118,7 +116,7 @@ const ContactPage = ({
               required
             />
           </div>
- 
+
           <Button
             type="submit"
             disabled={isSubmitting}
