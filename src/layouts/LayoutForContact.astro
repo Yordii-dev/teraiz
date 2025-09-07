@@ -16,34 +16,25 @@ const CONTENT = content.cta;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{content.page.contact.title}</title>
 
-    <meta
-      name="description"
-      content={content.page.contact.metas.description}
-    />
-    <meta
-      name="keywords"
-      content={content.page.contact.metas.keywords}
-    />
+    <meta name="description" content={content.page.contact.metas.description} />
+    <meta name="keywords" content={content.page.contact.metas.keywords} />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#002b56" />
 
-    <link
-      rel="canonical"
-      href={`https://teraiz.com/${lang}/contact`}
-    />
+    <link rel="canonical" href={`https://teraiz.com/${lang}/contact`} />
 
     <link rel="alternate" hreflang="es" href="https://teraiz.com/es/contact" />
     <link rel="alternate" hreflang="en" href="https://teraiz.com/en/contact" />
     <link rel="alternate" hreflang="fr" href="https://teraiz.com/fr/contact" />
-    <link rel="alternate" hreflang="x-default" href="https://teraiz.com/es/contact" />
-
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://teraiz.com/es/contact"
+    />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content={`https://teraiz.com/${lang}/contact`}
-    />
+    <meta property="og:url" content={`https://teraiz.com/${lang}/contact`} />
     <meta
       property="og:title"
       content={content.page.contact.metas.toShared.openGraph.title}
@@ -56,10 +47,7 @@ const CONTENT = content.cta;
 
     <!-- Twitter (opcional, solo si quieres compartir en Twitter) -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:url"
-      content={`https://teraiz.com/${lang}/contact`}
-    />
+    <meta name="twitter:url" content={`https://teraiz.com/${lang}/contact`} />
     <meta
       name="twitter:title"
       content={content.page.contact.metas.toShared.twitter.title}
@@ -71,9 +59,12 @@ const CONTENT = content.cta;
     <meta name="twitter:image" content="https://teraiz.com/og-image.jpg" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Teraiz" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -96,11 +87,10 @@ const CONTENT = content.cta;
           "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "customer support",
-            "availableLanguage": ["es","en","fr"],
+            "availableLanguage": ["es", "en", "fr"]
           }
         }
       }
-
     </script>
   </head>
 
@@ -118,7 +108,6 @@ const CONTENT = content.cta;
         visibleIcon={true}
       />
       <WhatsAppButton client:load content={content} />
- 
     </div>
   </body>
 </html>
