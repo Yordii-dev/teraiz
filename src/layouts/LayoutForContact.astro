@@ -4,6 +4,8 @@ import { getContent, getLang } from "@/contexts/PageContext";
 import ContactPage from "@/components/ContactPage";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Header from "@/components/Header.astro";
+import GoogleAnalytics from "@/components/GoogleAnalytics.astro";
+
 
 const lang = getLang();
 const content = getContent();
@@ -92,6 +94,9 @@ const CONTENT = content.cta;
         }
       }
     </script>
+
+    <GoogleAnalytics />
+
   </head>
 
   <body>

@@ -1,7 +1,6 @@
 ---
 import "@/index.css";
 import { getContent, getLang } from "@/contexts/PageContext";
-import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/Header.astro";
 import Hero from "@/components/Hero.astro";
 import Services from "@/components/Services.astro";
@@ -12,6 +11,7 @@ import FAQSection from "@/components/FAQSection.astro";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Cta from "@/components/Cta.astro";
 import Footer from "@/components/Footer.astro";
+import GoogleAnalytics from "@/components/GoogleAnalytics.astro";
 
 const lang = getLang();
 const content = getContent();
@@ -106,6 +106,9 @@ const content = getContent();
         }
       }
     </script>
+    
+    <GoogleAnalytics />
+
   </head>
 
   <body>
