@@ -22,63 +22,70 @@ import T4 from "@/assets/testimonies/t4.png?url";
 
 const es: TranslationType = {
   page: {
-    index:{
+    index: {
       title: `Software Inmobiliario | ${COMPANY_NAME}`,
-      metas:{       
-        description: "${COMPANY_NAME} desarrolla software a medida para inmobiliarias. Digitaliza tu negocio con soluciones PropTech, CRM inmobiliario, automatización de procesos y plataformas personalizadas.",
-        keywords:"software inmobiliario, CRM inmobiliario, desarrollo de software a medida, digitalización de inmobiliarias, PropTech, automatización inmobiliaria, sistema para inmobiliarias",      
-        
-        toShared:{
-          openGraph:{
+      metas: {
+        description:
+          "${COMPANY_NAME} desarrolla software a medida para inmobiliarias. Digitaliza tu negocio con soluciones PropTech, CRM inmobiliario, automatización de procesos y plataformas personalizadas.",
+        keywords:
+          "software inmobiliario, CRM inmobiliario, desarrollo de software a medida, digitalización de inmobiliarias, PropTech, automatización inmobiliaria, sistema para inmobiliarias",
+
+        toShared: {
+          openGraph: {
             title: "Software Inmobiliario a Medida | ${COMPANY_NAME}",
-            description: "Digitaliza tu empresa inmobiliaria con soluciones de software personalizadas, CRM y automatización."
+            description:
+              "Digitaliza tu empresa inmobiliaria con soluciones de software personalizadas, CRM y automatización.",
           },
-          
-          twitter:{
+
+          twitter: {
             title: "Software Inmobiliario a Medida | ${COMPANY_NAME}",
-            description: "Digitaliza tu empresa inmobiliaria con soluciones de software personalizadas, CRM y automatización."
-          }
-        }
+            description:
+              "Digitaliza tu empresa inmobiliaria con soluciones de software personalizadas, CRM y automatización.",
+          },
+        },
       },
     },
-    
+
     contact: {
       title: `Contáctanos | ${COMPANY_NAME}`,
       metas: {
-        description: "Ponte en contacto con ${COMPANY_NAME} para soluciones de software a medida y personalizadas para inmobiliarias y empresas del sector.",
-        keywords: "contacto, software inmobiliario a medida, CRM inmobiliario, soluciones PropTech, automatización inmobiliaria, software personalizado",
+        description:
+          "Ponte en contacto con ${COMPANY_NAME} para soluciones de software a medida y personalizadas para inmobiliarias y empresas del sector.",
+        keywords:
+          "contacto, software inmobiliario a medida, CRM inmobiliario, soluciones PropTech, automatización inmobiliaria, software personalizado",
         toShared: {
           openGraph: {
             title: `Contactanos | ${COMPANY_NAME}`,
-            description: "Ponte en contacto con ${COMPANY_NAME} para soluciones de software a medida y personalizadas para inmobiliarias y empresas del sector."
+            description:
+              "Ponte en contacto con ${COMPANY_NAME} para soluciones de software a medida y personalizadas para inmobiliarias y empresas del sector.",
           },
           twitter: {
             title: `Contactanos | ${COMPANY_NAME}`,
-            description: "Ponte en contacto con ${COMPANY_NAME} para soluciones de software a medida y personalizadas para inmobiliarias y empresas del sector."
-          }
-        }
-      }
+            description:
+              "Ponte en contacto con ${COMPANY_NAME} para soluciones de software a medida y personalizadas para inmobiliarias y empresas del sector.",
+          },
+        },
+      },
     },
 
     thankyou: {
       title: `Gracias | ${COMPANY_NAME}`,
       metas: {
         description: `Gracias por contactar a ${COMPANY_NAME}. Nuestro equipo se pondrá en contacto contigo pronto para ofrecerte soluciones de software personalizadas para tu inmobiliaria.`,
-        keywords: "gracias, mensaje enviado, software inmobiliario personalizado, CRM inmobiliario, soluciones PropTech, automatización inmobiliaria",
+        keywords:
+          "gracias, mensaje enviado, software inmobiliario personalizado, CRM inmobiliario, soluciones PropTech, automatización inmobiliaria",
         toShared: {
           openGraph: {
             title: `Gracias | ${COMPANY_NAME}`,
-            description: `Gracias por contactar a ${COMPANY_NAME}. Nuestro equipo se pondrá en contacto contigo pronto para ofrecerte soluciones de software personalizadas para tu inmobiliaria.`
+            description: `Gracias por contactar a ${COMPANY_NAME}. Nuestro equipo se pondrá en contacto contigo pronto para ofrecerte soluciones de software personalizadas para tu inmobiliaria.`,
           },
           twitter: {
             title: `Gracias | ${COMPANY_NAME}`,
-            description: `Gracias por contactar a ${COMPANY_NAME}. Nuestro equipo se pondrá en contacto contigo pronto para ofrecerte soluciones de software personalizadas para tu inmobiliaria.`
-          }
-        }
-      }
-    }
-
-
+            description: `Gracias por contactar a ${COMPANY_NAME}. Nuestro equipo se pondrá en contacto contigo pronto para ofrecerte soluciones de software personalizadas para tu inmobiliaria.`,
+          },
+        },
+      },
+    },
   },
   formModal: {
     title: "Contactanos",
@@ -100,34 +107,43 @@ const es: TranslationType = {
     title: "¡Mensaje enviado!",
     description: "Nos pondremos en contacto contigo muy pronto.",
     textBackBtn: "Volver al inicio",
-
   },
 
   header: {
     tags: [
       {
         id: 1,
-        href: HREF_HEADER["home"],
+        href: HREF_HEADER.home,
         name: "Inicio",
       },
       {
         id: 2,
-        href: HREF_HEADER["services"],
+        href: HREF_HEADER.services,
         name: "Servicios",
       },
       {
         id: 3,
-        href: HREF_HEADER["testimonies"],
+        href: HREF_HEADER.testimonies,
         name: "Testimonios",
       },
       {
         id: 4,
-        href: HREF_HEADER["faqs"],
-        name: "Dudas",
+        href: HREF_HEADER.presence,
+        name: "Presencia",
       },
       {
         id: 5,
-        href: HREF_HEADER["contact"],
+        href: HREF_HEADER.weGetIt,
+        name: "Te entendemos",
+      },
+      {
+        id: 6,
+        href: HREF_HEADER.faqs,
+        name: "Dudas",
+      },
+      {
+        id: 7,
+        href: HREF_HEADER.contact,
         name: "Contacto",
       },
     ],

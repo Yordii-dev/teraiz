@@ -1,13 +1,13 @@
 ---
-import Logo from "@/assets/logo-dark.svg?url";
 import { LanguageAndHamburger } from "@/components/DynamicHeader";
 import { getContent, getLang } from "@/contexts/PageContext";
 import type { langType } from "@/types/languages";
+import Logo from "./Logo.astro";
 const CONTENT = getContent().header;
 const LANG = getLang() as langType;
 const { hideNav } = Astro.props;
 
-const CONTACT_ID = 5;
+const CONTACT_ID = 7;
 const tags = CONTENT.tags.map((tag) => {
   if (tag.id === CONTACT_ID) {
     return { ...tag, href: `/${LANG}${tag.href}` };
@@ -22,11 +22,7 @@ const tags = CONTENT.tags.map((tag) => {
   <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
-      <div class="flex-shrink-0">
-        <a href="/" aria-label="Ir a la página principal">
-          <img src={Logo} alt="Logo Teraiz" />
-        </a>
-      </div>
+      <Logo />
 
       <!-- Desktop Navigation -->
       {

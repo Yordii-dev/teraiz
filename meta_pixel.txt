@@ -1,0 +1,24 @@
+Configuracion de PIXEl con:
+
+INTERFAZ DE META:
+    URL CONTIENE
+        /contact -> EVENT contacto
+        /thank-you -> EVENT cliente potencial
+    CLICK BTN
+        'Moyobamba, San Martín, Peru' -> EVENT busqueda de ubicacion
+
+MANUAL:
+    DEFAULT PageView -> EVENT visita de pagina
+        /, /contact, /thank-you
+    CUSTOM (FALTA)
+        CLICK BTN
+            'contact@teraiz.com' -> EVENT open mail CUSTOM
+            '+51 945 234 917' -> EVENT llamar CUSTOM
+            '+51 931 400 740' -> EVENT llamar CUSTOM
+            wsp icono -> EVENT hablar wsp CUSTOM
+        SCROLL SECTIONS Y #sections de nav
+            NOTA: detectar scroll en section
+            inicio, servicios, presencia, testimonios, dudas
+
+
+

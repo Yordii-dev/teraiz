@@ -28,12 +28,29 @@ const LanguageSelector = ({ langProp }: Props) => {
     const currentPath = window.location.pathname; // ej: /es/contact o /fr/contact
     const segments = currentPath.split("/").filter(Boolean); // ["es", "contact"]
 
-    // Reemplazamos el primer segmento con el idioma seleccionado
     let newLang = lang.code; // "es", "en" o "fr"
-    segments[0] = newLang;
+    if (newLang === "es") {
+      // Español → eliminar prefijo si existe
+      if (
+        segments[0] === "es" ||
+        segments[0] === "fr" ||
+        segments[0] === "en"
+      ) {
+        segments.shift();
+      }
+    } else {
+      // Otros idiomas → reemplazar o agregar prefijo
+      if (["es", "en", "fr"].includes(segments[0])) {
+        segments[0] = newLang;
+      } else {
+        segments.unshift(newLang);
+      }
+    }
+
+    // Reconstruir ruta: si no hay segmentos → "/"
+    const newPath = segments.length > 0 ? "/" + segments.join("/") : "/";
 
     // Reconstruimos la ruta
-    const newPath = "/" + segments.join("/");
 
     window.location.href = newPath;
   };

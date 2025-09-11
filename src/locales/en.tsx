@@ -24,65 +24,69 @@ const en: TranslationType = {
   page: {
     index: {
       title: `Real Estate Software | ${COMPANY_NAME}`,
-      metas: {       
+      metas: {
         description: `${COMPANY_NAME} develops custom software for real estate companies. Digitize your business with PropTech solutions, real estate CRM, process automation, and personalized platforms.`,
-        keywords: "real estate software, real estate CRM, custom software development, digitalization of real estate, PropTech, real estate automation, real estate system",      
-        
+        keywords:
+          "real estate software, real estate CRM, custom software development, digitalization of real estate, PropTech, real estate automation, real estate system",
+
         toShared: {
           openGraph: {
             title: `Custom Real Estate Software | ${COMPANY_NAME}`,
-            description: "Digitize your real estate business with personalized software solutions, CRM, and automation."
+            description:
+              "Digitize your real estate business with personalized software solutions, CRM, and automation.",
           },
-          
+
           twitter: {
             title: `Custom Real Estate Software | ${COMPANY_NAME}`,
-            description: "Digitize your real estate business with personalized software solutions, CRM, and automation."
-          }
-        }
-      }
+            description:
+              "Digitize your real estate business with personalized software solutions, CRM, and automation.",
+          },
+        },
+      },
     },
 
     contact: {
       title: `Contact Us | ${COMPANY_NAME}`,
       metas: {
         description: `Get in touch with ${COMPANY_NAME} for custom and personalized software solutions for real estate companies and businesses in the sector.`,
-        keywords: "contact, custom real estate software, real estate CRM, PropTech solutions, real estate automation, personalized software",
+        keywords:
+          "contact, custom real estate software, real estate CRM, PropTech solutions, real estate automation, personalized software",
         toShared: {
           openGraph: {
             title: `Contact Us | ${COMPANY_NAME}`,
-            description: `Get in touch with ${COMPANY_NAME} for custom and personalized software solutions for real estate companies and businesses in the sector.`
+            description: `Get in touch with ${COMPANY_NAME} for custom and personalized software solutions for real estate companies and businesses in the sector.`,
           },
           twitter: {
             title: `Contact Us | ${COMPANY_NAME}`,
-            description: `Get in touch with ${COMPANY_NAME} for custom and personalized software solutions for real estate companies and businesses in the sector.`
-          }
-        }
-      }
+            description: `Get in touch with ${COMPANY_NAME} for custom and personalized software solutions for real estate companies and businesses in the sector.`,
+          },
+        },
+      },
     },
 
     thankyou: {
       title: `Thank You | ${COMPANY_NAME}`,
       metas: {
         description: `Thank you for contacting ${COMPANY_NAME}. Our team will reach out to you shortly to provide customized software solutions for your real estate business.`,
-        keywords: "thank you, message sent, custom real estate software, real estate CRM, PropTech solutions, real estate automation",
+        keywords:
+          "thank you, message sent, custom real estate software, real estate CRM, PropTech solutions, real estate automation",
         toShared: {
           openGraph: {
             title: `Thank You | ${COMPANY_NAME}`,
-            description: `Thank you for contacting ${COMPANY_NAME}. Our team will reach out to you shortly to provide customized software solutions for your real estate business.`
+            description: `Thank you for contacting ${COMPANY_NAME}. Our team will reach out to you shortly to provide customized software solutions for your real estate business.`,
           },
           twitter: {
             title: `Thank You | ${COMPANY_NAME}`,
-            description: `Thank you for contacting ${COMPANY_NAME}. Our team will reach out to you shortly to provide customized software solutions for your real estate business.`
-          }
-        }
-      }
-    }
-
+            description: `Thank you for contacting ${COMPANY_NAME}. Our team will reach out to you shortly to provide customized software solutions for your real estate business.`,
+          },
+        },
+      },
+    },
   },
 
   formModal: {
     title: "Contact Us",
-    description:`Manage your real estate efficiently with ${COMPANY_NAME}. Fill out the form and our team will get in touch.`,
+    description: `Manage your real estate efficiently with ${COMPANY_NAME}. Fill out the form and our team will get in touch.`,
     nameLabel: "Your name",
     namePlaceholder: "",
 
@@ -99,33 +103,42 @@ const en: TranslationType = {
     title: "Message sent!",
     description: "We’ll get in touch with you very soon.",
     textBackBtn: "Back to home",
-
   },
   header: {
     tags: [
       {
         id: 1,
-        href: HREF_HEADER["home"],
+        href: HREF_HEADER.home,
         name: "Home",
       },
       {
-      id: 2,
-        href: HREF_HEADER["services"],
+        id: 2,
+        href: HREF_HEADER.services,
         name: "Services",
       },
       {
         id: 3,
-        href: HREF_HEADER["testimonies"],
-        name: "Testimonials",
+        href: HREF_HEADER.testimonies,
+        name: "Testimonies",
       },
       {
         id: 4,
-        href: HREF_HEADER["faqs"],
-        name: "FAQs",
+        href: HREF_HEADER.presence,
+        name: "Presence",
       },
       {
         id: 5,
-        href: HREF_HEADER["contact"],
+        href: HREF_HEADER.weGetIt,
+        name: "We get it",
+      },
+      {
+        id: 6,
+        href: HREF_HEADER.faqs,
+        name: "FAQs",
+      },
+      {
+        id: 7,
+        href: HREF_HEADER.contact,
         name: "Contact",
       },
     ],

@@ -17,9 +17,10 @@ export function LanguageAndHamburger({ content, lang, hideNav }: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const CONTENT = content.header;
+  const CONTACT_ID = 7;
 
   const tags = CONTENT.tags.map((tag) => {
-    if (tag.id === 5) {
+    if (tag.id === CONTACT_ID) {
       return { ...tag, href: `/${lang}${tag.href}` };
     }
     return tag;

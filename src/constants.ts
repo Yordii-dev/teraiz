@@ -19,9 +19,11 @@ export const COMPANY_PHONES = [
 export const COMPANY_ADDRESS = "Moyobamba, San Martín, Perú";
 export const COMPANY_ADDRESS_COORDS = "-6.033068775668156,-76.97331066428409";
 export const HREF_HEADER = {
-  home: "#inicio",
-  services: "#servicios",
-  testimonies: "#testimonios",
+  home: "#home",
+  services: "#services",
+  testimonies: "#testimonies",
+  presence: "#presence",
+  weGetIt: "#we-get-it",
   faqs: "#faqs",
   contact: "/contact",
 };

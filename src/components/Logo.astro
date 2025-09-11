@@ -1,0 +1,17 @@
+---
+import LogoImg from "@/assets/logo-dark.svg?url";
+import { getLang } from "@/contexts/PageContext";
+
+import type { langType } from "@/types/languages";
+
+const LANG = getLang() as langType;
+---
+
+<div class="flex-shrink-0">
+  <a
+    href={`${LANG === "es" ? "/" : "/" + LANG}`}
+    aria-label="Ir a la página principal"
+  >
+    <img src={LogoImg} alt="Logo Teraiz" />
+  </a>
+</div>
