@@ -3,6 +3,7 @@ import { Building2, Mail, Phone, MapPin } from "lucide-react";
 import Logo from "@/assets/logo-light.svg?url";
 import {
   COMPANY_ADDRESS,
+  COMPANY_ADDRESS_COORDS,
   COMPANY_MAIL,
   COMPANY_PHONES,
   LINK_SOCIALS_MEDIA,
@@ -96,7 +97,14 @@ const LANG = getLang() as langType;
 
           <div class="flex items-start">
             <MapPin className="h-5 w-5 text-brand-secondary mr-3 mt-1" />
-            <span class="text-white/80">{COMPANY_ADDRESS}</span>
+            <a
+              class="text-white/80 hover:underline"
+              href=`https://www.google.com/maps?q=${COMPANY_ADDRESS_COORDS}`
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {COMPANY_ADDRESS}
+            </a>
           </div>
         </div>
       </div>
