@@ -12,9 +12,9 @@ MANUAL:
         /, /contact, /thank-you
     CUSTOM (FALTA)
         CLICK BTN
-            'contact@teraiz.com' -> EVENT open mail CUSTOM
-            '+51 945 234 917' -> EVENT llamar CUSTOM
-            '+51 931 400 740' -> EVENT llamar CUSTOM
+            'contact@teraiz.com' -> EVENT open mail CUSTOM, YA ESTA SE SUPONE
+            '+51 945 234 917' -> EVENT llamar CUSTOM, YA ESTA SE SUPONE
+            '+51 931 400 740' -> EVENT llamar CUSTOM, YA ESTA SE SUPONE
             wsp icono -> EVENT hablar wsp CUSTOM
         SCROLL SECTIONS Y #sections de nav
             NOTA: detectar scroll en section
