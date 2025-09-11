@@ -75,7 +75,9 @@ const LANG = getLang() as langType;
             <Mail className="h-5 w-5 text-brand-secondary mr-3" />
             <a
               href={`mailto:${COMPANY_MAIL}`}
-              class="text-white/80 hover:text-brand-secondary transition-colors hover:underline"
+              class="contact-link text-white/80 hover:text-brand-secondary transition-colors hover:underline"
+              data-type="email"
+              data-value={COMPANY_MAIL}
             >
               {COMPANY_MAIL}
             </a>
@@ -88,6 +90,8 @@ const LANG = getLang() as langType;
                 <a
                   href={`tel:${item.phone}`}
                   class="text-white/80 hover:text-brand-secondary transition-colors hover:underline"
+                  data-type="call"
+                  data-value={item.phone}
                 >
                   {item.text}
                 </a>
@@ -98,7 +102,7 @@ const LANG = getLang() as langType;
           <div class="flex items-start">
             <MapPin className="h-5 w-5 text-brand-secondary mr-3 mt-1" />
             <a
-              class="text-white/80 hover:underline"
+              class="call-link text-white/80 hover:underline"
               href=`https://www.google.com/maps?q=${COMPANY_ADDRESS_COORDS}`
               target="_blank"
               rel="noopener noreferrer"
@@ -119,3 +123,20 @@ const LANG = getLang() as langType;
     </div>
   </div>
 </footer>
+
+<script is:inline>
+  document
+    .querySelectorAll<HTMLAnchorElement>(".contact-link")
+    .forEach((el) => {
+      el.addEventListener("click", () => {
+        if (typeof fbq === "function") {
+          const type = el.dataset.type; // "call" o "email"
+          const value = el.dataset.value; // número o email
+          fbq("trackCustom", type === "call" ? "ClickCall" : "ClickEmail", {
+            value: value,
+            page: window.location.pathname,
+          });
+        }
+      });
+    });
+</script>
