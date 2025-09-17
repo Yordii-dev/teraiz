@@ -13,6 +13,15 @@ const WhatsAppButton = ({ content }: WhatsAppButtonProps) => {
     const message = encodeURIComponent(CONTENT.message);
     const whatsappUrl = `https://wa.me/${COMPANY_PHONES[0].phone}?text=${message}`;
     window.open(whatsappUrl, "_blank");
+
+    if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
+      (window as any).fbq("trackCustom", "ClickWhatsApp", {
+        phone: COMPANY_PHONES[0].phone,
+        message: CONTENT.message,
+        page: window.location.pathname,
+      });
+      console.log("enviando")
+    }
   };
 
   return (
