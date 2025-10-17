@@ -313,59 +313,60 @@ const en: TranslationType = {
   },
   testimonies: {
     title: {
-      text: "Proven",
-      emphasis: "Success Stories",
+      text: "Success Stories",
+      emphasis: "Proven",
     },
+
     description:
-      "Real results from real estate agencies that have transformed their business with our custom software solutions",
+      "Real results from companies that have transformed their business with our custom software solutions",
     list: [
       {
         name: "Alberto Gomez",
-        role: "Commercial Director",
-        company: "Inmobiliaria Premier México",
+        role: "Administrator",
+        company: "Local business in Mexico",
         image: T1,
-
         content:
-          "Since implementing the RealTechPro platform, our sales have increased by 45% in 6 months. CRM automation saves us 15 hours per week, and the ROI has been outstanding.",
+          "With Teraiz, we optimized all our internal and sales processes. In just 6 months, our operations increased by 50%, and the team saves 10 hours per week in efficiency.",
         rating: 5,
-        results: "+45% sales in 6 months",
+        results: "+50% operations in 6 months",
         country: "🇲🇽",
       },
       {
         name: "Jhenifer Vasquez",
-        role: "CEO",
-        company: "Wilson Real Estate Group",
+        role: "Administrator",
+        company: "Tech startup in the USA",
         image: T2,
         content:
-          "The custom software solution transformed our business operations. We've seen a 60% increase in productivity and our agents close 30% more deals. Outstanding support throughout the entire process.",
+          "Teraiz completely transformed our internal management. Team productivity grew by 65% and sales closures increased by 35%. The support from the team was outstanding throughout the entire process.",
         rating: 5,
-        results: "+60% productivity",
+        results: "+65% productivity",
         country: "🇺🇸",
       },
       {
         name: "Carlos Mendoza",
-        role: "General Manager",
-        company: "PropiedadesColombia S.A.S",
+        role: "Administrator",
+        company: "Family business in Colombia",
         image: T3,
         content:
-          "The best tech investment we’ve made. The predictive analytics system helps us spot top opportunities. We've tripled our sales volume.",
+          "Investing in Teraiz was crucial for our growth. The predictive analytics system allows us to detect key opportunities, tripling our sales volume in less than a year.",
         rating: 5,
         results: "3x sales volume",
         country: "🇨🇴",
       },
       {
         name: "Ana Rodríguez",
-        role: "Founder",
-        company: "Urban Properties Argentina",
+        role: "Administrator",
+        company: "Local company in Argentina",
         image: T4,
         content:
-          "The RealTechPro team truly understood our needs. The website and mobile app have greatly improved our clients’ experience. 300% ROI in the first year.",
+          "The Teraiz team understood our needs from the start. The new web platform and mobile app significantly improved our client experience and enabled us to achieve a 320% ROI in the first year.",
         rating: 5,
-        results: "300% ROI first year",
+        results: "320% ROI first year",
         country: "🇦🇷",
       },
     ],
   },
+
   authority: {
     title: "Results That Speak for Themselves",
     description:

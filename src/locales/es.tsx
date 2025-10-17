@@ -324,55 +324,55 @@ const es: TranslationType = {
     },
 
     description:
-      "Resultados reales de inmobiliarias que han transformado su negocio con nuestras soluciones de software personalizado",
+      "Resultados reales de empresas que han transformado su negocio con nuestras soluciones de software personalizado",
     list: [
       {
         name: "Alberto Gomez",
-        role: "Directora Comercial",
-        company: "Inmobiliaria Premier México",
+        role: "Administrador",
+        company: "Empresa local en México",
         image: T1,
         content:
-          "Desde que implementamos la plataforma de RealTechPro, nuestras ventas aumentaron 45% en 6 meses. La automatización del CRM nos ahorra 15 horas semanales y el ROI ha sido excepcional.",
+          "Con Teraiz, logramos optimizar todos nuestros procesos internos y de ventas. En solo 6 meses aumentamos nuestras operaciones en un 50% y el equipo gana 10 horas semanales en eficiencia.",
         rating: 5,
-        results: "+45% ventas en 6 meses",
+        results: "+50% operaciones en 6 meses",
         country: "🇲🇽",
       },
       {
         name: "Jhenifer Vasquez",
-        role: "CEO",
-        company: "Wilson Real Estate Group",
+        role: "Administrador",
+        company: "Startup tecnológica en EE.UU.",
         image: T2,
         content:
-          "The custom software solution transformed our business operations. We've seen a 60% increase in productivity and our agents close 30% more deals. Outstanding support throughout the entire process.",
+          "La solución de Teraiz revolucionó nuestra gestión interna. La productividad de nuestro equipo creció 65% y los cierres de ventas aumentaron 35%. El soporte del equipo ha sido excepcional en todo momento.",
         rating: 5,
-        results: "+60% productividad",
+        results: "+65% productividad",
         country: "🇺🇸",
       },
       {
         name: "Carlos Mendoza",
-        role: "Gerente General",
-        company: "PropiedadesColombia S.A.S",
+        role: "Administrador",
+        company: "Negocio familiar en Colombia",
         image: T3,
         content:
-          "La mejor inversión tecnológica que hemos hecho. El sistema de analytics predictivos nos ayuda a identificar las mejores oportunidades. Hemos multiplicado por 3 nuestro volumen de ventas.",
+          "Invertir en Teraiz fue decisivo para nuestro crecimiento. El sistema de análisis predictivo nos permite detectar oportunidades clave, logrando triplicar el volumen de ventas en menos de un año.",
         rating: 5,
         results: "3x volumen de ventas",
         country: "🇨🇴",
       },
       {
         name: "Ana Rodríguez",
-        role: "Fundadora",
-        company: "Urban Properties Argentina",
+        role: "Administrador",
+        company: "Compañía local en Argentina",
         image: T4,
-
         content:
-          "El equipo de RealTechPro entendió perfectamente nuestras necesidades. El portal web y la app móvil han mejorado significativamente la experiencia de nuestros clientes. ROI del 300% en el primer año.",
+          "El equipo de Teraiz comprendió nuestras necesidades desde el inicio. La nueva plataforma web y la app móvil mejoraron la experiencia de nuestros clientes y nos permitió alcanzar un ROI de 320% en el primer año.",
         rating: 5,
-        results: "300% ROI primer año",
+        results: "320% ROI primer año",
         country: "🇦🇷",
       },
     ],
   },
+
   authority: {
     title: "Resultados que Hablan por Sí Solos",
     description:
