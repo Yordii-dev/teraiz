@@ -1,18 +1,14 @@
 ---
 import { Mail, Phone } from "lucide-react";
 import Logo from "@/assets/logo-light-s&c.svg?url";
-import {
-  COMPANY_MAIL,
-  COMPANY_PHONES,
-  LINK_SOCIALS_MEDIA,
-} from "@/constants";
+import { COMPANY_MAIL, COMPANY_PHONES, LINK_SOCIALS_MEDIA } from "@/constants";
 import { getContent, getLang } from "@/contexts/PageContext";
 import type { langType } from "@/types/languages";
 const CONTENT = getContent().footer;
 const LANG = getLang() as langType;
 ---
 
-<!-- <footer class="bg-brand-primary text-white">
+<!-- <footer class=" bg-brand-primary text-white">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <div class="lg:col-span-1">
@@ -124,7 +120,6 @@ const LANG = getLang() as langType;
 <footer class="bg-brand-primary text-white">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="py-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-
       {/* Marca */}
       <div>
         <img src={Logo} alt="Teraiz Consultora" class="h-10 mb-4" />
@@ -149,17 +144,19 @@ const LANG = getLang() as langType;
             </a>
           </div>
 
-          {COMPANY_PHONES.map((item) => (
-            <div class="flex items-center">
-              <Phone className="h-4 w-4 text-brand-secondary mr-3" />
-              <a
-                href={`tel:${item.phone}`}
-                class="text-white/80 hover:text-brand-secondary transition-colors"
-              >
-                {item.text}
-              </a>
-            </div>
-          ))}
+          {
+            COMPANY_PHONES.map((item) => (
+              <div class="flex items-center">
+                <Phone className="h-4 w-4 text-brand-secondary mr-3" />
+                <a
+                  href={`tel:${item.phone}`}
+                  class="text-white/80 hover:text-brand-secondary transition-colors"
+                >
+                  {item.text}
+                </a>
+              </div>
+            ))
+          }
         </div>
       </div>
 
@@ -185,7 +182,6 @@ const LANG = getLang() as langType;
           </a>
         </div>
       </div>
-
     </div>
 
     {/* Bottom */}
