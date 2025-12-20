@@ -28,12 +28,12 @@ export function LanguageAndHamburger({ content, lang, hideNav }: Props) {
 
   return (
     <>
-      <div className="hidden md:flex items-center space-x-4">
+      {/* <div className="hidden md:flex items-center space-x-4">
         <LanguageSelector langProp={lang} />
-      </div>
+      </div> */}
 
       <div className="md:hidden flex items-center space-x-2">
-        <LanguageSelector langProp={lang} />
+        {/* <LanguageSelector langProp={lang} /> */}
 
         {/* Mobile Hamburger */}
         {!hideNav && (

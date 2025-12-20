@@ -13,6 +13,7 @@ import Cta from "@/components/Cta.astro";
 import Footer from "@/components/Footer.astro";
 import GoogleAnalytics from "@/components/GoogleAnalytics.astro";
 import MetaPixel from "@/components/MetaPixel.astro";
+import ProjectGallery from "@/components/ProjectGallery";
 
 const lang = getLang();
 const content = getContent();
@@ -113,13 +114,14 @@ const content = getContent();
   </head>
 
   <body>
-    <div class="min-h-screen">
+    <div class="min-h-dvh">
       <Header />
       <Hero />
-      <Services />
+      <ProjectGallery client:load />
       <Testimonials />
-      <MapSection />
-      <ObjectionsSection />
+      <!--<Services /> -->
+      <!-- <MapSection /> -->
+      <!--<ObjectionsSection />-->
       <FAQSection />
       <Cta />
       <Footer />

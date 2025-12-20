@@ -1,8 +1,8 @@
 ---
 import { getContent, getLang } from "@/contexts/PageContext";
 import type { langType } from "@/types/languages";
-import { RESULTS_HERO } from "@/constants";
 import BtnCta from "./BtnCta.astro";
+import bgHero from "@/assets/bg-hero.jpg";
 
 const CONTENT = getContent().hero;
 const LANG = getLang() as langType;
@@ -10,143 +10,61 @@ const LANG = getLang() as langType;
 
 <section
   id="home"
-  class="relative z-0 min-h-screen lg:h-screen flex items-center lg:justify-center bg-gradient-to-br from-brand-primary via-brand-primary/95 to-brand-primary/90"
+  class="relative min-h-dvh flex items-center justify-center text-white overflow-hidden"
 >
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid lg:grid-cols-2 gap-0 lg:gap-16 items-center lg:h-screen">
-        <div
-          class="flex flex-col justify-center text-center lg:text-left text-white min-h-screen lg:min-h-0"
-        >
-          <h1
-            class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8"
-          >
-            {CONTENT.title.text}
-            <span class="text-brand-secondary block mt-2">
-              {CONTENT.title.emphasis}
-            </span>
-          </h1>
-          <p class="text-xl sm:text-2xl text-white/90 leading-relaxed mb-10">
-            {CONTENT.description.text}
-            <strong class="text-brand-secondary">
-              {CONTENT.description.emphasis}
-            </strong>
-          </p>
-          <!-- {CONTENT.description} -->
-          {/* CTA */}
-          <div class="space-y-6">
-            <BtnCta
-              lang={LANG}
-              textBtn={CONTENT.ctaText}
-              sizeBtn="lg"
-              classBtn="bg-brand-secondary hover:bg-brand-secondary/90 text-brand-primary px-12 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 group"
-              visibleIcon={true}
-            />
+  <!-- Background image -->
+  <div class="absolute inset-0 z-0">
+    <img
+      src={bgHero.src}
+      alt="Teraiz Software Consulting"
+      class="w-full h-full object-cover"
+    />
 
-            <p class="text-sm text-white/70 max-w-md mx-auto lg:mx-0">
-              {CONTENT.socialsProof}
-            </p>
-          </div>
-        </div>
+    <!-- Overlay -->
+    <!-- <div class="absolute inset-0 bg-brand-primary/85"></div> -->
 
-        {/* Trust & Results Column */}
-        <div class="space-y-8 mt-0 lg:mt-10">
-          {/* Results Stats */}
-          <div
-            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
-          >
-            <h3 class="text-white text-xl font-semibold mb-6 text-center">
-              {CONTENT.results.title}
-            </h3>
-            <div class="grid grid-cols-2 gap-6">
-              <div class="text-center">
-                <div class="text-4xl font-bold text-brand-secondary mb-2">
-                  {RESULTS_HERO.years}
-                </div>
-                <p class="text-sm text-white/80">
-                  {CONTENT.results.years}
-                </p>
-              </div>
-              <div class="text-center">
-                <div class="text-4xl font-bold text-brand-secondary mb-2">
-                  {RESULTS_HERO.projects}
-                </div>
-                <p class="text-sm text-white/80">
-                  {CONTENT.results.projects}
-                </p>
-              </div>
-              <div class="text-center">
-                <div class="text-4xl font-bold text-brand-secondary mb-2">
-                  {RESULTS_HERO.clients}
-                </div>
-                <p class="text-sm text-white/80">
-                  {CONTENT.results.clients}
-                </p>
-              </div>
-              <div class="text-center">
-                <div class="text-4xl font-bold text-brand-secondary mb-2">
-                  {RESULTS_HERO.satisfaction}
-                </div>
-                <p class="text-sm text-white/80">
-                  {CONTENT.results.satisfaction}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Services Icons */}
-          {
-            /* <div class="grid grid-cols-3 gap-4">
-                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
-                  <Building2 class="h-10 w-10 text-brand-secondary mx-auto mb-3" />
-                  <p class="text-white/90 text-sm font-medium">
-                    Desarrollo
-                    <br />
-                    Personalizado
-                  </p>
-                </div>
-                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
-                  <Users class="h-10 w-10 text-brand-secondary mx-auto mb-3" />
-                  <p class="text-white/90 text-sm font-medium">
-                    Soporte
-                    <br />
-                    Especializado
-                  </p>
-                </div>
-                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
-                  <Award class="h-10 w-10 text-brand-secondary mx-auto mb-3" />
-                  <p class="text-white/90 text-sm font-medium">
-                    Calidad
-                    <br />
-                    Garantizada
-                  </p>
-                </div>
-              </div> */
-          }
-
-          {/* Trust Indicator */}
-          <div
-            class="bg-gradient-to-r from-brand-secondary/10 to-brand-secondary/5 backdrop-blur-sm rounded-xl p-6 border border-brand-secondary/20 text-center"
-          >
-            <p class="text-brand-secondary font-bold text-lg mb-2">
-              🏆{CONTENT.results.partner.title}
-            </p>
-            <p class="text-white/90 text-sm leading-relaxed">
-              {CONTENT.results.partner.description}
-            </p>
-          </div>
-          <br />
-        </div>
-      </div>
+    <!-- Gradiente -->
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-brand-primary/90 via-brand-primary/80 to-brand-primary/90"
+    >
     </div>
   </div>
 
-  <div class="absolute inset-0 overflow-hidden pointer-events-none z-[-1]">
-    <div
-      class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-brand-secondary/10"
-    >
-    </div>
-    <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-white/5">
+  <!-- Content -->
+  <div class="relative z-10 container mx-auto px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <!-- Title -->
+      <h1
+        class="font-display font-semibold leading-tight
+           text-4xl sm:text-4xl md:text-5xl lg:text-6xl"
+      >
+        Acompañamiento técnico y
+        <span class="block text-brand-secondary sm:inline">
+          software a medida
+        </span>
+      </h1>
+
+      <!-- Description -->
+      <p class="mt-8 text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+        Transformamos ideas en sistemas escalables. De la estrategia al código
+        en producción.
+      </p>
+
+      <!-- CTA -->
+      <div class="mt-12">
+        <BtnCta
+          lang={LANG}
+          textBtn="Solicitar consulta gratuita"
+          sizeBtn="lg"
+          classBtn="bg-brand-secondary hover:bg-brand-secondary/90 text-brand-primary px-10 py-4 text-lg font-semibold shadow-xl transition-all"
+          visibleIcon={true}
+        />
+      </div>
+
+      <!-- Trust -->
+      <p class="mt-8 text-sm text-white/70">
+        Análisis inicial gratuito · 20 minutos · Sin compromiso
+      </p>
     </div>
   </div>
 </section>

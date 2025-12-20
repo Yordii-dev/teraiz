@@ -23,24 +23,23 @@ import T4 from "@/assets/testimonies/t4.png?url";
 const es: TranslationType = {
   page: {
     index: {
-      title: `Software Inmobiliario | ${COMPANY_NAME}`,
+      title: `Consultoría y Desarrollo de Software | ${COMPANY_NAME}`,
       metas: {
-        description:
-          "${COMPANY_NAME} desarrolla software a medida para inmobiliarias. Digitaliza tu negocio con soluciones PropTech, CRM inmobiliario, automatización de procesos y plataformas personalizadas.",
+        description: `${COMPANY_NAME} brinda asesoría y desarrollo de sistemas para empresas y emprendedores. Convertimos ideas y proyectos en plataformas funcionales y escalables.`,
         keywords:
-          "software inmobiliario, CRM inmobiliario, desarrollo de software a medida, digitalización de inmobiliarias, PropTech, automatización inmobiliaria, sistema para inmobiliarias",
+          "consultoría de software, desarrollo de sistemas a medida, asesoría tecnológica, desarrollo web, software empresarial, transformación digital",
 
         toShared: {
           openGraph: {
-            title: "Software Inmobiliario a Medida | ${COMPANY_NAME}",
+            title: `Consultoría de Software | ${COMPANY_NAME}`,
             description:
-              "Digitaliza tu empresa inmobiliaria con soluciones de software personalizadas, CRM y automatización.",
+              "Asesoría y desarrollo de sistemas a medida para empresas y emprendedores.",
           },
 
           twitter: {
-            title: "Software Inmobiliario a Medida | ${COMPANY_NAME}",
+            title: `Consultoría de Software | ${COMPANY_NAME}`,
             description:
-              "Digitaliza tu empresa inmobiliaria con soluciones de software personalizadas, CRM y automatización.",
+              "Asesoría y desarrollo de sistemas a medida para empresas y emprendedores.",
           },
         },
       },
@@ -119,23 +118,23 @@ const es: TranslationType = {
       {
         id: 2,
         href: HREF_HEADER.services,
-        name: "Servicios",
+        name: "Sistemas",
       },
       {
         id: 3,
         href: HREF_HEADER.testimonies,
         name: "Testimonios",
       },
-      {
-        id: 4,
-        href: HREF_HEADER.presence,
-        name: "Presencia",
-      },
-      {
-        id: 5,
-        href: HREF_HEADER.weGetIt,
-        name: "Te entendemos",
-      },
+      // {
+      //   id: 4,
+      //   href: HREF_HEADER.presence,
+      //   name: "Presencia",
+      // },
+      // {
+      //   id: 5,
+      //   href: HREF_HEADER.weGetIt,
+      //   name: "Te entendemos",
+      // },
       {
         id: 6,
         href: HREF_HEADER.faqs,
@@ -151,24 +150,23 @@ const es: TranslationType = {
   },
 
   hero: {
-    badge: "Desarrollo de Software Empresarial",
+    badge: "Consultoría y Desarrollo de Software",
     title: {
-      text: "Software para",
-      emphasis: "Inmobiliarias Exitosas",
+      text: "Desarrollamos",
+      emphasis: "Sistemas que Funcionan",
     },
-
     description: {
-      text: "Software inmobiliario para",
-      emphasis: "crecer y automatizar tu negocio.",
+      text: "Asesoramos y construimos",
+      emphasis: "proyectos digitales reales, no promesas.",
     },
     checks: [
-      "CRM personalizado con automatización de leads y seguimiento inteligente",
-      "Integraciones con portales inmobiliarios y herramientas existentes",
-      "Soporte técnico especializado y mantenimiento continuo",
+      "Asesoría técnica para ideas y proyectos en construcción",
+      "Desarrollo de sistemas y plataformas a medida",
+      "Acompañamiento técnico de inicio a fin",
     ],
-    ctaText: "Habla con un experto",
-    socialsProof:
-      "Análisis gratuito de procesos • Propuesta técnica personalizada • Sin compromiso",
+    ctaText: "Solicitar asesoría",
+    socialsProof: "Análisis inicial • Propuesta clara • Sin compromiso",
+
     results: {
       title: "Nuestros Resultados",
       years: "Años Desarrollando Software",
@@ -183,9 +181,10 @@ const es: TranslationType = {
     },
   },
   services: {
-    title: "Servicios Especializados",
+    title: "Nuestros Servicios",
     description:
-      "Soluciones completas de software para cada necesidad de tu inmobiliaria, respaldadas por más de 8 años de experiencia en el sector.",
+      "Soluciones tecnológicas adaptadas a la etapa y necesidad de cada proyecto.",
+
     list: [
       {
         icon: Code,
@@ -416,52 +415,27 @@ const es: TranslationType = {
   },
   faqs: {
     title: "Preguntas Frecuentes",
-    description:
-      "Respuestas a las preguntas más comunes sobre nuestros servicios de desarrollo de software inmobiliario.",
+    description: "Dudas comunes antes de trabajar con Teraiz Consultora.",
     list: [
       {
-        question: "¿Cuánto tiempo toma desarrollar una solución personalizada?",
+        question: "¿Qué servicios ofrece Teraiz Consultora?",
         answer:
-          "El tiempo varía según la complejidad, pero típicamente: Sitios web básicos (4-6 semanas), CRM personalizado (8-12 semanas), Apps móviles (10-16 semanas). Siempre entregamos prototipos funcionales en las primeras 2-3 semanas.",
-      },
-      {
-        question: "¿Qué tipo de soporte ofrecen después del lanzamiento?",
-        answer:
-          "Ofrecemos soporte técnico 24/7, actualizaciones gratuitas durante el primer año, capacitación continua para tu equipo, y un gerente de cuenta dedicado. También incluimos monitoreo proactivo y backups automáticos.",
-      },
-      {
-        question: "¿Pueden integrar con nuestros sistemas actuales?",
-        answer:
-          "Sí, somos expertos en integraciones. Conectamos con MLS, CRMs como Salesforce, sistemas contables como QuickBooks, plataformas de email marketing, redes sociales, y más de 50 herramientas comunes en el sector inmobiliario.",
-      },
-      {
-        question: "¿Cómo garantizan la seguridad de nuestros datos?",
-        answer:
-          "Implementamos encriptación SSL/TLS, backups automáticos diarios, autenticación de dos factores, cumplimiento con GDPR y regulaciones locales, hosting en servidores certificados, y auditorías de seguridad regulares.",
-      },
-      {
-        question: "¿Qué pasa si necesitamos cambios después del desarrollo?",
-        answer:
-          "Los primeros 3 meses incluyen ajustes menores sin costo. Para cambios mayores, ofrecemos planes de mantenimiento flexibles. Nuestro proceso ágil permite adaptaciones rápidas según evolucionen tus necesidades de negocio.",
-      },
-      {
-        question: "¿Ofrecen capacitación para nuestro equipo?",
-        answer:
-          "Sí, incluimos capacitación completa: sesiones presenciales o virtuales, manuales detallados, videos tutoriales, y sesiones de repaso. Continuamos el soporte hasta que tu equipo esté 100% cómodo con la nueva tecnología.",
-      },
-      {
-        question: "¿Cuál es el costo aproximado de una solución personalizada?",
-        answer:
-          "Los costos varían según las funcionalidades requeridas. Sitios web desde $5,000 USD, CRM personalizado desde $15,000 USD, Apps móviles desde $20,000 USD. Ofrecemos planes de pago flexibles y financiamiento disponible.",
+          "Brindamos consultoría y asesoría tecnológica, además del desarrollo de sistemas a medida, plataformas SaaS y aplicaciones móviles.",
       },
       {
         question:
-          "¿Trabajan con inmobiliarias pequeñas o solo grandes empresas?",
+          "¿Pueden ayudarnos si solo tenemos una idea o dudas técnicas?",
         answer:
-          "Trabajamos con inmobiliarias de todos los tamaños. Tenemos soluciones escalables desde agentes independientes hasta grandes corporativos. Nuestro enfoque se adapta al presupuesto y necesidades específicas de cada cliente.",
+          "Sí. Acompañamos desde la etapa de idea, validamos la viabilidad técnica y definimos la mejor solución antes de desarrollar.",
+      },
+      {
+        question: "¿Cómo es el primer contacto y el proceso inicial?",
+        answer:
+          "Agendamos una conversación gratuita, entendemos tu necesidad y te proponemos una ruta clara: asesoría, consultoría o desarrollo, según tu caso.",
       },
     ],
   },
+
   cta: {
     title: {
       text: "Comienza tu transformación",

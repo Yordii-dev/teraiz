@@ -10,7 +10,7 @@ const CONTENT = getContent().cta;
 const LANG = getLang() as langType;
 ---
 
-<section
+<!-- <section
   id="cta"
   class="py-20 bg-gradient-to-br from-brand-primary via-brand-primary to-brand-primary/90 text-white relative overflow-hidden"
 >
@@ -66,6 +66,47 @@ const LANG = getLang() as langType;
 
   {/* Background Elements */}
   <div class="absolute inset-0 overflow-hidden">
+    <div
+      class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-brand-secondary/10"
+    >
+    </div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-white/5">
+    </div>
+  </div>
+</section> -->
+<section
+  id="cta"
+  class="py-24 bg-brand-primary text-white relative overflow-hidden"
+>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2
+        class="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 leading-tight"
+      >
+        ¿Necesitas validar o construir un sistema?
+      </h2>
+
+      <p class="text-lg sm:text-xl text-white/85 mb-10 leading-relaxed">
+        Analizamos tu contexto y definimos si conviene asesoría técnica,
+        consultoría o desarrollo de software a medida.
+      </p>
+
+      <BtnCta
+        lang={LANG}
+        textBtn="Agendar conversación técnica"
+        sizeBtn="lg"
+        classBtn="bg-brand-secondary hover:bg-brand-secondary/90 text-brand-primary px-12 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
+        visibleIcon={true}
+      />
+
+      <p class="text-sm text-white/65 mt-6">
+        Primera conversación · 20 min · Sin compromiso
+      </p>
+    </div>
+  </div>
+
+  {/* Background Elements */}
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
     <div
       class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-brand-secondary/10"
     >

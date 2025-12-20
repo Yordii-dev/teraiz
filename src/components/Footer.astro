@@ -1,9 +1,7 @@
 ---
-import { Mail, Phone, MapPin } from "lucide-react";
-import Logo from "@/assets/logo-light.svg?url";
+import { Mail, Phone } from "lucide-react";
+import Logo from "@/assets/logo-light-s&c.svg?url";
 import {
-  COMPANY_ADDRESS,
-  COMPANY_ADDRESS_COORDS,
   COMPANY_MAIL,
   COMPANY_PHONES,
   LINK_SOCIALS_MEDIA,
@@ -14,7 +12,7 @@ const CONTENT = getContent().footer;
 const LANG = getLang() as langType;
 ---
 
-<footer class="bg-brand-primary text-white">
+<!-- <footer class="bg-brand-primary text-white">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <div class="lg:col-span-1">
@@ -120,6 +118,81 @@ const LANG = getLang() as langType;
           {CONTENT.copyright}
         </p>
       </div>
+    </div>
+  </div>
+</footer> -->
+<footer class="bg-brand-primary text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="py-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+      {/* Marca */}
+      <div>
+        <img src={Logo} alt="Teraiz Consultora" class="h-10 mb-4" />
+        <p class="text-white/80 text-sm leading-relaxed max-w-sm">
+          Consultoría, asesoría y desarrollo de soluciones digitales a medida
+          para negocios que quieren crecer con tecnología.
+        </p>
+      </div>
+
+      {/* Contacto */}
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+
+        <div class="space-y-3 text-sm">
+          <div class="flex items-center">
+            <Mail className="h-4 w-4 text-brand-secondary mr-3" />
+            <a
+              href={`mailto:${COMPANY_MAIL}`}
+              class="text-white/80 hover:text-brand-secondary transition-colors"
+            >
+              {COMPANY_MAIL}
+            </a>
+          </div>
+
+          {COMPANY_PHONES.map((item) => (
+            <div class="flex items-center">
+              <Phone className="h-4 w-4 text-brand-secondary mr-3" />
+              <a
+                href={`tel:${item.phone}`}
+                class="text-white/80 hover:text-brand-secondary transition-colors"
+              >
+                {item.text}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Redes */}
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+        <div class="flex space-x-4">
+          <a
+            href={LINK_SOCIALS_MEDIA.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-brand-secondary transition-colors"
+          >
+            <span class="text-sm font-bold">in</span>
+          </a>
+          <a
+            href={LINK_SOCIALS_MEDIA.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-brand-secondary transition-colors"
+          >
+            <span class="text-sm font-bold">fb</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    {/* Bottom */}
+    <div class="border-t border-white/10 py-6 text-center">
+      <p class="text-white/60 text-sm">
+        © {new Date().getFullYear()} Teraiz Consultora. Todos los derechos reservados.
+      </p>
     </div>
   </div>
 </footer>
