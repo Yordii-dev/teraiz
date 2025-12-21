@@ -43,7 +43,7 @@ const ProjectGallery = () => {
           </h1>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">
             Plataformas y sistemas en producción desarrollados durante los
-            últimos 10 meses de 2025, como parte de procesos reales de negocio.
+            últimos 10 meses de 2025.
           </p>
         </div>
 

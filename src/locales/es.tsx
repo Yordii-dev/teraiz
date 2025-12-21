@@ -15,10 +15,10 @@ import {
 } from "lucide-react";
 import type { TranslationType } from "@/types/Translations";
 import { COMPANY_NAME, HREF_HEADER } from "@/constants";
+import EmersonImg from "@/assets/testimonies/emerson.webp?url";
 import T1 from "@/assets/testimonies/t1.jpg?url";
-import T2 from "@/assets/testimonies/t2.jpg?url";
-import T3 from "@/assets/testimonies/t3.jpg?url";
-import T4 from "@/assets/testimonies/t4.png?url";
+import ApalImg from "@/assets/testimonies/apal.webp?url";
+import LotizaImg from "@/assets/testimonies/lotiza.webp?url";
 
 const es: TranslationType = {
   page: {
@@ -326,48 +326,48 @@ const es: TranslationType = {
       "Resultados reales de empresas que han transformado su negocio con nuestras soluciones de software personalizado",
     list: [
       {
-        name: "Alberto Gomez",
-        role: "Administrador",
-        company: "Empresa local en México",
+        name: "Emerson",
+        role: "Emprendedor",
+        company: "El Cruce – Taller Mecánico",
+        image: EmersonImg,
+        content:
+          "El sistema de Teraiz transformó la gestión de nuestro taller. Ahora controlamos reparaciones, repuestos, tiempos y costos en un solo lugar. Redujimos errores operativos y mejoramos significativamente la atención al cliente.",
+        rating: 5,
+        results: "Control total del taller",
+        country: "🇵🇪",
+      },
+      {
+        name: "Ana",
+        role: "Universitaria / RRHH",
+        company: "Hermos – Empresa Industrial",
         image: T1,
         content:
-          "Con Teraiz, logramos optimizar todos nuestros procesos internos y de ventas. En solo 6 meses aumentamos nuestras operaciones en un 50% y el equipo gana 10 horas semanales en eficiencia.",
+          "La plataforma de gestión vacacional nos permitió automatizar solicitudes, validar antigüedad y llevar un control claro por empleado. El flujo de aprobación por correo facilitó el trabajo tanto para RRHH como para los jefes directos.",
         rating: 5,
-        results: "+50% operaciones en 6 meses",
-        country: "🇲🇽",
+        results: "Procesos de RRHH automatizados",
+        country: "🇵🇪",
       },
       {
-        name: "Jhenifer Vasquez",
-        role: "Administrador",
-        company: "Startup tecnológica en EE.UU.",
-        image: T2,
+        name: "Cristian",
+        role: "Gerente de Operaciones",
+        company: "Empresa R&R – ApalWorkflow",
+        image: ApalImg,
         content:
-          "La solución de Teraiz revolucionó nuestra gestión interna. La productividad de nuestro equipo creció 65% y los cierres de ventas aumentaron 35%. El soporte del equipo ha sido excepcional en todo momento.",
+          "Con ApalWorkflow logramos centralizar la logística administrativa y la operación en campo. La app para operadores y el panel administrativo nos dieron trazabilidad completa de rutas, pedidos y estados en tiempo real.",
         rating: 5,
-        results: "+65% productividad",
-        country: "🇺🇸",
+        results: "Logística en tiempo real",
+        country: "🇵🇪",
       },
       {
-        name: "Carlos Mendoza",
-        role: "Administrador",
-        company: "Negocio familiar en Colombia",
-        image: T3,
+        name: "Inmobiliaria Lotiza",
+        role: "Dirección Comercial",
+        company: "Lotiza – Plataforma Inmobiliaria",
+        image: LotizaImg,
         content:
-          "Invertir en Teraiz fue decisivo para nuestro crecimiento. El sistema de análisis predictivo nos permite detectar oportunidades clave, logrando triplicar el volumen de ventas en menos de un año.",
+          "El SaaS multiempresa desarrollado por Teraiz nos permitió gestionar proyectos de lotización, ventas, contratos y recordatorios automáticos. Hoy contamos con un ecosistema digital completo para el sector inmobiliario.",
         rating: 5,
-        results: "3x volumen de ventas",
-        country: "🇨🇴",
-      },
-      {
-        name: "Ana Rodríguez",
-        role: "Administrador",
-        company: "Compañía local en Argentina",
-        image: T4,
-        content:
-          "El equipo de Teraiz comprendió nuestras necesidades desde el inicio. La nueva plataforma web y la app móvil mejoraron la experiencia de nuestros clientes y nos permitió alcanzar un ROI de 320% en el primer año.",
-        rating: 5,
-        results: "320% ROI primer año",
-        country: "🇦🇷",
+        results: "Gestión inmobiliaria integral",
+        country: "🇵🇪",
       },
     ],
   },

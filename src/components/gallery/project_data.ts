@@ -85,59 +85,65 @@ export const projects: Project[] = [
   // Gestión & Operaciones
   {
     id: 1,
-    title: "Sistema para estacionamientos y vehículos",
+    title: "Sistema de Gestión de Estacionamientos",
     category_id: 2,
     cover: PARQUEO1,
     images: [PARQUEO1, PARQUEO2, PARQUEO3, PARQUEO4, PARQUEO5, PARQUEO6],
-    description: "Sistema para el control de ingresos y salidas...",
+    description:
+      "Plataforma para el control integral de estacionamientos: registro de entradas y salidas de vehículos, planes prepago, control de tiempos, pausas, reubicación de vehículos y gestión operativa en tiempo real.",
   },
 
   {
     id: 2,
-    title: "Sistema para reparación de vehículos",
+    title: "Sistema de Gestión para Talleres Mecánicos",
     category_id: 2,
     cover: EL_CRUCE1,
     images: [EL_CRUCE1, EL_CRUCE2, EL_CRUCE3, EL_CRUCE4, EL_CRUCE5, EL_CRUCE6],
-    description: "Sistema para el control de ingresos y salidas...",
+    description:
+      "Sistema para talleres de reparación vehicular que permite registrar vehículos, diagnósticos, reparaciones, repuestos, costos de mano de obra, venta de aceites y servicios de mantenimiento.",
   },
 
   {
     id: 3,
-    title: "Sistema para gestión de reparación de equipos PC",
+    title: "Sistema de Gestión de Reparación de Equipos PC",
     category_id: 2,
     cover: COMPUTE_MANAGER1,
     images: [COMPUTE_MANAGER1, COMPUTE_MANAGER2, COMPUTE_MANAGER3],
-    description: "Sistema para el control de ingresos y salidas...",
+    description:
+      "Sistema minimalista para el registro de equipos y averías, diagnóstico técnico, seguimiento de reparaciones y control del proceso de solución.",
   },
   {
     id: 4,
-    title: "Sistema de Gestión Municipal",
+    title: "Sistema de Gestión Municipal (Licitaciones Públicas)",
     category_id: 2,
     cover: CLARIDAD1,
     images: [CLARIDAD1, CLARIDAD2, CLARIDAD3, CLARIDAD4, CLARIDAD5],
-    description: "Sistema para el control de ingresos y salidas...",
+    description:
+      "Plataforma para la gestión de proyectos de licitación pública, control de presupuestos presentados por los concursantes y seguimiento del proceso de adjudicación.",
   },
   {
     id: 5,
-    title: "Sistema de Gestión vacacional para empleados",
+    title: "Sistema de Gestión Vacacional de Empleados",
     category_id: 2,
     cover: HERMOS1,
     images: [HERMOS1, HERMOS2, HERMOS3],
-    description: "Sistema para el control de ingresos y salidas...",
+    description:
+      "Sistema enfocado en la gestión de vacaciones del personal: cálculo automático de antigüedad, control de días disponibles por año, registro de solicitudes y notificaciones automáticas por correo a los responsables.",
   },
 
   // SaaS & Plataformas
   {
     id: 6,
-    title: "Plataforma de Gestión de Lotizaciones",
+    title: "Plataforma SaaS de Gestión de Lotizaciones",
     category_id: 3,
     cover: LOTIZA1,
     images: [LOTIZA1],
-    description: "SaaS para la administración integral de lotizaciones...",
+    description:
+      "Plataforma multiempresa para inmobiliarias: gestión de proyectos de lotización, ventas, contratos, recordatorios automáticos vía WhatsApp, portal público de venta de lotes y landing pages personalizadas.",
   },
   {
     id: 7,
-    title: "Sistema para logística de entregas mayoristas",
+    title: "Sistema de Logística de Entregas Mayoristas (Administrativo)",
     category_id: 3,
     cover: APALWORKFLOW_GENERAL1,
     images: [
@@ -146,13 +152,14 @@ export const projects: Project[] = [
       APALWORKFLOW_GENERAL3,
       APALWORKFLOW_GENERAL4,
     ],
-    description: "SaaS para la administración integral de lotizaciones...",
+    description:
+      "Sistema administrativo para la gestión de logística y entregas: asignación de pedidos, control de rutas, seguimiento en tiempo real, carga masiva desde Excel, estadísticas y asignación de vehículos y operadores.",
   },
 
   // Aplicaciones móviles
   {
     id: 8,
-    title: "App móvil “Belleza” (contratación de estilistas, maquillaje, etc.)",
+    title: "App móvil de Servicios de Belleza",
     category_id: 4,
     cover: BELLEZA1,
     images: [
@@ -164,12 +171,13 @@ export const projects: Project[] = [
       BELLEZA6,
       BELLEZA7,
     ],
-    description: "Sistema para el control de ingresos y salidas...",
+    description:
+      "Aplicación móvil para profesionales del sector estético: contratación de estilistas, maquilladores y otros servicios de belleza bajo demanda.",
   },
 
   {
     id: 9,
-    title: "App móvil inmobiliaria (aprendizaje de real estate)",
+    title: "App móvil de Educación Inmobiliaria",
     category_id: 4,
     cover: RAIZ_BRAIN1,
     images: [
@@ -184,12 +192,13 @@ export const projects: Project[] = [
       RAIZ_BRAIN9,
       RAIZ_BRAIN10,
     ],
-    description: "Sistema para el control de ingresos y salidas...",
+    description:
+      "Plataforma educativa móvil para aprender conceptos clave del real estate, con lecciones cortas y prácticas al final de cada módulo.",
   },
 
   {
     id: 10,
-    title: "Sistema para logística de entregas mayoristas",
+    title: "App móvil de Logística para Operadores",
     category_id: 4,
     cover: APALWORKFLOW_MANAGE1,
     images: [
@@ -201,6 +210,7 @@ export const projects: Project[] = [
       APALWORKFLOW_MANAGE6,
       APALWORKFLOW_MANAGE7,
     ],
-    description: "Sistema para el control de ingresos y salidas...",
+    description:
+      "Aplicación móvil para conductores y operadores: visualización de rutas optimizadas en mapa, gestión de entregas, actualización de estados de pedidos y comunicación directa con el área administrativa.",
   },
 ];
