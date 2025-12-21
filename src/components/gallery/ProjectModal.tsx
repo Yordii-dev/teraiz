@@ -2,6 +2,7 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import type { ImageMetadata } from "astro";
 import type { Project } from "@/types/project";
+import { categories } from "./project_data";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -62,15 +63,18 @@ const ProjectModal = ({
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/60 backdrop-blur-md" />
 
-      {/* Close */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 md:top-8 md:right-8 w-12 h-12 rounded-full
-               flex items-center justify-center z-[101] text-white"
+        className="
+    absolute top-4 right-4 md:top-8 md:right-8
+    w-12 h-12 flex items-center justify-center
+    z-[101]
+    text-gray-900 md:text-white
+    drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] md:drop-shadow-none
+  "
       >
         <X className="w-6 h-6" />
       </button>
-
       <button
         onClick={(e) => {
           e.stopPropagation();
@@ -78,21 +82,28 @@ const ProjectModal = ({
             (prev) => (prev - 1 + project.images.length) % project.images.length
           );
         }}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12
-             rounded-full flex items-center justify-center
-             z-[101] text-white"
+        className="
+    absolute left-4 md:left-8 top-1/2 -translate-y-1/2
+    w-12 h-12 flex items-center justify-center
+    z-[101]
+    text-gray-900 md:text-white
+    drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] md:drop-shadow-none
+  "
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
-
       <button
         onClick={(e) => {
           e.stopPropagation();
           setActiveImageIndex((prev) => (prev + 1) % project.images.length);
         }}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12
-             rounded-full flex items-center justify-center
-             z-[101] text-white"
+        className="
+    absolute right-4 md:right-8 top-1/2 -translate-y-1/2
+    w-12 h-12 flex items-center justify-center
+    z-[101]
+    text-gray-900 md:text-white
+    drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] md:drop-shadow-none
+  "
       >
         <ChevronRight className="w-6 h-6" />
       </button>
@@ -104,16 +115,23 @@ const ProjectModal = ({
       >
         <div className="rounded-xl overflow-hidden shadow-hover bg-card">
           {/* Main image */}
-          <img
+          {/* <img
             src={project.images[activeImageIndex].src}
             alt={project.title}
             className="w-full mt-4 max-h-[60vh] object-contain bg-card"
-          />
+          /> */}
+          <div className="mt-4 h-[60vh] flex items-center justify-center bg-card">
+            <img
+              src={project.images[activeImageIndex].src}
+              alt={project.title}
+              className="max-h-full max-w-full object-contain"
+            />
+          </div>
 
           {/* Content */}
           <div className="p-6 md:p-8">
             <span className="text-accent text-sm font-medium tracking-wide uppercase">
-              {project.category_id}
+              {categories.find((cat) => cat.id === project.category_id)?.name}
             </span>
 
             <h2 className="font-display text-2xl md:text-3xl font-semibold mt-2">
