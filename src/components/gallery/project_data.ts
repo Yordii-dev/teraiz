@@ -14,9 +14,6 @@ import APALWORKFLOW_MANAGE1 from "@/assets/gallery/APALWORKFLOW_MANAGE/img1.webp
 import APALWORKFLOW_MANAGE2 from "@/assets/gallery/APALWORKFLOW_MANAGE/img2.webp";
 import APALWORKFLOW_MANAGE3 from "@/assets/gallery/APALWORKFLOW_MANAGE/img3.webp";
 import APALWORKFLOW_MANAGE4 from "@/assets/gallery/APALWORKFLOW_MANAGE/img4.webp";
-import APALWORKFLOW_MANAGE5 from "@/assets/gallery/APALWORKFLOW_MANAGE/img5.webp";
-import APALWORKFLOW_MANAGE6 from "@/assets/gallery/APALWORKFLOW_MANAGE/img6.webp";
-import APALWORKFLOW_MANAGE7 from "@/assets/gallery/APALWORKFLOW_MANAGE/img7.webp";
 
 import BELLEZA_LOGO from "@/assets/gallery/BELLEZA/logo.webp";
 import BELLEZA1 from "@/assets/gallery/BELLEZA/img1.webp";
@@ -184,9 +181,6 @@ export const projects: Project[] = [
       APALWORKFLOW_MANAGE2,
       APALWORKFLOW_MANAGE3,
       APALWORKFLOW_MANAGE4,
-      APALWORKFLOW_MANAGE5,
-      APALWORKFLOW_MANAGE6,
-      APALWORKFLOW_MANAGE7,
     ],
     description:
       "Aplicación móvil para conductores y operadores: visualización de rutas optimizadas en mapa, gestión de entregas, actualización de estados de pedidos y comunicación directa con el área administrativa.",
