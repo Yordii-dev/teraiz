@@ -125,11 +125,11 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
         className="relative max-w-5xl w-full animate-scale-in"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="rounded-xl h-full shadow-hover bg-card overflow-hidden">
+        <div className="flex flex-col bg-primary rounded-xl h-full shadow-hover bg-card overflow-hidden">
           {/* Image */}
           <div className="pt-8"></div>
           <div
-            className="p-4 md:p-0 h-[40vh] md:h-[60vh] flex items-center justify-center"
+            className="flex-grow p-4 md:p-0 h-[40vh] md:h-[60vh] flex items-center justify-center"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
@@ -156,7 +156,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           )}
 
           {/* Info */}
-          <div className="p-4 md:p-8">
+          <div className="flex flex-col justify-end bg-gray-400 p-4 md:p-8">
             <div className="flex justify-between items-center">
               <h2 className="font-display text-2xl md:text-3xl font-semibold">
                 {project.title}
