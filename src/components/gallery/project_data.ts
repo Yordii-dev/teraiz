@@ -80,49 +80,8 @@ export const categories: ProjectCategory[] = [
 ];
 
 export const projects: Project[] = [
-  // Gestión & Operaciones
   {
     id: 1,
-    title: "Sistema de Estacionamientos",
-    category_id: 2,
-    cover: PARQUEO_LOGO,
-    images: [PARQUEO1, PARQUEO2, PARQUEO3, PARQUEO4, PARQUEO5, PARQUEO6],
-    description:
-      "Plataforma para el control integral de estacionamientos: registro de entradas y salidas de vehículos, planes prepago, control de tiempos, pausas, reubicación de vehículos y gestión operativa en tiempo real.",
-  },
-
-  {
-    id: 2,
-    title: "Sistema para Talleres Mecánicos",
-    category_id: 2,
-    cover: EL_CRUCE_LOGO,
-    images: [EL_CRUCE1, EL_CRUCE2, EL_CRUCE3, EL_CRUCE4, EL_CRUCE5, EL_CRUCE6],
-    description:
-      "Sistema para talleres de reparación vehicular que permite registrar vehículos, diagnósticos, reparaciones, repuestos, costos de mano de obra, venta de aceites y servicios de mantenimiento.",
-  },
-
-  {
-    id: 3,
-    title: "Gestión de Vacaciones de Empleados",
-    category_id: 2,
-    cover: HERMOS_LOGO,
-    images: [HERMOS1, HERMOS2, HERMOS3],
-    description:
-      "Sistema enfocado en la gestión de vacaciones del personal: cálculo automático de antigüedad, control de días disponibles por año, registro de solicitudes y notificaciones automáticas por correo a los responsables.",
-  },
-
-  // SaaS & Plataformas
-  {
-    id: 4,
-    title: "Plataforma de Lotizaciones (SaaS)",
-    category_id: 3,
-    cover: LOTIZA_LOGO,
-    images: [LOTIZA1],
-    description:
-      "Plataforma multiempresa para inmobiliarias: gestión de proyectos de lotización, ventas, contratos, recordatorios automáticos vía WhatsApp, portal público de venta de lotes y landing pages personalizadas.",
-  },
-  {
-    id: 5,
     title: "Logística Mayorista – Administración",
     category_id: 3,
     cover: APALWORKFLOW_GENERAL_LOGO,
@@ -136,7 +95,46 @@ export const projects: Project[] = [
       "Sistema administrativo para la gestión de logística y entregas: asignación de pedidos, control de rutas, seguimiento en tiempo real, carga masiva desde Excel, estadísticas y asignación de vehículos y operadores.",
   },
 
-  // Aplicaciones móviles
+  {
+    id: 2,
+    title: "Gestión de Vacaciones de Empleados",
+    category_id: 2,
+    cover: HERMOS_LOGO,
+    images: [HERMOS1, HERMOS2, HERMOS3],
+    description:
+      "Sistema enfocado en la gestión de vacaciones del personal: cálculo automático de antigüedad, control de días disponibles por año, registro de solicitudes y notificaciones automáticas por correo a los responsables.",
+  },
+
+  {
+    id: 3,
+    title: "Plataforma de Lotizaciones (SaaS)",
+    category_id: 3,
+    cover: LOTIZA_LOGO,
+    images: [LOTIZA1],
+    description:
+      "Plataforma multiempresa para inmobiliarias: gestión de proyectos de lotización, ventas, contratos, recordatorios automáticos vía WhatsApp, portal público de venta de lotes y landing pages personalizadas.",
+  },
+
+  {
+    id: 4,
+    title: "Sistema de Estacionamientos",
+    category_id: 2,
+    cover: PARQUEO_LOGO,
+    images: [PARQUEO1, PARQUEO2, PARQUEO3, PARQUEO4, PARQUEO5, PARQUEO6],
+    description:
+      "Plataforma para el control integral de estacionamientos: registro de entradas y salidas de vehículos, planes prepago, control de tiempos, pausas, reubicación de vehículos y gestión operativa en tiempo real.",
+  },
+
+  {
+    id: 5,
+    title: "Sistema para Talleres Mecánicos",
+    category_id: 2,
+    cover: EL_CRUCE_LOGO,
+    images: [EL_CRUCE1, EL_CRUCE2, EL_CRUCE3, EL_CRUCE4, EL_CRUCE5, EL_CRUCE6],
+    description:
+      "Sistema para talleres de reparación vehicular que permite registrar vehículos, diagnósticos, reparaciones, repuestos, costos de mano de obra, venta de aceites y servicios de mantenimiento.",
+  },
+
   {
     id: 6,
     title: "App de Servicios de Belleza",

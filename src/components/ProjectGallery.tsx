@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProjectCard from "./gallery/ProjectCard";
 import ProjectModal from "./gallery/ProjectModal";
 import { categories, projects } from "./gallery/project_data";
@@ -8,11 +8,36 @@ const ProjectGallery = () => {
   const [selectedProject, setSelectedProject] = useState<
     (typeof projects)[0] | null
   >(null);
+  const [showAllMobile, setShowAllMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detectar si es mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // 768px = breakpoint md de Tailwind
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Reset showAllMobile cuando cambia la categoría
+  useEffect(() => {
+    setShowAllMobile(false);
+  }, [selectedCategory]);
 
   const filteredProjects =
     selectedCategory === 1
       ? projects
       : projects.filter((p) => p.category_id === selectedCategory);
+
+  // En desktop muestra todos, en mobile muestra 3 o todos según showAllMobile
+  const visibleProjects =
+    isMobile && !showAllMobile
+      ? filteredProjects.slice(0, 3)
+      : filteredProjects;
 
   const handleNext = () => {
     if (!selectedProject) return;
@@ -84,7 +109,7 @@ const ProjectGallery = () => {
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <ProjectCard
               key={project.id}
               project={project}
@@ -93,6 +118,27 @@ const ProjectGallery = () => {
             />
           ))}
         </div>
+
+        {/* Mobile: Show all button */}
+        {isMobile && filteredProjects.length > 3 && !showAllMobile && (
+          <div className="mt-8 flex justify-center">
+            <button
+              onClick={() => setShowAllMobile(true)}
+              className="
+        text-sm font-medium
+        text-foreground
+        px-6 py-2.5
+        rounded-full
+        border border-gray-300
+        hover:border-gray-400
+        hover:bg-gray-50
+        transition-all
+      "
+            >
+              Mostrar todos los sistemas (+{filteredProjects.length - 3})
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Modal */}
