@@ -103,7 +103,8 @@ const ProjectModal = ({
             alt={project.title}
             className="w-full mt-4 max-h-[60vh] object-contain bg-card"
           /> */}
-          <div className="p-2 md:p-8 bg-transparent h-[40vh] md:h-[60vh] flex items-center justify-center bg-card">
+          <div className="pt-5"></div>
+          <div className="md:p-0 p-2 bg-transparent h-[40vh] md:h-[60vh] flex items-center justify-center bg-card">
             <img
               src={project.images[activeImageIndex].src}
               alt={project.title}
@@ -114,7 +115,7 @@ const ProjectModal = ({
           {/* Content */}
           <div className="p-2 md:p-8">
             <div className="flex justify-between items-center">
-              <h2 className="font-display text-2xl md:text-3xl font-semibold mt-2">
+              <h2 className="font-display text-2xl md:text-3xl font-semibold">
                 {project.title}
               </h2>
               <div className="w-20 h-20 rounded-sm border overflow-hidden bg-white">
