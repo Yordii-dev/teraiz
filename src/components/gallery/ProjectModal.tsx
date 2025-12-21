@@ -1,8 +1,6 @@
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useState } from "react";
-import type { ImageMetadata } from "astro";
+import { useEffect, useState, useRef } from "react";
 import type { Project } from "@/types/project";
-import { categories } from "./project_data";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -11,13 +9,11 @@ interface ProjectModalProps {
   onPrev: () => void;
 }
 
-const ProjectModal = ({
-  project,
-  onClose,
-  onNext,
-  onPrev,
-}: ProjectModalProps) => {
+const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
 
   /* Reset image index when project changes */
   useEffect(() => {
@@ -32,15 +28,11 @@ const ProjectModal = ({
       if (e.key === "Escape") onClose();
 
       if (e.key === "ArrowRight") {
-        // siguiente imagen del mismo proyecto
-        setActiveImageIndex((prev) => (prev + 1) % project.images.length);
+        nextImage();
       }
 
       if (e.key === "ArrowLeft") {
-        // imagen anterior del mismo proyecto
-        setActiveImageIndex(
-          (prev) => (prev - 1 + project.images.length) % project.images.length
-        );
+        prevImage();
       }
     };
 
@@ -51,9 +43,41 @@ const ProjectModal = ({
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [project, onClose]);
+  }, [project]);
 
   if (!project) return null;
+
+  const nextImage = () => {
+    setActiveImageIndex((prev) => (prev + 1) % project.images.length);
+  };
+
+  const prevImage = () => {
+    setActiveImageIndex(
+      (prev) => (prev - 1 + project.images.length) % project.images.length
+    );
+  };
+
+  /* Touch handlers (mobile swipe) */
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+
+    const distance = touchStartX.current - touchEndX.current;
+
+    if (Math.abs(distance) > 50) {
+      distance > 0 ? nextImage() : prevImage();
+    }
+
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
 
   return (
     <div
@@ -63,62 +87,82 @@ const ProjectModal = ({
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/60 backdrop-blur-md" />
 
+      {/* Close */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 md:top-8 md:right-8 w-12 h-12 flex items-center justify-center z-[101] text-gray-900 md:text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] md:drop-shadow-none"
+        className="absolute top-4 right-4 md:top-8 md:right-8 w-12 h-12 flex items-center justify-center z-[101] text-dark md:text-white"
       >
         <X className="w-6 h-6" />
       </button>
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          setActiveImageIndex(
-            (prev) => (prev - 1 + project.images.length) % project.images.length
-          );
-        }}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center z-[101] text-gray-900 md:text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] md:drop-shadow-none"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          setActiveImageIndex((prev) => (prev + 1) % project.images.length);
-        }}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center z-[101] text-gray-900 md:text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] md:drop-shadow-none
-  "
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button>
+
+      {/* Desktop arrows */}
+      {project.images.length > 1 && (
+        <>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              prevImage();
+            }}
+            className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center z-[101] text-white"
+          >
+            <ChevronLeft className="w-7 h-7" />
+          </button>
+
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              nextImage();
+            }}
+            className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center z-[101] text-white"
+          >
+            <ChevronRight className="w-7 h-7" />
+          </button>
+        </>
+      )}
 
       {/* Content */}
       <div
         className="relative max-w-5xl w-full animate-scale-in"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="rounded-xl shadow-hover bg-card">
-          {/* Main image */}
-          {/* <img
-            src={project.images[activeImageIndex].src}
-            alt={project.title}
-            className="w-full mt-4 max-h-[60vh] object-contain bg-card"
-          /> */}
-          <div className="pt-5"></div>
-          <div className="md:p-0 p-2 bg-transparent h-[40vh] md:h-[60vh] flex items-center justify-center bg-card">
+        <div className="rounded-xl h-full shadow-hover bg-card overflow-hidden">
+          {/* Image */}
+          <div className="pt-8"></div>
+          <div
+            className="p-4 md:p-0 h-[40vh] md:h-[60vh] flex items-center justify-center"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             <img
               src={project.images[activeImageIndex].src}
               alt={project.title}
-              className="max-h-full max-w-full object-contain"
+              className="max-h-full max-w-full object-contain transition"
             />
           </div>
 
-          {/* Content */}
-          <div className="p-2 md:p-8">
+          {/* Mobile dots */}
+          {project.images.length > 1 && (
+            <div className="flex justify-center gap-2 mt-3 md:hidden">
+              {project.images.map((_, index) => (
+                <span
+                  key={index}
+                  className={`h-2 w-2 rounded-full transition ${
+                    index === activeImageIndex ? "bg-foreground" : "bg-muted"
+                  }`}
+                />
+              ))}
+            </div>
+          )}
+
+          {/* Info */}
+          <div className="p-4 md:p-8">
             <div className="flex justify-between items-center">
               <h2 className="font-display text-2xl md:text-3xl font-semibold">
                 {project.title}
               </h2>
-              <div className="w-20 h-20 rounded-sm border overflow-hidden bg-white">
+
+              <div className="w-16 h-16 rounded-sm border overflow-hidden bg-white">
                 <img
                   src={project.cover.src}
                   alt={project.title}
@@ -131,20 +175,18 @@ const ProjectModal = ({
               {project.description}
             </p>
 
-            {/* Gallery thumbnails */}
+            {/* Thumbnails (desktop only) */}
             {project.images.length > 1 && (
-              <div className="flex gap-3 mt-6 overflow-x-auto">
+              <div className="hidden md:flex gap-3 mt-6 overflow-x-auto">
                 {project.images.map((img, index) => (
                   <button
                     key={index}
                     onClick={() => setActiveImageIndex(index)}
-                    className={`rounded-lg overflow-hidden border transition
-                      ${
-                        index === activeImageIndex
-                          ? "border-accent"
-                          : "border-transparent opacity-60 hover:opacity-100"
-                      }
-                    `}
+                    className={`rounded-lg overflow-hidden border transition ${
+                      index === activeImageIndex
+                        ? "border-accent"
+                        : "border-transparent opacity-60 hover:opacity-100"
+                    }`}
                   >
                     <img
                       src={img.src}
