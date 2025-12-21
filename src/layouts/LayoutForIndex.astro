@@ -23,10 +23,13 @@ const content = getContent();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{content.page.index.title}</title>
+    <title>{content.seo.index.title}</title>
 
-    <meta name="description" content={content.page.index.metas.description} />
-    <meta name="keywords" content={content.page.index.metas.keywords} />
+    <!-- Navegador priorizara la carga de la img al cargar la pagina -->
+    <link rel="preload" as="image" href="/public/bg-hero.webp" />
+
+    <meta name="description" content={content.seo.index.metas.description} />
+    <meta name="keywords" content={content.seo.index.metas.keywords} />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#002b56" />
 
@@ -51,11 +54,11 @@ const content = getContent();
     />
     <meta
       property="og:title"
-      content={content.page.index.metas.toShared.openGraph.title}
+      content={content.seo.index.metas.toShared.openGraph.title}
     />
     <meta
       property="og:description"
-      content={content.page.index.metas.toShared.openGraph.description}
+      content={content.seo.index.metas.toShared.openGraph.description}
     />
     <meta property="og:image" content="https://teraiz.com/og-image.jpg" />
 
@@ -69,11 +72,11 @@ const content = getContent();
     />
     <meta
       name="twitter:title"
-      content={content.page.index.metas.toShared.twitter.title}
+      content={content.seo.index.metas.toShared.twitter.title}
     />
     <meta
       name="twitter:description"
-      content={content.page.index.metas.toShared.twitter.description}
+      content={content.seo.index.metas.toShared.twitter.description}
     />
     <meta name="twitter:image" content="https://teraiz.com/og-image.jpg" />
 

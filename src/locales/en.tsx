@@ -21,7 +21,7 @@ import T3 from "@/assets/testimonies/t3.jpg?url";
 import T4 from "@/assets/testimonies/t4.png?url";
 
 const en: TranslationType = {
-  page: {
+  seo: {
     index: {
       title: `Real Estate Software | ${COMPANY_NAME}`,
       metas: {

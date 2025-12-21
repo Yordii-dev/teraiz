@@ -66,7 +66,7 @@ const ProjectModal = ({
       <button
         onClick={onClose}
         className="absolute top-4 right-4 md:top-8 md:right-8 w-12 h-12 rounded-full
-             bg-black/60 hover:bg-black/80 flex items-center justify-center z-[101] text-white"
+               flex items-center justify-center z-[101] text-white"
       >
         <X className="w-6 h-6" />
       </button>
@@ -79,7 +79,7 @@ const ProjectModal = ({
           );
         }}
         className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12
-             rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center
+             rounded-full flex items-center justify-center
              z-[101] text-white"
       >
         <ChevronLeft className="w-6 h-6" />
@@ -91,7 +91,7 @@ const ProjectModal = ({
           setActiveImageIndex((prev) => (prev + 1) % project.images.length);
         }}
         className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12
-             rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center
+             rounded-full flex items-center justify-center
              z-[101] text-white"
       >
         <ChevronRight className="w-6 h-6" />

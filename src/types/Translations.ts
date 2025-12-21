@@ -8,7 +8,7 @@ interface Service {
 }
 
 interface Tag {
-  id:number;
+  id: number;
   href: string;
   name: string;
 }
@@ -54,36 +54,36 @@ interface SectionFooter {
   details: string[];
 }
 
-interface Meta{
+interface Meta {
   description: string;
-  keywords:string;
-  toShared:{
-    openGraph:{
-      title:string;
-      description:string;
-    },
-    
-    twitter:{
-      title:string;
-      description:string;
-    }
-  }
+  keywords: string;
+  toShared: {
+    openGraph: {
+      title: string;
+      description: string;
+    };
+
+    twitter: {
+      title: string;
+      description: string;
+    };
+  };
 }
 
 export type TranslationType = {
-  page: {
-    index:{
+  seo: {
+    index: {
       title: string;
-      metas:Meta;      
-    },
-    contact:{
+      metas: Meta;
+    };
+    contact: {
       title: string;
-      metas:Meta;
-    },
-    thankyou:{
+      metas: Meta;
+    };
+    thankyou: {
       title: string;
-      metas:Meta;
-    }
+      metas: Meta;
+    };
   };
 
   formModal: {
@@ -107,7 +107,6 @@ export type TranslationType = {
     title: string;
     description: string;
     textBackBtn: string;
-    
   };
 
   header: {

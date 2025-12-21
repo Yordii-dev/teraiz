@@ -16,95 +16,98 @@ import {
 import type { TranslationType } from "@/types/Translations";
 import { COMPANY_NAME, HREF_HEADER } from "@/constants";
 import EmersonImg from "@/assets/testimonies/emerson.webp?url";
-import T1 from "@/assets/testimonies/t1.jpg?url";
+import AnaImg from "@/assets/testimonies/ana.webp?url";
 import ApalImg from "@/assets/testimonies/apal.webp?url";
 import LotizaImg from "@/assets/testimonies/lotiza.webp?url";
 
 const es: TranslationType = {
-  page: {
+  seo: {
     index: {
-      title: `Consultoría y Desarrollo de Software | ${COMPANY_NAME}`,
+      title: `Consultoría y Desarrollo de Software a Medida | ${COMPANY_NAME}`,
       metas: {
-        description: `${COMPANY_NAME} brinda asesoría y desarrollo de sistemas para empresas y emprendedores. Convertimos ideas y proyectos en plataformas funcionales y escalables.`,
+        description: `${COMPANY_NAME} es una empresa de consultoría y desarrollo de software a medida. Analizamos, validamos y construimos sistemas escalables para empresas y emprendedores.`,
         keywords:
-          "consultoría de software, desarrollo de sistemas a medida, asesoría tecnológica, desarrollo web, software empresarial, transformación digital",
+          "consultoría de software, desarrollo de software a medida, análisis de proyectos digitales, desarrollo de sistemas empresariales, software SaaS, automatización de procesos, transformación digital",
 
         toShared: {
           openGraph: {
-            title: `Consultoría de Software | ${COMPANY_NAME}`,
+            title: `Consultoría y Desarrollo de Software | ${COMPANY_NAME}`,
             description:
-              "Asesoría y desarrollo de sistemas a medida para empresas y emprendedores.",
+              "Análisis, validación y desarrollo de sistemas de software a medida para empresas y emprendedores.",
           },
-
           twitter: {
-            title: `Consultoría de Software | ${COMPANY_NAME}`,
+            title: `Consultoría y Desarrollo de Software | ${COMPANY_NAME}`,
             description:
-              "Asesoría y desarrollo de sistemas a medida para empresas y emprendedores.",
+              "Construimos software a medida con enfoque estratégico y escalable.",
           },
         },
       },
     },
 
     contact: {
-      title: `Contáctanos | ${COMPANY_NAME}`,
+      title: `Contacto | ${COMPANY_NAME}`,
       metas: {
-        description:
-          "Ponte en contacto con ${COMPANY_NAME} para soluciones de software a medida y personalizadas para inmobiliarias y empresas del sector.",
+        description: `Agenda una reunión con ${COMPANY_NAME} y recibe asesoría profesional para evaluar y desarrollar tu proyecto de software.`,
         keywords:
-          "contacto, software inmobiliario a medida, CRM inmobiliario, soluciones PropTech, automatización inmobiliaria, software personalizado",
+          "contacto consultoría de software, reunión de análisis de proyecto, desarrollo de sistemas a medida, asesoría tecnológica empresarial",
         toShared: {
           openGraph: {
-            title: `Contactanos | ${COMPANY_NAME}`,
+            title: `Agenda una reunión | ${COMPANY_NAME}`,
             description:
-              "Ponte en contacto con ${COMPANY_NAME} para soluciones de software a medida y personalizadas para inmobiliarias y empresas del sector.",
+              "Hablemos de tu idea o sistema y evaluemos juntos la mejor solución tecnológica.",
           },
           twitter: {
-            title: `Contactanos | ${COMPANY_NAME}`,
+            title: `Agenda una reunión | ${COMPANY_NAME}`,
             description:
-              "Ponte en contacto con ${COMPANY_NAME} para soluciones de software a medida y personalizadas para inmobiliarias y empresas del sector.",
+              "Asesoría y evaluación profesional de proyectos de software.",
           },
         },
       },
     },
 
     thankyou: {
-      title: `Gracias | ${COMPANY_NAME}`,
+      title: `Solicitud Enviada | ${COMPANY_NAME}`,
       metas: {
-        description: `Gracias por contactar a ${COMPANY_NAME}. Nuestro equipo se pondrá en contacto contigo pronto para ofrecerte soluciones de software personalizadas para tu inmobiliaria.`,
+        description: `Gracias por contactar a ${COMPANY_NAME}. Revisaremos tu solicitud y coordinaremos una reunión para analizar tu proyecto.`,
         keywords:
-          "gracias, mensaje enviado, software inmobiliario personalizado, CRM inmobiliario, soluciones PropTech, automatización inmobiliaria",
+          "solicitud enviada, consultoría de software, evaluación de proyectos digitales, desarrollo de software empresarial",
         toShared: {
           openGraph: {
-            title: `Gracias | ${COMPANY_NAME}`,
-            description: `Gracias por contactar a ${COMPANY_NAME}. Nuestro equipo se pondrá en contacto contigo pronto para ofrecerte soluciones de software personalizadas para tu inmobiliaria.`,
+            title: `Gracias por contactarnos | ${COMPANY_NAME}`,
+            description:
+              "Tu solicitud fue recibida. Nuestro equipo te contactará para evaluar tu proyecto.",
           },
           twitter: {
-            title: `Gracias | ${COMPANY_NAME}`,
-            description: `Gracias por contactar a ${COMPANY_NAME}. Nuestro equipo se pondrá en contacto contigo pronto para ofrecerte soluciones de software personalizadas para tu inmobiliaria.`,
+            title: `Gracias por contactarnos | ${COMPANY_NAME}`,
+            description:
+              "Pronto coordinaremos una reunión para analizar tu proyecto.",
           },
         },
       },
     },
   },
+
   formModal: {
-    title: "Contactanos",
-    description: `Gestiona tu inmobiliaria de manera eficiente con ${COMPANY_NAME}. Completa el formulario y nuestro equipo te contactará.`,
+    title: "Hablemos de tu proyecto",
+    description: `En ${COMPANY_NAME} analizamos, validamos y desarrollamos sistemas de software a medida. Completa el formulario y agenda una conversación con nuestro equipo.`,
 
-    nameLabel: "Tu nombre",
-    namePlaceholder: "",
+    nameLabel: "Nombre completo",
+    namePlaceholder: "Ej. Juan Pérez",
 
-    mailLabel: "Tu correo de contacto",
-    mailPlaceholder: "tu@mail.com",
+    mailLabel: "Correo de contacto",
+    mailPlaceholder: "tu@empresa.com",
 
-    phoneLabel: "Tu número de teléfono",
-    phonePlaceholder: "",
+    phoneLabel: "Teléfono / WhatsApp",
+    phonePlaceholder: "+51 999 999 999",
 
-    textCtaBtn: "Hablar con un experto",
-    textCtaBtnSending: "Enviando...",
+    textCtaBtn: "Agendar reunión",
+    textCtaBtnSending: "Enviando solicitud...",
   },
+
   successModal: {
-    title: "¡Mensaje enviado!",
-    description: "Nos pondremos en contacto contigo muy pronto.",
+    title: "Solicitud enviada",
+    description:
+      "Hemos recibido tu mensaje. Nuestro equipo se pondrá en contacto contigo para coordinar una reunión y evaluar tu proyecto.",
     textBackBtn: "Volver al inicio",
   },
 
@@ -340,7 +343,7 @@ const es: TranslationType = {
         name: "Ana",
         role: "Universitaria / RRHH",
         company: "Hermos – Empresa Industrial",
-        image: T1,
+        image: AnaImg,
         content:
           "La plataforma de gestión vacacional nos permitió automatizar solicitudes, validar antigüedad y llevar un control claro por empleado. El flujo de aprobación por correo facilitó el trabajo tanto para RRHH como para los jefes directos.",
         rating: 5,
@@ -484,8 +487,8 @@ const es: TranslationType = {
   },
   wsp: {
     message:
-      "Hola, me interesa conocer más sobre sus soluciones de software para inmobiliarias. ¿Podrían proporcionarme más información?",
-    ariaLabel: "Contactar por WhatsApp",
+      "Hola, quiero conocer más sobre las soluciones de software y consultoría de Teraiz.",
+    ariaLabel: "Contactar a Teraiz por WhatsApp",
   },
 };
 

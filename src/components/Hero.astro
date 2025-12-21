@@ -2,7 +2,7 @@
 import { getContent, getLang } from "@/contexts/PageContext";
 import type { langType } from "@/types/languages";
 import BtnCta from "./BtnCta.astro";
-import bgHero from "@/assets/bg-hero.jpg";
+import bgHero from "/public/bg-hero.webp";
 
 const CONTENT = getContent().hero;
 const LANG = getLang() as langType;
@@ -25,7 +25,12 @@ const LANG = getLang() as langType;
 
     <!-- Gradiente -->
     <div
-      class="absolute inset-0 bg-gradient-to-b from-brand-primary/90 via-brand-primary/80 to-brand-primary/90"
+      class="absolute inset-0
+             bg-gradient-to-br
+             from-brand-primary/30
+             via-brand-primary/70
+             to-brand-primary/100
+             backdrop-blur-sm"
     >
     </div>
   </div>

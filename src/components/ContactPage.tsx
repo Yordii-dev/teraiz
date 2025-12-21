@@ -70,68 +70,121 @@ const ContactPage = ({
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-24 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Título y subtítulo */}
-        <div className="mb-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900">{CONTENT.title}</h2>
-          <p className="mt-2 text-gray-600 max-w-xl mx-auto">
+        {/* Título */}
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+            {CONTENT.title}
+          </h2>
+          <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
             {CONTENT.description}
           </p>
         </div>
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-4 max-w-md mx-auto w-full"
-        >
-          <div className="space-y-2">
-            <Label htmlFor="name">{CONTENT.nameLabel}</Label>
-            <Input
-              id="name"
-              type="text"
-              placeholder={CONTENT.namePlaceholder}
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="email">{CONTENT.mailLabel}</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder={CONTENT.mailPlaceholder}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="phone">{CONTENT.phoneLabel}</Label>
-            <Input
-              id="phone"
-              type="tel"
-              placeholder={CONTENT.phonePlaceholder}
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
-            />
-          </div>
 
-          <Button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white"
-          >
-            {isSubmitting ? (
-              CONTENT.textCtaBtnSending
-            ) : (
-              <>
-                <Send className="mr-2 h-4 w-4" />
-                {CONTENT.textCtaBtn}
-              </>
-            )}
-          </Button>
-        </form>
+        {/* Card del formulario */}
+        <div className="max-w-lg mx-auto">
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
+            <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Nombre */}
+              <div className="space-y-1.5">
+                <Label className="text-sm font-medium text-gray-700">
+                  {CONTENT.nameLabel}
+                </Label>
+                <Input
+                  id="name"
+                  type="text"
+                  placeholder={CONTENT.namePlaceholder}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  className="
+                h-11
+                rounded-lg
+                border-gray-300
+                focus:border-brand-primary
+                focus:ring-brand-primary/20
+              "
+                />
+              </div>
+
+              {/* Email */}
+              <div className="space-y-1.5">
+                <Label className="text-sm font-medium text-gray-700">
+                  {CONTENT.mailLabel}
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder={CONTENT.mailPlaceholder}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="
+                h-11
+                rounded-lg
+                border-gray-300
+                focus:border-brand-primary
+                focus:ring-brand-primary/20
+              "
+                />
+              </div>
+
+              {/* Teléfono */}
+              <div className="space-y-1.5">
+                <Label className="text-sm font-medium text-gray-700">
+                  {CONTENT.phoneLabel}
+                </Label>
+                <Input
+                  id="phone"
+                  type="tel"
+                  placeholder={CONTENT.phonePlaceholder}
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                  className="
+                h-11
+                rounded-lg
+                border-gray-300
+                focus:border-brand-primary
+                focus:ring-brand-primary/20
+              "
+                />
+              </div>
+
+              {/* CTA */}
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="
+              w-full
+              h-11
+              rounded-lg
+              bg-brand-primary
+              text-white
+              font-medium
+              hover:bg-brand-primary/90
+              shadow-md
+              transition-all
+            "
+              >
+                {isSubmitting ? (
+                  CONTENT.textCtaBtnSending
+                ) : (
+                  <>
+                    <Send className="mr-2 h-4 w-4" />
+                    {CONTENT.textCtaBtn}
+                  </>
+                )}
+              </Button>
+
+              {/* Texto de confianza */}
+              <p className="text-xs text-center text-gray-400">
+                Te contactamos en menos de 24 horas · Reunión sin compromiso
+              </p>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   );

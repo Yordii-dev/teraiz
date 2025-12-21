@@ -16,10 +16,10 @@ const CONTENT = content.cta;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{content.page.contact.title}</title>
+    <title>{content.seo.contact.title}</title>
 
-    <meta name="description" content={content.page.contact.metas.description} />
-    <meta name="keywords" content={content.page.contact.metas.keywords} />
+    <meta name="description" content={content.seo.contact.metas.description} />
+    <meta name="keywords" content={content.seo.contact.metas.keywords} />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#002b56" />
 
@@ -28,22 +28,18 @@ const CONTENT = content.cta;
     <link rel="alternate" hreflang="es" href="https://teraiz.com/es/contact" />
     <link rel="alternate" hreflang="en" href="https://teraiz.com/en/contact" />
     <link rel="alternate" hreflang="fr" href="https://teraiz.com/fr/contact" />
-    <link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://teraiz.com/"
-    />
+    <link rel="alternate" hreflang="x-default" href="https://teraiz.com/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://teraiz.com/${lang}/contact`} />
     <meta
       property="og:title"
-      content={content.page.contact.metas.toShared.openGraph.title}
+      content={content.seo.contact.metas.toShared.openGraph.title}
     />
     <meta
       property="og:description"
-      content={content.page.contact.metas.toShared.openGraph.description}
+      content={content.seo.contact.metas.toShared.openGraph.description}
     />
     <meta property="og:image" content="https://teraiz.com/og-image.jpg" />
 
@@ -52,11 +48,11 @@ const CONTENT = content.cta;
     <meta name="twitter:url" content={`https://teraiz.com/${lang}/contact`} />
     <meta
       name="twitter:title"
-      content={content.page.contact.metas.toShared.twitter.title}
+      content={content.seo.contact.metas.toShared.twitter.title}
     />
     <meta
       name="twitter:description"
-      content={content.page.contact.metas.toShared.twitter.description}
+      content={content.seo.contact.metas.toShared.twitter.description}
     />
     <meta name="twitter:image" content="https://teraiz.com/og-image.jpg" />
 

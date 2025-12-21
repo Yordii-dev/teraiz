@@ -85,7 +85,7 @@ export const projects: Project[] = [
   // Gestión & Operaciones
   {
     id: 1,
-    title: "Sistema de Gestión de Estacionamientos",
+    title: "Sistema de Estacionamientos",
     category_id: 2,
     cover: PARQUEO1,
     images: [PARQUEO1, PARQUEO2, PARQUEO3, PARQUEO4, PARQUEO5, PARQUEO6],
@@ -95,7 +95,7 @@ export const projects: Project[] = [
 
   {
     id: 2,
-    title: "Sistema de Gestión para Talleres Mecánicos",
+    title: "Sistema para Talleres Mecánicos",
     category_id: 2,
     cover: EL_CRUCE1,
     images: [EL_CRUCE1, EL_CRUCE2, EL_CRUCE3, EL_CRUCE4, EL_CRUCE5, EL_CRUCE6],
@@ -105,7 +105,7 @@ export const projects: Project[] = [
 
   {
     id: 3,
-    title: "Sistema de Gestión de Reparación de Equipos PC",
+    title: "Sistema de Reparación de PCs",
     category_id: 2,
     cover: COMPUTE_MANAGER1,
     images: [COMPUTE_MANAGER1, COMPUTE_MANAGER2, COMPUTE_MANAGER3],
@@ -114,7 +114,7 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Sistema de Gestión Municipal (Licitaciones Públicas)",
+    title: "Sistema de Licitaciones Municipales",
     category_id: 2,
     cover: CLARIDAD1,
     images: [CLARIDAD1, CLARIDAD2, CLARIDAD3, CLARIDAD4, CLARIDAD5],
@@ -123,7 +123,7 @@ export const projects: Project[] = [
   },
   {
     id: 5,
-    title: "Sistema de Gestión Vacacional de Empleados",
+    title: "Gestión de Vacaciones de Empleados",
     category_id: 2,
     cover: HERMOS1,
     images: [HERMOS1, HERMOS2, HERMOS3],
@@ -134,7 +134,7 @@ export const projects: Project[] = [
   // SaaS & Plataformas
   {
     id: 6,
-    title: "Plataforma SaaS de Gestión de Lotizaciones",
+    title: "Plataforma de Lotizaciones (SaaS)",
     category_id: 3,
     cover: LOTIZA1,
     images: [LOTIZA1],
@@ -143,7 +143,7 @@ export const projects: Project[] = [
   },
   {
     id: 7,
-    title: "Sistema de Logística de Entregas Mayoristas (Administrativo)",
+    title: "Logística Mayorista – Administración",
     category_id: 3,
     cover: APALWORKFLOW_GENERAL1,
     images: [
@@ -159,7 +159,7 @@ export const projects: Project[] = [
   // Aplicaciones móviles
   {
     id: 8,
-    title: "App móvil de Servicios de Belleza",
+    title: "App de Servicios de Belleza",
     category_id: 4,
     cover: BELLEZA1,
     images: [
@@ -177,7 +177,7 @@ export const projects: Project[] = [
 
   {
     id: 9,
-    title: "App móvil de Educación Inmobiliaria",
+    title: "App Educativa Inmobiliaria",
     category_id: 4,
     cover: RAIZ_BRAIN1,
     images: [
@@ -198,7 +198,7 @@ export const projects: Project[] = [
 
   {
     id: 10,
-    title: "App móvil de Logística para Operadores",
+    title: "Logística Mayorista – Operadores",
     category_id: 4,
     cover: APALWORKFLOW_MANAGE1,
     images: [
