@@ -57,7 +57,7 @@ const ProjectModal = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
+      className="fixed inset-0 z-50 flex md:items-center md:justify-center p-4 md:p-8"
       onClick={onClose}
     >
       {/* Backdrop */}
@@ -65,13 +65,7 @@ const ProjectModal = ({
 
       <button
         onClick={onClose}
-        className="
-    absolute top-4 right-4 md:top-8 md:right-8
-    w-12 h-12 flex items-center justify-center
-    z-[101]
-    text-gray-900 md:text-white
-    drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] md:drop-shadow-none
-  "
+        className="absolute top-4 right-4 md:top-8 md:right-8 w-12 h-12 flex items-center justify-center z-[101] text-gray-900 md:text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] md:drop-shadow-none"
       >
         <X className="w-6 h-6" />
       </button>
@@ -82,13 +76,7 @@ const ProjectModal = ({
             (prev) => (prev - 1 + project.images.length) % project.images.length
           );
         }}
-        className="
-    absolute left-4 md:left-8 top-1/2 -translate-y-1/2
-    w-12 h-12 flex items-center justify-center
-    z-[101]
-    text-gray-900 md:text-white
-    drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] md:drop-shadow-none
-  "
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center z-[101] text-gray-900 md:text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] md:drop-shadow-none"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
@@ -97,12 +85,7 @@ const ProjectModal = ({
           e.stopPropagation();
           setActiveImageIndex((prev) => (prev + 1) % project.images.length);
         }}
-        className="
-    absolute right-4 md:right-8 top-1/2 -translate-y-1/2
-    w-12 h-12 flex items-center justify-center
-    z-[101]
-    text-gray-900 md:text-white
-    drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] md:drop-shadow-none
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center z-[101] text-gray-900 md:text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] md:drop-shadow-none
   "
       >
         <ChevronRight className="w-6 h-6" />
@@ -110,17 +93,17 @@ const ProjectModal = ({
 
       {/* Content */}
       <div
-        className="relative max-w-5xl w-full max-h-[90vh] animate-scale-in"
+        className="relative max-w-5xl w-full animate-scale-in"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="rounded-xl overflow-hidden shadow-hover bg-card">
+        <div className="rounded-xl shadow-hover bg-card">
           {/* Main image */}
           {/* <img
             src={project.images[activeImageIndex].src}
             alt={project.title}
             className="w-full mt-4 max-h-[60vh] object-contain bg-card"
           /> */}
-          <div className="mt-4 h-[60vh] flex items-center justify-center bg-card">
+          <div className="p-2 md:p-8 bg-transparent h-[40vh] md:h-[60vh] flex items-center justify-center bg-card">
             <img
               src={project.images[activeImageIndex].src}
               alt={project.title}
@@ -129,7 +112,7 @@ const ProjectModal = ({
           </div>
 
           {/* Content */}
-          <div className="p-6 md:p-8">
+          <div className="p-2 md:p-8">
             <div className="flex justify-between items-center">
               <h2 className="font-display text-2xl md:text-3xl font-semibold mt-2">
                 {project.title}

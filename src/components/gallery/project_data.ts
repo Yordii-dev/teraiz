@@ -7,7 +7,7 @@ import APALWORKFLOW_GENERAL_LOGO from "@/assets/gallery/APALWORKFLOW_GENERAL/log
 import APALWORKFLOW_GENERAL1 from "@/assets/gallery/APALWORKFLOW_GENERAL/img1.webp";
 import APALWORKFLOW_GENERAL2 from "@/assets/gallery/APALWORKFLOW_GENERAL/img2.webp";
 import APALWORKFLOW_GENERAL3 from "@/assets/gallery/APALWORKFLOW_GENERAL/img3.webp";
-import APALWORKFLOW_GENERAL4 from "@/assets/gallery/APALWORKFLOW_GENERAL/img4.webp";
+// import APALWORKFLOW_GENERAL4 from "@/assets/gallery/APALWORKFLOW_GENERAL/img4.webp";
 
 import APALWORKFLOW_MANAGE_LOGO from "@/assets/gallery/APALWORKFLOW_MANAGE/logo.webp";
 import APALWORKFLOW_MANAGE1 from "@/assets/gallery/APALWORKFLOW_MANAGE/img1.webp";
@@ -89,7 +89,7 @@ export const projects: Project[] = [
       APALWORKFLOW_GENERAL1,
       APALWORKFLOW_GENERAL2,
       APALWORKFLOW_GENERAL3,
-      APALWORKFLOW_GENERAL4,
+      // APALWORKFLOW_GENERAL4,
     ],
     description:
       "Sistema administrativo para la gestión de logística y entregas: asignación de pedidos, control de rutas, seguimiento en tiempo real, carga masiva desde Excel, estadísticas y asignación de vehículos y operadores.",
