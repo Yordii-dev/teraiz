@@ -1,12 +1,15 @@
 import type { Project, ProjectCategory } from "@/types/project";
 
+import LOTIZA_LOGO from "@/assets/gallery/LOTIZA/logo.webp";
 import LOTIZA1 from "@/assets/gallery/LOTIZA/img1.jpeg";
 
+import APALWORKFLOW_GENERAL_LOGO from "@/assets/gallery/APALWORKFLOW_GENERAL/logo.webp";
 import APALWORKFLOW_GENERAL1 from "@/assets/gallery/APALWORKFLOW_GENERAL/img1.webp";
 import APALWORKFLOW_GENERAL2 from "@/assets/gallery/APALWORKFLOW_GENERAL/img2.webp";
 import APALWORKFLOW_GENERAL3 from "@/assets/gallery/APALWORKFLOW_GENERAL/img3.webp";
 import APALWORKFLOW_GENERAL4 from "@/assets/gallery/APALWORKFLOW_GENERAL/img4.webp";
 
+import APALWORKFLOW_MANAGE_LOGO from "@/assets/gallery/APALWORKFLOW_MANAGE/logo.webp";
 import APALWORKFLOW_MANAGE1 from "@/assets/gallery/APALWORKFLOW_MANAGE/img1.webp";
 import APALWORKFLOW_MANAGE2 from "@/assets/gallery/APALWORKFLOW_MANAGE/img2.webp";
 import APALWORKFLOW_MANAGE3 from "@/assets/gallery/APALWORKFLOW_MANAGE/img3.webp";
@@ -15,6 +18,7 @@ import APALWORKFLOW_MANAGE5 from "@/assets/gallery/APALWORKFLOW_MANAGE/img5.webp
 import APALWORKFLOW_MANAGE6 from "@/assets/gallery/APALWORKFLOW_MANAGE/img6.webp";
 import APALWORKFLOW_MANAGE7 from "@/assets/gallery/APALWORKFLOW_MANAGE/img7.webp";
 
+import BELLEZA_LOGO from "@/assets/gallery/BELLEZA/logo.webp";
 import BELLEZA1 from "@/assets/gallery/BELLEZA/img1.webp";
 import BELLEZA2 from "@/assets/gallery/BELLEZA/img2.webp";
 import BELLEZA3 from "@/assets/gallery/BELLEZA/img3.webp";
@@ -23,16 +27,7 @@ import BELLEZA5 from "@/assets/gallery/BELLEZA/img5.webp";
 import BELLEZA6 from "@/assets/gallery/BELLEZA/img6.webp";
 import BELLEZA7 from "@/assets/gallery/BELLEZA/img7.webp";
 
-import CLARIDAD1 from "@/assets/gallery/CLARIDAD/img1.webp";
-import CLARIDAD2 from "@/assets/gallery/CLARIDAD/img2.webp";
-import CLARIDAD3 from "@/assets/gallery/CLARIDAD/img3.webp";
-import CLARIDAD4 from "@/assets/gallery/CLARIDAD/img4.webp";
-import CLARIDAD5 from "@/assets/gallery/CLARIDAD/img5.webp";
-
-import COMPUTE_MANAGER1 from "@/assets/gallery/COMPUTER_MANAGER/img1.webp";
-import COMPUTE_MANAGER2 from "@/assets/gallery/COMPUTER_MANAGER/img2.webp";
-import COMPUTE_MANAGER3 from "@/assets/gallery/COMPUTER_MANAGER/img3.webp";
-
+import EL_CRUCE_LOGO from "@/assets/gallery/EL_CRUCE/logo.webp";
 import EL_CRUCE1 from "@/assets/gallery/EL_CRUCE/img1.webp";
 import EL_CRUCE2 from "@/assets/gallery/EL_CRUCE/img2.webp";
 import EL_CRUCE3 from "@/assets/gallery/EL_CRUCE/img3.webp";
@@ -40,10 +35,12 @@ import EL_CRUCE4 from "@/assets/gallery/EL_CRUCE/img4.webp";
 import EL_CRUCE5 from "@/assets/gallery/EL_CRUCE/img5.webp";
 import EL_CRUCE6 from "@/assets/gallery/EL_CRUCE/img6.webp";
 
+import HERMOS_LOGO from "@/assets/gallery/HERMOS/logo.webp";
 import HERMOS1 from "@/assets/gallery/HERMOS/img1.webp";
 import HERMOS2 from "@/assets/gallery/HERMOS/img2.webp";
 import HERMOS3 from "@/assets/gallery/HERMOS/img3.webp";
 
+import PARQUEO_LOGO from "@/assets/gallery/PARQUEO/logo.webp";
 import PARQUEO1 from "@/assets/gallery/PARQUEO/img1.webp";
 import PARQUEO2 from "@/assets/gallery/PARQUEO/img2.webp";
 import PARQUEO3 from "@/assets/gallery/PARQUEO/img3.webp";
@@ -51,6 +48,7 @@ import PARQUEO4 from "@/assets/gallery/PARQUEO/img4.webp";
 import PARQUEO5 from "@/assets/gallery/PARQUEO/img5.webp";
 import PARQUEO6 from "@/assets/gallery/PARQUEO/img6.webp";
 
+import RAIZ_BRAIN_LOGO from "@/assets/gallery/RAIZ_BRAIN/logo.webp";
 import RAIZ_BRAIN1 from "@/assets/gallery/RAIZ_BRAIN/img1.webp";
 import RAIZ_BRAIN2 from "@/assets/gallery/RAIZ_BRAIN/img2.webp";
 import RAIZ_BRAIN3 from "@/assets/gallery/RAIZ_BRAIN/img3.webp";
@@ -87,7 +85,7 @@ export const projects: Project[] = [
     id: 1,
     title: "Sistema de Estacionamientos",
     category_id: 2,
-    cover: PARQUEO1,
+    cover: PARQUEO_LOGO,
     images: [PARQUEO1, PARQUEO2, PARQUEO3, PARQUEO4, PARQUEO5, PARQUEO6],
     description:
       "Plataforma para el control integral de estacionamientos: registro de entradas y salidas de vehículos, planes prepago, control de tiempos, pausas, reubicación de vehículos y gestión operativa en tiempo real.",
@@ -97,7 +95,7 @@ export const projects: Project[] = [
     id: 2,
     title: "Sistema para Talleres Mecánicos",
     category_id: 2,
-    cover: EL_CRUCE1,
+    cover: EL_CRUCE_LOGO,
     images: [EL_CRUCE1, EL_CRUCE2, EL_CRUCE3, EL_CRUCE4, EL_CRUCE5, EL_CRUCE6],
     description:
       "Sistema para talleres de reparación vehicular que permite registrar vehículos, diagnósticos, reparaciones, repuestos, costos de mano de obra, venta de aceites y servicios de mantenimiento.",
@@ -105,27 +103,9 @@ export const projects: Project[] = [
 
   {
     id: 3,
-    title: "Sistema de Reparación de PCs",
-    category_id: 2,
-    cover: COMPUTE_MANAGER1,
-    images: [COMPUTE_MANAGER1, COMPUTE_MANAGER2, COMPUTE_MANAGER3],
-    description:
-      "Sistema minimalista para el registro de equipos y averías, diagnóstico técnico, seguimiento de reparaciones y control del proceso de solución.",
-  },
-  {
-    id: 4,
-    title: "Sistema de Licitaciones Municipales",
-    category_id: 2,
-    cover: CLARIDAD1,
-    images: [CLARIDAD1, CLARIDAD2, CLARIDAD3, CLARIDAD4, CLARIDAD5],
-    description:
-      "Plataforma para la gestión de proyectos de licitación pública, control de presupuestos presentados por los concursantes y seguimiento del proceso de adjudicación.",
-  },
-  {
-    id: 5,
     title: "Gestión de Vacaciones de Empleados",
     category_id: 2,
-    cover: HERMOS1,
+    cover: HERMOS_LOGO,
     images: [HERMOS1, HERMOS2, HERMOS3],
     description:
       "Sistema enfocado en la gestión de vacaciones del personal: cálculo automático de antigüedad, control de días disponibles por año, registro de solicitudes y notificaciones automáticas por correo a los responsables.",
@@ -133,19 +113,19 @@ export const projects: Project[] = [
 
   // SaaS & Plataformas
   {
-    id: 6,
+    id: 4,
     title: "Plataforma de Lotizaciones (SaaS)",
     category_id: 3,
-    cover: LOTIZA1,
+    cover: LOTIZA_LOGO,
     images: [LOTIZA1],
     description:
       "Plataforma multiempresa para inmobiliarias: gestión de proyectos de lotización, ventas, contratos, recordatorios automáticos vía WhatsApp, portal público de venta de lotes y landing pages personalizadas.",
   },
   {
-    id: 7,
+    id: 5,
     title: "Logística Mayorista – Administración",
     category_id: 3,
-    cover: APALWORKFLOW_GENERAL1,
+    cover: APALWORKFLOW_GENERAL_LOGO,
     images: [
       APALWORKFLOW_GENERAL1,
       APALWORKFLOW_GENERAL2,
@@ -158,10 +138,10 @@ export const projects: Project[] = [
 
   // Aplicaciones móviles
   {
-    id: 8,
+    id: 6,
     title: "App de Servicios de Belleza",
     category_id: 4,
-    cover: BELLEZA1,
+    cover: BELLEZA_LOGO,
     images: [
       BELLEZA1,
       BELLEZA2,
@@ -176,10 +156,10 @@ export const projects: Project[] = [
   },
 
   {
-    id: 9,
+    id: 7,
     title: "App Educativa Inmobiliaria",
     category_id: 4,
-    cover: RAIZ_BRAIN1,
+    cover: RAIZ_BRAIN_LOGO,
     images: [
       RAIZ_BRAIN1,
       RAIZ_BRAIN2,
@@ -197,10 +177,10 @@ export const projects: Project[] = [
   },
 
   {
-    id: 10,
+    id: 8,
     title: "Logística Mayorista – Operadores",
     category_id: 4,
-    cover: APALWORKFLOW_MANAGE1,
+    cover: APALWORKFLOW_MANAGE_LOGO,
     images: [
       APALWORKFLOW_MANAGE1,
       APALWORKFLOW_MANAGE2,

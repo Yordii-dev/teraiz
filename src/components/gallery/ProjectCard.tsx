@@ -16,9 +16,11 @@ const ProjectCard = ({ project, index, onOpen }: ProjectCardProps) => {
     group
     relative
     bg-white
-    border border-gray-200
-    rounded-xl
-    shadow-md
+rounded-2xl
+border border-gray-100
+shadow-[0_8px_30px_rgb(0,0,0,0.04)]
+hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)]
+
     hover:shadow-xl
     cursor-pointer
     transition-all
@@ -28,12 +30,14 @@ const ProjectCard = ({ project, index, onOpen }: ProjectCardProps) => {
       style={{ animationDelay: `${index * 100}ms` }}
       onClick={() => onOpen(project)}
     >
-      <div className="aspect-[4/3] overflow-hidden">
-        <img
-          src={project.cover.src}
-          alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-        />
+      <div className="aspect-[4/3] p-4">
+        <div className="w-full h-full rounded-lg overflow-hidden bg-white flex items-center justify-center">
+          <img
+            src={project.cover.src}
+            alt={project.title}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+        </div>
       </div>
 
       {/* Overlay */}
