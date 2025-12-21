@@ -20,9 +20,6 @@ import BELLEZA1 from "@/assets/gallery/BELLEZA/img1.webp";
 import BELLEZA2 from "@/assets/gallery/BELLEZA/img2.webp";
 import BELLEZA3 from "@/assets/gallery/BELLEZA/img3.webp";
 import BELLEZA4 from "@/assets/gallery/BELLEZA/img4.webp";
-import BELLEZA5 from "@/assets/gallery/BELLEZA/img5.webp";
-import BELLEZA6 from "@/assets/gallery/BELLEZA/img6.webp";
-import BELLEZA7 from "@/assets/gallery/BELLEZA/img7.webp";
 
 import EL_CRUCE_LOGO from "@/assets/gallery/EL_CRUCE/logo.webp";
 import EL_CRUCE1 from "@/assets/gallery/EL_CRUCE/img1.webp";
@@ -137,15 +134,7 @@ export const projects: Project[] = [
     title: "App de Servicios de Belleza",
     category_id: 4,
     cover: BELLEZA_LOGO,
-    images: [
-      BELLEZA1,
-      BELLEZA2,
-      BELLEZA3,
-      BELLEZA4,
-      BELLEZA5,
-      BELLEZA6,
-      BELLEZA7,
-    ],
+    images: [BELLEZA1, BELLEZA2, BELLEZA3, BELLEZA4],
     description:
       "Aplicación móvil para profesionales del sector estético: contratación de estilistas, maquilladores y otros servicios de belleza bajo demanda.",
   },
