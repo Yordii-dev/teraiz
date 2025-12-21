@@ -321,12 +321,11 @@ const es: TranslationType = {
   },
   testimonies: {
     title: {
-      text: "Casos de Éxito",
-      emphasis: "Comprobados",
+      text: "Casos de éxito",
+      emphasis: "reales",
     },
-
     description:
-      "Resultados reales de empresas que han transformado su negocio con nuestras soluciones de software personalizado",
+      "Proyectos que demuestran cómo ayudamos a empresas y emprendedores a desarrollar sus ideas.",
     list: [
       {
         name: "Emerson",
