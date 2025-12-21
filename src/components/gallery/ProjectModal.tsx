@@ -130,13 +130,18 @@ const ProjectModal = ({
 
           {/* Content */}
           <div className="p-6 md:p-8">
-            <span className="text-accent text-sm font-medium tracking-wide uppercase">
-              {categories.find((cat) => cat.id === project.category_id)?.name}
-            </span>
-
-            <h2 className="font-display text-2xl md:text-3xl font-semibold mt-2">
-              {project.title}
-            </h2>
+            <div className="flex justify-between items-center">
+              <h2 className="font-display text-2xl md:text-3xl font-semibold mt-2">
+                {project.title}
+              </h2>
+              <div className="w-20 h-20 rounded-sm border overflow-hidden bg-white">
+                <img
+                  src={project.cover.src}
+                  alt={project.title}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
 
             <p className="text-muted-foreground mt-3 leading-relaxed">
               {project.description}

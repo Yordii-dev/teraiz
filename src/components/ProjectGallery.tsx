@@ -64,7 +64,7 @@ const ProjectGallery = () => {
         {/* Header */}
         <div className="text-center mb-12 animate-fade-up">
           <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground mt-3">
-            Sistemas desarrollados
+            Sistemas desarrollados 2025
           </h1>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">
             Plataformas y sistemas en producción desarrollados durante los
@@ -72,9 +72,8 @@ const ProjectGallery = () => {
           </p>
         </div>
 
-        {/* Filters */}
         <div
-          className="flex flex-wrap justify-center gap-3 mb-12 animate-fade-up"
+          className="flex flex-wrap justify-center gap-2 mb-12 animate-fade-up"
           style={{ animationDelay: "100ms" }}
         >
           {categories.map((category) => {
@@ -85,18 +84,22 @@ const ProjectGallery = () => {
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`
-          relative px-5 py-2.5 rounded-full text-sm font-medium
-          transition-all
+          relative
+          px-4 py-2
+          text-sm font-medium
+          rounded-md
+          transition-all duration-200
           ${
             isActive
               ? `
-                gradient-hero
-                shadow-lg scale-[1.03]
-                ring-2 ring-brand-secondary/40
+                text-foreground
+                bg-white
+                shadow-sm
+                border border-gray-200
               `
               : `
-                bg-card text-muted-foreground
-                hover:text-foreground hover:bg-sand-dark
+                text-muted-foreground
+                hover:text-foreground
               `
           }
         `}
