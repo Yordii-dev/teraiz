@@ -125,7 +125,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
         className="relative max-w-5xl w-full animate-scale-in"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex flex-col bg-primary rounded-xl h-full shadow-hover bg-card overflow-hidden">
+        <div className="flex flex-col rounded-xl h-full shadow-hover bg-card overflow-hidden">
           {/* Image */}
           <div className="pt-8"></div>
           <div
@@ -156,7 +156,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           )}
 
           {/* Info */}
-          <div className="flex flex-col justify-end bg-gray-400 p-4 md:p-8">
+          <div className="flex flex-col justify-end p-4 md:p-8">
             <div className="flex justify-between items-center">
               <h2 className="font-display text-2xl md:text-3xl font-semibold">
                 {project.title}
