@@ -1,7 +1,11 @@
 import type { Project, ProjectCategory } from "@/types/project";
 
 import LOTIZA_LOGO from "@/assets/gallery/LOTIZA/logo.webp";
-import LOTIZA1 from "@/assets/gallery/LOTIZA/img1.jpeg";
+import LOTIZA1 from "@/assets/gallery/LOTIZA/img1.webp";
+import LOTIZA2 from "@/assets/gallery/LOTIZA/img2.webp";
+import LOTIZA3 from "@/assets/gallery/LOTIZA/img3.webp";
+import LOTIZA4 from "@/assets/gallery/LOTIZA/img4.webp";
+import LOTIZA5 from "@/assets/gallery/LOTIZA/img5.webp";
 
 import APALWORKFLOW_GENERAL_LOGO from "@/assets/gallery/APALWORKFLOW_GENERAL/logo.webp";
 import APALWORKFLOW_GENERAL1 from "@/assets/gallery/APALWORKFLOW_GENERAL/img1.webp";
@@ -26,8 +30,6 @@ import EL_CRUCE1 from "@/assets/gallery/EL_CRUCE/img1.webp";
 import EL_CRUCE2 from "@/assets/gallery/EL_CRUCE/img2.webp";
 import EL_CRUCE3 from "@/assets/gallery/EL_CRUCE/img3.webp";
 import EL_CRUCE4 from "@/assets/gallery/EL_CRUCE/img4.webp";
-import EL_CRUCE5 from "@/assets/gallery/EL_CRUCE/img5.webp";
-import EL_CRUCE6 from "@/assets/gallery/EL_CRUCE/img6.webp";
 
 import HERMOS_LOGO from "@/assets/gallery/HERMOS/logo.webp";
 import HERMOS1 from "@/assets/gallery/HERMOS/img1.webp";
@@ -39,20 +41,12 @@ import PARQUEO1 from "@/assets/gallery/PARQUEO/img1.webp";
 import PARQUEO2 from "@/assets/gallery/PARQUEO/img2.webp";
 import PARQUEO3 from "@/assets/gallery/PARQUEO/img3.webp";
 import PARQUEO4 from "@/assets/gallery/PARQUEO/img4.webp";
-import PARQUEO5 from "@/assets/gallery/PARQUEO/img5.webp";
-import PARQUEO6 from "@/assets/gallery/PARQUEO/img6.webp";
 
 import RAIZ_BRAIN_LOGO from "@/assets/gallery/RAIZ_BRAIN/logo.webp";
 import RAIZ_BRAIN1 from "@/assets/gallery/RAIZ_BRAIN/img1.webp";
 import RAIZ_BRAIN2 from "@/assets/gallery/RAIZ_BRAIN/img2.webp";
 import RAIZ_BRAIN3 from "@/assets/gallery/RAIZ_BRAIN/img3.webp";
 import RAIZ_BRAIN4 from "@/assets/gallery/RAIZ_BRAIN/img4.webp";
-import RAIZ_BRAIN5 from "@/assets/gallery/RAIZ_BRAIN/img5.webp";
-import RAIZ_BRAIN6 from "@/assets/gallery/RAIZ_BRAIN/img6.webp";
-import RAIZ_BRAIN7 from "@/assets/gallery/RAIZ_BRAIN/img7.webp";
-import RAIZ_BRAIN8 from "@/assets/gallery/RAIZ_BRAIN/img8.webp";
-import RAIZ_BRAIN9 from "@/assets/gallery/RAIZ_BRAIN/img9.webp";
-import RAIZ_BRAIN10 from "@/assets/gallery/RAIZ_BRAIN/img10.webp";
 
 export const categories: ProjectCategory[] = [
   {
@@ -104,7 +98,7 @@ export const projects: Project[] = [
     title: "Plataforma de Lotizaciones (SaaS)",
     category_id: 3,
     cover: LOTIZA_LOGO,
-    images: [LOTIZA1],
+    images: [LOTIZA1, LOTIZA2, LOTIZA3, LOTIZA4, LOTIZA5],
     description:
       "Plataforma multiempresa para inmobiliarias: gestión de proyectos de lotización, ventas, contratos, recordatorios automáticos vía WhatsApp, portal público de venta de lotes y landing pages personalizadas.",
   },
@@ -114,7 +108,7 @@ export const projects: Project[] = [
     title: "Sistema de Estacionamientos",
     category_id: 2,
     cover: PARQUEO_LOGO,
-    images: [PARQUEO1, PARQUEO2, PARQUEO3, PARQUEO4, PARQUEO5, PARQUEO6],
+    images: [PARQUEO1, PARQUEO2, PARQUEO3, PARQUEO4],
     description:
       "Plataforma para el control integral de estacionamientos: registro de entradas y salidas de vehículos, planes prepago, control de tiempos, pausas, reubicación de vehículos y gestión operativa en tiempo real.",
   },
@@ -124,7 +118,7 @@ export const projects: Project[] = [
     title: "Sistema para Talleres Mecánicos",
     category_id: 2,
     cover: EL_CRUCE_LOGO,
-    images: [EL_CRUCE1, EL_CRUCE2, EL_CRUCE3, EL_CRUCE4, EL_CRUCE5, EL_CRUCE6],
+    images: [EL_CRUCE1, EL_CRUCE2, EL_CRUCE3, EL_CRUCE4],
     description:
       "Sistema para talleres de reparación vehicular que permite registrar vehículos, diagnósticos, reparaciones, repuestos, costos de mano de obra, venta de aceites y servicios de mantenimiento.",
   },
@@ -144,18 +138,7 @@ export const projects: Project[] = [
     title: "App Educativa Inmobiliaria",
     category_id: 4,
     cover: RAIZ_BRAIN_LOGO,
-    images: [
-      RAIZ_BRAIN1,
-      RAIZ_BRAIN2,
-      RAIZ_BRAIN3,
-      RAIZ_BRAIN4,
-      RAIZ_BRAIN5,
-      RAIZ_BRAIN6,
-      RAIZ_BRAIN7,
-      RAIZ_BRAIN8,
-      RAIZ_BRAIN9,
-      RAIZ_BRAIN10,
-    ],
+    images: [RAIZ_BRAIN1, RAIZ_BRAIN2, RAIZ_BRAIN3, RAIZ_BRAIN4],
     description:
       "Plataforma educativa móvil para aprender conceptos clave del real estate, con lecciones cortas y prácticas al final de cada módulo.",
   },
