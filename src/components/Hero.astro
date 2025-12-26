@@ -2,7 +2,8 @@
 import { getContent, getLang } from "@/contexts/PageContext";
 import type { langType } from "@/types/languages";
 import BtnCta from "./BtnCta.astro";
-import bgHero from "/public/bg-hero.webp";
+import bgHero from "/public/bg-hero.jpg";
+import { Check } from "lucide-react";
 
 const CONTENT = getContent().hero;
 const LANG = getLang() as langType;
@@ -21,7 +22,7 @@ const LANG = getLang() as langType;
     />
 
     <!-- Overlay -->
-    <!-- <div class="absolute inset-0 bg-brand-primary/85"></div> -->
+    <div class="absolute inset-0 bg-brand-primary/50"></div>
 
     <!-- Gradiente -->
     <div
@@ -42,22 +43,39 @@ const LANG = getLang() as langType;
         class="font-display font-semibold leading-tight
          text-4xl sm:text-4xl md:text-5xl lg:text-6xl"
       >
-        Consultoría técnica y software a medida para empresas
-
-        <!-- <span class="block text-brand-secondary sm:inline">
-          para empresas
-        </span> -->
+        ¿Tu proyecto está bloqueado?
+        <span class="block text-brand-secondary mt-2">
+          Te ayudamos a avanzar
+        </span>
       </h1>
 
-      <p class="mt-6 text-lg text-white/90 max-w-xl mx-auto">
-        Diseñamos y construimos sistemas escalables listos para producción.
+      <p class="mt-6 text-lg text-white max-w-xl mx-auto">
+        Somos tu equipo a demanda. Resolvemos bugs, implementamos tus modulos
+        faltantes y tomamos decisiones técnicas cuando tu desarrollo está
+        atascado.
       </p>
-
+      <ul
+        class="mt-8 flex flex-col sm:flex-row gap-6 justify-center
+             text-white/80 max-w-3xl mx-auto"
+      >
+        <li class="flex items-center gap-2">
+          <Check className="w-5 h-5 text-green-500" />
+          <span>Sesiones desde 2 horas</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <Check className="w-5 h-5 text-green-500" />
+          <span>Sin contratos largos</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <Check className="w-5 h-5 text-green-500" />
+          <span>Solo pagas cuando lo necesitas</span>
+        </li>
+      </ul>
       <!-- CTA -->
       <div class="mt-12">
         <BtnCta
           lang={LANG}
-          textBtn="Solicitar consulta gratuita"
+          textBtn="AGENDA LLAMADA GRATIS"
           sizeBtn="lg"
           classBtn="bg-brand-secondary hover:bg-brand-secondary/90 text-brand-primary px-10 py-4 text-lg font-semibold shadow-xl transition-all"
           visibleIcon={true}
@@ -70,7 +88,7 @@ const LANG = getLang() as langType;
       </p> -->
     </div>
   </div>
-  <div
+  <!-- <div
     class="absolute bottom-10 sm:bottom-12
          left-1/2 -translate-x-1/2
          w-[92%] sm:w-auto
@@ -82,5 +100,5 @@ const LANG = getLang() as langType;
     <span class="font-medium text-center">+8 proyectos · 2025</span>
     <span class="opacity-40">|</span>
     <span class="font-medium text-center">consultoría gratuita</span>
-  </div>
+  </div> -->
 </section>

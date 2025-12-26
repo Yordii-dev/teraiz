@@ -64,11 +64,11 @@ const ProjectGallery = () => {
         {/* Header */}
         <div className="text-center mb-12 animate-fade-up">
           <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground mt-3">
-            Sistemas desarrollados 2025
+            Proyectos en produccion 2025
           </h1>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">
-            Plataformas y sistemas en producción desarrollados durante los
-            últimos 10 meses de 2025.
+            Desarrollamos módulos completos, arreglamos bugs críticos y
+            diseñamos arquitecturas para sistemas reales en producción.
           </p>
         </div>
 

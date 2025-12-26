@@ -89,18 +89,18 @@ const es: TranslationType = {
 
   formModal: {
     title: "Hablemos de tu proyecto",
-    description: `En ${COMPANY_NAME} analizamos, validamos y desarrollamos sistemas de software a medida. Completa el formulario y agenda una conversación con nuestro equipo.`,
+    description: `En ${COMPANY_NAME} analizamos tu caso, identificamos bloqueos técnicos y te guiamos para definir o completar tu sistema. Completa el formulario y agenda una conversación.`,
 
     nameLabel: "Nombre completo",
     namePlaceholder: "Ej. Juan Pérez",
 
     mailLabel: "Correo de contacto",
-    mailPlaceholder: "tu@empresa.com",
+    mailPlaceholder: "tu@gmail.com",
 
     phoneLabel: "Teléfono / WhatsApp",
     phonePlaceholder: "+51 999 999 999",
 
-    textCtaBtn: "Agendar reunión",
+    textCtaBtn: "Agendar llamada gratis",
     textCtaBtnSending: "Enviando solicitud...",
   },
 
@@ -321,11 +321,11 @@ const es: TranslationType = {
   },
   testimonies: {
     title: {
-      text: "Casos de éxito",
+      text: "Casos reales",
       emphasis: "reales",
     },
     description:
-      "Proyectos que demuestran cómo ayudamos a empresas y emprendedores a desarrollar sus ideas.",
+      "Profesionales y empresas que nos contactaron con procesos poco claros o bloqueos técnicos. En cada caso, ayudamos a definir la solución, estructurar el sistema y llevarlo a implementación.",
     list: [
       {
         name: "Emerson",
@@ -333,42 +333,42 @@ const es: TranslationType = {
         company: "El Cruce – Taller Mecánico",
         image: EmersonImg,
         content:
-          "El sistema de Teraiz transformó la gestión de nuestro taller. Ahora controlamos reparaciones, repuestos, tiempos y costos en un solo lugar. Redujimos errores operativos y mejoramos significativamente la atención al cliente.",
+          "Tenía claro qué procesos necesitaba en el taller, pero no cómo llevarlos a un sistema. En Teraiz me ayudaron a estructurar el flujo y a desarrollar las funciones clave: reparaciones, inventario y facturación.",
         rating: 5,
-        results: "Control total del taller",
+        results: "Sistema interno implementado",
         country: "🇵🇪",
       },
       {
         name: "Ana",
-        role: "Universitaria / RRHH",
-        company: "Hermos – Empresa Industrial",
+        role: "Desarrolladora",
+        company: "Hermos – Sistema de Vacaciones",
         image: AnaImg,
         content:
-          "La plataforma de gestión vacacional nos permitió automatizar solicitudes, validar antigüedad y llevar un control claro por empleado. El flujo de aprobación por correo facilitó el trabajo tanto para RRHH como para los jefes directos.",
+          "Estaba bloqueada con el cálculo de vacaciones por antigüedad. En la consultoría revisamos la lógica y la estructura del código, lo que me permitió implementar la funcionalidad correctamente.",
         rating: 5,
-        results: "Procesos de RRHH automatizados",
+        results: "Lógica corregida e implementada",
         country: "🇵🇪",
       },
       {
         name: "Cristian",
-        role: "Gerente de Operaciones",
+        role: "Emprendedor",
         company: "Empresa R&R – ApalWorkflow",
         image: ApalImg,
         content:
-          "Con ApalWorkflow logramos centralizar la logística administrativa y la operación en campo. La app para operadores y el panel administrativo nos dieron trazabilidad completa de rutas, pedidos y estados en tiempo real.",
+          "Necesitaba digitalizar la logística, pero no tenía el flujo claro. En Teraiz ayudaron a definir los procesos y a desarrollar la app móvil junto con el panel de gestión.",
         rating: 5,
-        results: "Logística en tiempo real",
+        results: "App y panel desarrollados",
         country: "🇵🇪",
       },
       {
-        name: "Inmobiliaria Lotiza",
-        role: "Dirección Comercial",
-        company: "Lotiza – Plataforma Inmobiliaria",
+        name: "Lotiza",
+        role: "Equipo Inmobiliario",
+        company: "Lotiza – Plataforma SaaS",
         image: LotizaImg,
         content:
-          "El SaaS multiempresa desarrollado por Teraiz nos permitió gestionar proyectos de lotización, ventas, contratos y recordatorios automáticos. Hoy contamos con un ecosistema digital completo para el sector inmobiliario.",
+          "sBuscábamos un SaaS multiempresa y necesitábamos claridad técnica. La consultoría nos ayudó a definir la arquitectura, los módulos iniciales y la base de datos para escalar.",
         rating: 5,
-        results: "Gestión inmobiliaria integral",
+        results: "Definición de arquitectura SaaS",
         country: "🇵🇪",
       },
     ],
@@ -420,20 +420,29 @@ const es: TranslationType = {
     description: "Dudas comunes antes de trabajar con Teraiz Consultora.",
     list: [
       {
-        question: "¿Qué servicios ofrece Teraiz Consultora?",
+        question: "¿Qué hace Teraiz?",
         answer:
-          "Brindamos consultoría y asesoría tecnológica, además del desarrollo de sistemas a medida, plataformas SaaS y aplicaciones móviles.",
+          "Consultoría técnica. Ayudamos a desarrolladores atascados con bugs o decisiones técnicas, y a emprendedores a ordenar y validar sus ideas de software.",
       },
       {
-        question:
-          "¿Pueden ayudarnos si solo tenemos una idea o dudas técnicas?",
+        question: "¿Atienden si estoy trabado con un problema técnico?",
         answer:
-          "Sí. Acompañamos desde la etapa de idea, validamos la viabilidad técnica y definimos la mejor solución antes de desarrollar.",
+          "Sí. Agendamos una sesión, revisamos el problema juntos y te mostramos cómo resolverlo. También te guiamos si no sabés qué tecnología o arquitectura usar.",
       },
       {
-        question: "¿Cómo es el primer contacto y el proceso inicial?",
+        question: "¿Pueden ayudarme si solo tengo una idea?",
         answer:
-          "Agendamos una conversación gratuita, entendemos tu necesidad y te proponemos una ruta clara: asesoría, consultoría o desarrollo, según tu caso.",
+          "Sí. Te ayudamos a ordenarla, definimos qué es viable técnicamente y te orientamos sobre cómo construirlo. Si necesitás que lo desarrollemos, también podemos hacerlo.",
+      },
+      {
+        question: "¿Cómo funciona la primera llamada?",
+        answer:
+          "Es gratis. Hablamos 30-45 minutos, entendemos tu problema o idea y te decimos si podemos ayudarte.",
+      },
+      {
+        question: "¿Trabajan con proyectos ya iniciados?",
+        answer:
+          "Sí. Revisamos tu código, encontramos el problema y te ayudamos a resolverlo. También completamos módulos que te faltan o te guiamos para que lo hagas vos.",
       },
     ],
   },
